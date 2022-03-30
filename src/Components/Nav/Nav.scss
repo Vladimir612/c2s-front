@@ -1,0 +1,206 @@
+@import "../../global.scss";
+
+nav {
+  @include box-center($justify: space-between);
+  position: fixed;
+  z-index: 100;
+  padding: 1rem 2rem;
+  width: 100vw;
+  background: transparent;
+  .dugme-prijavi {
+    background: $crvena;
+    border-radius: 2rem;
+    padding: 0.4rem 0.9rem;
+    color: $aktivni_link;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 9px #000000cc;
+    a {
+      color: $aktivni_link;
+    }
+  }
+}
+
+.logo-wrapper {
+  z-index: 100;
+  min-width: 5rem;
+  max-width: 7rem;
+  img {
+    @include fit-image;
+  }
+}
+
+.links-wrapper {
+  ul {
+    @include box-center;
+  }
+  li {
+    padding: 0 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    color: $tekst_tamna;
+    span {
+      margin-right: 0.2rem;
+    }
+    &::before {
+      left: 1rem !important;
+    }
+    &:hover::before {
+      width: 80% !important;
+    }
+    &.active::before {
+      width: 80% !important;
+    }
+    .sub-linkovi {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      background: $pozadina_tamna;
+      overflow: hidden;
+      li {
+        width: calc(100% - 0.5rem);
+        padding: 0.3rem 0.5rem;
+        color: $aktivni_link;
+        transition: all ease-in 0.2s;
+        border-radius: 1rem;
+        margin: 0.2rem 0 0.2rem 0.5rem;
+        &::before {
+          display: none;
+        }
+        &:hover {
+          background: $pozadina_siva;
+          color: $pozadina_tamna;
+        }
+      }
+    }
+  }
+}
+
+.hamburger-menu {
+  @include box-center($direction: column, $justify: space-between);
+  z-index: 100;
+  height: 1rem;
+  cursor: pointer;
+  .line {
+    width: 1.8rem;
+    height: 0.2rem;
+    border-radius: 0.2rem;
+    background-color: $aktivni_link;
+  }
+}
+
+.menu {
+  @include box-center($direction: column);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 51;
+  background-color: $pozadina_tamna;
+  ul {
+    @include box-center($direction: column, $justify: space-between);
+    align-items: flex-start;
+
+    li {
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      padding: 1vh 0;
+      color: $tekst_tamna;
+      cursor: pointer;
+      position: relative;
+      font-weight: 500;
+      transition: color ease-in 0.4s;
+      &:hover {
+        color: $aktivni_link;
+      }
+      &.active {
+        color: $aktivni_link;
+      }
+    }
+
+    .sub-linkovi {
+      overflow-y: scroll;
+      li {
+        padding: 0.5vh 0;
+        color: $aktivni_link;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: initial;
+
+        &:first-child {
+          padding: 1vh 0 0.5vh 0;
+        }
+      }
+    }
+  }
+  .dugme-prijavi {
+    background: $crvena;
+    border-radius: 2rem;
+    padding: 0.4rem 1.5rem;
+    color: $aktivni_link;
+    margin-top: 1.5rem;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 9px #000000cc;
+    a {
+      color: $aktivni_link;
+    }
+  }
+}
+
+.menu {
+  @include box-center($justify: center);
+}
+.links-wrapper {
+  @include box-center($justify: center);
+  li::before {
+    content: attr(datacontent);
+    position: absolute;
+    border-bottom: 3px solid $aktivni_link;
+
+    left: 0;
+    color: $aktivni_link;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.7s ease-in-out;
+  }
+  li:hover::before {
+    width: 100%;
+  }
+}
+
+.bg-container {
+  min-height: 4rem;
+  width: 100vw;
+  background: $pozadina_tamna;
+  z-index: 25;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .links-wrapper {
+    display: none;
+  }
+  nav {
+    .dugme-prijavi {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .hamburger-menu,
+  .menu {
+    display: none;
+  }
+}

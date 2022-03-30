@@ -48,11 +48,11 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $dugme_tamna;
+  background: $pozadina_tamna;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darken($dugme_tamna, 20);
+  background: darken($pozadina_tamna, 20);
 }
