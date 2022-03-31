@@ -1,0 +1,25 @@
+@import "../../../global.scss";
+
+.wrap-radionica {
+  @include box-center($direction: row, $justify: center);
+  width: 95%;
+  background-color: #b4afb3;
+  border-radius: 2rem;
+  margin: 2rem;
+}
+.opis {
+  width: 50%;
+  p {
+    color: whitesmoke;
+  }
+  h1 {
+    color: whitesmoke;
+  }
+}
+.predavaci {
+  @include box-center($direction: row, $justify: center);
+  p {
+    width: 30%;
+    color: whitesmoke;
+  }
+}

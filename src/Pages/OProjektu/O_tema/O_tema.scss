@@ -1,0 +1,33 @@
+@import "../../../global.scss";
+
+.wrap-otema {
+  @include box-center($direction: row, $justify: space-evenly);
+  flex-wrap: wrap;
+  width: 95%;
+  //   padding: 30px;
+  @media (min-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+}
+
+.div-za-sliku {
+  width: 20rem;
+  height: 20rem;
+  .slika-otema {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+.div-za-tekst {
+  .ime-otema {
+    color: grey;
+  }
+  .tekst-otema {
+    text-overflow: clip;
+    width: 15rem;
+    height: 15rem;
+    color: white;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../global.scss";
+
+.wrap-oprojektu {
+  @include box-center($direction: column, $justify: center);
+  width: 100%;
+  background-color: $pozadina_tamna;
+  flex-wrap: wrap;
+}
+
+.nav_OProjektu {
+  @include box-center($direction: row, $justify: space-around);
+  width: calc(7em + 50%);
+  color: #989898;
+  background-color: $pozadina_nav_oprojektu;
+  border-radius: 40px;
+  margin: 2%;
+  padding: 1%;
+
+  .dugmeOProjektu {
+    width: 23%;
+    border-radius: 20rem;
+    border: none;
+    color: #989898;
+    background-color: $pozadina_nav_oprojektu;
+    padding: 0.8rem 0.2rem;
+  }
+  .dugmeOProjektu:hover {
+    color: antiquewhite;
+    background-color: $crvena;
+  }
+}
+.contentOProjektu {
+  width: 100%;
+  @include box-center($direction: column, $justify: center);
+
+  .presek-dana {
+    width: 95%;
+    height: 1rem;
+    border-top: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    text-align: center;
+    margin: 5%;
+    .krug-presek {
+      position: relative;
+      left: calc(50% - 3rem);
+      bottom: 3rem;
+      width: 6rem;
+      height: 6rem;
+      background-color: bisque;
+      border-radius: 5rem;
+      .p {
+      }
+    }
+  }
+}

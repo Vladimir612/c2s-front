@@ -12,6 +12,8 @@ $tekst_tamna: #ffffffb3;
 $naslov_siva: #14191b;
 $tekst_siva: #14191bb3;
 
+$pozadina_nav_oprojektu: #292929;
+
 //mixins
 @mixin box-center($direction: row, $justify: center) {
   display: flex;
