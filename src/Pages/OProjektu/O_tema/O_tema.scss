@@ -1,33 +1,38 @@
 @import "../../../global.scss";
 
 .wrap-otema {
-  @include box-center($direction: row, $justify: space-evenly);
-  flex-wrap: wrap;
-  width: 95%;
-  //   padding: 30px;
-  @media (min-width: 800px) {
-    .flex-container {
-      flex-direction: column;
+  @include box-center($direction: row, $justify: space-between);
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    .div-za-sliku {
+      width: 80%;
+    }
+    .div-za-tekst {
+      width: 100%;
     }
   }
+
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .div-za-sliku {
-  width: 20rem;
-  height: 20rem;
+  width: 40%;
+
   .slika-otema {
-    width: 20rem;
-    height: 20rem;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 }
 .div-za-tekst {
+  width: 55%;
   .ime-otema {
     color: grey;
   }
   .tekst-otema {
     text-overflow: clip;
-    width: 15rem;
-    height: 15rem;
+    width: 90%;
     color: white;
   }
 }

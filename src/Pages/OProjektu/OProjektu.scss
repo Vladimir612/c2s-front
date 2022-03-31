@@ -30,7 +30,8 @@
   }
 }
 .contentOProjektu {
-  width: 100%;
+  width: 93%;
+
   @include box-center($direction: column, $justify: center);
 
   .presek-dana {
