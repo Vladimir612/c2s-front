@@ -6,11 +6,12 @@ nav {
   z-index: 100;
   padding: 1rem 2rem;
   width: 100vw;
+  top: 0;
   background: transparent;
   .dugme-prijavi {
     background: $crvena;
     border-radius: 2rem;
-    padding: 0.4rem 0.9rem;
+    padding: 0.4rem 1.9rem;
     color: $aktivni_link;
     outline: none;
     border: none;
@@ -143,7 +144,7 @@ nav {
   .dugme-prijavi {
     background: $crvena;
     border-radius: 2rem;
-    padding: 0.4rem 1.5rem;
+    padding: 0.4rem 1.9rem;
     color: $aktivni_link;
     margin-top: 1.5rem;
     outline: none;
@@ -178,7 +179,7 @@ nav {
 }
 
 .bg-container {
-  min-height: 4rem;
+  height: 3rem;
   width: 100vw;
   background: $pozadina_tamna;
   z-index: 25;
