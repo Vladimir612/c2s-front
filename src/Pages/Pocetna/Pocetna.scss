@@ -1,0 +1,112 @@
+@import "../../global.scss";
+
+.pocetna-container {
+  margin-top: 6rem;
+  .lopte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    .prva-grupa {
+      position: absolute;
+      top: 20%;
+      left: 8%;
+      .lopta:first-child {
+        box-shadow: inset 10px -9px 31px 7px #000000eb,
+          7px 9px 16px 3px #0000004a;
+        &::after {
+          box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
+        }
+      }
+    }
+  }
+  .content {
+    @include box-center($justify: space-around);
+  }
+  .staklo-container {
+    margin: 0 1rem;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    border-radius: 1rem;
+    h1 {
+      text-transform: uppercase;
+      color: $aktivni_link;
+      width: 50%;
+      font-weight: 900;
+      padding: 1rem;
+    }
+    h2 {
+      text-transform: uppercase;
+      color: $aktivni_link;
+      font-weight: 300;
+      padding-left: 1rem;
+      span {
+        color: $crvena;
+      }
+    }
+    .uvodni-tekst {
+      padding: 1rem;
+      color: $tekst_tamna;
+      font-weight: 300;
+    }
+    .timer {
+      @include box-center($justify: space-around);
+      background: $crvena;
+      padding: 1rem 0;
+      color: $aktivni_link;
+      div {
+        @include box-center($direction: column);
+        p:first-child {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .dugmad-grupa {
+      padding: 1rem 0;
+      @include box-center($justify: space-around);
+      button {
+        border-radius: 2rem;
+        padding: 0.4rem 1.9rem;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 9px #000000cc;
+        &.crveno {
+          border: none;
+          background: #cc203a;
+        }
+        &.transparentno {
+          border: 2px solid #fff;
+          background: transparent;
+        }
+      }
+    }
+    .img-wrapper {
+      img {
+        @include fit-image;
+      }
+    }
+    &:last-child {
+      width: 30%;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .pocetna-container {
+    margin-top: 3rem;
+    .content {
+      flex-direction: column-reverse;
+      .staklo-container {
+        width: 90%;
+        margin: 1rem 0;
+        &:last-child {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
