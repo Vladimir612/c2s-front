@@ -1,11 +1,24 @@
 @import "../../global.scss";
 
+.pocetak-pocetna {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .pocetna-container {
   margin-top: 6rem;
+  .hero-section {
+    overflow: hidden;
+  }
+  .kompanije-section {
+    min-height: 100vh;
+    background: $pozadina_siva;
+  }
   .lopte {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100vw;
     height: 100%;
     .prva-grupa {
@@ -15,14 +28,50 @@
       .lopta:first-child {
         box-shadow: inset 10px -9px 31px 7px #000000eb,
           7px 9px 16px 3px #0000004a;
+        animation-duration: 38s;
         &::after {
           box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
+        }
+      }
+    }
+    .druga-grupa {
+      position: absolute;
+      top: 60%;
+      right: 18%;
+      .lopta:last-child {
+        box-shadow: inset 10px -9px 31px 7px #000000eb,
+          7px 9px 16px 3px #0000004a;
+        animation-duration: 45s;
+        &::after {
+          top: 2.2rem;
+          left: 5.1rem;
+          box-shadow: 0 4px 27px 20px rgb(255 255 255 / 47%);
+        }
+      }
+    }
+    .treca-grupa {
+      position: absolute;
+      top: 15%;
+      right: 28%;
+      .lopta:first-child {
+        box-shadow: inset 6px -1px 37px 2px #000000a6,
+          7px 9px 16px 3px #0000004a;
+        z-index: 10;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        animation-duration: 35s;
+        &::after {
+          top: 2.2rem;
+          left: 5.1rem;
+          box-shadow: -32px -5px 30px 15px rgb(255 255 255 / 37%);
         }
       }
     }
   }
   .content {
     @include box-center($justify: space-around);
+    margin-bottom: 10rem;
   }
   .staklo-container {
     margin: 0 1rem;
@@ -93,6 +142,86 @@
       width: 30%;
     }
   }
+  .kompanije-section {
+    .kako-postati-conatiner {
+      width: 95%;
+      border-radius: 2rem;
+      background: $pozadina_siva;
+      padding: 2rem;
+      margin: auto;
+      transform: translateY(-5rem);
+      box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.433);
+      h3 {
+        margin-bottom: 1rem;
+        color: $pozadina_tamna;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+      }
+      p {
+        color: $tekst_siva;
+      }
+    }
+    .kompanije-ucesnice {
+      @include box-center($justify: center, $direction: column);
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+      .logoi-kompanija {
+        @include box-center($justify: space-around);
+        flex-wrap: wrap;
+        .partner-wrapper {
+          width: 13rem;
+          height: 6rem;
+          margin: 0.9rem 0.6rem;
+          background: #fff;
+          border-radius: 2rem;
+          @include box-center($justify: center);
+          box-shadow: 0 32px 40px rgba(0, 0, 0, 0.15);
+        }
+        .img-wrapper {
+          width: 80%;
+          img {
+            @include fit-image;
+          }
+        }
+      }
+    }
+    .ostale-kompanije {
+      @include box-center($justify: center);
+      flex-wrap: wrap;
+      width: 95%;
+      gap: 25%;
+      margin-bottom: 5rem;
+      margin-top: 3rem;
+      .godisnji-partneri,
+      .naturalni-partneri,
+      .medijski-partneri {
+        margin-top: 1rem;
+        width: 10rem;
+        @include box-center($justify: center, $direction: column);
+        h3 {
+          text-align: center;
+        }
+        .partner-wrapper {
+          width: 10rem;
+          height: 10rem;
+          background: #fff;
+          border-radius: 2rem;
+          box-shadow: 0 32px 40px rgba(0, 0, 0, 0.15);
+          @include box-center($justify: center);
+          .img-wrapper {
+            width: 80%;
+            img {
+              @include fit-image;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -109,4 +238,35 @@
       }
     }
   }
+}
+
+//partneri
+
+.partneri {
+  padding: 4rem;
+  padding-top: 5rem;
+  margin-bottom: 10rem;
+
+  .pokrovitelj,
+  .generalni,
+  .naturalni,
+  .medijski {
+    @include box-center(column, center);
+  }
+
+  .generalniNaslov {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .naturalniNaslov,
+  .medijskiNaslov {
+    margin-top: 2.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.slick-slide > :first-child {
+  @include box-center(row, center);
 }

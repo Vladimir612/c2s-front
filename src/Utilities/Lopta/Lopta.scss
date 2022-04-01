@@ -11,6 +11,10 @@
   &.crvena {
     background: $crvena;
   }
+  &.transparentna {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(4px);
+  }
   &::after {
     content: "";
     display: block;
