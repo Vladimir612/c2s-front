@@ -1,0 +1,56 @@
+@import "../../global.scss";
+
+footer {
+  padding: 0 2.5rem;
+  width: 100vw;
+  @include box-center($justify: space-between);
+  background: $pozadina_tamna;
+  .img-wrapper {
+    width: 15rem;
+    img {
+      @include fit-image;
+    }
+  }
+  .kontakt-section {
+    margin-right: 3rem;
+    width: 15rem;
+    max-width: 100%;
+    @include box-center($justify: space-between);
+    gap: 0.8rem;
+  }
+  button {
+    text-transform: uppercase;
+    border-radius: 2rem;
+    padding: 0.4rem 1.9rem;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 9px #000000cc;
+    &.transparentno {
+      border: 2px solid #fff;
+      background: transparent;
+    }
+    &.sivo {
+      border: none;
+      color: $pozadina_tamna;
+      background: $pozadina_siva;
+      @include box-center($justify: space-between);
+      width: 10rem;
+      padding-right: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  footer {
+    flex-direction: column;
+    button.sivo {
+      margin-bottom: 2rem;
+    }
+    .kontakt-section {
+      margin-bottom: 2rem;
+      margin-right: 0;
+    }
+  }
+}
