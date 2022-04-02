@@ -1,1 +1,23 @@
-@import "../../global.scss";
+@import "../../../global.scss";
+
+.companyLink {
+  @include box-center($direction: row, $justify: flex-start);
+  margin-bottom: 3%;
+  width: 50%;
+  height: 4rem;
+  // border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+  .logoKompanije {
+    width: 40%;
+    img {
+      width: 40%;
+      border-radius: 2px solid gold;
+      padding: 4%;
+      // height: 50px;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}

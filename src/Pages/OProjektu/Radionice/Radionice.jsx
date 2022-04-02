@@ -2,6 +2,7 @@ import React from "react";
 import "./Radionice.scss";
 import PredavacReact1 from "../../../Assets/Images/predavacReact1.jpg";
 import PredavacReact2 from "../../../Assets/Images/predavacReact2.jpg";
+// mora ovo isto u props
 import Logo1 from "../../../Assets/Images/logo1.png";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
@@ -10,8 +11,9 @@ import { useState } from "react";
 const Radionice = (props) => {
   const handleDetails = () => {
     setDetalji(!detalji);
-    // alert(detalji);
   };
+  const prikaziViseManje = props.detaljiPocetnoStanje;
+
   const [detalji, setDetalji] = useState(false);
   // 0 je otvoreno 1 je zatvoreno
   const [visibleRadionica, setVisibleRadionica] = useState(false);
@@ -53,7 +55,7 @@ const Radionice = (props) => {
               <div
                 className="oPredavacu"
                 style={{
-                  display: detalji ? "none" : "block",
+                  display: detalji ? "none" : "flex",
                 }}
               >
                 <h2>{props.imePredavaca1}</h2>
@@ -66,7 +68,7 @@ const Radionice = (props) => {
               <div
                 className="oPredavacu"
                 style={{
-                  display: detalji ? "none" : "block",
+                  display: detalji ? "none" : "flex",
                 }}
               >
                 <h2>{props.imePredavaca2}</h2>
@@ -85,7 +87,7 @@ const Radionice = (props) => {
           <div className="bottom-radionica">
             <div className="details">
               <button className="dugmeOProjektu" onClick={handleDetails}>
-                OIFJOD
+                {detalji ? "Prikaži detaljnije v" : "Sakrij detaljnije ^"}
               </button>
             </div>
             <div className="companyLink">

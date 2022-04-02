@@ -3,6 +3,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .radionica-item {
+  width: 100%;
   @include box-center($justify: flex-start);
   align-items: flex-start;
   margin-bottom: 1rem;
@@ -39,8 +40,11 @@
   width: 50%;
   p {
     color: whitesmoke;
+    text-overflow: ellipsis;
+    text-align: justify;
   }
   h1 {
+    margin-top: 3%;
     color: whitesmoke;
   }
 }
@@ -54,7 +58,8 @@
     align-self: baseline;
   }
   .slikePredavaca {
-    width: 15rem;
+    margin-top: 5%;
+    width: 20vw;
     display: flex;
     justify-content: center;
     img {
@@ -67,6 +72,7 @@
     align-items: left;
     flex-direction: column;
     justify-content: space-between;
+    transition: display 2s ease-out;
 
     width: 65%;
     height: 100%;
@@ -86,21 +92,37 @@
 
   //background-color: aquamarine;
   .details {
-    width: fit-content;
+    width: 40%;
+
     .dugmeOProjektu {
-      margin: 10%;
+      padding-left: 10%;
       border: none;
       background-color: #b4afb3;
+      font-size: 1.5rem;
     }
   }
   .companyLink {
+    @include box-center($direction: row, $justify: flex-start);
+
     width: 50%;
     height: 4rem;
     // border: 2px solid black;
-    background-color: white;
+    background-color: rgb(148, 126, 126);
     border-radius: 1.5rem 0rem 0rem 0rem;
+    .logoKompanije {
+      width: 40%;
+      img {
+        width: 40%;
+        border-radius: 2px solid gold;
+        padding: 4%;
+        // height: 50px;
+      }
+    }
   }
   a {
     text-decoration: none;
   }
 }
+// .radionicaKomponenta {
+//   width: 690px;
+// }

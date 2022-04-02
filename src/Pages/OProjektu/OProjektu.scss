@@ -30,9 +30,22 @@
   }
 }
 .contentOProjektu {
-  width: 93%;
-
   @include box-center($direction: column, $justify: center);
+
+  width: 95%;
+  .contentOProjektu-panel {
+    @include box-center($direction: row, $justify: center);
+  }
+  // @include box-center($direction: column, $justify: center);
+
+  .panelKomad {
+    @include box-center($direction: row, $justify: center);
+    flex-wrap: wrap;
+  }
+  .panelipls {
+    display: flex;
+    flex-direction: row;
+  }
 
   .presek-dana {
     width: 95%;
@@ -44,13 +57,16 @@
     margin: 5%;
     .krug-presek {
       position: relative;
-      left: calc(50% - 3rem);
-      bottom: 3rem;
-      width: 6rem;
-      height: 6rem;
+      left: calc(50% - 2rem);
+      bottom: 2rem;
+      width: 4rem;
+      height: 4rem;
+      //treba da se poppravi za tel
       background-color: bisque;
       border-radius: 5rem;
-      .p {
+      p {
+        position: relative;
+        top: 33%;
       }
     }
   }

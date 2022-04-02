@@ -4,9 +4,12 @@ import "./OProjektu.scss";
 import Radionice from "./Radionice/Radionice";
 import O_tema from "./O_tema/O_tema";
 import OtemaSlikaRadionice from "../../Assets/Images/otemaslika.png";
+import Panel from "./Panel/Panel";
+import ModeratorSlika from "../../Assets/Images/predavacReact1.jpg";
+import SpeedDating from "./SpeedDating/SpeedDating";
 
 const OProjektu = () => {
-  const [aktivanTab, setAktivanTab] = useState(1);
+  const [aktivanTab, setAktivanTab] = useState(3);
   const handleRadionice = () => {
     setAktivanTab(1);
   };
@@ -46,7 +49,7 @@ const OProjektu = () => {
           ></O_tema>
           <Radionice
             imeRadionice="REACT"
-            link="reak.t"
+            link="https://fonis.rs/"
             tekstOpis="Another way is to change the percentage of the flex property of the
           flex items to create different layouts for different screen sizes.
           Note that we also have to include flex-wrap: wrap; on the flex
@@ -57,10 +60,11 @@ const OProjektu = () => {
             flex items to create different"
             imePredavaca2="MARKO JOVANOVIC"
             tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            detaljiPocetnoStanje="Prikaži detaljnije"
           ></Radionice>
           <Radionice
             imeRadionice="REACT"
-            link="reak.t"
+            link="https://fonis.rs/"
             tekstOpis="tracted by the rn looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             imePredavaca1="JOVANA JOVANOVIC"
             tekstPredavac1="OAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
@@ -69,34 +73,82 @@ const OProjektu = () => {
           ></Radionice>
           <Radionice
             imeRadionice="BLABLA"
-            link="reak.t"
-            tekstOpis="Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work:
-          Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example tAnother way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example t
-          Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work:
-          Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example tAnother way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example t"
-            tekstPrviPredavac="OAIHFushaefoijsiefposejfiusnfo weoifjweiufn owef lneiufwone fower oknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            link="https://fonis.rs/"
+            tekstOpis=" Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example to work:
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example t
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example to work:
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example to work:
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example t
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example to work:
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example to work:
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example t
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example to work:
+            Another way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example tAnother way is to change the percentage of the flex property of the
+            flex items to create different layouts for different screen sizes.
+            Note that we also have to include flex-wrap: wrap; on the flex
+            container for this example t"
+            imePredavaca1="JOVANA JOVANOVIC"
+            tekstPredavac1=" way is to change the percentage of the flex property of the
+            flex items to create different way is to change the percentage of the flex property of the
+            flex items to create different"
+            imePredavaca2="MARKO JOVANOVIC"
+            tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            detaljiPocetnoStanje="Prikaži detaljnije"
           ></Radionice>
           <Radionice
             imeRadionice="REACT"
-            link="reak.t"
+            link="https://fonis.rs/"
             tekstOpis="Another way is to change the percentage of the flex property of the
           flex items to create different layouts for different screen sizes.
           Note that we also have to include flex-wrap: wrap; on the flex
@@ -112,15 +164,34 @@ const OProjektu = () => {
         </div>
       )}
       {aktivanTab === 2 && (
-        <div className="contentOProjektu">
+        <div className="contentOProjektu-panel">
           <O_tema
             ime="PANEL"
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
             slika={OtemaSlikaRadionice}
           ></O_tema>
-          <Radionice></Radionice>
-          <Radionice></Radionice>
-          <Radionice></Radionice>
+          <div className="panelipls">
+            <Panel
+              className="panelKomad"
+              titula="MODERATOR PANELA"
+              ime="Jovana Matrica"
+              opisRadnogMesta="moderator panela"
+              bottomText="iodgj dsiog oe jgdsj oisjg osjfgio jse fj"
+              slika={ModeratorSlika}
+            ></Panel>
+            <Panel
+              className="panelKomad"
+              titula="MODERATOR PAmELA"
+              ime="Jovana Matrica"
+              opisRadnogMesta="moderator panela jsifjie sjf aojef soi jfsajf  jerj grg"
+              bottomText="iodgj dsiog oe jgdsj oisjg osjfgio jse fj daj ziki da  iefi jsoejf sje jeoj sdoiwei j jie FI FS J"
+              slika={ModeratorSlika}
+            ></Panel>
+            <Panel></Panel>
+            <Panel></Panel>
+            <Panel></Panel>
+            <Panel></Panel>
+          </div>
         </div>
       )}
       {aktivanTab === 3 && (
@@ -131,6 +202,18 @@ const OProjektu = () => {
             slika={OtemaSlikaRadionice}
           ></O_tema>
           <Radionice></Radionice>
+          <SpeedDating
+            logo={ModeratorSlika}
+            link="https://fonis.rs/"
+          ></SpeedDating>
+          <SpeedDating
+            logo={ModeratorSlika}
+            link="https://fonis.rs/"
+          ></SpeedDating>
+          <SpeedDating
+            logo={ModeratorSlika}
+            link="https://fonis.rs/"
+          ></SpeedDating>
         </div>
       )}
       {aktivanTab === 4 && (

@@ -1,1 +1,57 @@
-@import "../../global.scss";
+@import "../../../global.scss";
+
+.panel-item {
+  width: 40vw;
+  height: 40vw;
+  margin-bottom: 3%;
+  @include box-center($direction: row, $justify: center);
+  flex-wrap: wrap;
+  //   height: fit-content;
+  //   padding: 30px;
+  overflow: hidden;
+  background-color: #b4afb3;
+  border-radius: 2rem;
+  .wrap-panel {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vw;
+  }
+}
+.panel-top {
+  @include box-center($direction: row, $justify: space-between);
+
+  height: 6vw;
+
+  .titula {
+  }
+  .divLogo {
+    background-color: white;
+    border-radius: 0rem 0rem 0rem 1.5rem;
+    width: 18vw;
+    height: 6vw;
+    // border: 2px solid black;
+  }
+}
+.panel-middle {
+  display: flex;
+  flex: row;
+
+  img {
+    height: 20vw;
+    border: 2px solid gold;
+    border-radius: 50%;
+  }
+  .panelista-info {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+.panel-bottom {
+  p {
+    margin: 5%;
+    text-align: justify;
+  }
+}

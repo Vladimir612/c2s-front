@@ -8,17 +8,20 @@
       width: 80%;
     }
     .div-za-tekst {
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: center;
+      // border: 2px solid gold;
     }
   }
-
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .div-za-sliku {
   width: 40%;
-
+  margin-bottom: 1rem;
   .slika-otema {
     width: 100%;
     height: auto;
@@ -29,10 +32,13 @@
   width: 55%;
   .ime-otema {
     color: grey;
+    margin-bottom: 1rem;
   }
   .tekst-otema {
-    text-overflow: clip;
-    width: 90%;
+    text-align: justify;
+    text-overflow: ellipsis;
+    width: 100%;
+    justify-content: center;
     color: white;
   }
 }
