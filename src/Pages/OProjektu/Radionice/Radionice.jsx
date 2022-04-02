@@ -2,6 +2,7 @@ import React from "react";
 import "./Radionice.scss";
 import PredavacReact1 from "../../../Assets/Images/predavacReact1.jpg";
 import PredavacReact2 from "../../../Assets/Images/predavacReact2.jpg";
+import Logo1 from "../../../Assets/Images/logo1.png";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -88,7 +89,10 @@ const Radionice = (props) => {
               </button>
             </div>
             <div className="companyLink">
-              Logo,, <a href={props.link}> Saznaj vise o kompaniji</a>
+              <div className="logoKompanije">
+                <img src={Logo1} alt="kompanije studentima logo" />
+              </div>
+              <a href={props.link}> Saznaj vise o kompaniji</a>
             </div>
           </div>
         </div>
