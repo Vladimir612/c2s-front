@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.tehnologija-wrapper {
+    margin-top: 0.5rem;
+    display: flex;
+
+    .tehnologija-input {
+        margin-right: 1rem;
+    }
+
+    .tehnologija-nivo-input {
+        margin-right: 1rem;
+    }
+
+    .obrisi-dugme {
+        width: 6rem;
+        border-radius: 0.5rem;
+        border: 0;
+        background-color: $crvena;
+    }
+}
