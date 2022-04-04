@@ -36,6 +36,7 @@ const Panel = (props) => {
               className="divLogo"
               style={{
                 display: props.titula === "MODERATOR PANELA" ? "none" : "block",
+                
               }}
             ></div>
           </div>

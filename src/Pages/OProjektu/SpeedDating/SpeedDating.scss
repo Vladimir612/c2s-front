@@ -1,23 +1,37 @@
 @import "../../../global.scss";
 
-.companyLink {
-  @include box-center($direction: row, $justify: flex-start);
-  margin-bottom: 3%;
-  width: 50%;
-  height: 4rem;
-  // border: 2px solid black;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1.5rem;
-  .logoKompanije {
-    width: 40%;
-    img {
-      width: 40%;
-      border-radius: 2px solid gold;
-      padding: 4%;
-      // height: 50px;
+.speedDating-item {
+  @include box-center($direction: column, $justify: center);
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 2vw;
+  .companyLink {
+    @include box-center($direction: row, $justify: space-around);
+
+    width: 90%;
+    height: 80%;
+    // border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5rem;
+    .logoKompanije {
+      width: 30%;
+      height: 9vh;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      img {
+        // vertical-align: middle;
+        padding-top: 1vh;
+        height: 8vh;
+        // border-radius: 2px solid gold;
+        // padding: 4%;
+        // height: 50px;
+      }
     }
   }
-}
-a {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+    font-size: calc(1.5vmax + 0.4em);
+    color: black;
+  }
 }

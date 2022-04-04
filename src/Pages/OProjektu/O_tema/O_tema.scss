@@ -30,8 +30,9 @@
 }
 .div-za-tekst {
   width: 55%;
+  font-size: calc(0.8vmax + 0.4em);
   .ime-otema {
-    color: grey;
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 1rem;
   }
   .tekst-otema {
@@ -39,6 +40,6 @@
     text-overflow: ellipsis;
     width: 100%;
     justify-content: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
   }
 }

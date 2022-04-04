@@ -11,10 +11,10 @@ import { useState } from "react";
 const Radionice = (props) => {
   const handleDetails = () => {
     setDetalji(!detalji);
+    // alert(props.detaljiPocetnoStanje);
   };
-  const prikaziViseManje = props.detaljiPocetnoStanje;
 
-  const [detalji, setDetalji] = useState(false);
+  const [detalji, setDetalji] = useState(props.detaljiPocetnoStanje);
   // 0 je otvoreno 1 je zatvoreno
   const [visibleRadionica, setVisibleRadionica] = useState(false);
   return (
@@ -39,8 +39,26 @@ const Radionice = (props) => {
       >
         <div className="wrap-radionica">
           <div className="opis">
-            <h1>{props.imeRadionice}</h1>
-            <p>{props.tekstOpis}</p>
+            <div className="radionica-ime">
+              <h1>{props.imeRadionice}</h1>
+            </div>
+
+            <div
+              className="tekstualniOpis"
+              style={{
+                height: detalji ? "15vh" : "fit-content",
+              }}
+            >
+              {props.tekstOpis}
+              <br></br>
+              <br></br>
+              {props.tekstOpis2}
+            </div>
+            {/* <p
+              style={{
+                height: detalji ? "15vh" : "40vh",
+              }}
+            ></p> */}
           </div>
           <div
             className="predavaci"
@@ -60,6 +78,7 @@ const Radionice = (props) => {
               >
                 <h2>{props.imePredavaca1}</h2>
                 <h4>Predavac</h4>
+                <br></br>
                 {/* ovde mozda za h4 da ide isto preko props ako nema moze da bude nes sem predavaca */}
                 <p>{props.tekstPredavac1}</p>
               </div>
@@ -73,6 +92,7 @@ const Radionice = (props) => {
               >
                 <h2>{props.imePredavaca2}</h2>
                 <h4>Predavac</h4>
+                <br></br>
                 <p>{props.tekstPredavac2}</p>
               </div>
               <div className="slikePredavaca">
@@ -90,6 +110,7 @@ const Radionice = (props) => {
                 {detalji ? "Prikaži detaljnije v" : "Sakrij detaljnije ^"}
               </button>
             </div>
+
             <div className="companyLink">
               <div className="logoKompanije">
                 <img src={Logo1} alt="kompanije studentima logo" />
