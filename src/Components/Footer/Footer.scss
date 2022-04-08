@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 footer {
+  position: absolute;
   padding: 0 2.5rem;
   width: 100vw;
   @include box-center($justify: space-between);
