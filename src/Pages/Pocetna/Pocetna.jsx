@@ -59,43 +59,14 @@ const Pocetna = () => {
     infinite: true,
     arrows: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     swipeToSlide: true,
     autoplaySpeed: 1500,
     centerPadding: "60px",
-    responsive: [
-      {
-        breakpoint: 1650,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 720,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
+
   return (
     <>
       <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
@@ -108,8 +79,8 @@ const Pocetna = () => {
               <Lopta boja="crvena" width="5rem" height="5rem" />
             </div>
             <div className="druga-grupa">
-              <Lopta boja="bela" width="4.5rem" height="4.5rem" />
-              <Lopta boja="crvena" width="8rem" height="8rem" />
+              <Lopta boja="bela" width="6.5rem" height="6.5rem" />
+              <Lopta boja="crvena" width="14rem" height="14rem" />
             </div>
             <div className="treca-grupa">
               <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
@@ -176,6 +147,20 @@ const Pocetna = () => {
           </div>
         </div>
         <div className="kompanije-section">
+          <div className="lopte">
+            <div className="prva-grupa">
+              <Lopta boja="bela" width="3rem" height="3rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+            <div className="druga-grupa">
+              <Lopta boja="bela" width="4.5rem" height="4.5rem" />
+              <Lopta boja="crvena" width="8rem" height="8rem" />
+            </div>
+            <div className="treca-grupa">
+              <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+          </div>
           <div className="kako-postati-conatiner">
             <h3>Kako da postanes deo c2s-a?</h3>
             <p>
@@ -225,36 +210,35 @@ const Pocetna = () => {
             <div className="ostale-kompanije">
               <div className="godisnji-partneri">
                 <h3>godisnji partneri</h3>
-                <div className="partner-wrapper">
-                  <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
-                  </div>
-                </div>
+                <PartneriSlider
+                  partneri={generalniPartneri}
+                  settings={generalniSettings}
+                  width="12rem"
+                  height="12rem"
+                />
               </div>
               <div className="naturalni-partneri">
                 <h3>naturalni partneri</h3>
-                <div className="partner-wrapper">
-                  <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
-                  </div>
-                </div>
+                <PartneriSlider
+                  partneri={generalniPartneri}
+                  settings={generalniSettings}
+                  width="12rem"
+                  height="12rem"
+                />
               </div>
               <div className="medijski-partneri">
                 <h3>medijski partneri</h3>
-                <div className="partner-wrapper">
-                  <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
-                  </div>
-                </div>
+                <PartneriSlider
+                  partneri={generalniPartneri}
+                  settings={generalniSettings}
+                  width="12rem"
+                  height="12rem"
+                />
               </div>
             </div>
           </div>
-          {/* <PartneriSlider
-            partneri={generalniPartneri}
-            settings={generalniSettings}
-            width="16rem"
-          /> */}
         </div>
+
         <Footer pocetakPocetna={pocetakPocetna} />
       </div>
     </>

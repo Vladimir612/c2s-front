@@ -1,8 +1,8 @@
 import React from "react";
 import "./Radionice.scss";
-import PredavacReact1 from "../../../Assets/Images/predavacReact1.jpg";
-import PredavacReact2 from "../../../Assets/Images/predavacReact2.jpg";
-import Logo1 from "../../../Assets/Images/logo1.png";
+
+// mora ovo isto u props
+// import Logo1 from "../../../Assets/Images/logo1.png";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -10,9 +10,10 @@ import { useState } from "react";
 const Radionice = (props) => {
   const handleDetails = () => {
     setDetalji(!detalji);
-    // alert(detalji);
+    // alert(props.detaljiPocetnoStanje);
   };
-  const [detalji, setDetalji] = useState(false);
+
+  const [detalji, setDetalji] = useState(props.detaljiPocetnoStanje);
   // 0 je otvoreno 1 je zatvoreno
   const [visibleRadionica, setVisibleRadionica] = useState(false);
   return (
@@ -37,8 +38,26 @@ const Radionice = (props) => {
       >
         <div className="wrap-radionica">
           <div className="opis">
-            <h1>{props.imeRadionice}</h1>
-            <p>{props.tekstOpis}</p>
+            <div className="radionica-ime">
+              <h1>{props.imeRadionice}</h1>
+            </div>
+
+            <div
+              className="tekstualniOpis"
+              style={{
+                height: detalji ? "15vh" : "fit-content",
+              }}
+            >
+              {props.tekstOpis}
+              <br></br>
+              <br></br>
+              {props.tekstOpis2}
+            </div>
+            {/* <p
+              style={{
+                height: detalji ? "15vh" : "40vh",
+              }}
+            ></p> */}
           </div>
           <div
             className="predavaci"
@@ -48,16 +67,17 @@ const Radionice = (props) => {
           >
             <div className="predavac1">
               <div className="slikePredavaca">
-                <img src={PredavacReact1} alt="zemaljac" />
+                <img src={props.slikaPredavaca1} alt="zemaljac" />
               </div>
               <div
                 className="oPredavacu"
                 style={{
-                  display: detalji ? "none" : "block",
+                  display: detalji ? "none" : "flex",
                 }}
               >
                 <h2>{props.imePredavaca1}</h2>
                 <h4>Predavac</h4>
+                <br></br>
                 {/* ovde mozda za h4 da ide isto preko props ako nema moze da bude nes sem predavaca */}
                 <p>{props.tekstPredavac1}</p>
               </div>
@@ -66,16 +86,17 @@ const Radionice = (props) => {
               <div
                 className="oPredavacu"
                 style={{
-                  display: detalji ? "none" : "block",
+                  display: detalji ? "none" : "flex",
                 }}
               >
                 <h2>{props.imePredavaca2}</h2>
                 <h4>Predavac</h4>
+                <br></br>
                 <p>{props.tekstPredavac2}</p>
               </div>
               <div className="slikePredavaca">
                 <img
-                  src={PredavacReact2}
+                  src={props.slikaPredavaca2}
                   className="predavac-img"
                   alt="zemaljac"
                 />
@@ -85,14 +106,17 @@ const Radionice = (props) => {
           <div className="bottom-radionica">
             <div className="details">
               <button className="dugmeOProjektu" onClick={handleDetails}>
-                OIFJOD
+                {detalji ? "Prikaži detaljnije v" : "Sakrij detaljnije ^"}
               </button>
             </div>
+
             <div className="companyLink">
               <div className="logoKompanije">
-                <img src={Logo1} alt="kompanije studentima logo" />
+                <img src={props.logo} className="logoRadionica" alt="kompanije studentima logo" />
               </div>
-              <a href={props.link}> Saznaj vise o kompaniji</a>
+              <a 
+              // style={{display: detalji?"none":"block"}} 
+              href={props.link}>Saznaj više o kompaniji</a>
             </div>
           </div>
         </div>

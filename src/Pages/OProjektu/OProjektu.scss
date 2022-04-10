@@ -9,49 +9,131 @@
 
 .nav_OProjektu {
   @include box-center($direction: row, $justify: space-around);
-  width: calc(7em + 50%);
+  width: calc(8em + 57%);
+
   color: #989898;
   background-color: $pozadina_nav_oprojektu;
   border-radius: 40px;
-  margin: 2%;
-  padding: 1%;
+  margin: 2% 0% 5% 0%;
+  padding: 0.5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: calc(2.7rem + 0.5vw);
 
   .dugmeOProjektu {
+    // display: table-cell;
+    font-size: calc(0.55rem + 0.8vw);
+    height: calc(2rem + 0.5vw);
+    padding: 0px;
+    font-weight: 500;
     width: 23%;
     border-radius: 20rem;
     border: none;
-    color: #989898;
+    // color: rgba(255, 255, 255, 0.85);
     background-color: $pozadina_nav_oprojektu;
     padding: 0.8rem 0.2rem;
+    vertical-align: middle;
+    overflow: hidden;
+    //ovde menjati piksele ako je problem u dugmicima u navu
+    #prviProblem {
+      @media screen and (max-width: 520px) {
+        position: relative;
+        top: calc(-0.5rem - 0.125vw);
+      }
+    }
+    #drugiProblem {
+      @media screen and (max-width: 860px) {
+        position: relative;
+        top: calc(-0.5rem - 0.125vw);
+      }
+    }
+    p {
+      position: relative;
+      top: calc(-0.15vw - 0.05em);
+      text-align: center;
+      vertical-align: middle;
+    }
   }
   .dugmeOProjektu:hover {
-    color: antiquewhite;
+    // color: antiquewhite;
+    background-color: $crvena;
+  }
+  .dugmeOProjektu:focus {
+    // color: antiquewhite;
     background-color: $crvena;
   }
 }
-.contentOProjektu {
-  width: 93%;
-
+.contentOProjektu-radionica {
   @include box-center($direction: column, $justify: center);
 
-  .presek-dana {
-    width: 95%;
-    height: 1rem;
-    border-top: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
-    border-left: 1px solid whitesmoke;
-    text-align: center;
-    margin: 5%;
-    .krug-presek {
+  width: 95%;
+}
+
+.contentOProjektu-panel {
+  @include box-center($direction: column, $justify: center);
+}
+
+// // @include box-center($direction: column, $justify: center);
+
+// .panelKomad {
+//   @include box-center($direction: row, $justify: center);
+//   flex-wrap: wrap;
+// }
+.panelipls {
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.presek-dana {
+  width: 95%;
+  height: 1rem;
+  border-top: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  border-left: 1px solid whitesmoke;
+  text-align: center;
+  margin: 10%;
+  .krug-presek {
+    position: relative;
+    left: calc(50% - 2rem);
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    //treba da se poppravi za tel
+    background-color: whitesmoke;
+    border-radius: 5rem;
+    p {
       position: relative;
-      left: calc(50% - 3rem);
-      bottom: 3rem;
-      width: 6rem;
-      height: 6rem;
-      background-color: bisque;
-      border-radius: 5rem;
-      .p {
-      }
+      top: 33%;
     }
+  }
+}
+.crvenoDole {
+  width: 100%;
+  height: 10%;
+  background-color: $crvena;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+
+  .pogledaj-ostalo {
+    display: flex;
+    flex: row;
+    justify-content: center;
+    // vertical-align: middle;
+    // width: 35%;
+    p {
+      margin-top: 3%;
+      // padding-top: 4%;
+      color: white;
+      font-weight: 500;
+    }
+  }
+  .doleNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }

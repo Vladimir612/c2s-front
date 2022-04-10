@@ -1,0 +1,47 @@
+@import "../../../global.scss";
+
+.wrap-otema {
+  @include box-center($direction: row, $justify: space-between);
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    .div-za-sliku {
+      width: 80%;
+    }
+    .div-za-tekst {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+      justify-content: center;
+      // border: 2px solid gold;
+    }
+  }
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.div-za-sliku {
+  width: 40%;
+  margin-bottom: 1rem;
+  .slika-otema {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+.div-za-tekst {
+  width: 55%;
+  padding-right: 6vw;
+  font-size: calc(0.8vmax + 0.4em);
+  .ime-otema {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+  }
+  .tekst-otema {
+    text-align: justify;
+    text-overflow: ellipsis;
+    width: 100%;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

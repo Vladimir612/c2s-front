@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const TechChallenge = () => {
+const TechChallenge = (props) => {
   const [visibleTechChallenge, setVisibleTechChallenge] = useState(false);
   return (
     <VisibilitySensor
@@ -18,14 +18,25 @@ const TechChallenge = () => {
       partialVisibility
     >
       <motion.div
-        className="techChallenge-item"
+        className="speedDating-item"
         animate={visibleTechChallenge && { y: 0, opacity: 1 }}
         initial={{
           y: 80,
           opacity: 0,
         }}
         transition={{ duration: 1 }}
-      ></motion.div>
+      >
+                <div className="companyLink">
+          <div className="logoKompanije">
+            <img
+              className="speedLogo"
+              src={props.logo}
+              alt="kompanije studentima logo"
+            />
+          </div>
+          <a href={props.link}> Saznaj vise o kompaniji</a>
+        </div>
+      </motion.div>
     </VisibilitySensor>
   );
 };
