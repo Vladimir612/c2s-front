@@ -107,18 +107,19 @@
   border-left: 1px solid whitesmoke;
   text-align: center;
   margin: 7%;
+  font-size: 1rem;
   .krug-presek {
     position: relative;
-    left: calc(50% - 2rem);
-    bottom: 2rem;
-    width: 4rem;
-    height: 4rem;
+    left: calc(50% - 2vw);
+    bottom: 4vw;
+    width: 8vw;
+    height: 8vw;
     //treba da se poppravi za tel
     background-color: whitesmoke;
     border-radius: 5rem;
     p {
       position: relative;
-      top: 33%;
+      top: calc(4vw - 0.5rem);
     }
   }
 }
