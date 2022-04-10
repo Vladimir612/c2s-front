@@ -20,7 +20,7 @@ function App() {
                 <Route path="/agenda" element={<Agenda />} />
                 <Route path="/o-nama" element={<ONama />} />
                 <Route path="/nasi-partneri" element={<NasiPartneri />} />
-                <Route path="/faqu" element={<Faq />} />
+                <Route path="/faq" element={<Faq />} />
                 <Route path="/prijava" element={<Prijava />} />
                 <Route path="/generator" element={<Generator />} />
                 <Route path="*" element={<Error />} />
