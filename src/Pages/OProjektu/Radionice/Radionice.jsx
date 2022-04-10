@@ -45,6 +45,7 @@ const Radionice = (props) => {
             <div
               className="tekstualniOpis"
               style={{
+                transition: "height ease 3s",
                 height: detalji ? "15vh" : "fit-content",
               }}
             >
