@@ -1,0 +1,38 @@
+@import "../../global.scss";
+
+.ostali-partneri-container {
+  .hero-partneri {
+    margin-top: 3.8rem;
+    background: $crvena;
+    height: 25rem;
+    @include box-center;
+    p {
+      text-align: center;
+      padding: 0 20%;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+  .ostali-partneri-slider {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    h3 {
+      padding-left: 2.5rem;
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ostali-partneri-container {
+    .ostali-partneri-slider {
+      h3 {
+        padding-left: 0;
+      }
+    }
+  }
+}

@@ -79,8 +79,8 @@ const Pocetna = () => {
               <Lopta boja="crvena" width="5rem" height="5rem" />
             </div>
             <div className="druga-grupa">
-              <Lopta boja="bela" width="4.5rem" height="4.5rem" />
-              <Lopta boja="crvena" width="8rem" height="8rem" />
+              <Lopta boja="bela" width="6.5rem" height="6.5rem" />
+              <Lopta boja="crvena" width="14rem" height="14rem" />
             </div>
             <div className="treca-grupa">
               <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
@@ -147,6 +147,20 @@ const Pocetna = () => {
           </div>
         </div>
         <div className="kompanije-section">
+          <div className="lopte">
+            <div className="prva-grupa">
+              <Lopta boja="bela" width="3rem" height="3rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+            <div className="druga-grupa">
+              <Lopta boja="bela" width="4.5rem" height="4.5rem" />
+              <Lopta boja="crvena" width="8rem" height="8rem" />
+            </div>
+            <div className="treca-grupa">
+              <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+          </div>
           <div className="kako-postati-conatiner">
             <h3>Kako da postanes deo c2s-a?</h3>
             <p>

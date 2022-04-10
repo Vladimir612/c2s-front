@@ -112,7 +112,7 @@ const Nav = () => {
               <FaCaretDown color={nasiPartneriAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
-                animate={{ height: nasiPartneriAktiv ? "11rem" : 0 }}
+                animate={{ height: nasiPartneriAktiv ? "15rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
@@ -130,6 +130,9 @@ const Nav = () => {
                 </Link>
                 <Link to="/nasi-partneri/samos-education">
                   <li>Samos education</li>
+                </Link>
+                <Link to="/godisnji-naturalni-medijski">
+                  <li>Godisnji, naturalni i medijski partneri</li>
                 </Link>
               </motion.ul>
             </li>
@@ -265,24 +268,57 @@ const Nav = () => {
 
             <motion.ul
               className="sub-linkovi"
-              animate={{ height: nasiPartneriAktiv ? "9.5rem" : 0 }}
+              animate={{ height: nasiPartneriAktiv ? "13.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Link to="/nasi-partneri/raiffeisen">
+              <Link
+                to="/nasi-partneri/raiffeisen"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
                 <li>Raiffeisen</li>
               </Link>
-              <Link to="/nasi-partneri/addacta">
+              <Link
+                to="/nasi-partneri/addacta"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
                 <li>Addacta</li>
               </Link>
-              <Link to="/nasi-partneri/aisi">
+              <Link
+                to="/nasi-partneri/aisi"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
                 <li>Aisi</li>
               </Link>
-              <Link to="/nasi-partneri/prime-software">
+              <Link
+                to="/nasi-partneri/prime-software"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
                 <li>Prime software</li>
               </Link>
-              <Link to="/nasi-partneri/samos-education">
+              <Link
+                to="/nasi-partneri/samos-education"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
                 <li>Samos education</li>
+              </Link>
+              <Link
+                to="/godisnji-naturalni-medijski"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Godisnji, naturalni i medijski partneri</li>
               </Link>
             </motion.ul>
           </li>
