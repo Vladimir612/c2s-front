@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./OProjektu.scss";
 import Radionice from "./Radionice/Radionice";
-import O_tema from "./O_tema/O_tema";
+import OTema from "./OTema/OTema";
 import OtemaSlikaRadionice from "../../Assets/Images/otemaslika.png";
 import Panel from "./Panel/Panel";
 import ModeratorSlika from "../../Assets/Images/predavacReact1.jpg";
@@ -94,14 +94,14 @@ const OProjektu = () => {
 
       {aktivanTab === 1 && (
         <div className="contentOProjektu-radionica">
-          <O_tema
+          <OTema
             ime="RADIONICE"
             text="Radionice
 
 
             Svi naši članovi imaju prilike da uče o savremenim tehnologijama i da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice koje smo do sada održali pokrivale su frontend i backend development, web development, web dizajn, grafički dizajn, game development, data science, kao i mnoge tehnologije u pomenutim oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo razvoju soft, odnosno mekih veština. "
             slika={OtemaSlikaRadionice}
-          ></O_tema>
+          ></OTema>
           <div className="presek-dana">
             <div className="krug-presek">
               <p>1.dan</p>
@@ -180,7 +180,7 @@ const OProjektu = () => {
       )}
       {aktivanTab === 2 && (
         <div className="contentOProjektu-panel">
-          <O_tema
+          <OTema
             ime="PANEL"
             text="It is a long established fact that a reader will be
             
@@ -190,7 +190,7 @@ const OProjektu = () => {
              ing 'Content here, content here', making it look like readabl
              e English. "
             slika={OtemaSlikaRadionice}
-          ></O_tema>
+          ></OTema>
           <div className="panelipls">
             <Panel
               className="panelKomad"
@@ -219,7 +219,7 @@ const OProjektu = () => {
       )}
       {aktivanTab === 3 && (
         <div className="contentOProjektu">
-          <O_tema
+          <OTema
             ime="SPEED DATING"
             text="It is a long established fact that a reader will be distracted by
              the readable content of a page when looking at its layout. The point of
@@ -227,7 +227,7 @@ const OProjektu = () => {
               letters, as opposed to using 'Content here, content here', making it look
                like readable English. "
             slika={OtemaSlikaRadionice}
-          ></O_tema>
+          ></OTema>
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
@@ -241,11 +241,11 @@ const OProjektu = () => {
       )}
       {aktivanTab === 4 && (
         <div className="contentOProjektu">
-          <O_tema
+          <OTema
             ime="TECH CHALLENGE"
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
             slika={OtemaSlikaRadionice}
-          ></O_tema>
+          ></OTema>
 
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
           <TechChallenge

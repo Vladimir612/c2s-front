@@ -1,11 +1,11 @@
-import "./O_tema.scss";
+import "./OTema.scss";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 import React from "react";
 
-const O_tema = (props) => {
+const OTema = (props) => {
   const [visibleOtema, setVisibleOtema] = useState(false);
   return (
     <VisibilitySensor
@@ -45,4 +45,4 @@ const O_tema = (props) => {
   );
 };
 
-export default O_tema;
+export default OTema;

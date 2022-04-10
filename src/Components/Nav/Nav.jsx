@@ -116,11 +116,21 @@ const Nav = () => {
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <li>Raiffeisen</li>
-                <li>Addacta</li>
-                <li>Aisi</li>
-                <li>Prime software</li>
-                <li>Samos education</li>
+                <Link to="/nasi-partneri/raiffeisen">
+                  <li>Raiffeisen</li>
+                </Link>
+                <Link to="/nasi-partneri/addacta">
+                  <li>Addacta</li>
+                </Link>
+                <Link to="/nasi-partneri/aisi">
+                  <li>Aisi</li>
+                </Link>
+                <Link to="/nasi-partneri/prime-software">
+                  <li>Prime software</li>
+                </Link>
+                <Link to="/nasi-partneri/samos-education">
+                  <li>Samos education</li>
+                </Link>
               </motion.ul>
             </li>
             <Link
@@ -141,20 +151,10 @@ const Nav = () => {
             </Link>
           </ul>
         </div>
-        <motion.button
-          className="dugme-prijavi"
-          whileHover={{
-            scale: 1.1,
-          }}
-          whileTap={{
-            scale: 0.9,
-          }}
-        >
-          <Link
-            to="/prijava"
-            onClick={() => {
-              setMenuOpen(false);
-            }}
+        <div className="desno">
+          <motion.button
+            className="dugme-prijavi"
+            style={{ marginRight: "1rem" }}
             whileHover={{
               scale: 1.1,
             }}
@@ -162,9 +162,47 @@ const Nav = () => {
               scale: 0.9,
             }}
           >
-            Prijavi se
-          </Link>
-        </motion.button>
+            <Link
+              to="/generator"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              CV Generator
+            </Link>
+          </motion.button>
+
+          <motion.button
+            className="dugme-prijavi"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+          >
+            <Link
+              to="/prijava"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              Prijavi se
+            </Link>
+          </motion.button>
+        </div>
       </nav>
       <motion.div
         className="menu"
@@ -231,11 +269,21 @@ const Nav = () => {
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <li>Raiffeisen</li>
-              <li>Addacta</li>
-              <li>Aisi</li>
-              <li>Prime software</li>
-              <li>Samos education</li>
+              <Link to="/nasi-partneri/raiffeisen">
+                <li>Raiffeisen</li>
+              </Link>
+              <Link to="/nasi-partneri/addacta">
+                <li>Addacta</li>
+              </Link>
+              <Link to="/nasi-partneri/aisi">
+                <li>Aisi</li>
+              </Link>
+              <Link to="/nasi-partneri/prime-software">
+                <li>Prime software</li>
+              </Link>
+              <Link to="/nasi-partneri/samos-education">
+                <li>Samos education</li>
+              </Link>
             </motion.ul>
           </li>
           <Link
@@ -254,6 +302,31 @@ const Nav = () => {
           >
             <li datacontent={"FAQ"}>FAQ</li>
           </Link>
+          <motion.button
+            className="dugme-prijavi"
+            style={{ marginRight: "1rem" }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+          >
+            <Link
+              to="/generator"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              CV Generator
+            </Link>
+          </motion.button>
           <motion.button
             className="dugme-prijavi"
             whileHover={{

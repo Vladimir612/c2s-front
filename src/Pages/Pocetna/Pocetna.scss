@@ -8,7 +8,9 @@
 .pocetna-container {
   margin-top: 6rem;
   .hero-section {
+    min-height: 100vh;
     overflow: hidden;
+    @include box-center;
   }
   .kompanije-section {
     min-height: 100vh;
@@ -122,7 +124,7 @@
         color: #fff;
         outline: none;
         cursor: pointer;
-        box-shadow: 2px 2px 9px #000000cc;
+        box-shadow: 2px 6px 13px #00000026;
         &.crveno {
           border: none;
           background: #cc203a;
@@ -200,8 +202,7 @@
       .naturalni-partneri,
       .medijski-partneri {
         margin-top: 1rem;
-        width: 10rem;
-        @include box-center($justify: center, $direction: column);
+        width: 12rem;
         h3 {
           text-align: center;
         }

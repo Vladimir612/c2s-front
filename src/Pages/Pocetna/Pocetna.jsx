@@ -59,43 +59,14 @@ const Pocetna = () => {
     infinite: true,
     arrows: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     swipeToSlide: true,
     autoplaySpeed: 1500,
     centerPadding: "60px",
-    responsive: [
-      {
-        breakpoint: 1650,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 720,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
+
   return (
     <>
       <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
@@ -225,36 +196,35 @@ const Pocetna = () => {
             <div className="ostale-kompanije">
               <div className="godisnji-partneri">
                 <h3>godisnji partneri</h3>
-                <div className="partner-wrapper">
-                  <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
-                  </div>
-                </div>
+                <PartneriSlider
+                  partneri={generalniPartneri}
+                  settings={generalniSettings}
+                  width="12rem"
+                  height="12rem"
+                />
               </div>
               <div className="naturalni-partneri">
                 <h3>naturalni partneri</h3>
-                <div className="partner-wrapper">
-                  <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
-                  </div>
-                </div>
+                <PartneriSlider
+                  partneri={generalniPartneri}
+                  settings={generalniSettings}
+                  width="12rem"
+                  height="12rem"
+                />
               </div>
               <div className="medijski-partneri">
                 <h3>medijski partneri</h3>
-                <div className="partner-wrapper">
-                  <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
-                  </div>
-                </div>
+                <PartneriSlider
+                  partneri={generalniPartneri}
+                  settings={generalniSettings}
+                  width="12rem"
+                  height="12rem"
+                />
               </div>
             </div>
           </div>
-          {/* <PartneriSlider
-            partneri={generalniPartneri}
-            settings={generalniSettings}
-            width="16rem"
-          /> */}
         </div>
+
         <Footer pocetakPocetna={pocetakPocetna} />
       </div>
     </>

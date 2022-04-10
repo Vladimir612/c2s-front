@@ -75,8 +75,7 @@ nav {
           display: none;
         }
         &:hover {
-          background: $pozadina_siva;
-          color: $pozadina_tamna;
+          color: $crvena;
         }
       }
     }
@@ -142,6 +141,7 @@ nav {
     }
   }
   .dugme-prijavi {
+    cursor: pointer;
     background: $crvena;
     border-radius: 2rem;
     padding: 0.4rem 1.9rem;
@@ -188,12 +188,12 @@ nav {
   left: 0;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1275px) {
   .links-wrapper {
     display: none;
   }
   nav {
-    .dugme-prijavi {
+    .desno {
       display: none;
     }
   }
@@ -202,7 +202,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1275px) {
   .hamburger-menu,
   .menu {
     display: none;
