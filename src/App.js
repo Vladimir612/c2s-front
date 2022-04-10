@@ -12,24 +12,6 @@ import Generator from "./Pages/CVGenerator/Generator";
 import OstaliPartneri from "./Pages/OstaliPartneri/OstaliPartneri";
 
 function App() {
-<<<<<<< HEAD
-    return (
-        <div className="App">
-            {/* <ScrollToTop /> */}
-            <Routes>
-                <Route path="/" element={<Pocetna />} />
-                <Route path="/o-projektu" element={<OProjektu />} />
-                <Route path="/agenda" element={<Agenda />} />
-                <Route path="/o-nama" element={<ONama />} />
-                <Route path="/nasi-partneri" element={<NasiPartneri />} />
-                <Route path="/faq" element={<Faq />} />
-                <Route path="/prijava" element={<Prijava />} />
-                <Route path="/generator" element={<Generator />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
-        </div>
-    );
-=======
   return (
     <div className="App">
       {/* <ScrollToTop /> */}
@@ -50,7 +32,6 @@ function App() {
       </Routes>
     </div>
   );
->>>>>>> 4923f216ccf5dc0eab757634c4c109e2ad2d597a
 }
 
 export default App;

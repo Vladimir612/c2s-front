@@ -106,17 +106,24 @@ const Radionice = (props) => {
           <div className="bottom-radionica">
             <div className="details">
               <button className="dugmeOProjektu" onClick={handleDetails}>
-                {detalji ? "Prikaži detaljnije v" : "Sakrij detaljnije ^"}
+                {detalji ? "Prikaži detaljnije" : "Sakrij detaljnije"}
               </button>
             </div>
 
             <div className="companyLink">
               <div className="logoKompanije">
-                <img src={props.logo} className="logoRadionica" alt="kompanije studentima logo" />
+                <img
+                  src={props.logo}
+                  className="logoRadionica"
+                  alt="kompanije studentima logo"
+                />
               </div>
-              <a 
-              // style={{display: detalji?"none":"block"}} 
-              href={props.link}>Saznaj više o kompaniji</a>
+              <a
+                // style={{display: detalji?"none":"block"}}
+                href={props.link}
+              >
+                Saznaj više o kompaniji
+              </a>
             </div>
           </div>
         </div>
