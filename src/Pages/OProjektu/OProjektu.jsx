@@ -5,10 +5,10 @@ import Radionice from "./Radionice/Radionice";
 import O_tema from "./O_tema/O_tema";
 import OtemaSlikaRadionice from "../../Assets/Images/otemaslika.png";
 import Panel from "./Panel/Panel";
-import ModeratorSlika from "../../Assets/Images/predavacReact1.jpg";
+import ModeratorSlika from "../../Assets/Images/Zaposleni/zaposleni500px.png";
 import SpeedDating from "./SpeedDating/SpeedDating";
 import RfzLogo from "../../Assets/Images/RfzLogo.png";
-import PredavacReact1 from "../../Assets/Images/predavacReact1.jpg";
+import PredavacReact1 from "../../Assets/Images/Zaposleni/zaposleni500px.png";
 import PredavacReact2 from "../../Assets/Images/predavacReact2.jpg";
 import TechChallenge from "./TechChallenge/TechChallenge";
 
@@ -115,12 +115,10 @@ const OProjektu = () => {
             tekstOpis2="Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu."
             imePredavaca1="JOVANA JOVANOVIC"
             slikaPredavaca1={PredavacReact1}
-            tekstPredavac1=" way is to change the percentage of the flex property of the
-            flex items to create different way is to change the percentage of the flex property of the
-            flex items to create different"
+            tekstPredavac1=" Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook"
             imePredavaca2="MARKO JOVANOVIC"
             slikaPredavaca2={PredavacReact2}
-            tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            tekstPredavac2="Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook"
             detaljiPocetnoStanje={true}
           ></Radionice>
           <Radionice
@@ -227,6 +225,7 @@ const OProjektu = () => {
               letters, as opposed to using 'Content here, content here', making it look
                like readable English. "
             slika={OtemaSlikaRadionice}
+            procitajPravilnik="none"
           ></O_tema>
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
@@ -243,8 +242,12 @@ const OProjektu = () => {
         <div className="contentOProjektu">
           <O_tema
             ime="TECH CHALLENGE"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
+            text="Tech Challenge
+
+
+            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice koje smo do sada održali pokrivale su frontend i backend development, web development, web dizajn, grafički dizajn, game development, data science, kao i mnoge tehnologije u pomenutim oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo razvoju soft, odnosno mekih veština.Svi naši članovi imaju prilike da uče o savremenim tehnologijama i da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice koje smo do sada održali pokrivale su frontend i backend development, web development, web dizajn, grafički dizajn, game development, data science, kao i mnoge tehnologije u pomenutim oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo razvoju soft, odnosno mekih veština.Svi naši članovi ."
             slika={OtemaSlikaRadionice}
+            procitajPravilnik="prikazi"
           ></O_tema>
 
           <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>

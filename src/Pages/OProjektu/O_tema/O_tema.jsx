@@ -38,6 +38,15 @@ const O_tema = (props) => {
           <div className="div-za-tekst">
             <h1 className="ime-otema">{props.ime}</h1>
             <p className="tekst-otema">{props.text}</p>
+            <button
+              style={{
+                display:
+                  props.procitajPravilnik === "prikazi" ? "block" : "none",
+              }}
+              className="dugmePravilnik"
+            >
+             <span> Pročitaj pravilnik</span>
+            </button>
           </div>
         </div>
       </motion.div>

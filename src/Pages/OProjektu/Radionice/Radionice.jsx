@@ -83,6 +83,13 @@ const Radionice = (props) => {
               </div>
             </div>
             <div className="predavac2">
+              <div className="slikePredavaca">
+                <img
+                  src={props.slikaPredavaca2}
+                  className="predavac-img"
+                  alt="zemaljac"
+                />
+              </div>
               <div
                 className="oPredavacu"
                 style={{
@@ -93,13 +100,6 @@ const Radionice = (props) => {
                 <h4>Predavac</h4>
                 <br></br>
                 <p>{props.tekstPredavac2}</p>
-              </div>
-              <div className="slikePredavaca">
-                <img
-                  src={props.slikaPredavaca2}
-                  className="predavac-img"
-                  alt="zemaljac"
-                />
               </div>
             </div>
           </div>
@@ -112,11 +112,18 @@ const Radionice = (props) => {
 
             <div className="companyLink">
               <div className="logoKompanije">
-                <img src={props.logo} className="logoRadionica" alt="kompanije studentima logo" />
+                <img
+                  src={props.logo}
+                  className="logoRadionica"
+                  alt="kompanije studentima logo"
+                />
               </div>
-              <a 
-              // style={{display: detalji?"none":"block"}} 
-              href={props.link}>Saznaj više o kompaniji</a>
+              <a
+                // style={{display: detalji?"none":"block"}}
+                href={props.link}
+              >
+                Saznaj više o kompaniji
+              </a>
             </div>
           </div>
         </div>
