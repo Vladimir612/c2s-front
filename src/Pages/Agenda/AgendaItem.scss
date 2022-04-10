@@ -1,0 +1,61 @@
+@import "../../global.scss";
+
+.agenda-item{
+    margin: 8rem 0;
+    @include box-center;
+    gap: 2rem;
+    color: #fff;
+    &:first-child{
+        margin: 13rem 0 8rem 0;
+    }
+    &.obrnuto{
+        flex-direction: row-reverse;
+        .right-content{
+            transform: translateX(-25%);            
+        }
+    }
+    .left-content{
+        h3{
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .mesto{
+            font-weight: 300;
+        }
+    }
+    .right-content{
+        transform: translateX(25%);
+        ul{
+            @include box-center($direction: column);
+            li{
+                font-weight: 300;
+                @include box-center($justify: space-around);
+            }
+            span{
+                padding: .5rem .4rem;
+                color: #fff;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .agenda-item, .agenda-item.obrnuto{
+        flex-direction: column;
+        align-items: flex-start;
+        .left-content{
+            h3{
+                text-align: left;
+            }
+        }
+        .right-content{
+            transform: translateX(0);
+            span:nth-child(1){
+                padding: 1rem 1rem 1rem 0;
+            }
+        }
+    }
+    
+}
