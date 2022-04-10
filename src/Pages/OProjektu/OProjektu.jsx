@@ -7,6 +7,10 @@ import OtemaSlikaRadionice from "../../Assets/Images/otemaslika.png";
 import Panel from "./Panel/Panel";
 import ModeratorSlika from "../../Assets/Images/predavacReact1.jpg";
 import SpeedDating from "./SpeedDating/SpeedDating";
+import RfzLogo from "../../Assets/Images/RfzLogo.png";
+import PredavacReact1 from "../../Assets/Images/predavacReact1.jpg";
+import PredavacReact2 from "../../Assets/Images/predavacReact2.jpg";
+import TechChallenge from "./TechChallenge/TechChallenge";
 
 const OProjektu = () => {
   const [aktivanTab, setAktivanTab] = useState(1);
@@ -34,6 +38,10 @@ const OProjektu = () => {
           // }
           style={{
             backgroundColor: aktivanTab === 1 ? "#cc203a" : "#292929",
+            color:
+              aktivanTab === 1
+                ? "rgba(255, 255, 255, 0.98)"
+                : "rgba(255, 255, 255, 0.65)",
           }}
           onClick={handleRadionice}
         >
@@ -43,6 +51,10 @@ const OProjektu = () => {
           className="dugmeOProjektu"
           style={{
             backgroundColor: aktivanTab === 2 ? "#cc203a" : "#292929",
+            color:
+              aktivanTab === 2
+                ? "rgba(255, 255, 255, 0.98)"
+                : "rgba(255, 255, 255, 0.65)",
           }}
           onClick={handlePanel}
         >
@@ -52,6 +64,10 @@ const OProjektu = () => {
           className="dugmeOProjektu"
           style={{
             backgroundColor: aktivanTab === 3 ? "#cc203a" : "#292929",
+            color:
+              aktivanTab === 3
+                ? "rgba(255, 255, 255, 0.98)"
+                : "rgba(255, 255, 255, 0.65)",
           }}
           onClick={handleDating}
         >
@@ -63,6 +79,10 @@ const OProjektu = () => {
           className="dugmeOProjektu"
           style={{
             backgroundColor: aktivanTab === 4 ? "#cc203a" : "#292929",
+            color:
+              aktivanTab === 4
+                ? "rgba(255, 255, 255, 0.98)"
+                : "rgba(255, 255, 255, 0.65)",
           }}
           onClick={handleTech}
         >
@@ -76,10 +96,10 @@ const OProjektu = () => {
         <div className="contentOProjektu-radionica">
           <O_tema
             ime="RADIONICE"
-            text="It is a long established fact that a reader will be distracted by the
-             readable content of a page when looking at its layout. The point of using 
-             Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
-             as opposed to using 'Content here, content here', making it look like readable English. "
+            text="Radionice
+
+
+            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice koje smo do sada održali pokrivale su frontend i backend development, web development, web dizajn, grafički dizajn, game development, data science, kao i mnoge tehnologije u pomenutim oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo razvoju soft, odnosno mekih veština. "
             slika={OtemaSlikaRadionice}
           ></O_tema>
           <div className="presek-dana">
@@ -89,36 +109,35 @@ const OProjektu = () => {
           </div>
           <Radionice
             imeRadionice="REACT"
+            logo={RfzLogo}
             link="https://fonis.rs/"
             tekstOpis="Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook. Od svog pojavljivanja 2011. godine pa sve do danas, React je ostao veoma popularan zbog svojih dodatnih karakteristika poput jednostavnosti i fleksibilnosti."
             tekstOpis2="Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu."
             imePredavaca1="JOVANA JOVANOVIC"
+            slikaPredavaca1={PredavacReact1}
             tekstPredavac1=" way is to change the percentage of the flex property of the
             flex items to create different way is to change the percentage of the flex property of the
             flex items to create different"
             imePredavaca2="MARKO JOVANOVIC"
+            slikaPredavaca2={PredavacReact2}
             tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
             detaljiPocetnoStanje={true}
           ></Radionice>
           <Radionice
             imeRadionice="REACT"
+            logo={RfzLogo}
             link="https://fonis.rs/"
-            tekstOpis="tracted by the rn looking at its layout. The point of using Lorem Ipsum is 
-            that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-             here, content here', making it look like readable English.
-            It is a long established fact that a reader will be distracted by the readable 
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that 
-            it has a more-or-less normal distribution of letters, as opposed to using 'Content here
-            , content here', making it look like readable English.It is a long established fact that
-             a reader will be distracted by the readable content of a page when looking at its layout
-             . The point of using Lorem Ipsum is that it has a more-or-less normal distribution of lett
-             ers, as opposed to using 'Content here, content here', making it look like readable English."
+            tekstOpis="Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook. Od svog pojavljivanja 2011. godine pa sve do danas, React je ostao veoma popularan zbog svojih dodatnih karakteristika poput jednostavnosti i fleksibilnosti."
+            tekstOpis2="Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu."
             imePredavaca1="JOVANA JOVANOVIC"
-            tekstPredavac1="it has a more-or-less normal distribution of letters, as opposed to using 'Content here
-            , content here', making it look like readable English.It is a long established fact that
-             a reader will be distracted by the readable content of a page when looking at its layout"
+            slikaPredavaca1={PredavacReact1}
+            tekstPredavac1=" way is to change the percentage of the flex property of the
+            flex items to create different way is to change the percentage of the flex property of the
+            flex items to create different"
             imePredavaca2="MARKO JOVANOVIC"
+            slikaPredavaca2={PredavacReact2}
             tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            detaljiPocetnoStanje={true}
           ></Radionice>
           <div className="presek-dana">
             <div className="krug-presek">
@@ -126,90 +145,36 @@ const OProjektu = () => {
             </div>
           </div>
           <Radionice
-            detaljiPocetnoStanje={false}
-            imeRadionice="BLABLA"
+            imeRadionice="REACT"
+            logo={RfzLogo}
             link="https://fonis.rs/"
-            tekstOpis=" Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example to work:
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example t
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example to work:
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example to work:
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example t
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example to work:
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example to work:
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example t
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example to work:
-            Another way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example tAnother way is to change the percentage of the flex property of the
-            flex items to create different layouts for different screen sizes.
-            Note that we also have to include flex-wrap: wrap; on the flex
-            container for this example t"
+            tekstOpis="Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook. Od svog pojavljivanja 2011. godine pa sve do danas, React je ostao veoma popularan zbog svojih dodatnih karakteristika poput jednostavnosti i fleksibilnosti."
+            tekstOpis2="Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu."
             imePredavaca1="JOVANA JOVANOVIC"
+            slikaPredavaca1={PredavacReact1}
             tekstPredavac1=" way is to change the percentage of the flex property of the
             flex items to create different way is to change the percentage of the flex property of the
             flex items to create different"
             imePredavaca2="MARKO JOVANOVIC"
+            slikaPredavaca2={PredavacReact2}
             tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
-            detaljiPocetnoStanje="Prikaži detaljnije"
+            detaljiPocetnoStanje={true}
           ></Radionice>
           <Radionice
             imeRadionice="REACT"
+            logo={RfzLogo}
             link="https://fonis.rs/"
-            tekstOpis="Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work:"
-            tekstPrviPredavac="OAIHFushaefoijsiefposejfiusnfo weoifjweiufn owef
-             lneiufwone fower oknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            tekstOpis="Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook. Od svog pojavljivanja 2011. godine pa sve do danas, React je ostao veoma popularan zbog svojih dodatnih karakteristika poput jednostavnosti i fleksibilnosti."
+            tekstOpis2="Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu."
+            imePredavaca1="JOVANA JOVANOVIC"
+            slikaPredavaca1={PredavacReact1}
+            tekstPredavac1=" way is to change the percentage of the flex property of the
+            flex items to create different way is to change the percentage of the flex property of the
+            flex items to create different"
+            imePredavaca2="MARKO JOVANOVIC"
+            slikaPredavaca2={PredavacReact2}
+            tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
+            detaljiPocetnoStanje={true}
           ></Radionice>
         </div>
       )}
@@ -232,17 +197,18 @@ const OProjektu = () => {
               titula="MODERATOR PANELA"
               ime="Jovana Matrica"
               opisRadnogMesta="moderator panela"
-              bottomText="iodgj dsiog oe jgdsj oisjg osjfgio jse fj"
+              bottomText="Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook."
               slika={ModeratorSlika}
             ></Panel>
             <Panel
               className="panelKomad"
               titula="PANELISTA"
               ime="Jovana Matrica"
-              opisRadnogMesta="moderator panela jsifjie sjf aojef soi jfsajf  jerj grg"
+              opisRadnogMesta="Profesor na Fakultetu Organizacionih nauka"
               bottomText="iodgj dsiog oe jgdsj oisjg osjfgio jse fj daj ziki da  ief
               i jsoejf sje jeoj sdoiwei j jie FI FS J"
               slika={ModeratorSlika}
+              logo={RfzLogo}
             ></Panel>
             <Panel></Panel>
             <Panel></Panel>
@@ -262,42 +228,15 @@ const OProjektu = () => {
                like readable English. "
             slika={OtemaSlikaRadionice}
           ></O_tema>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
-          <SpeedDating
-            logo={ModeratorSlika}
-            link="https://fonis.rs/"
-          ></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
         </div>
       )}
       {aktivanTab === 4 && (
@@ -307,6 +246,40 @@ const OProjektu = () => {
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
             slika={OtemaSlikaRadionice}
           ></O_tema>
+
+          <SpeedDating logo={RfzLogo} link="https://fonis.rs/"></SpeedDating>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
+          <TechChallenge
+            logo={RfzLogo}
+            link="https://fonis.rs/"
+          ></TechChallenge>
         </div>
       )}
       <div className="crvenoDole">
@@ -323,7 +296,12 @@ const OProjektu = () => {
               // }
               style={{
                 backgroundColor: aktivanTab === 1 ? "#cc203a" : "#292929",
+                color:
+                  aktivanTab === 1
+                    ? "rgba(255, 255, 255, 0.98)"
+                    : "rgba(255, 255, 255, 0.65)",
               }}
+              // onMouseEnter={alert("wtf")}
               onClick={handleRadionice}
             >
               <p>RADIONICE</p>
@@ -332,6 +310,10 @@ const OProjektu = () => {
               className="dugmeOProjektu"
               style={{
                 backgroundColor: aktivanTab === 2 ? "#cc203a" : "#292929",
+                color:
+                  aktivanTab === 2
+                    ? "rgba(255, 255, 255, 0.98)"
+                    : "rgba(255, 255, 255, 0.65)",
               }}
               onClick={handlePanel}
             >
@@ -341,6 +323,10 @@ const OProjektu = () => {
               className="dugmeOProjektu"
               style={{
                 backgroundColor: aktivanTab === 3 ? "#cc203a" : "#292929",
+                color:
+                  aktivanTab === 3
+                    ? "rgba(255, 255, 255, 0.98)"
+                    : "rgba(255, 255, 255, 0.65)",
               }}
               onClick={handleDating}
             >
@@ -352,6 +338,10 @@ const OProjektu = () => {
               className="dugmeOProjektu"
               style={{
                 backgroundColor: aktivanTab === 4 ? "#cc203a" : "#292929",
+                color:
+                  aktivanTab === 4
+                    ? "rgba(255, 255, 255, 0.98)"
+                    : "rgba(255, 255, 255, 0.65)",
               }}
               onClick={handleTech}
             >

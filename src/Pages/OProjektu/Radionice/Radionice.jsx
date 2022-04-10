@@ -1,9 +1,8 @@
 import React from "react";
 import "./Radionice.scss";
-import PredavacReact1 from "../../../Assets/Images/predavacReact1.jpg";
-import PredavacReact2 from "../../../Assets/Images/predavacReact2.jpg";
+
 // mora ovo isto u props
-import Logo1 from "../../../Assets/Images/logo1.png";
+// import Logo1 from "../../../Assets/Images/logo1.png";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -68,7 +67,7 @@ const Radionice = (props) => {
           >
             <div className="predavac1">
               <div className="slikePredavaca">
-                <img src={PredavacReact1} alt="zemaljac" />
+                <img src={props.slikaPredavaca1} alt="zemaljac" />
               </div>
               <div
                 className="oPredavacu"
@@ -97,7 +96,7 @@ const Radionice = (props) => {
               </div>
               <div className="slikePredavaca">
                 <img
-                  src={PredavacReact2}
+                  src={props.slikaPredavaca2}
                   className="predavac-img"
                   alt="zemaljac"
                 />
@@ -113,9 +112,11 @@ const Radionice = (props) => {
 
             <div className="companyLink">
               <div className="logoKompanije">
-                <img src={Logo1} alt="kompanije studentima logo" />
+                <img src={props.logo} className="logoRadionica" alt="kompanije studentima logo" />
               </div>
-              <a href={props.link}> Saznaj vise o kompaniji</a>
+              <a 
+              // style={{display: detalji?"none":"block"}} 
+              href={props.link}>Saznaj više o kompaniji</a>
             </div>
           </div>
         </div>

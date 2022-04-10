@@ -6,27 +6,14 @@
   width: 100%;
   @include box-center($justify: flex-start);
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 3vw;
   color: rgba(0, 0, 0, 0.87);
   &:last-child {
     // margin-bottom: 6rem;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .wrap-radionica {
-    // margin: 2%;
-    flex-direction: column;
-    .predavaci {
-      width: 90%;
-      padding: 0%;
-      padding-top: 10px;
-    }
-    .opis {
-      width: 90%;
-    }
-  }
-}
+
 .wrap-radionica {
   @include box-center($direction: row, $justify: space-around);
   flex-wrap: wrap;
@@ -133,17 +120,23 @@
     }
   }
   .companyLink {
-    @include box-center($direction: row, $justify: flex-start);
+    @include box-center($direction: row, $justify: space-around);
 
     width: 50%;
     height: 5vmax;
     // border: 2px solid black;
     background-color: rgb(255, 255, 255);
+    overflow: hidden;
     border-radius: 1.5rem 0rem 0rem 0rem;
+    padding-left: 2%;
     .logoKompanije {
-      width: 40%;
+      width: 50%;
+      height: 90%;
+      // overflow: hidden;  zanimljivo
       img {
-        width: 40%;
+        padding-top: 2%;
+        // width: 80%;
+        height: 90%;
         // border-radius: 2px solid gold;
         // padding: 4%;
         // height: 50px;
@@ -151,11 +144,41 @@
     }
   }
   a {
+    margin-right: 2%;
+
     text-decoration: none;
     color: black;
     font-size: calc(1.5vmax + 0.4em);
+    
   }
 }
 // .radionicaKomponenta {
 //   width: 690px;
 // }
+@media screen and (max-width: 768px) {
+  .wrap-radionica {
+    // margin: 2%;
+    flex-direction: column;
+    .predavaci {
+      width: 90%;
+      padding: 0%;
+      padding-top: 10px;
+    }
+    .opis {
+      width: 90%;
+    }
+    a{
+      display: none;
+    }
+    .companyLink{
+      flex-direction: row;
+      justify-content: flex;
+    }
+    .logoKompanije {
+      
+    .logoRadionica{
+  
+}
+    }
+  }
+}

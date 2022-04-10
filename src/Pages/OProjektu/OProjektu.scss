@@ -16,6 +16,8 @@
   border-radius: 40px;
   margin: 2% 0% 5% 0%;
   padding: 0.5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   height: calc(2.7rem + 0.5vw);
 
   .dugmeOProjektu {
@@ -24,10 +26,10 @@
     height: calc(2rem + 0.5vw);
     padding: 0px;
     font-weight: 500;
-    width: 24%;
+    width: 23%;
     border-radius: 20rem;
     border: none;
-    color: rgba(255, 255, 255, 0.85);
+    // color: rgba(255, 255, 255, 0.85);
     background-color: $pozadina_nav_oprojektu;
     padding: 0.8rem 0.2rem;
     vertical-align: middle;
@@ -77,10 +79,13 @@
 //   @include box-center($direction: row, $justify: center);
 //   flex-wrap: wrap;
 // }
-// .panelipls {
-//   display: flex;
-//   flex-direction: row;
-// }
+.panelipls {
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .presek-dana {
   width: 95%;
@@ -89,7 +94,7 @@
   border-right: 1px solid whitesmoke;
   border-left: 1px solid whitesmoke;
   text-align: center;
-  margin: 5%;
+  margin: 10%;
   .krug-presek {
     position: relative;
     left: calc(50% - 2rem);

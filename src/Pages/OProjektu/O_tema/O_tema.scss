@@ -10,6 +10,7 @@
     .div-za-tekst {
       width: 90%;
       margin: 0 auto;
+      padding: 0;
       justify-content: center;
       // border: 2px solid gold;
     }
@@ -30,6 +31,7 @@
 }
 .div-za-tekst {
   width: 55%;
+  padding-right: 6vw;
   font-size: calc(0.8vmax + 0.4em);
   .ime-otema {
     color: rgba(255, 255, 255, 0.85);

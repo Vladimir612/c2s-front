@@ -20,6 +20,14 @@ const Panel = (props) => {
     >
       <motion.div
         className="panel-item"
+        style={{
+          backgroundColor:
+            props.titula === "MODERATOR PANELA" ? "#CC203A" : "#b4afb3",
+          color:
+            props.titula === "MODERATOR PANELA"
+              ? "rgba(255,255,255,0.9)"
+              : "rgba(0,0,0,0.9)",
+        }}
         animate={visiblePanel && { y: 0, opacity: 1 }}
         initial={{
           y: 80,
@@ -36,9 +44,13 @@ const Panel = (props) => {
               className="divLogo"
               style={{
                 display: props.titula === "MODERATOR PANELA" ? "none" : "block",
-                
               }}
-            ></div>
+            >
+              {" "}
+              <div className="slikaRam">
+                <img src={props.logo} alt="" className="slikaLogo" />
+              </div>
+            </div>
           </div>
           <div className="panel-middle">
             <div className="slika-panel">

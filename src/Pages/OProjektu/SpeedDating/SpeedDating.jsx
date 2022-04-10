@@ -28,7 +28,11 @@ const SpeedDating = (props) => {
       >
         <div className="companyLink">
           <div className="logoKompanije">
-            <img src={props.logo} alt="kompanije studentima logo" />
+            <img
+              className="speedLogo"
+              src={props.logo}
+              alt="kompanije studentima logo"
+            />
           </div>
           <a href={props.link}> Saznaj vise o kompaniji</a>
         </div>
