@@ -1,1 +1,49 @@
-@import "../../global.scss";
+@import "../../../global.scss";
+
+
+.speedDating-item {
+  @include box-center($direction: column, $justify: center);
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 2vw;
+  .companyLink {
+    @include box-center($direction: row, $justify: space-around);
+
+    width: 90%;
+    height: 80%;
+    // border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5rem;
+    .logoKompanije {
+      width: 30%;
+      height: 9vh;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      .speedLogo {
+        // vertical-align: middle;
+        padding-top: 1vh;
+        height: 8vh;
+        // border-radius: 2px solid gold;
+        // padding: 4%;
+        // height: 50px;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    font-size: calc(1.5vmax + 0.4em);
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  
+  .speedLogo{
+    position: relative;
+    top: 22%;
+    left: -20%;
+    height: 2vw;
+    padding: 30%;
+  }
+}
+

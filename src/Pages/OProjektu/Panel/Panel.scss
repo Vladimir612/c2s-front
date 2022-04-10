@@ -1,1 +1,140 @@
-@import "../../global.scss";
+@import "../../../global.scss";
+.panel-item {
+  @include box-center($direction: row, $justify: center);
+  width: 40vw;
+  height: 40vw;
+  margin-bottom: 7vw;
+
+  flex-wrap: wrap;
+  //   height: fit-content;
+  //   padding: 30px;
+  overflow: hidden;
+  background-color: #b4afb3;
+  border-radius: 1.5rem;
+  .wrap-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.panel-top {
+  @include box-center($direction: row, $justify: space-between);
+  // border: 2px solid red;
+  // height: 150px;
+  width: 100%;
+
+  height: 15%;
+
+  .titula {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      justify-content: center;
+      text-align: center;
+      font-size: calc(2vmax + 0.8em);
+      // margin-top: 2vh;
+      // @media screen and (max-width: 768px) {
+      //   font-size: 2.5vh;
+      // }
+    }
+  }
+  .divLogo {
+    background-color: white;
+    border-radius: 0rem 0rem 0rem 1.5rem;
+    width: 45%;
+    height: 98%;
+    // border: 2px solid black;
+    .slikaRam{
+      height: 100%;
+      margin: 3%;
+      .slikaLogo{
+        width: 90%;
+        // height: 60%;
+        margin: 3%;
+        margin-top: 10%;
+      }
+    }
+
+  }
+}
+.panel-middle {
+  display: flex;
+  flex: row;
+  width: 100%;
+  height: 45%;
+
+  .slika-panel {
+    width: 50%;
+    margin-top: 4%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    img {
+      height: 88.89%;
+      width: 80%;
+      // border: 2px solid gold;
+      border-radius: 50%;
+    }
+  }
+
+  .panelista-info {
+    // border: 2px solid red;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 2vw;
+    margin-top: 2%;
+    h4 {
+      font-size: 3vmax;
+      // @media screen and (max-width: 768px) {
+      //   font-size: 2vh;
+      // }
+    }
+    p {
+      font-size: 2vmax;
+      // @media screen and (max-width: 768px) {
+      //   font-size: 1.5vh;
+      // }
+    }
+  }
+}
+.panel-bottom {
+  width: 100%;
+  height: 40%;
+  max-height: fit-content;
+  // border: 2px solid red;
+  p {
+    font-size: calc(0.8vmax + 0.4em);
+    margin: 5%;
+    text-align: justify;
+    text-overflow: ellipsis;
+    // @media screen and (max-width: 768px) {
+    //   font-size: 1.5vh;
+    // }
+  }
+}
+.panel-item {
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+    height: 90vw;
+
+    // .titula {
+    //   h2 {
+    //     font-size: 2.5vh;
+    //   }
+    // }
+    .panelista-info {
+      // h4 {
+      //   font-size: 2vh;
+      // }
+    }
+  }
+}
