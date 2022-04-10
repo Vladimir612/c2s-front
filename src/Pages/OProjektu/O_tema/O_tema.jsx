@@ -1,11 +1,11 @@
-import "./OTema.scss";
+import "./O_tema.scss";
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 import React from "react";
 
-const OTema = (props) => {
+const O_tema = (props) => {
   const [visibleOtema, setVisibleOtema] = useState(false);
   return (
     <VisibilitySensor
@@ -38,6 +38,15 @@ const OTema = (props) => {
           <div className="div-za-tekst">
             <h1 className="ime-otema">{props.ime}</h1>
             <p className="tekst-otema">{props.text}</p>
+            <button
+              style={{
+                display:
+                  props.procitajPravilnik === "prikazi" ? "block" : "none",
+              }}
+              className="dugmePravilnik"
+            >
+             <span> Pročitaj pravilnik</span>
+            </button>
           </div>
         </div>
       </motion.div>
@@ -45,4 +54,4 @@ const OTema = (props) => {
   );
 };
 
-export default OTema;
+export default O_tema;

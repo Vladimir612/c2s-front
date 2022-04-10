@@ -45,6 +45,7 @@ const Radionice = (props) => {
             <div
               className="tekstualniOpis"
               style={{
+                transition: "height ease 3s",
                 height: detalji ? "15vh" : "fit-content",
               }}
             >
@@ -83,6 +84,13 @@ const Radionice = (props) => {
               </div>
             </div>
             <div className="predavac2">
+              <div className="slikePredavaca">
+                <img
+                  src={props.slikaPredavaca2}
+                  className="predavac-img"
+                  alt="zemaljac"
+                />
+              </div>
               <div
                 className="oPredavacu"
                 style={{
@@ -94,19 +102,12 @@ const Radionice = (props) => {
                 <br></br>
                 <p>{props.tekstPredavac2}</p>
               </div>
-              <div className="slikePredavaca">
-                <img
-                  src={props.slikaPredavaca2}
-                  className="predavac-img"
-                  alt="zemaljac"
-                />
-              </div>
             </div>
           </div>
           <div className="bottom-radionica">
             <div className="details">
               <button className="dugmeOProjektu" onClick={handleDetails}>
-                {detalji ? "Prikaži detaljnije" : "Sakrij detaljnije"}
+                {detalji ? "Prikaži detaljnije v" : "Sakrij detaljnije ^"}
               </button>
             </div>
 

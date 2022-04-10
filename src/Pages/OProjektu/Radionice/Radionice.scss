@@ -1,7 +1,7 @@
 @import "../../../global.scss";
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+// * {
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+// }
 .radionica-item {
   width: 100%;
   @include box-center($justify: flex-start);
@@ -13,6 +13,14 @@
   }
 }
 
+// @keyframes detaljiShow {
+//   0% {
+//     height: 15vh;
+//   }
+//   100% {
+//     height: fit-content;
+//   }
+// }
 
 .wrap-radionica {
   @include box-center($direction: row, $justify: space-around);
@@ -43,8 +51,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     // white-space:pre-line;
-
-    font-size: calc(0.8vmax + 0.4em);
+    // transition: height ease 3s;
+    font-size: calc(0.8vmax + 0.6em);
     text-align: justify;
     padding: 1vw;
   }
@@ -60,47 +68,58 @@
 .predavaci {
   @include box-center($direction: column, $justify: space-between);
   width: 50%;
-  // margin-left: 2vw;
-  padding-left: 2vw;
+  padding-left: 3vw;
+  padding-right: 1vw;
+
   p {
     height: 50%;
-    align-self: baseline;
+    // align-self: baseline;
     // font-size: 2vw;
-    font-size: calc(0.8vmax + 0.4em);
+    font-size: calc(0.8vmax + 0.5em);
   }
   h2 {
-    font-size: calc(0.8vmax + 0.8em);
+    font-size: calc(0.8vmax + 0.85em);
+    margin-top: 10%;
   }
   h4 {
-    font-size: calc(0.8vmax + 0.6em);
+    font-size: calc(0.8vmax + 0.65em);
   }
   .slikePredavaca {
-    margin-top: 5%;
-    width: 20vw;
+    margin-top: 8%;
+    // margin-right: 20%;
+    width: 18vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+
     display: flex;
     justify-content: center;
+
     img {
       border-radius: 50%;
-      width: 90%;
+      // width: 130%;
+      width: 17vw;
+      transition: height 2s;
     }
   }
   .oPredavacu {
+    // margin-top: 10%;
     display: flex;
-    // align-items: left;
     flex-direction: column;
-    justify-content: space-between;
-    // transition: display 2s ease-out;
-    // font-size: calc(0.8vmax + 0.6em);
+    justify-content: center;
 
-    width: 65%;
+    width: 50vw;
     height: 100%;
   }
 }
 .predavac1 {
-  @include box-center($direction: row, $justify: space-around);
+  @include box-center($direction: row, $justify: flex-start);
+  width: 100%;
 }
 .predavac2 {
-  @include box-center($direction: row, $justify: space-around);
+  @include box-center($direction: row-reverse, $justify: flex-start);
+  width: 100%;
 }
 
 .bottom-radionica {
@@ -120,7 +139,7 @@
     }
   }
   .companyLink {
-    @include box-center($direction: row, $justify: space-around);
+    @include box-center($direction: row, $justify: flex-start);
 
     width: 50%;
     height: 5vmax;
@@ -129,17 +148,16 @@
     overflow: hidden;
     border-radius: 1.5rem 0rem 0rem 0rem;
     padding-left: 2%;
+    // padding-right: 2%;
     .logoKompanije {
       width: 50%;
       height: 90%;
       // overflow: hidden;  zanimljivo
-      img {
-        padding-top: 2%;
+      .logoRadionica {
+        padding-top: 3%;
         // width: 80%;
         height: 90%;
-        // border-radius: 2px solid gold;
-        // padding: 4%;
-        // height: 50px;
+        margin-left: 8%;
       }
     }
   }
@@ -149,7 +167,6 @@
     text-decoration: none;
     color: black;
     font-size: calc(1.5vmax + 0.4em);
-    
   }
 }
 // .radionicaKomponenta {
@@ -163,22 +180,27 @@
       width: 90%;
       padding: 0%;
       padding-top: 10px;
+      .slikePredavaca {
+        width: 30vw;
+        img {
+          width: 30vw;
+        }
+      }
     }
     .opis {
       width: 90%;
     }
-    a{
+    a {
       display: none;
     }
-    .companyLink{
+    .companyLink {
       flex-direction: row;
       justify-content: flex;
     }
     .logoKompanije {
-      
-    .logoRadionica{
-  
-}
+      .logoRadionica {
+        // transform: scale(0.8);
+      }
     }
   }
 }

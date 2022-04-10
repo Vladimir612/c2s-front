@@ -1,5 +1,28 @@
 @import "../../global.scss";
 
+@media screen and (min-width: 1700px) {
+  .dugmeOProjektu {
+    height: 2.5vw;
+
+    p {
+      margin-top: 0.17vw;
+    }
+  }
+}
+@media screen and (min-width: 2300px) {
+  .dugmeOProjektu {
+    p {
+      margin-top: 0.3vw;
+    }
+  }
+}
+@media screen and (max-width: 1700px) {
+  .dugmeOProjektu {
+    height: calc(2rem + 0.5vw);
+  }
+}
+//ovo gore je da bude ok na ultrawide i 4k
+
 .wrap-oprojektu {
   @include box-center($direction: column, $justify: center);
   width: 100%;
@@ -21,28 +44,26 @@
   height: calc(2.7rem + 0.5vw);
 
   .dugmeOProjektu {
-    // display: table-cell;
     font-size: calc(0.55rem + 0.8vw);
-    height: calc(2rem + 0.5vw);
+    // height: calc(2rem + 0.5vw);
     padding: 0px;
     font-weight: 500;
     width: 23%;
     border-radius: 20rem;
     border: none;
-    // color: rgba(255, 255, 255, 0.85);
     background-color: $pozadina_nav_oprojektu;
     padding: 0.8rem 0.2rem;
     vertical-align: middle;
     overflow: hidden;
     //ovde menjati piksele ako je problem u dugmicima u navu
     #prviProblem {
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 599px) {
         position: relative;
         top: calc(-0.5rem - 0.125vw);
       }
     }
     #drugiProblem {
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 1005px) {
         position: relative;
         top: calc(-0.5rem - 0.125vw);
       }
@@ -54,14 +75,12 @@
       vertical-align: middle;
     }
   }
-  .dugmeOProjektu:hover {
-    // color: antiquewhite;
-    background-color: $crvena;
-  }
-  .dugmeOProjektu:focus {
-    // color: antiquewhite;
-    background-color: $crvena;
-  }
+  // .dugmeOProjektu:hover {
+  //   background-color: $crvena;
+  // }
+  // .dugmeOProjektu:focus {
+  //   background-color: $crvena;  ne funkcionise sa ternarnim u jsx
+  // }
 }
 .contentOProjektu-radionica {
   @include box-center($direction: column, $justify: center);
@@ -72,13 +91,6 @@
 .contentOProjektu-panel {
   @include box-center($direction: column, $justify: center);
 }
-
-// // @include box-center($direction: column, $justify: center);
-
-// .panelKomad {
-//   @include box-center($direction: row, $justify: center);
-//   flex-wrap: wrap;
-// }
 .panelipls {
   width: 95vw;
   display: flex;
@@ -95,18 +107,19 @@
   border-left: 1px solid whitesmoke;
   text-align: center;
   margin: 10%;
+  font-size: 1rem;
   .krug-presek {
     position: relative;
-    left: calc(50% - 2rem);
-    bottom: 2rem;
-    width: 4rem;
-    height: 4rem;
+    left: calc(50% - 4vmax);
+    bottom: 4vmax;
+    width: 8vmax;
+    height: 8vmax;
     //treba da se poppravi za tel
     background-color: whitesmoke;
-    border-radius: 5rem;
+    border-radius: 50%;
     p {
       position: relative;
-      top: 33%;
+      top: calc(4vmax - 0.5rem);
     }
   }
 }
@@ -136,4 +149,6 @@
     flex-direction: row;
     justify-content: center;
   }
+}
+@media screen and (max-width: 768px) {
 }
