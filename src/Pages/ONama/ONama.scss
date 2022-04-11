@@ -1,0 +1,133 @@
+@import "../../global.scss";
+
+.logo-c2s {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  margin: 2rem;
+  position: relative;
+  .levi-trapez {
+    border-bottom: 120px solid $crvena;
+    border-right: 30px solid transparent;
+    height: 0;
+    width: 90px;
+  }
+
+  .srednji-trapez {
+    border-bottom: 80px solid $crvena;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 70px;
+    transform: rotate(180deg) translateX(14px);
+  }
+
+  .desni-trapez {
+    border-bottom: 52px solid $crvena;
+    border-left: 13px solid transparent;
+    height: 0;
+    width: 45px;
+    transform: translateX(-20px);
+  }
+  .lopte-nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .lop {
+      cursor: pointer;
+      position: absolute;
+      width: 1.1rem;
+      height: 1.1rem;
+      color: $crvena;
+      background: #fff;
+      border-radius: 50%;
+      z-index: 2;
+      @include box-center;
+      font-size: 0.7rem;
+      font-weight: 500;
+      box-shadow: inset 0 0 4px 3px rgba(0, 0, 0, 0.24);
+      transition: all ease-in 0.2s;
+      &.active {
+        box-shadow: 0 0 4px 3px rgb(255 255 255 / 47%),
+          inset 0 0 4px 3px rgba(0, 0, 0, 0.24);
+        width: 1.15rem;
+        height: 1.15rem;
+      }
+      &:hover {
+        box-shadow: 0 0 4px 3px rgb(255 255 255 / 47%),
+          inset 0 0 4px 3px rgba(0, 0, 0, 0.24);
+      }
+      &.lopta-1 {
+        top: 8px;
+        left: 13px;
+      }
+      &.lopta-2 {
+        top: 50%;
+        left: 42px;
+        transform: translateY(-50%);
+      }
+      &.lopta-3 {
+        bottom: 13px;
+        left: 7px;
+      }
+      &.lopta-4 {
+        top: 28px;
+        left: 55%;
+        transform: translateX(-50%);
+      }
+      &.lopta-5 {
+        bottom: 28px;
+        left: 52%;
+        transform: translateX(-50%);
+      }
+      &.lopta-6 {
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .linije-nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .lin {
+      width: 5px;
+      height: 2rem;
+      background: #fff;
+      position: absolute;
+      &.linija-1 {
+        top: 26px;
+        left: 22px;
+        transform: rotate(-35deg) translateX(14px);
+      }
+      &.linija-2 {
+        top: 50px;
+        left: 22px;
+        transform: rotate(44deg) translateX(14px);
+      }
+      &.linija-3 {
+        top: 8px;
+        left: 72px;
+        transform: rotate(68deg) translateX(14px);
+        height: 3rem;
+      }
+      &.linija-4 {
+        top: 37px;
+        left: 91px;
+        transform: rotate(10deg) translateX(14px);
+      }
+      &.linija-5 {
+        top: 29px;
+        left: 122px;
+        transform: rotate(68deg) translateX(14px);
+        height: 3rem;
+      }
+    }
+  }
+}
