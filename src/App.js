@@ -17,7 +17,7 @@ function App() {
       {/* <ScrollToTop /> */}
       <Routes>
         <Route path="/" element={<Pocetna />} />
-        <Route path="/o-projektu" element={<OProjektu />} />
+        <Route path="/o-projektu/*" element={<OProjektu />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/o-nama" element={<ONama />} />
         <Route path="/nasi-partneri/*" element={<NasiPartneri />} />

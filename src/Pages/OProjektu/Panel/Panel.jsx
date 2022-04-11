@@ -1,72 +1,98 @@
-import "./Panel.scss";
 import React from "react";
-import VisibilitySensor from "react-visibility-sensor";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import ModeratorSlika from "../../../Assets/Images/predavacReact1.jpg";
+import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
+import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
+import UcesnikPanela from "./UcesnikPanela";
+import "./Panel.scss";
 
-const Panel = (props) => {
-  const [visiblePanel, setVisiblePanel] = useState(false);
+//kompanije
+import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
+
+const Panel = () => {
+  const ucesniciPanela = [
+    {
+      moderator: true,
+      ime: "Jovana Jovanovic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: slikaZaposleni,
+    },
+    {
+      moderator: false,
+      ime: "Jovana Jovanovic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: slikaZaposleni,
+      slikaKompanije: raiffeisen,
+      linkKompanije: "/nasi-partneri/raiffeisen",
+    },
+    {
+      moderator: false,
+      ime: "Jovana Jovanovic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: slikaZaposleni,
+      slikaKompanije: raiffeisen,
+      linkKompanije: "/nasi-partneri/raiffeisen",
+    },
+    {
+      moderator: false,
+      ime: "Jovana Jovanovic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: slikaZaposleni,
+      slikaKompanije: raiffeisen,
+      linkKompanije: "/nasi-partneri/raiffeisen",
+    },
+    {
+      moderator: false,
+      ime: "Jovana Jovanovic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: slikaZaposleni,
+      slikaKompanije: raiffeisen,
+      linkKompanije: "/nasi-partneri/raiffeisen",
+    },
+    {
+      moderator: false,
+      ime: "Jovana Jovanovic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: slikaZaposleni,
+      slikaKompanije: raiffeisen,
+      linkKompanije: "/nasi-partneri/raiffeisen",
+    },
+  ];
   return (
-    <VisibilitySensor
-      onChange={(isVisible) => {
-        if (isVisible && !visiblePanel) {
-          setVisiblePanel(true);
-        }
-        return;
-      }}
-      delayedCall
-      partialVisibility
-    >
-      <motion.div
-        className="panel-item"
-        style={{
-          backgroundColor:
-            props.titula === "MODERATOR PANELA" ? "#CC203A" : "#b4afb3",
-          color:
-            props.titula === "MODERATOR PANELA"
-              ? "rgba(255,255,255,0.9)"
-              : "rgba(0,0,0,0.9)",
-        }}
-        animate={visiblePanel && { y: 0, opacity: 1 }}
-        initial={{
-          y: 80,
-          opacity: 0,
-        }}
-        transition={{ duration: 1 }}
-      >
-        <div className="wrap-panel">
-          <div className="panel-top">
-            <div className="titula">
-              <h2>{props.titula}</h2>
-            </div>
-            <div
-              className="divLogo"
-              style={{
-                display: props.titula === "MODERATOR PANELA" ? "none" : "block",
-              }}
-            >
-              {" "}
-              <div className="slikaRam">
-                <img src={props.logo} alt="" className="slikaLogo" />
-              </div>
-            </div>
-          </div>
-          <div className="panel-middle">
-            <div className="slika-panel">
-              <img src={props.slika} alt="" className="" />
-            </div>
-            <div className="panelista-info">
-              <h4>{props.ime}</h4>
-              <p>{props.opisRadnogMesta}</p>
-            </div>
-          </div>
-          <div className="panel-bottom">
-            <p className="bottomText">{props.bottomText}</p>
-          </div>
+    <div className="panel-container">
+      <div className="o-projektu-uvod">
+        <div className="slika">
+          <img src={ilustracijaTest} alt="Radionica" />
         </div>
-      </motion.div>
-    </VisibilitySensor>
+        <div className="tekst">
+          <h2>TEMA PANELA</h2>
+          <p>
+            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
+            da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice
+            koje smo do sada održali pokrivale su frontend i backend
+            development, web development, web dizajn, grafički dizajn, game
+            development, data science, kao i mnoge tehnologije u pomenutim
+            oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
+            razvoju soft, odnosno mekih veština.
+          </p>
+        </div>
+      </div>
+      <div className="ucesnici-panela">
+        {ucesniciPanela.map((ucesnik, index) => {
+          return <UcesnikPanela ucesnik={ucesnik} key={index} />;
+        })}
+      </div>
+    </div>
   );
 };
 

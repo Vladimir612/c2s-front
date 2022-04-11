@@ -1,154 +1,94 @@
 @import "../../global.scss";
 
-@media screen and (min-width: 1700px) {
-  .dugmeOProjektu {
-    height: 2.5vw;
+.o-projektu-container {
+  margin-top: 3.8rem;
+  .o-projektu-navigation {
+    width: fit-content;
+    @include box-center;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    background: $pozadina_nav_oprojektu;
+    border-radius: 2rem;
+    ul {
+      @include box-center;
+      li {
+        padding: 0.7rem 1.5rem;
+        a {
+          color: #fff;
+          transition: all ease-in 0.2s;
+        }
+        a:hover {
+          color: $crvena;
+        }
 
-    p {
-      margin-top: 0.17vw;
-    }
-  }
-}
-@media screen and (min-width: 2300px) {
-  .dugmeOProjektu {
-    p {
-      margin-top: 0.3vw;
-    }
-  }
-}
-@media screen and (max-width: 1700px) {
-  .dugmeOProjektu {
-    height: calc(2rem + 0.5vw);
-  }
-}
-//ovo gore je da bude ok na ultrawide i 4k
-
-.wrap-oprojektu {
-  @include box-center($direction: column, $justify: center);
-  width: 100%;
-  background-color: $pozadina_tamna;
-  flex-wrap: wrap;
-}
-
-.nav_OProjektu {
-  @include box-center($direction: row, $justify: space-around);
-  width: calc(8em + 57%);
-
-  color: #989898;
-  background-color: $pozadina_nav_oprojektu;
-  border-radius: 40px;
-  margin: 2% 0% 5% 0%;
-  padding: 0.5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  height: calc(2.7rem + 0.5vw);
-
-  .dugmeOProjektu {
-    font-size: calc(0.55rem + 0.8vw);
-    // height: calc(2rem + 0.5vw);
-    padding: 0px;
-    font-weight: 500;
-    width: 23%;
-    border-radius: 20rem;
-    border: none;
-    background-color: $pozadina_nav_oprojektu;
-    padding: 0.8rem 0.2rem;
-    vertical-align: middle;
-    overflow: hidden;
-    //ovde menjati piksele ako je problem u dugmicima u navu
-    #prviProblem {
-      @media screen and (max-width: 599px) {
-        position: relative;
-        top: calc(-0.5rem - 0.125vw);
+        &.active {
+          background: $crvena;
+          border-radius: 2rem;
+          a {
+            color: #fff !important;
+          }
+        }
       }
     }
-    #drugiProblem {
-      @media screen and (max-width: 1005px) {
-        position: relative;
-        top: calc(-0.5rem - 0.125vw);
+  }
+
+  .o-projektu-uvod {
+    @include box-center($justify: space-around);
+    gap: 2rem;
+    padding: 4rem 2rem;
+    .slika {
+      display: contents;
+      margin-right: 2rem;
+      img {
+        width: 26rem;
       }
     }
-    p {
-      position: relative;
-      top: calc(-0.15vw - 0.05em);
-      text-align: center;
-      vertical-align: middle;
+    .tekst {
+      color: #fff;
+      h2 {
+        margin-bottom: 2rem;
+      }
     }
   }
-  // .dugmeOProjektu:hover {
-  //   background-color: $crvena;
-  // }
-  // .dugmeOProjektu:focus {
-  //   background-color: $crvena;  ne funkcionise sa ternarnim u jsx
-  // }
-}
-.contentOProjektu-radionica {
-  @include box-center($direction: column, $justify: center);
 
-  width: 95%;
-}
-
-.contentOProjektu-panel {
-  @include box-center($direction: column, $justify: center);
-}
-.panelipls {
-  width: 95vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.presek-dana {
-  width: 95%;
-  height: 1rem;
-  border-top: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
-  border-left: 1px solid whitesmoke;
-  text-align: center;
-  margin: 10%;
-  font-size: 1rem;
-  .krug-presek {
-    position: relative;
-    left: calc(50% - 4vmax);
-    bottom: 4vmax;
-    width: 8vmax;
-    height: 8vmax;
-    //treba da se poppravi za tel
-    background-color: whitesmoke;
-    border-radius: 50%;
+  .donji-nav {
+    background: $crvena;
+    height: 15rem;
+    @include box-center($direction: column);
     p {
-      position: relative;
-      top: calc(4vmax - 0.5rem);
-    }
-  }
-}
-.crvenoDole {
-  width: 100%;
-  height: 10%;
-  background-color: $crvena;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: column;
-
-  .pogledaj-ostalo {
-    display: flex;
-    flex: row;
-    justify-content: center;
-    // vertical-align: middle;
-    // width: 35%;
-    p {
-      margin-top: 3%;
-      // padding-top: 4%;
-      color: white;
+      color: #fff;
+      font-size: 1.4rem;
       font-weight: 500;
     }
   }
-  .doleNav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .o-projektu-container {
+    .o-projektu-uvod {
+      flex-direction: column;
+    }
   }
 }
-@media screen and (max-width: 768px) {
+
+@media only screen and (max-width: 600px) {
+  .o-projektu-container {
+    .o-projektu-uvod {
+      .slika {
+        img {
+          width: 20rem;
+        }
+      }
+    }
+    .o-projektu-navigation {
+      font-size: 1rem;
+      margin: 1rem auto 0 auto;
+      ul {
+        flex-direction: column;
+        li {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 }

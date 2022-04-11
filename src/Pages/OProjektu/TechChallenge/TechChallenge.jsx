@@ -1,43 +1,81 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
+import { BsArrowRight } from "react-icons/bs";
 import "./TechChallenge.scss";
-import VisibilitySensor from "react-visibility-sensor";
-import { motion } from "framer-motion";
-import { useState } from "react";
 
-const TechChallenge = (props) => {
-  const [visibleTechChallenge, setVisibleTechChallenge] = useState(false);
+//kompanije
+import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
+
+const TechChallenge = () => {
   return (
-    <VisibilitySensor
-      onChange={(isVisible) => {
-        if (isVisible && !visibleTechChallenge) {
-          setVisibleTechChallenge(true);
-        }
-        return;
-      }}
-      delayedCall
-      partialVisibility
-    >
-      <motion.div
-        className="speedDating-item"
-        animate={visibleTechChallenge && { y: 0, opacity: 1 }}
-        initial={{
-          y: 80,
-          opacity: 0,
-        }}
-        transition={{ duration: 1 }}
-      >
-                <div className="companyLink">
-          <div className="logoKompanije">
-            <img
-              className="speedLogo"
-              src={props.logo}
-              alt="kompanije studentima logo"
-            />
-          </div>
-          <a href={props.link}> Saznaj vise o kompaniji</a>
+    <div className="tech-challenge-container">
+      <div className="o-projektu-uvod">
+        <div className="slika">
+          <img src={ilustracijaTest} alt="Radionica" />
         </div>
-      </motion.div>
-    </VisibilitySensor>
+        <div className="tekst">
+          <h2>TECH CHALLENGE</h2>
+          <p>
+            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
+            da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice
+            koje smo do sada održali pokrivale su frontend i backend
+            development, web development, web dizajn, grafički dizajn, game
+            development, data science, kao i mnoge tehnologije u pomenutim
+            oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
+            razvoju soft, odnosno mekih veština.
+          </p>
+        </div>
+      </div>
+      <div className="kompanije">
+        <h2>KOMPANIJE</h2>
+        <Link to="/nasi-partneri/raiffeisen">
+          <div className="link-do-kompanije">
+            <div className="img-wrapper">
+              <img src={raiffeisen} alt="Raiffeisen" />
+            </div>
+            <p>Saznaj više o kompaniji</p>
+            <BsArrowRight size={35} color="#14191b" />
+          </div>
+        </Link>
+        <Link to="/nasi-partneri/raiffeisen">
+          <div className="link-do-kompanije">
+            <div className="img-wrapper">
+              <img src={raiffeisen} alt="Raiffeisen" />
+            </div>
+            <p>Saznaj više o kompaniji</p>
+            <BsArrowRight size={35} color="#14191b" />
+          </div>
+        </Link>
+        <Link to="/nasi-partneri/raiffeisen">
+          <div className="link-do-kompanije">
+            <div className="img-wrapper">
+              <img src={raiffeisen} alt="Raiffeisen" />
+            </div>
+            <p>Saznaj više o kompaniji</p>
+            <BsArrowRight size={35} color="#14191b" />
+          </div>
+        </Link>
+        <Link to="/nasi-partneri/raiffeisen">
+          <div className="link-do-kompanije">
+            <div className="img-wrapper">
+              <img src={raiffeisen} alt="Raiffeisen" />
+            </div>
+            <p>Saznaj više o kompaniji</p>
+            <BsArrowRight size={35} color="#14191b" />
+          </div>
+        </Link>
+        <Link to="/nasi-partneri/raiffeisen">
+          <div className="link-do-kompanije">
+            <div className="img-wrapper">
+              <img src={raiffeisen} alt="Raiffeisen" />
+            </div>
+            <p>Saznaj više o kompaniji</p>
+            <BsArrowRight size={35} color="#14191b" />
+          </div>
+        </Link>
+      </div>
+    </div>
   );
 };
 
