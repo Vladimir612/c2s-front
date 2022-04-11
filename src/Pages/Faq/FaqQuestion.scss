@@ -1,32 +1,36 @@
 @import "../../global.scss";
 
 .faq-question {
-  margin: 0 0 12px 0;
-  counter-increment: my-counter;
-  position: relative;
-  &::before {
-    content: counter(my-counter);
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, white;
-    position: absolute;
-    --size: 26px;
-    left: -40px;
-    line-height: var(--size);
-    width: var(--size);
-    height: var(--size);
-    top: 0;
-    background: rgb(204, 32, 58);
-    border-radius: 50%;
-    text-align: center;
-  }
-  .odg {
-    position: relative;
+  margin-bottom: 2rem;
+  .odgovor-wrapper {
     border: 1px solid white;
     overflow: hidden;
     border-radius: 1.5rem;
     padding: 1rem;
-    background-color: rgb(24, 29, 31);
+    font-weight: 300;
+    max-width: 60rem;
+    &.hidden {
+      border: none;
+    }
+  }
+  p {
+    color: #fff;
+  }
+  .pitanje-wrapper {
+    @include box-center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    .prikazi-odgovor {
+      background: $crvena;
+      margin-right: 1rem;
+      cursor: pointer;
+      @include box-center;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+    }
+  }
+  .pitanje {
+    font-weight: 500;
   }
 }

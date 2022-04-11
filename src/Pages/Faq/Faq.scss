@@ -1,78 +1,33 @@
 @import "../../global.scss";
 
 .faq-container {
-  background-color: #14181c;
-  color: white;
-  padding-right: 5vw;
-  width: 97%;
-  ul {
-    padding-left: 3vw;
-    width: 100%;
-  }
-
-  ul li {
-    margin: 0 0 12px 0;
-    position: relative;
-  }
-
+  margin: 0 2rem;
+  margin-top: 3.8rem;
+  padding: 2rem 3rem;
   .questions {
-    display: flex;
-    flex-direction: row;
-    margin-left: 2.5rem;
+    @include box-center;
+    justify-content: flex-start;
   }
-
-  ul li::before {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, white;
-    position: absolute;
-    left: -2.5rem;
-    line-height: 1.7rem;
-    width: 1.7rem;
-    height: 1.7rem;
-    top: 0;
-    background: rgb(204, 32, 58);
-    border-radius: 50%;
-    text-align: center;
-  }
-
-  .naslov1 {
-    margin-left: 2rem;
-  }
-  .naslov2 {
-    margin-top: 2.5rem;
-    flex: 1;
-  }
-
-  .answers {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sve {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    right: 0;
-    text-align: center;
-    margin-top: 3vw;
-  }
-
-  .slika1 {
-    width: 34%;
-    left: 0%;
+  .naslov {
+    color: #fff;
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    margin-bottom: 2rem;
   }
   .mejl {
-    display: flex;
-    flex-direction: column;
-    right: 0%;
-    padding-right: 0;
-    width: 66%;
+    @include box-center($direction: column);
     height: fit-content;
+    width: 100%;
+    .ime {
+      width: 100%;
+    }
+    .poruka {
+      width: 100%;
+    }
   }
 
   .unos {
@@ -91,15 +46,6 @@
   .unos2 {
     height: 8rem;
     padding-top: 0.4rem;
-  }
-
-  .dugme {
-    border: none;
-    background-color: rgb(204, 32, 58);
-    border-radius: 1.5rem;
-    height: 2.45rem;
-    width: 100%;
-    color: white;
   }
 
   .oko-dugme {
@@ -124,45 +70,40 @@
     padding: 1rem;
     background-color: rgb(24, 29, 31);
   }
-}
-
-@media (min-width: 426px) {
-  .faq-container {
-    .slika1 {
-      position: relative;
+  .postavite-pitanje {
+    @include box-center;
+    justify-content: flex-start;
+    max-width: 60rem;
+    .img-wrapper {
+      width: 50%;
+      max-width: 18rem;
+      img {
+        @include fit-image;
+      }
     }
-
-    .slika-levo {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      top: 0;
-      margin: auto;
-    }
+  }
+  .dugme-prijavi {
+    background: $crvena;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 0.8rem 3rem;
+    cursor: pointer;
+    color: $aktivni_link;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 9px #000000cc;
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 700px) {
   .faq-container {
-    .answers {
-      width: 103%;
-    }
-
-    .naslov2 {
-      margin-bottom: -0.25vh;
-    }
-    .slika1 {
-      width: 78vw;
-      height: 20vh;
-      align-items: center;
-    }
-    .slika-levo {
-      width: auto;
-      height: 19vh;
-    }
-
-    .mejl {
-      width: 100%;
+    padding: 3rem 0 0 0;
+    .postavite-pitanje {
+      flex-direction: column;
+      gap: 2rem;
+      .img-wrapper {
+        width: 90%;
+      }
     }
   }
 }

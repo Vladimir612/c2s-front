@@ -1,8 +1,8 @@
 @import "../../global.scss";
 
 .partneri-nav {
-  position: fixed;
-  top: 4.7rem;
+  position: absolute;
+  top: 4.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -49,8 +49,8 @@
   }
   .video-wrapper {
     border-top: 2px solid $pozadina_siva;
-    position: fixed;
-    top: 3.8rem;
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100vw;
     height: calc(100vh - 3.8rem);
@@ -117,14 +117,6 @@
     .left-arrow,
     .right-arrow {
       display: none;
-    }
-  }
-}
-
-@media only screen and (max-width: 1275px) {
-  .partneri-container {
-    .video-wrapper {
-      top: 3.1rem;
     }
   }
 }

@@ -25,7 +25,7 @@ function App() {
           path="/godisnji-naturalni-medijski"
           element={<OstaliPartneri />}
         />
-        <Route path="/faqu" element={<Faq />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/prijava" element={<Prijava />} />
         <Route path="/generator" element={<Generator />} />
         <Route path="*" element={<Error />} />

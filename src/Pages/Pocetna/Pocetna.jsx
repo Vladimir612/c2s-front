@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Nav from "../../Components/Nav/Nav";
+import Footer from "../../Components/Footer/Footer";
 import Lopta from "./../../Utilities/Lopta/Lopta";
 import "./Pocetna.scss";
 import { motion } from "framer-motion";
@@ -17,7 +18,6 @@ import raiffeisen from "../../Assets/Images/Partneri/raiffeisen.svg";
 //carousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Footer from "../../Components/Footer/Footer";
 
 const Pocetna = () => {
   const pocetakPocetna = useRef();

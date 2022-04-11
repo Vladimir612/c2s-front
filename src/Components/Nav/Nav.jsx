@@ -85,10 +85,18 @@ const Nav = () => {
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <li>Radionice</li>
-                <li>Panel</li>
-                <li>Speed dating</li>
-                <li>Tech challenge</li>
+                <Link to="/o-projektu/radionice">
+                  <li>Radionice</li>
+                </Link>
+                <Link to="/o-projektu/panel">
+                  <li>Panel</li>
+                </Link>
+                <Link to="/o-projektu/speed-dating">
+                  <li>Speed dating</li>
+                </Link>
+                <Link to="/o-projektu/tech-challenge">
+                  <li>Tech challenge</li>
+                </Link>
               </motion.ul>
             </li>
 
@@ -239,10 +247,18 @@ const Nav = () => {
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <li>Radionice</li>
-              <li>Panel</li>
-              <li>Speed dating</li>
-              <li>Tech challenge</li>
+              <Link to="/o-projektu/radionice">
+                <li>Radionice</li>
+              </Link>
+              <Link to="/o-projektu/panel">
+                <li>Panel</li>
+              </Link>
+              <Link to="/o-projektu/speed-dating">
+                <li>Speed dating</li>
+              </Link>
+              <Link to="/o-projektu/tech-challenge">
+                <li>Tech challenge</li>
+              </Link>
             </motion.ul>
           </li>
           <Link
