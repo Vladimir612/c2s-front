@@ -1,90 +1,116 @@
 @import "../../global.scss";
 
-.o-nama-container{
+.o-nama-container {
   min-height: 100vh;
   color: #fff;
-  @include box-center($direction:column);
+  @include box-center($direction: column);
   margin: 0 2rem;
   margin-top: 12rem;
   gap: 15rem;
-  .o-nama-flex{
+  .o-nama-flex {
     @include box-center($justify: space-between);
     gap: 2rem;
-    .left-content, .right-content{
+    .left-content,
+    .right-content {
       flex: 1;
     }
-    .left-content{
-      h2{
+    .left-content {
+      h2 {
         font-size: 1.9rem;
         font-weight: 500;
         margin-bottom: 2rem;
       }
-      p{
+      p {
         font-size: 1.1rem;
-        font-weight: 300
+        font-weight: 300;
       }
     }
-    .right-content{
+    .right-content {
       @include box-center;
-      .img-wrapper{
+      .img-wrapper {
         width: 100%;
         height: 20rem;
         border-radius: 2rem;
         overflow: hidden;
-        img{
+        img {
           @include fit-image;
         }
       }
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       flex-direction: row-reverse;
+    }
+  }
+  .o-nama-timovi {
+    h2 {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .o-nama-carousel {
+      margin-bottom: 2rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    .o-nama-navigation {
+      @include box-center($justify: space-between);
+      padding: 1rem;
+      .left,
+      .right {
+        width: 2rem;
+        height: 2rem;
+        background: rgba(180, 175, 179, 0.2);
+        border-radius: 50%;
+        @include box-center;
+        cursor: pointer;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .o-nama-container{
+  .o-nama-container {
     margin-top: 5rem;
     gap: 10rem;
-    .o-nama-flex{
-      flex-direction: column!important;
-      .left-content{
+    .o-nama-flex {
+      flex-direction: column !important;
+      .left-content {
         margin-bottom: 2rem;
       }
     }
   }
 }
 
-
 .logo-c2s {
+  transform: translateX(0.8rem);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
-  margin: 2rem;
   position: relative;
   .levi-trapez {
-    border-bottom: 120px solid $crvena;
-    border-right: 30px solid transparent;
+    border-bottom: 6rem solid $crvena;
+    border-right: 1.5rem solid transparent;
     height: 0;
-    width: 90px;
+    width: 4.5rem;
   }
 
   .srednji-trapez {
-    border-bottom: 80px solid $crvena;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+    border-bottom: 4.4rem solid $crvena;
+    border-left: 1.1rem solid transparent;
+    border-right: 1.1rem solid transparent;
     height: 0;
-    width: 70px;
-    transform: rotate(180deg) translateX(14px);
+    width: 3.5rem;
+    transform: rotate(180deg) translateX(0.7rem);
   }
 
   .desni-trapez {
-    border-bottom: 52px solid $crvena;
-    border-left: 13px solid transparent;
+    border-bottom: 2.8rem solid $crvena;
+    border-left: 0.7rem solid transparent;
     height: 0;
-    width: 45px;
-    transform: translateX(-20px);
+    width: 2.4rem;
+    transform: translateX(-1rem);
   }
   .lopte-nav {
     position: absolute;
@@ -95,8 +121,8 @@
     .lop {
       cursor: pointer;
       position: absolute;
-      width: 18px;
-      height: 18px;
+      width: 1.1rem;
+      height: 1.1rem;
       color: $crvena;
       background: #fff;
       border-radius: 50%;
@@ -104,45 +130,42 @@
       @include box-center;
       font-size: 0.7rem;
       font-weight: 500;
-      box-shadow: inset 0 0 4px 3px rgba(0, 0, 0, 0.24);
+      box-shadow: inset 0 0 4px 3px rgba(0, 0, 0, 0.24),
+        0 0 6px 1px rgba(0, 0, 0, 0.493);
       transition: all ease-in 0.2s;
       &.active {
         box-shadow: 0 0 4px 3px rgb(255 255 255 / 47%),
           inset 0 0 4px 3px rgba(0, 0, 0, 0.24);
-        width: 21px;
-        height: 21px;
+        width: 1.2rem;
+        height: 1.2rem;
       }
       &:hover {
         box-shadow: 0 0 4px 3px rgb(255 255 255 / 47%),
           inset 0 0 4px 3px rgba(0, 0, 0, 0.24);
       }
       &.lopta-1 {
-        top: 8px;
-        left: 13px;
+        top: 4%;
+        left: 6%;
       }
       &.lopta-2 {
-        top: 50%;
-        left: 42px;
-        transform: translateY(-50%);
+        top: 40%;
+        left: 18%;
       }
       &.lopta-3 {
-        bottom: 13px;
-        left: 7px;
+        top: 72%;
+        left: 4%;
       }
       &.lopta-4 {
-        top: 28px;
-        left: 55%;
-        transform: translateX(-50%);
+        top: 23%;
+        left: 52%;
       }
       &.lopta-5 {
-        bottom: 28px;
-        left: 52%;
-        transform: translateX(-50%);
+        top: 60%;
+        left: 48%;
       }
       &.lopta-6 {
-        right: 28px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 40%;
+        left: 75%;
       }
     }
   }
@@ -153,35 +176,37 @@
     top: 0;
     left: 0;
     .lin {
-      width: 5px;
-      height: 42px;
+      width: 0.3rem;
+      height: 2rem;
       background: #fff;
       position: absolute;
+      box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.493);
       &.linija-1 {
-        top: 26px;
-        left: 22px;
-        transform: rotate(-35deg) translateX(14px);
+        top: 12%;
+        left: 15%;
+        transform: rotate(-30deg);
       }
       &.linija-2 {
-        top: 50px;
-        left: 22px;
-        transform: rotate(44deg) translateX(14px);
+        top: 50%;
+        left: 14%;
+        transform: rotate(38deg);
       }
       &.linija-3 {
-        top: 14px;
-        left: 65px;
-        transform: rotate(60deg) translateX(14px);
+        top: 13%;
+        left: 40%;
+        height: 3.4rem;
+        transform: rotate(73deg);
       }
       &.linija-4 {
-        top: 37px;
-        left: 68px;
-        transform: rotate(10deg) translateX(16px);
+        top: 35%;
+        left: 53.5%;
+        transform: rotate(11deg);
       }
       &.linija-5 {
-        top: 29px;
-        left: 122px;
-        transform: rotate(68deg) translateX(14px);
-        height: 48px;
+        top: 35%;
+        left: 68%;
+        height: 2.8rem;
+        transform: rotate(66deg);
       }
     }
   }

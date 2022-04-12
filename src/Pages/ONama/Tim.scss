@@ -1,0 +1,80 @@
+@import "../../global.scss";
+
+.tim-content {
+  @include box-center;
+  align-items: flex-start;
+  .tim-content-text {
+    width: 60%;
+    padding: 1rem;
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+    .img-wrapper {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        @include fit-image;
+      }
+    }
+    .o-nama-coordinator {
+      @include box-center;
+      margin-top: 2rem;
+      gap: 2rem;
+      justify-content: flex-start;
+      h5 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+    }
+  }
+  .o-nama-content-img {
+    width: 40%;
+    padding: 1rem;
+    .img-wrapper {
+      border-radius: 2rem;
+      overflow: hidden;
+      width: 100%;
+      img {
+        @include fit-image;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .tim-content {
+    flex-direction: column;
+    .tim-content-text {
+      width: 100%;
+    }
+    .o-nama-content-img {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tim-content {
+    .tim-content-text {
+      .o-nama-coordinator {
+        flex-direction: column;
+      }
+      .o-nama-coordinator-text {
+        @include box-center($direction: column);
+      }
+    }
+  }
+}
