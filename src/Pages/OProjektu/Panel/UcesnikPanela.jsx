@@ -5,6 +5,8 @@ import "./UcesnikPanela.scss";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
 
+import lopte2 from "../../../Assets/Images/krugovi-radionica.png";
+
 const UcesnikPanela = (props) => {
   const [vidljivPanelista, setVidljivPanelista] = useState(false);
 
@@ -32,6 +34,11 @@ const UcesnikPanela = (props) => {
         }}
         transition={{ duration: 1 }}
       >
+        {!props.ucesnik.moderator && (
+          <div className="lopte-slika">
+            <img src={lopte2} alt="Lopte" />
+          </div>
+        )}
         <h2>{props.ucesnik.moderator ? "MODERATOR PANELA" : "PANELISTA"}</h2>
         <div className="ucesnik">
           <div className="slika">

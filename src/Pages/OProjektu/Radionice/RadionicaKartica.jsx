@@ -7,7 +7,7 @@ import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
 
-import lopte2 from "../../../Assets/Images/o-projektu-krugovi-2.svg";
+import lopte2 from "../../../Assets/Images/krugovi-radionica.png";
 
 const RadionicaKartica = (props) => {
   const [prikaziDetaljnije, setPrikaziDetaljnije] = useState(false);
@@ -34,6 +34,9 @@ const RadionicaKartica = (props) => {
         transition={{ duration: 1 }}
       >
         <div className="top">
+          <div className="lopte-slika">
+            <img src={lopte2} alt="Lopte" />
+          </div>
           <div className="left">
             <h2>{props.radionica.naslov}</h2>
             <p>{props.radionica.prviParagraf}</p>
@@ -112,6 +115,11 @@ const RadionicaKartica = (props) => {
           </motion.div>
         </div>
         <div className="bottom">
+          {prikaziDetaljnije && (
+            <div className="lopte-slika">
+              <img src={lopte2} alt="Lopte" />
+            </div>
+          )}
           <div
             className="prikazi-sakrij"
             onClick={() => setPrikaziDetaljnije(!prikaziDetaljnije)}

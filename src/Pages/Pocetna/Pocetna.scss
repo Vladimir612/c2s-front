@@ -129,10 +129,16 @@
         &.crveno {
           border: none;
           background: #cc203a;
+          a {
+            color: #fff;
+          }
         }
         &.transparentno {
           border: 2px solid #fff;
           background: transparent;
+          a {
+            color: #fff;
+          }
         }
       }
     }
@@ -235,7 +241,7 @@
         .partner-wrapper {
           width: 13rem;
           height: 6rem;
-          margin: 0.9rem 0.6rem;
+          margin: 2rem 3.6rem;
           background: #fff;
           border-radius: 2rem;
           @include box-center($justify: center);

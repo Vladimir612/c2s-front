@@ -7,19 +7,35 @@
   border-radius: 2rem;
   padding: 2rem;
   color: $pozadina_tamna;
-  // .lopte-slika {
-  //   width: 15rem;
-  //   position: absolute;
-  //   img {
-  //     @include fit-image;
-  //   }
-  // }
+  .lopte-slika {
+    width: 5rem;
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    img {
+      @include fit-image;
+    }
+  }
+  .bottom {
+    .lopte-slika {
+      width: 5rem;
+      position: absolute;
+      top: initial;
+      bottom: 5%;
+      left: 35%;
+      transform: rotate(-40deg);
+      img {
+        @include fit-image;
+      }
+    }
+  }
   .top {
     overflow: hidden;
     margin-bottom: 3rem;
     @include box-center;
     gap: 3rem;
     .left {
+      z-index: 1;
       width: 50%;
       h2 {
         font-size: 2.1rem;
@@ -31,6 +47,7 @@
       }
     }
     .right {
+      z-index: 1;
       width: 50%;
       @include box-center($direction: column);
       gap: 2rem;
@@ -93,6 +110,9 @@
 @media only screen and (max-width: 1050px) {
   .radionica-kartica {
     padding: 2rem 0.7rem 7rem 0.7rem;
+    .lopte-slika {
+      display: none;
+    }
     .top {
       flex-direction: column;
       .left,

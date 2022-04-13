@@ -7,6 +7,16 @@
   width: 30rem;
   border-radius: 2rem;
   padding: 2rem;
+  .lopte-slika {
+    width: 5rem;
+    position: absolute;
+    top: 36%;
+    right: 5%;
+    transform: rotate(200deg);
+    img {
+      @include fit-image;
+    }
+  }
   h2 {
     margin-bottom: 1rem;
   }

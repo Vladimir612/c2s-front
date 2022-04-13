@@ -18,6 +18,7 @@ import raiffeisen from "../../Assets/Images/Partneri/raiffeisen.svg";
 //carousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const Pocetna = () => {
   const pocetakPocetna = useRef();
@@ -132,7 +133,7 @@ const Pocetna = () => {
                     scale: 0.9,
                   }}
                 >
-                  Prijavi se
+                  <Link to="/prijava">Prijavi se</Link>
                 </motion.button>
                 <motion.button
                   className="dugme transparentno"
@@ -143,7 +144,7 @@ const Pocetna = () => {
                     scale: 0.9,
                   }}
                 >
-                  O projektu
+                  <Link to="/o-projektu/radionice">O projektu</Link>
                 </motion.button>
               </div>
             </motion.div>
@@ -197,6 +198,11 @@ const Pocetna = () => {
           <div className="kompanije-ucesnice">
             <h3>kompanije učesnice</h3>
             <div className="logoi-kompanija">
+              <div className="partner-wrapper">
+                <div className="img-wrapper">
+                  <img src={raiffeisen} alt="Raiffeisen" />
+                </div>
+              </div>
               <div className="partner-wrapper">
                 <div className="img-wrapper">
                   <img src={raiffeisen} alt="Raiffeisen" />
