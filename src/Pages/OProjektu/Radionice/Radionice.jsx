@@ -3,6 +3,7 @@ import "./Radionice.scss";
 import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
 import RadionicaKartica from "./RadionicaKartica";
 import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
+import { motion } from "framer-motion";
 
 const Radionice = () => {
   const radionica1 = {
@@ -26,9 +27,26 @@ const Radionice = () => {
     <div className="radionice-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <img src={ilustracijaTest} alt="Radionica" />
+          <motion.img
+            src={ilustracijaTest}
+            alt="Radionica"
+            animate={{ x: "0%", opacity: 1 }}
+            initial={{
+              x: "-100%",
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+          />
         </div>
-        <div className="tekst">
+        <motion.div
+          className="tekst"
+          animate={{ x: "0%", opacity: 1 }}
+          initial={{
+            x: "100%",
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+        >
           <h2>RADIONICE</h2>
           <p>
             Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
@@ -39,7 +57,7 @@ const Radionice = () => {
             oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
             razvoju soft, odnosno mekih veština.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="presek-dana">
         <div className="krug-presek">

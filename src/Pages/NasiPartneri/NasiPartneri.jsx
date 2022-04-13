@@ -15,27 +15,30 @@ const NasiPartneri = () => {
     case "/nasi-partneri":
       aktivnaStrana = -1;
       break;
-    case "/nasi-partneri/addacta":
+    case "/nasi-partneri/adacta":
       aktivnaStrana = 1;
       break;
-    case "/nasi-partneri/aisi":
+    case "/nasi-partneri/eyesee":
       aktivnaStrana = 2;
       break;
     case "/nasi-partneri/prime-software":
       aktivnaStrana = 3;
       break;
-    case "/nasi-partneri/samos-education":
+    case "/nasi-partneri/semos-education":
       aktivnaStrana = 4;
       break;
     case "/nasi-partneri/raiffeisen":
       aktivnaStrana = 5;
+      break;
+    case "/nasi-partneri/a1":
+      aktivnaStrana = 6;
       break;
     default:
       aktivnaStrana = -1;
       break;
   }
 
-  const zaposleniAddacta = [
+  const zaposleniAdacta = [
     {
       ime: "Pera Peric",
       zaposleniJeRekao:
@@ -76,51 +79,54 @@ const NasiPartneri = () => {
       <Nav />
       <div className="partneri-nav">
         <ul>
-          <Link to="addacta">
-            <li className={aktivnaStrana === 1 ? "active" : ""}>Addacta</li>
+          <Link to="adacta">
+            <li className={aktivnaStrana === 1 ? "active" : ""}>Adacta</li>
           </Link>
-          <Link to="aisi">
-            <li className={aktivnaStrana === 2 ? "active" : ""}>Aisi</li>
+          <Link to="eyesee">
+            <li className={aktivnaStrana === 2 ? "active" : ""}>Eyesee</li>
           </Link>
           <Link to="prime-software">
             <li className={aktivnaStrana === 3 ? "active" : ""}>
               Prime software
             </li>
           </Link>
-          <Link to="samos-education">
+          <Link to="semos-education">
             <li className={aktivnaStrana === 4 ? "active" : ""}>
-              Samos education
+              Semos education
             </li>
           </Link>
           <Link to="raiffeisen">
             <li className={aktivnaStrana === 5 ? "active" : ""}>Raiffeisen</li>
           </Link>
+          <Link to="a1">
+            <li className={aktivnaStrana === 6 ? "active" : ""}>A1</li>
+          </Link>
         </ul>
       </div>
       <Routes>
         <Route
-          path="addacta"
+          path="adacta"
           element={
             <PartnerSnimak
               video={video}
-              zaposleni={zaposleniAddacta}
-              prevLink="/nasi-partneri/raiffeisen"
-              nextLink="/nasi-partneri/aisi"
-              partnerIme="Addacta"
+              zaposleni={zaposleniAdacta}
+              prevLink="/nasi-partneri/a1"
+              nextLink="/nasi-partneri/eyesee"
+              partnerIme="Adacta"
               oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
             />
           }
         />
 
         <Route
-          path="aisi"
+          path="eyesee"
           element={
             <PartnerSnimak
               video={test2}
               zaposleni={zaposleniRaiffeisen}
-              prevLink="/nasi-partneri/addacta"
+              prevLink="/nasi-partneri/adacta"
               nextLink="/nasi-partneri/prime-software"
-              partnerIme="Aisi"
+              partnerIme="Eyesee"
               oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
             />
           }
@@ -131,15 +137,15 @@ const NasiPartneri = () => {
             <PartnerSnimak
               video={video}
               zaposleni={zaposleniRaiffeisen}
-              prevLink="/nasi-partneri/aisi"
-              nextLink="/nasi-partneri/samos-education"
+              prevLink="/nasi-partneri/eyesee"
+              nextLink="/nasi-partneri/semos-education"
               partnerIme="prime software"
               oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
             />
           }
         />
         <Route
-          path="samos-education"
+          path="semos-education"
           element={
             <PartnerSnimak
               video={test2}
@@ -157,9 +163,22 @@ const NasiPartneri = () => {
             <PartnerSnimak
               video={video}
               zaposleni={zaposleniRaiffeisen}
-              prevLink="/nasi-partneri/samos-education"
-              nextLink="/nasi-partneri/addacta"
+              prevLink="/nasi-partneri/semos-education"
+              nextLink="/nasi-partneri/a1"
               partnerIme="Raiffeisen"
+              oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
+            />
+          }
+        />
+        <Route
+          path="a1"
+          element={
+            <PartnerSnimak
+              video={video}
+              zaposleni={zaposleniRaiffeisen}
+              prevLink="/nasi-partneri/raiffeisen"
+              nextLink="/nasi-partneri/adacta"
+              partnerIme="A1"
               oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
             />
           }

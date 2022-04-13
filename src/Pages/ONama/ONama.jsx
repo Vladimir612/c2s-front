@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./ONama.scss";
 import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
@@ -6,8 +6,15 @@ import nekiLjudi from "../../Assets/Images/ljudi.png";
 import Tim from "./Tim";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Lopta from "./../../Utilities/Lopta/Lopta";
+
+import VisibilitySensor from "react-visibility-sensor";
+import { motion } from "framer-motion";
 
 const ONama = () => {
+  const pocetakPocetna = useRef();
+  const [visibleSecond, setVisibleSecond] = useState(false);
+
   const coreTim = {
     imeTima: "CORE TIM",
     oTimu:
@@ -95,10 +102,38 @@ const ONama = () => {
 
   return (
     <>
+      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
       <Nav />
       <div className="o-nama-container">
+        <div className="lopte-anim">
+          <div className="prva-grupa">
+            <Lopta boja="bela" width="3rem" height="3rem" />
+            <Lopta boja="crvena" width="5rem" height="5rem" />
+          </div>
+          <div className="druga-grupa">
+            <Lopta boja="bela" width="6.5rem" height="6.5rem" />
+            <Lopta boja="crvena" width="5rem" height="5rem" />
+          </div>
+        </div>
+        <div className="lopte-anim">
+          <div className="prva-grupa">
+            <Lopta boja="bela" width="3rem" height="3rem" />
+            <Lopta boja="crvena" width="5rem" height="5rem" />
+          </div>
+          <div className="druga-grupa">
+            <Lopta boja="bela" width="6.5rem" height="6.5rem" />
+            <Lopta boja="crvena" width="5rem" height="5rem" />
+          </div>
+        </div>
         <div class="o-nama-flex">
-          <div className="left-content">
+          <motion.div
+            className="left-content"
+            animate={{ x: "0%" }}
+            initial={{
+              x: "-50%",
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <h2>O FONISU</h2>
             <p>
               FONIS predstavlja ujedinjujuću tačku studenata informatike i mesto
@@ -112,35 +147,60 @@ const ONama = () => {
               srednjoškolce i Studenti studentima koje dugi niz godina
               organizujemo.
             </p>
-          </div>
-          <div className="right-content">
+          </motion.div>
+          <motion.div
+            className="right-content"
+            animate={{ x: "0%" }}
+            initial={{
+              x: "50%",
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <div class="img-wrapper">
               <img src={nekiLjudi} alt="fonis-slika" />
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div class="o-nama-flex">
-          <div className="left-content">
-            <h2>O FONISU</h2>
-            <p>
-              FONIS predstavlja ujedinjujuću tačku studenata informatike i mesto
-              za generisanje novih i širenje postojećih znanja iz oblasti
-              informacionih tehnologija, a takođe i mesto na kom se stvaraju
-              nova poznanstva koja često prerastaju u neraskidiva prijateljstva.
-              Interne radionice našim članovima daju jedinstvenu priliku da
-              svoja postojeća IT i menadžment znanja i veštine upotpune novim i
-              primene ih pre svega na internim hakatonima, ali i kroz
-              realizaciju projekata poput FON Hakatona, Hakatona za
-              srednjoškolce i Studenti studentima koje dugi niz godina
-              organizujemo.
-            </p>
-          </div>
-          <div className="right-content">
-            <div class="img-wrapper">
-              <img src={nekiLjudi} alt="fonis-slika" />
+        <VisibilitySensor
+          onChange={(isVisible) => {
+            if (isVisible && !visibleSecond) {
+              setVisibleSecond(true);
+            }
+            return;
+          }}
+          delayedCall
+          partialVisibility
+        >
+          <motion.div
+            class="o-nama-flex"
+            animate={visibleSecond && { y: "0%" }}
+            initial={{
+              y: "50%",
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="left-content">
+              <h2>O FONISU</h2>
+              <p>
+                FONIS predstavlja ujedinjujuću tačku studenata informatike i
+                mesto za generisanje novih i širenje postojećih znanja iz
+                oblasti informacionih tehnologija, a takođe i mesto na kom se
+                stvaraju nova poznanstva koja često prerastaju u neraskidiva
+                prijateljstva. Interne radionice našim članovima daju
+                jedinstvenu priliku da svoja postojeća IT i menadžment znanja i
+                veštine upotpune novim i primene ih pre svega na internim
+                hakatonima, ali i kroz realizaciju projekata poput FON Hakatona,
+                Hakatona za srednjoškolce i Studenti studentima koje dugi niz
+                godina organizujemo.
+              </p>
             </div>
-          </div>
-        </div>
+            <div className="right-content">
+              <div class="img-wrapper">
+                <img src={nekiLjudi} alt="fonis-slika" />
+              </div>
+            </div>
+          </motion.div>
+        </VisibilitySensor>
         <div class="o-nama-timovi">
           <h2>ORGANIZACIONI TIM PROJEKTA</h2>
           <div class="o-nama-carousel">
@@ -156,49 +216,49 @@ const ONama = () => {
                   <div className="lopte-nav">
                     <div
                       className={
-                        vidljivTim === 0 ? "lop lopta-1 active" : "lop lopta-1"
+                        vidljivTim === 1 ? "lop lopta-1 active" : "lop lopta-1"
                       }
-                      onClick={() => setVidljivTim(0)}
+                      onClick={() => setVidljivTim(1)}
                     >
                       1
                     </div>
                     <div
                       className={
-                        vidljivTim === 1 ? "lop lopta-2 active" : "lop lopta-2"
+                        vidljivTim === 2 ? "lop lopta-2 active" : "lop lopta-2"
                       }
-                      onClick={() => setVidljivTim(1)}
+                      onClick={() => setVidljivTim(2)}
                     >
                       2
                     </div>
                     <div
                       className={
-                        vidljivTim === 2 ? "lop lopta-3 active" : "lop lopta-3"
+                        vidljivTim === 3 ? "lop lopta-3 active" : "lop lopta-3"
                       }
-                      onClick={() => setVidljivTim(2)}
+                      onClick={() => setVidljivTim(3)}
                     >
                       3
                     </div>
                     <div
                       className={
-                        vidljivTim === 3 ? "lop lopta-4 active" : "lop lopta-4"
+                        vidljivTim === 4 ? "lop lopta-4 active" : "lop lopta-4"
                       }
-                      onClick={() => setVidljivTim(3)}
+                      onClick={() => setVidljivTim(4)}
                     >
                       4
                     </div>
                     <div
                       className={
-                        vidljivTim === 4 ? "lop lopta-5 active" : "lop lopta-5"
+                        vidljivTim === 5 ? "lop lopta-5 active" : "lop lopta-5"
                       }
-                      onClick={() => setVidljivTim(4)}
+                      onClick={() => setVidljivTim(5)}
                     >
                       5
                     </div>
                     <div
                       className={
-                        vidljivTim === 5 ? "lop lopta-6 active" : "lop lopta-6"
+                        vidljivTim === 6 ? "lop lopta-6 active" : "lop lopta-6"
                       }
-                      onClick={() => setVidljivTim(5)}
+                      onClick={() => setVidljivTim(6)}
                     >
                       6
                     </div>
@@ -226,7 +286,7 @@ const ONama = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer pocetakPocetna={pocetakPocetna} />
     </>
   );
 };

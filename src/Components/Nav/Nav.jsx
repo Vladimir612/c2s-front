@@ -81,7 +81,7 @@ const Nav = () => {
               <FaCaretDown color={oProjektuAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
-                animate={{ height: oProjektuAktiv ? "8.5rem" : 0 }}
+                animate={{ height: oProjektuAktiv ? "9.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
@@ -120,7 +120,7 @@ const Nav = () => {
               <FaCaretDown color={nasiPartneriAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
-                animate={{ height: nasiPartneriAktiv ? "15rem" : 0 }}
+                animate={{ height: nasiPartneriAktiv ? "15.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >

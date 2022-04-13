@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./NasiPartneri.scss";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Zaposleni from "./Zaposleni";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
@@ -36,12 +36,12 @@ const PartnerSnimak = (props) => {
         </div>
         <div className="left-arrow">
           <Link to={props.prevLink}>
-            <BsArrowLeftCircleFill color="#fff" size={40} />
+            <FiChevronLeft size={40} color="#b4afb3" />
           </Link>
         </div>
         <div className="right-arrow">
           <Link to={props.nextLink}>
-            <BsArrowRightCircleFill color="#fff" size={40} />
+            <FiChevronRight size={40} color="#b4afb3" />
           </Link>
         </div>
 
@@ -64,7 +64,7 @@ const PartnerSnimak = (props) => {
             )}
             <div className="zaposleni-nav">
               <div className="zaposleni-levo">
-                <BsArrowLeftCircleFill
+                <FiChevronLeft
                   color="#fff"
                   size={25}
                   style={{ cursor: "pointer" }}
@@ -72,7 +72,7 @@ const PartnerSnimak = (props) => {
                 />
               </div>
               <div className="zaposleni-desno">
-                <BsArrowRightCircleFill
+                <FiChevronRight
                   color="#fff"
                   size={25}
                   style={{ cursor: "pointer" }}

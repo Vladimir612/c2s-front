@@ -5,13 +5,61 @@
   width: 100%;
   @include box-center($direction: column);
   position: relative;
-  margin-top: 7rem;
+  margin-top: 4rem;
   h2 {
+    z-index: 9;
     color: #fff;
     font-size: 1.8rem;
   }
   .agenda-content {
     @include box-center($direction: column);
+  }
+  .lopte-anim {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40%;
+    &:nth-child(2) {
+      top: 50%;
+    }
+    .prva-grupa {
+      position: absolute;
+      left: 20%;
+      .lopta:first-child {
+        box-shadow: inset 10px -9px 31px 7px #000000eb,
+          7px 9px 16px 3px #0000004a;
+        animation-duration: 30s;
+        &::after {
+          box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
+        }
+      }
+    }
+    .druga-grupa {
+      position: absolute;
+      top: 60%;
+      right: 30%;
+    }
+    .treca-grupa {
+      position: absolute;
+      top: 30%;
+      right: 20%;
+      .lopta:first-child {
+        box-shadow: inset 6px -1px 37px 2px #000000a6,
+          7px 9px 16px 3px #0000004a;
+        z-index: 10;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        animation-duration: 30s;
+        &::after {
+          top: 2.2rem;
+          left: 5.1rem;
+          box-shadow: -32px -5px 30px 15px rgb(255 255 255 / 37%);
+        }
+      }
+    }
   }
 
   .linija-lopte {
@@ -43,18 +91,18 @@
       top: 14rem;
     }
     img:nth-child(2) {
-      top: 35rem;
+      top: 40rem;
     }
     img:nth-child(3) {
-      top: 56rem;
+      top: 65rem;
     }
     img:nth-child(4) {
-      top: 77rem;
+      top: 90rem;
     }
   }
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1170px) {
   .agenda-container {
     .linija-lopte {
       .linija {
@@ -83,6 +131,7 @@
 
 @media only screen and (max-width: 550px) {
   .agenda-container {
+    padding-left: 1.5rem;
     .linija-lopte {
       .linija {
         left: 1rem;

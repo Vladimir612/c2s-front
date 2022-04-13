@@ -1,20 +1,22 @@
 @import "../../global.scss";
 
 .agenda-item {
-  margin: 6rem 0;
+  z-index: 5;
+  margin: 4rem 0;
   @include box-center;
-  gap: 2rem;
   color: #fff;
-  &:first-child {
-    margin: 8rem 0 6rem 0;
-  }
   &.obrnuto {
     flex-direction: row-reverse;
     .right-content {
-      transform: translateX(-25%);
+      transform: translateX(-8rem);
     }
   }
   .left-content {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    padding: 1.5rem;
+    border-radius: 1rem;
     h3 {
       font-size: 2rem;
       text-align: center;
@@ -22,10 +24,16 @@
     }
     .mesto {
       font-weight: 300;
+      @include box-center;
     }
   }
   .right-content {
-    transform: translateX(25%);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transform: translateX(8rem);
     ul {
       @include box-center($direction: column);
       li {
@@ -35,16 +43,20 @@
       span {
         padding: 0.5rem 0.4rem;
         color: #fff;
+        &:nth-child(1) {
+          font-weight: 500;
+        }
       }
     }
   }
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1170px) {
   .agenda-item,
   .agenda-item.obrnuto {
     flex-direction: column;
     align-items: flex-start;
+    gap: 2rem;
     .left-content {
       h3 {
         text-align: left;
@@ -54,6 +66,20 @@
       transform: translateX(0);
       span:nth-child(1) {
         padding: 1rem 1rem 1rem 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .agenda-item,
+  .agenda-item.obrnuto {
+    .right-content {
+      ul {
+        li {
+          flex-direction: column;
+          align-items: flex-start;
+        }
       }
     }
   }

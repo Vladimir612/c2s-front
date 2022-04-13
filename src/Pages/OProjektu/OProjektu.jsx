@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./OProjektu.scss";
 import Radionice from "./Radionice/Radionice";
 import Panel from "./Panel/Panel";
@@ -9,6 +9,7 @@ import Nav from "./../../Components/Nav/Nav";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 
 const OProjektu = () => {
+  const pocetakPocetna = useRef();
   const location = useLocation();
   let aktivnaStrana = -1;
 
@@ -35,6 +36,7 @@ const OProjektu = () => {
 
   return (
     <>
+      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
       <Nav />
       <div className="o-projektu-container">
         <div className="o-projektu-navigation">
@@ -81,7 +83,7 @@ const OProjektu = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer pocetakPocetna={pocetakPocetna} />
     </>
   );
 };

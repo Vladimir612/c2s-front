@@ -6,6 +6,7 @@ import "./Panel.scss";
 
 //kompanije
 import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
+import { motion } from "framer-motion";
 
 const Panel = () => {
   const ucesniciPanela = [
@@ -72,9 +73,26 @@ const Panel = () => {
     <div className="panel-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <img src={ilustracijaTest} alt="Radionica" />
+          <motion.img
+            src={ilustracijaTest}
+            alt="Radionica"
+            animate={{ x: "0%", opacity: 1 }}
+            initial={{
+              x: "-100%",
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+          />
         </div>
-        <div className="tekst">
+        <motion.div
+          className="tekst"
+          animate={{ x: "0%", opacity: 1 }}
+          initial={{
+            x: "100%",
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+        >
           <h2>TEMA PANELA</h2>
           <p>
             Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
@@ -85,7 +103,7 @@ const Panel = () => {
             oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
             razvoju soft, odnosno mekih veština.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="ucesnici-panela">
         {ucesniciPanela.map((ucesnik, index) => {

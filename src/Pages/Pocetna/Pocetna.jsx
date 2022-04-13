@@ -88,7 +88,15 @@ const Pocetna = () => {
             </div>
           </div>
           <div className="content">
-            <div className="staklo-container">
+            <motion.div
+              className="staklo-container"
+              animate={{ x: "0%", opacity: 1 }}
+              initial={{
+                x: "-100%",
+                opacity: 0,
+              }}
+              transition={{ duration: 1 }}
+            >
               <h1>kompanije studentima</h1>
               <h2>
                 break your lim<span>it</span>s
@@ -138,12 +146,20 @@ const Pocetna = () => {
                   O projektu
                 </motion.button>
               </div>
-            </div>
-            <div className="staklo-container">
+            </motion.div>
+            <motion.div
+              className="staklo-container"
+              animate={{ x: "0%", opacity: 1 }}
+              initial={{
+                x: "100%",
+                opacity: 0,
+              }}
+              transition={{ duration: 1 }}
+            >
               <div className="img-wrapper">
                 <img src={c2sSvetli} alt="c2s logo" />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="kompanije-section">

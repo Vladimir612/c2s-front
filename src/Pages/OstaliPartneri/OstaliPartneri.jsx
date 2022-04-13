@@ -14,6 +14,8 @@ import Prime from "../../Assets/Images/Partneri/prime-software.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PartneriSlider from "./../Pocetna/PartneriSlider";
+import { motion } from "framer-motion";
+import Lopta from "../../Utilities/Lopta/Lopta";
 
 const OstaliPartneri = () => {
   const pocetakOstaliPartneri = useRef();
@@ -99,37 +101,59 @@ const OstaliPartneri = () => {
       <Nav />
       <div className="ostali-partneri-container">
         <div className="hero-partneri">
-          <p>
+          <motion.p
+            animate={{ opacity: 1 }}
+            initial={{
+              opacity: 0,
+            }}
+            transition={{ duration: 0.5 }}
+          >
             S ponosom vam predstavljamo naše partnere koji neizmernom podrškom
             doprinose uspešnoj realizaciji naših projekata.
-          </p>
+          </motion.p>
         </div>
-        <div className="ostali-partneri-slider">
-          <h3>GODISNJI PARTNERI</h3>
-          <PartneriSlider
-            partneri={generalniPartneri}
-            settings={generalniSettings}
-            width="12rem"
-            height="12rem"
-          />
-        </div>
-        <div className="ostali-partneri-slider">
-          <h3>NATURALNI PARTNERI</h3>
-          <PartneriSlider
-            partneri={generalniPartneri}
-            settings={generalniSettings}
-            width="12rem"
-            height="12rem"
-          />
-        </div>
-        <div className="ostali-partneri-slider">
-          <h3>MEDIJSKI PARTNERI</h3>
-          <PartneriSlider
-            partneri={generalniPartneri}
-            settings={generalniSettings}
-            width="12rem"
-            height="12rem"
-          />
+        <div className="ostali-content">
+          <div className="lopte-anim">
+            <div className="prva-grupa">
+              <Lopta boja="bela" width="3rem" height="3rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+            <div className="druga-grupa">
+              <Lopta boja="bela" width="6.5rem" height="6.5rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+            <div className="treca-grupa">
+              <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
+              <Lopta boja="crvena" width="5rem" height="5rem" />
+            </div>
+          </div>
+          <div className="ostali-partneri-slider">
+            <h3>GODISNJI PARTNERI</h3>
+            <PartneriSlider
+              partneri={generalniPartneri}
+              settings={generalniSettings}
+              width="12rem"
+              height="12rem"
+            />
+          </div>
+          <div className="ostali-partneri-slider">
+            <h3>NATURALNI PARTNERI</h3>
+            <PartneriSlider
+              partneri={generalniPartneri}
+              settings={generalniSettings}
+              width="12rem"
+              height="12rem"
+            />
+          </div>
+          <div className="ostali-partneri-slider">
+            <h3>MEDIJSKI PARTNERI</h3>
+            <PartneriSlider
+              partneri={generalniPartneri}
+              settings={generalniSettings}
+              width="12rem"
+              height="12rem"
+            />
+          </div>
         </div>
       </div>
       <Footer pocetakPocetna={pocetakOstaliPartneri} />
