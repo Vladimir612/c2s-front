@@ -7,6 +7,8 @@ import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
 
+import lopte2 from "../../../Assets/Images/o-projektu-krugovi-2.svg";
+
 const RadionicaKartica = (props) => {
   const [prikaziDetaljnije, setPrikaziDetaljnije] = useState(false);
   const [vidljivaRadionica, setVidljivaRadionica] = useState(false);

@@ -3,12 +3,14 @@
 .faq-question {
   margin-bottom: 2rem;
   .odgovor-wrapper {
-    border: 1px solid white;
     overflow: hidden;
     border-radius: 1.5rem;
     padding: 1rem;
     font-weight: 300;
     max-width: 60rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
     &.hidden {
       border: none;
     }

@@ -4,6 +4,35 @@
   margin: 0 2rem;
   margin-top: 3.8rem;
   padding: 2rem 3rem;
+  .lopte-anim {
+    z-index: -1;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100vw;
+    height: 60%;
+    &:nth-child(2) {
+      top: calc(100vh + 10%);
+    }
+    .prva-grupa {
+      position: absolute;
+      top: 20%;
+      right: 40%;
+      .lopta:first-child {
+        box-shadow: inset 10px -9px 31px 7px #000000eb,
+          7px 9px 16px 3px #0000004a;
+        animation-duration: 30s;
+        &::after {
+          box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
+        }
+      }
+    }
+    .druga-grupa {
+      position: absolute;
+      top: 80%;
+      right: 10%;
+    }
+  }
   .questions {
     @include box-center;
     justify-content: flex-start;

@@ -120,24 +120,27 @@ const Nav = () => {
               <FaCaretDown color={nasiPartneriAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
-                animate={{ height: nasiPartneriAktiv ? "15.5rem" : 0 }}
+                animate={{ height: nasiPartneriAktiv ? "18.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
                 <Link to="/nasi-partneri/raiffeisen">
                   <li>Raiffeisen</li>
                 </Link>
-                <Link to="/nasi-partneri/addacta">
-                  <li>Addacta</li>
+                <Link to="/nasi-partneri/adacta">
+                  <li>Adacta</li>
                 </Link>
-                <Link to="/nasi-partneri/aisi">
-                  <li>Aisi</li>
+                <Link to="/nasi-partneri/eyesee">
+                  <li>Eyesee</li>
                 </Link>
                 <Link to="/nasi-partneri/prime-software">
                   <li>Prime software</li>
                 </Link>
-                <Link to="/nasi-partneri/samos-education">
-                  <li>Samos education</li>
+                <Link to="/nasi-partneri/semos-education">
+                  <li>Semos education</li>
+                </Link>
+                <Link to="/nasi-partneri/a1">
+                  <li>A1</li>
                 </Link>
                 <Link to="/godisnji-naturalni-medijski">
                   <li>Godisnji, naturalni i medijski partneri</li>
@@ -243,7 +246,7 @@ const Nav = () => {
 
             <motion.ul
               className="sub-linkovi"
-              animate={{ height: oProjektuAktiv ? "7.5rem" : 0 }}
+              animate={{ height: oProjektuAktiv ? "8.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
@@ -284,7 +287,7 @@ const Nav = () => {
 
             <motion.ul
               className="sub-linkovi"
-              animate={{ height: nasiPartneriAktiv ? "13.5rem" : 0 }}
+              animate={{ height: nasiPartneriAktiv ? "15.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
@@ -297,20 +300,20 @@ const Nav = () => {
                 <li>Raiffeisen</li>
               </Link>
               <Link
-                to="/nasi-partneri/addacta"
+                to="/nasi-partneri/adacta"
                 onClick={() => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Addacta</li>
+                <li>Adacta</li>
               </Link>
               <Link
-                to="/nasi-partneri/aisi"
+                to="/nasi-partneri/eyesee"
                 onClick={() => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Aisi</li>
+                <li>Eyesee</li>
               </Link>
               <Link
                 to="/nasi-partneri/prime-software"
@@ -321,12 +324,20 @@ const Nav = () => {
                 <li>Prime software</li>
               </Link>
               <Link
-                to="/nasi-partneri/samos-education"
+                to="/nasi-partneri/semos-education"
                 onClick={() => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Samos education</li>
+                <li>Semos education</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/a1"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>A1</li>
               </Link>
               <Link
                 to="/godisnji-naturalni-medijski"

@@ -92,6 +92,15 @@
     width: 5rem;
     margin-top: 1rem;
     @include box-center($justify: space-around);
+    .zaposleni-levo,
+    .zaposleni-desno {
+      width: 2rem;
+      height: 2rem;
+      background: rgba(180, 175, 179, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      @include box-center;
+    }
   }
 }
 

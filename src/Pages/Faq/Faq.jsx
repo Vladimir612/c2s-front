@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Faq.scss";
 import FaqQuestion from "./FaqQuestion";
 import Nav from "./../../Components/Nav/Nav";
@@ -6,12 +6,25 @@ import Footer from "../../Components/Footer/Footer";
 import koverta from "../../Assets/Images/koverta.svg";
 
 import { motion } from "framer-motion";
+import Lopta from "../../Utilities/Lopta/Lopta";
 
 const Faq = () => {
+  const pocetakPocetna = useRef();
   return (
     <>
+      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
       <Nav />
       <div className="faq-container">
+        <div className="lopte-anim">
+          <div className="prva-grupa">
+            <Lopta boja="bela" width="3rem" height="3rem" />
+            <Lopta boja="crvena" width="5rem" height="5rem" />
+          </div>
+          <div className="druga-grupa">
+            <Lopta boja="bela" width="6.5rem" height="6.5rem" />
+            <Lopta boja="crvena" width="5rem" height="5rem" />
+          </div>
+        </div>
         <h2 className="naslov">FAQ</h2>
         <div class="questions">
           <ul>
@@ -75,7 +88,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer pocetakPocetna={pocetakPocetna} />
     </>
   );
 };
