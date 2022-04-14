@@ -38,6 +38,7 @@
   }
   .o-nama-flex {
     @include box-center($justify: space-between);
+    align-items: flex-start;
     gap: 5rem;
     &:nth-child(4) {
       flex-direction: row-reverse;
@@ -78,11 +79,14 @@
     }
   }
   .o-nama-timovi {
+    position: relative;
+    width: 100%;
     h2 {
       color: #fff;
       margin-bottom: 2rem;
     }
     .o-nama-carousel {
+      width: 100%;
       margin-bottom: 2rem;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.1);

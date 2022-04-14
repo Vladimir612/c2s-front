@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
+import speedSlika from "../../../Assets/Images/speed-dating.png";
 import { BsArrowRight } from "react-icons/bs";
 import "./SpeedDating.scss";
 
@@ -14,11 +14,11 @@ const SpeedDating = () => {
       <div className="o-projektu-uvod">
         <div className="slika">
           <motion.img
-            src={ilustracijaTest}
-            alt="Radionica"
-            animate={{ x: "0%", opacity: 1 }}
+            src={speedSlika}
+            alt="Speed dating"
+            animate={{ y: 0, opacity: 1 }}
             initial={{
-              x: "-100%",
+              y: -100,
               opacity: 0,
             }}
             transition={{ duration: 1 }}
@@ -26,22 +26,21 @@ const SpeedDating = () => {
         </div>
         <motion.div
           className="tekst"
-          animate={{ x: "0%", opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           initial={{
-            x: "100%",
+            y: -100,
             opacity: 0,
           }}
           transition={{ duration: 1 }}
         >
           <h2>SPEED DATING</h2>
           <p>
-            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
-            da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice
-            koje smo do sada održali pokrivale su frontend i backend
-            development, web development, web dizajn, grafički dizajn, game
-            development, data science, kao i mnoge tehnologije u pomenutim
-            oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
-            razvoju soft, odnosno mekih veština.
+            Intervju često predstavlja najbitniju fazu koja kandidate deli od
+            željenog posla. Speed dating predstavlja petnaestominutnu simulaciju
+            intervjua, gde će se delagati naći u ulozi kandidata za posao ili
+            praksu. Kroz ovu simulaciju imaće priliku da pokažu sebe u najboljem
+            svetlu HR predstavnicima kompanija, ali i da čuju više o kompaniji i
+            o tome kako izgleda njihov proces selekcije.
           </p>
         </motion.div>
       </div>

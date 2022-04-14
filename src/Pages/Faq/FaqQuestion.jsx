@@ -25,12 +25,11 @@ const FaqQuestion = (props) => {
           vidljivOdgovor ? "odgovor-wrapper" : "odgovor-wrapper hidden"
         }
         animate={{
-          padding: vidljivOdgovor ? "1rem" : "0rem",
           height: vidljivOdgovor ? "auto" : "0rem",
           width: vidljivOdgovor ? "auto" : "0rem",
           opacity: vidljivOdgovor ? 1 : 0,
         }}
-        initial={{ height: "0rem", width: "0rem", padding: "0rem", opacity: 0 }}
+        initial={{ height: "0rem", width: "0rem", opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
         {<p>{props.answer}</p>}

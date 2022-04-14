@@ -5,6 +5,19 @@ import Nav from "./../../Components/Nav/Nav";
 import nekiLjudi from "../../Assets/Images/ljudi.png";
 import Tim from "./Tim";
 
+//organizacioni tim
+import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.png";
+import coreTimSlika from "../../Assets/Images/organizacioniTim/coreTim.png";
+import dizajnTimSlika from "../../Assets/Images/organizacioniTim/dizajnTim.png";
+import hrTimSlika from "../../Assets/Images/organizacioniTim/hrTim.png";
+import itTimSlika from "../../Assets/Images/organizacioniTim/itTim.png";
+import KostaAcimovic from "../../Assets/Images/organizacioniTim/KostaAcimovic.png";
+import logistikaTimSlika from "../../Assets/Images/organizacioniTim/logistikaTim.png";
+import NemanjaVukelic from "../../Assets/Images/organizacioniTim/NemanjaVukelic.png";
+import prTimSlika from "../../Assets/Images/organizacioniTim/prTim.png";
+import StefanBozovic from "../../Assets/Images/organizacioniTim/StefanBozovic.png";
+import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLazarevic.png";
+
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Lopta from "./../../Utilities/Lopta/Lopta";
 
@@ -18,68 +31,68 @@ const ONama = () => {
   const coreTim = {
     imeTima: "CORE TIM",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
+      "Tim koordinatora, glavni zaslužni i odgovorni za uspešnu realizaciju projekta, svojim iskustvom i znanjem uspešno je organizovao i upravljao celokupnim projektom. 🤓",
     slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
+    imeKoordinatora: "Ana Kesić",
     funkcijaKoordinatora: "Koordinatorka projekta",
-    slikaTima: nekiLjudi,
+    slikaTima: coreTimSlika,
   };
   const itTim = {
     imeTima: "IT TIM",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
-    slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
-    funkcijaKoordinatora: "Koordinatorka projekta",
-    slikaTima: nekiLjudi,
+      "Tim za informacione tehnologije marljivo je radio na izradi veb sajta projekta gde možete pronaći sve neophodne informacije u vezi projekta. 💻",
+    slikaKoordinatora: VladimirLazarevic,
+    imeKoordinatora: "Vladimir Lazarević",
+    funkcijaKoordinatora: "Koordinator IT tima",
+    slikaTima: itTimSlika,
   };
   const dizajnTim = {
     imeTima: "DIZAJN TIM",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
-    slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
-    funkcijaKoordinatora: "Koordinatorka projekta",
-    slikaTima: nekiLjudi,
+      "Tim za dizajn kroz vizuelnu prezentaciju projekta pokazao je svoju kreativnost i veštine. 🎨",
+    slikaKoordinatora: StefanBozovic,
+    imeKoordinatora: "Stefan Božović",
+    funkcijaKoordinatora: "Koordinator dizajn tima",
+    slikaTima: dizajnTimSlika,
   };
   const crTim = {
     imeTima: "CR TIM",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
+      "Tim za odnose sa kompanijama je zaslužan za ostvarivanje partnerstava koji doprinose realizaciji projekta na visokom nivou. 💰",
     slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
-    funkcijaKoordinatora: "Koordinatorka projekta",
+    imeKoordinatora: "Anja Pejović",
+    funkcijaKoordinatora: "Koordinatorka CR tima",
     slikaTima: nekiLjudi,
   };
 
   const hrTim = {
     imeTima: "HR TIM",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
-    slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
-    funkcijaKoordinatora: "Koordinatorka projekta",
-    slikaTima: nekiLjudi,
+      "Tim za ljudske resurse vodio je računa da članovi svih organizacionih timova dostignu svoj pun potencijal i upravljao selekcijom prijavljenih kandidata. 👩🏻‍🤝‍👨🏼",
+    slikaKoordinatora: KostaAcimovic,
+    imeKoordinatora: "Kosta Aćimović",
+    funkcijaKoordinatora: "Koordinator HR tima",
+    slikaTima: hrTimSlika,
   };
 
   const prTim = {
     imeTima: "PR TIM",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
-    slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
-    funkcijaKoordinatora: "Koordinatorka projekta",
-    slikaTima: nekiLjudi,
+      "Tim za odnose sa javnošću bio je zadužen za novinarske poslove poput pisanja tekstova, promocije, prezentovanje samog projekta u najboljem svetlu, kao i ostvarivanje medijskih saradnji. 🗞",
+    slikaKoordinatora: BojanaCelovic,
+    imeKoordinatora: "Bojana Ćelović",
+    funkcijaKoordinatora: "Koordinatorka PR tima",
+    slikaTima: prTimSlika,
   };
 
   const logistikaTim = {
     imeTima: "LOGISTIKA",
     oTimu:
-      "Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja.",
-    slikaKoordinatora: nekiLjudi,
-    imeKoordinatora: "Ana Kesic",
-    funkcijaKoordinatora: "Koordinatorka projekta",
-    slikaTima: nekiLjudi,
+      "Tim za logistiku osmislio je operacioni plan celokupnog događaja i postarao se da sve prođe u najboljem redu. 📆",
+    slikaKoordinatora: NemanjaVukelic,
+    imeKoordinatora: "Nemanja Vukelić",
+    funkcijaKoordinatora: "Koordinator logistike",
+    slikaTima: logistikaTimSlika,
   };
 
   const [vidljivTim, setVidljivTim] = useState(0);
@@ -136,16 +149,15 @@ const ONama = () => {
           >
             <h2>O FONISU</h2>
             <p>
-              FONIS predstavlja ujedinjujuću tačku studenata informatike i mesto
-              za generisanje novih i širenje postojećih znanja iz oblasti
-              informacionih tehnologija, a takođe i mesto na kom se stvaraju
-              nova poznanstva koja često prerastaju u neraskidiva prijateljstva.
-              Interne radionice našim članovima daju jedinstvenu priliku da
-              svoja postojeća IT i menadžment znanja i veštine upotpune novim i
-              primene ih pre svega na internim hakatonima, ali i kroz
-              realizaciju projekata poput FON Hakatona, Hakatona za
-              srednjoškolce i Studenti studentima koje dugi niz godina
-              organizujemo.
+              Udruženje studenata informatike FONIS je studentska, nevladina i
+              neprofitna organizacija sa Fakulteta organizacionih nauka. Okuplja
+              buduće IT stručnjake u cilju učestvovanja na stručnim
+              predavanjima, kursevima, takmičenjima i seminarima, rada na
+              projektima, kao i ostvarivanja stručnih praksi u IT oblastima.
+              Zajedničkim zalaganjem svih članova udruženja, FONIS već dugi niz
+              godina radi na organizaciji i realizaciji nekoliko edukativnih i
+              takmičarskih projekata iz sveta IT-ja, među kojima je i upravo
+              projekat Kompanije studentima.
             </p>
           </motion.div>
           <motion.div
@@ -180,18 +192,25 @@ const ONama = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="left-content">
-              <h2>O FONISU</h2>
+              <h2>C2S</h2>
               <p>
-                FONIS predstavlja ujedinjujuću tačku studenata informatike i
-                mesto za generisanje novih i širenje postojećih znanja iz
-                oblasti informacionih tehnologija, a takođe i mesto na kom se
-                stvaraju nova poznanstva koja često prerastaju u neraskidiva
-                prijateljstva. Interne radionice našim članovima daju
-                jedinstvenu priliku da svoja postojeća IT i menadžment znanja i
-                veštine upotpune novim i primene ih pre svega na internim
-                hakatonima, ali i kroz realizaciju projekata poput FON Hakatona,
-                Hakatona za srednjoškolce i Studenti studentima koje dugi niz
-                godina organizujemo.
+                Kompanije studentima predstavlja projekat čiji je organizator
+                Udruženje studenata informatike FONIS, a za cilj ima da kroz
+                zabavan i interaktivan način omogući svim zainteresovanim
+                učesnicima da nauče nešto novo iz oblasti informacionih
+                tehnologija. Na panel diskusiji ćeš dobiti priliku da čuješ
+                savete i priče iz poslovnih praksi koje ti mogu značiti kada se
+                budeš našao na mestu praktikanta. Pored panel diskusije, na
+                radionicama, koje će drzati predstavnici kompanija, dobićeš
+                priliku da unaprediš svoje znanje u izabranoj oblasti iz ITa.
+                Tech challenge je deo projekta na kome je tvoj zadatak da nađeš
+                rešenje za realan problem sa kojim se susreću IT kompanije. Na
+                kraju, važan deo ovog projekta predstavlja i speed dating, gde
+                ćeš se naći u ulozi kandidata za posao ili praksu i tako dobiti
+                priliku da osetiš kako izgleda pravi intervju koji je neophodan
+                za ulazak u svaku IT kompaniju. Generalni pokrovitelji projekta
+                su Raiffeisen banka💵, Adacta💻, A1📞, Semos📚, Prime
+                software💿, Eye see⌨️. Čekamo tvoju prijavu! 👍🏼
               </p>
             </div>
             <div className="right-content">

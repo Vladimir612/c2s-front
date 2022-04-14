@@ -8,8 +8,8 @@ import c2sSvetli from "../../Assets/Images/c2slogo_svetli.svg";
 import PartneriSlider from "./PartneriSlider";
 
 //slike
-import Catenamedia from "../../Assets/Images/Partneri/catenamedia.png";
-import Endava from "../../Assets/Images/Partneri/endava.png";
+import DevIt from "../../Assets/Images/Partneri/dev-it.svg";
+import Hedwell from "../../Assets/Images/Partneri/hedwell.png";
 import Fon from "../../Assets/Images/Partneri/fon.png";
 import Guarana from "../../Assets/Images/Partneri/guarana.png";
 import Prime from "../../Assets/Images/Partneri/prime-software.png";
@@ -22,18 +22,13 @@ import { Link } from "react-router-dom";
 
 const Pocetna = () => {
   const pocetakPocetna = useRef();
-  const generalniPartneri = [
+
+  const godisnjiPartneri = [
     {
-      partnerSlika: Catenamedia,
-      partnerIme: "Catenamedia",
-      pozadina: "#f53942",
-      link: "https://www.catenamedia.com/",
-    },
-    {
-      partnerSlika: Endava,
-      partnerIme: "Endava",
+      partnerSlika: Prime,
+      partnerIme: "Prime",
       pozadina: "#fff",
-      link: "https://www.endava.com/",
+      link: "https://www.primeholding.com/",
     },
     {
       partnerSlika: Fon,
@@ -48,14 +43,20 @@ const Pocetna = () => {
       link: "https://guarana.rs/",
     },
     {
-      partnerSlika: Prime,
-      partnerIme: "Prime",
+      partnerSlika: Hedwell,
+      partnerIme: "Hedwell",
       pozadina: "#fff",
-      link: "https://www.primeholding.com/",
+      link: "https://guarana.rs/",
+    },
+    {
+      partnerSlika: DevIt,
+      partnerIme: "DevIT",
+      pozadina: "#fff",
+      link: "https://guarana.rs/",
     },
   ];
 
-  const generalniSettings = {
+  const godisnjiSettings = {
     dots: false,
     infinite: true,
     arrows: false,
@@ -103,11 +104,9 @@ const Pocetna = () => {
                 break your lim<span>it</span>s
               </h2>
               <p className="uvodni-tekst">
-                Kompanije studentima je projekat Udruženja studenata informatike
-                FONIS koji za cilj ima prenošenje znanja i povezivanje studenata
-                sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim
-                bojama, obogaćen sadržajem koji će svim studentima pružiti
-                priliku.
+                Unapredi svoje znanje učeći od iskusnih IT stručnjaka, oslobodi
+                se treme kroz simulaciju intervjua i izađi iz zone komfora.
+                Čekamo te od 14. do 17. maja. Prijave se uskoro otvaraju
               </p>
               <div className="timer">
                 <div className="dani">
@@ -178,22 +177,18 @@ const Pocetna = () => {
               <Lopta boja="crvena" width="5rem" height="5rem" />
             </div>
           </div>
-          <div className="kako-postati-conatiner">
+          <div className="kako-postati-container">
             <h3>Kako da postanes deo c2s-a?</h3>
-            <p>
-              Kompanije studentima je projekat Udruženja studenata informatike
-              FONIS koji za cilj ima prenošenje znanja i povezivanje studenata
-              sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim
-              bojama, obogaćen sadržajem koji će svim studentima pružiti
-              priliku.Kompanije studentima je projekat Udruženja studenata
-              informatike FONIS koji za cilj ima prenošenje znanja i povezivanje
-              studenata sa IT kompanijama. Ove godine će doživeti izdanje
-              obojeno novim bojama, obogaćen sadržajem koji će svim studentima
-              pružiti priliku.FONIS koji za cilj ima prenošenje znanja i
-              povezivanje studenata sa IT kompanijama. Ove godine će doživeti
-              izdanje obojeno novim bojama, obogaćen sadržajem koji će svim
-              studentima pružiti priliku.
-            </p>
+            <div className="kako">
+              <p>1. Odaberi kompaniju sa kojom želiš da se upoznaš,</p>
+              <p>2. Napiši prijavu,</p>
+              <p>3. Pošalji prijavu,</p>
+              <p>4. Sačekaj mejl kojim ti javljamo da si primljen/a,</p>
+              <p>
+                5. Provedi 4 dana unapređujući svoje znanje i upoznajući se sa
+                nekim od najboljih kompanija u Srbiji.
+              </p>
+            </div>
           </div>
           <div className="kompanije-ucesnice">
             <h3>kompanije učesnice</h3>
@@ -205,7 +200,7 @@ const Pocetna = () => {
               </div>
               <div className="partner-wrapper">
                 <div className="img-wrapper">
-                  <img src={raiffeisen} alt="Raiffeisen" />
+                  <img src={Prime} alt="Prime Software" />
                 </div>
               </div>
               <div className="partner-wrapper">
@@ -233,8 +228,8 @@ const Pocetna = () => {
               <div className="godisnji-partneri">
                 <h3>godisnji partneri</h3>
                 <PartneriSlider
-                  partneri={generalniPartneri}
-                  settings={generalniSettings}
+                  partneri={godisnjiPartneri}
+                  settings={godisnjiSettings}
                   width="12rem"
                   height="12rem"
                 />
@@ -242,8 +237,8 @@ const Pocetna = () => {
               <div className="naturalni-partneri">
                 <h3>naturalni partneri</h3>
                 <PartneriSlider
-                  partneri={generalniPartneri}
-                  settings={generalniSettings}
+                  partneri={godisnjiPartneri}
+                  settings={godisnjiSettings}
                   width="12rem"
                   height="12rem"
                 />
@@ -251,8 +246,8 @@ const Pocetna = () => {
               <div className="medijski-partneri">
                 <h3>medijski partneri</h3>
                 <PartneriSlider
-                  partneri={generalniPartneri}
-                  settings={generalniSettings}
+                  partneri={godisnjiPartneri}
+                  settings={godisnjiSettings}
                   width="12rem"
                   height="12rem"
                 />

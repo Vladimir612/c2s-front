@@ -7,6 +7,7 @@ import koverta from "../../Assets/Images/koverta.svg";
 
 import { motion } from "framer-motion";
 import Lopta from "../../Utilities/Lopta/Lopta";
+import { Link } from "react-router-dom";
 
 const Faq = () => {
   const pocetakPocetna = useRef();
@@ -29,24 +30,57 @@ const Faq = () => {
         <div class="questions">
           <ul>
             <FaqQuestion
-              question="Koliko članova tim može imati?"
-              answer="Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi."
+              question="Ko se sve može prijaviti za učesće na projektu Kompanije studentima?"
+              answer={
+                <p>
+                  Mogu se prijaviti studenti svih fakulteta koji žele da kroz
+                  učesće na projektu steknu nova znanja i iskustva iz oblasti
+                  informacionih tehnologija. Prijave se nalaze na stranici
+                  <Link to="/prijava"> PRIJAVA</Link> i traju do 5. maja do
+                  23:59č.
+                </p>
+              }
             />
             <FaqQuestion
-              question="Koliko članova tim može imati?"
-              answer="Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi."
+              question="Za koliko radionica se mogu prijaviti?"
+              answer={
+                <p>
+                  Maksimalno se možeš prijaviti za 3 radionice, ali ćeš biti
+                  primljen/a samo na jednu.
+                </p>
+              }
             />
             <FaqQuestion
-              question="Koliko članova tim može imati?"
-              answer="Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi."
+              question="Za koliko tech-challenge-a se mogu prijaviti?"
+              answer={
+                <p>
+                  Maksimalno se možeš prijaviti za 3 , ali ćeš biti primljen/a
+                  samo na jedan.
+                </p>
+              }
             />
             <FaqQuestion
-              question="Koliko članova tim može imati?"
-              answer="Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi."
+              question="Gde i kada će biti održan projekat?"
+              answer={
+                <p>
+                  Panel diskusija i radionice će biti održane 14. i 15. maja na
+                  Fakultetu organizacionih nauka, dok će Speed dating biti
+                  realizovan u prostorijama ____ 16. maja. Tech challenge i
+                  zatvaranje projekta će se održati ___ 17. Maja. Detaljnu
+                  agendu možeš promaći na stranici
+                  <Link to="/agenda"> AGENDA</Link>.
+                </p>
+              }
             />
             <FaqQuestion
-              question="Koliko članova tim može imati?"
-              answer="Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi. Tim treba da sadrži od 3 do 4 člana. Nije moguća individualna prijava, jer su za učesnike potrebni timovi."
+              question="Da li je neophodno poslati CV za učešće na speed dating-u?"
+              answer={
+                <p>
+                  Za učešće na speed dating-u je neophodno poslati CV. Ukoliko
+                  već nemate svoj CV, možete ga napraviti na našoj stranici
+                  <Link to="/generator"> CV GENERATOR</Link>
+                </p>
+              }
             />
           </ul>
         </div>

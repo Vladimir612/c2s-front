@@ -1,6 +1,6 @@
 import React from "react";
 import "./Radionice.scss";
-import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
+import radioniceSlika from "../../../Assets/Images/radionice.png";
 import RadionicaKartica from "./RadionicaKartica";
 import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
 import { motion } from "framer-motion";
@@ -28,11 +28,11 @@ const Radionice = () => {
       <div className="o-projektu-uvod">
         <div className="slika">
           <motion.img
-            src={ilustracijaTest}
-            alt="Radionica"
-            animate={{ x: "0%", opacity: 1 }}
+            src={radioniceSlika}
+            alt="Radionice"
+            animate={{ y: 0, opacity: 1 }}
             initial={{
-              x: "-100%",
+              y: -100,
               opacity: 0,
             }}
             transition={{ duration: 1 }}
@@ -40,9 +40,9 @@ const Radionice = () => {
         </div>
         <motion.div
           className="tekst"
-          animate={{ x: "0%", opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           initial={{
-            x: "100%",
+            y: -100,
             opacity: 0,
           }}
           transition={{ duration: 1 }}

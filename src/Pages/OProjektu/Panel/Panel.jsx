@@ -1,5 +1,5 @@
 import React from "react";
-import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
+import panelSlika from "../../../Assets/Images/panel.png";
 import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
 import UcesnikPanela from "./UcesnikPanela";
 import "./Panel.scss";
@@ -74,11 +74,11 @@ const Panel = () => {
       <div className="o-projektu-uvod">
         <div className="slika">
           <motion.img
-            src={ilustracijaTest}
-            alt="Radionica"
-            animate={{ x: "0%", opacity: 1 }}
+            src={panelSlika}
+            alt="Panel"
+            animate={{ y: 0, opacity: 1 }}
             initial={{
-              x: "-100%",
+              y: -100,
               opacity: 0,
             }}
             transition={{ duration: 1 }}
@@ -86,9 +86,9 @@ const Panel = () => {
         </div>
         <motion.div
           className="tekst"
-          animate={{ x: "0%", opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           initial={{
-            x: "100%",
+            y: -100,
             opacity: 0,
           }}
           transition={{ duration: 1 }}

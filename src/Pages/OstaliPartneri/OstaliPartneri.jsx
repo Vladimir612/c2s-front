@@ -4,8 +4,8 @@ import Nav from "./../../Components/Nav/Nav";
 import "./OstaliPartneri.scss";
 
 //slike
-import Catenamedia from "../../Assets/Images/Partneri/catenamedia.png";
-import Endava from "../../Assets/Images/Partneri/endava.png";
+import DevIt from "../../Assets/Images/Partneri/dev-it.svg";
+import Hedwell from "../../Assets/Images/Partneri/hedwell.png";
 import Fon from "../../Assets/Images/Partneri/fon.png";
 import Guarana from "../../Assets/Images/Partneri/guarana.png";
 import Prime from "../../Assets/Images/Partneri/prime-software.png";
@@ -20,18 +20,12 @@ import Lopta from "../../Utilities/Lopta/Lopta";
 const OstaliPartneri = () => {
   const pocetakOstaliPartneri = useRef();
 
-  const generalniPartneri = [
+  const godisnjiPartneri = [
     {
-      partnerSlika: Catenamedia,
-      partnerIme: "Catenamedia",
-      pozadina: "#f53942",
-      link: "https://www.catenamedia.com/",
-    },
-    {
-      partnerSlika: Endava,
-      partnerIme: "Endava",
+      partnerSlika: Prime,
+      partnerIme: "Prime",
       pozadina: "#fff",
-      link: "https://www.endava.com/",
+      link: "https://www.primeholding.com/",
     },
     {
       partnerSlika: Fon,
@@ -46,14 +40,20 @@ const OstaliPartneri = () => {
       link: "https://guarana.rs/",
     },
     {
-      partnerSlika: Prime,
-      partnerIme: "Prime",
+      partnerSlika: Hedwell,
+      partnerIme: "Hedwell",
       pozadina: "#fff",
-      link: "https://www.primeholding.com/",
+      link: "https://guarana.rs/",
+    },
+    {
+      partnerSlika: DevIt,
+      partnerIme: "DevIT",
+      pozadina: "#fff",
+      link: "https://guarana.rs/",
     },
   ];
 
-  const generalniSettings = {
+  const godisnjiSettings = {
     dots: false,
     infinite: true,
     arrows: false,
@@ -130,8 +130,8 @@ const OstaliPartneri = () => {
           <div className="ostali-partneri-slider">
             <h3>GODISNJI PARTNERI</h3>
             <PartneriSlider
-              partneri={generalniPartneri}
-              settings={generalniSettings}
+              partneri={godisnjiPartneri}
+              settings={godisnjiSettings}
               width="12rem"
               height="12rem"
             />
@@ -139,8 +139,8 @@ const OstaliPartneri = () => {
           <div className="ostali-partneri-slider">
             <h3>NATURALNI PARTNERI</h3>
             <PartneriSlider
-              partneri={generalniPartneri}
-              settings={generalniSettings}
+              partneri={godisnjiPartneri}
+              settings={godisnjiSettings}
               width="12rem"
               height="12rem"
             />
@@ -148,8 +148,8 @@ const OstaliPartneri = () => {
           <div className="ostali-partneri-slider">
             <h3>MEDIJSKI PARTNERI</h3>
             <PartneriSlider
-              partneri={generalniPartneri}
-              settings={generalniSettings}
+              partneri={godisnjiPartneri}
+              settings={godisnjiSettings}
               width="12rem"
               height="12rem"
             />

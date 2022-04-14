@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ilustracijaTest from "../../../Assets/Images/ilustracija-test.svg";
+import techSlika from "../../../Assets/Images/tech-challenge.png";
 import { BsArrowRight } from "react-icons/bs";
 import "./TechChallenge.scss";
 
@@ -14,11 +14,11 @@ const TechChallenge = () => {
       <div className="o-projektu-uvod">
         <div className="slika">
           <motion.img
-            src={ilustracijaTest}
-            alt="Radionica"
-            animate={{ x: "0%", opacity: 1 }}
+            src={techSlika}
+            alt="Tech challenge"
+            animate={{ y: 0, opacity: 1 }}
             initial={{
-              x: "-100%",
+              y: -100,
               opacity: 0,
             }}
             transition={{ duration: 1 }}
@@ -26,22 +26,22 @@ const TechChallenge = () => {
         </div>
         <motion.div
           className="tekst"
-          animate={{ x: "0%", opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           initial={{
-            x: "100%",
+            y: -100,
             opacity: 0,
           }}
           transition={{ duration: 1 }}
         >
           <h2>TECH CHALLENGE</h2>
           <p>
-            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
-            da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice
-            koje smo do sada održali pokrivale su frontend i backend
-            development, web development, web dizajn, grafički dizajn, game
-            development, data science, kao i mnoge tehnologije u pomenutim
-            oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
-            razvoju soft, odnosno mekih veština.
+            Tokom studija, većina studenata nema priliku da oseti kako to
+            izgleda rešavanje realnih IT problema na radnom mestu. Upravo zbog
+            toga cilj ovog dela projekta je da se članovi timova upoznaju i
+            ponude rešenje za IT studiju slučaja. Za učešće na ovom delu
+            projekta neophodno je da okupiš tim ili se samostalno prijaviš,
+            pošalješ prijavu i 17. maja prezentuješ svoje rešenje jednoj od
+            kompanija!
           </p>
         </motion.div>
       </div>

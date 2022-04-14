@@ -15,9 +15,11 @@ const Nav = () => {
     <>
       <div className="bg-container"></div>
       <nav>
-        <div className="logo-wrapper">
-          <img src={logo} alt="Fonis Logo" />
-        </div>
+        <Link to="/">
+          <div className="logo-wrapper">
+            <img src={logo} alt="Fonis Logo" />
+          </div>
+        </Link>
         <div
           className="hamburger-menu"
           onClick={() => {
