@@ -21,6 +21,7 @@
       overflow: hidden;
       img {
         @include fit-image;
+        object-position: top;
       }
     }
     .o-nama-coordinator {

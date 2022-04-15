@@ -6,8 +6,10 @@ import nekiLjudi from "../../Assets/Images/ljudi.png";
 import Tim from "./Tim";
 
 //organizacioni tim
+import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.png";
 import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.png";
 import coreTimSlika from "../../Assets/Images/organizacioniTim/coreTim.png";
+import crTimSlika from "../../Assets/Images/organizacioniTim/crTim.png";
 import dizajnTimSlika from "../../Assets/Images/organizacioniTim/dizajnTim.png";
 import hrTimSlika from "../../Assets/Images/organizacioniTim/hrTim.png";
 import itTimSlika from "../../Assets/Images/organizacioniTim/itTim.png";
@@ -59,10 +61,10 @@ const ONama = () => {
     imeTima: "CR TIM",
     oTimu:
       "Tim za odnose sa kompanijama je zaslužan za ostvarivanje partnerstava koji doprinose realizaciji projekta na visokom nivou. 💰",
-    slikaKoordinatora: nekiLjudi,
+    slikaKoordinatora: AnjaPejovic,
     imeKoordinatora: "Anja Pejović",
     funkcijaKoordinatora: "Koordinatorka CR tima",
-    slikaTima: nekiLjudi,
+    slikaTima: crTimSlika,
   };
 
   const hrTim = {

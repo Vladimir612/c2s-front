@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../Assets/Videos/earth.mp4";
+import video from "../../Assets/Videos/prime.mp4";
 import test2 from "../../Assets/Videos/test2.mp4";
 import "./NasiPartneri.scss";
 import Nav from "./../../Components/Nav/Nav";

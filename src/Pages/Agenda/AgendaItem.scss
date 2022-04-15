@@ -8,7 +8,7 @@
   &.obrnuto {
     flex-direction: row-reverse;
     .right-content {
-      transform: translateX(-8rem);
+      transform: translateX(-10rem);
     }
   }
   .left-content {
@@ -33,9 +33,11 @@
     backdrop-filter: blur(18px);
     padding: 1.5rem;
     border-radius: 1rem;
-    transform: translateX(8rem);
+    transform: translateX(10rem);
+    width: 26rem;
     ul {
       @include box-center($direction: column);
+      align-items: flex-start;
       li {
         font-weight: 300;
         @include box-center($justify: space-around);
@@ -45,6 +47,7 @@
         color: #fff;
         &:nth-child(1) {
           font-weight: 500;
+          white-space: nowrap;
         }
       }
     }
@@ -63,6 +66,7 @@
       }
     }
     .right-content {
+      width: 18rem;
       transform: translateX(0);
       span:nth-child(1) {
         padding: 1rem 1rem 1rem 0;

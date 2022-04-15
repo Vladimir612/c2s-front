@@ -24,10 +24,10 @@ const PartnerSnimak = (props) => {
       }
     }
   };
+
   return (
     <>
       <div className="pocetak-pocetna" ref={pocetakPartneri}></div>
-
       <div className="partneri-container">
         <div className="video-wrapper">
           <video autoPlay loop muted key={props.video}>

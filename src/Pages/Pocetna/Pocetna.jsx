@@ -4,16 +4,20 @@ import Footer from "../../Components/Footer/Footer";
 import Lopta from "./../../Utilities/Lopta/Lopta";
 import "./Pocetna.scss";
 import { motion } from "framer-motion";
-import c2sSvetli from "../../Assets/Images/c2slogo_svetli.svg";
+import c2sSvetli from "../../Assets/Images/c2slogo_svetli.png";
 import PartneriSlider from "./PartneriSlider";
 
-//slike
-import DevIt from "../../Assets/Images/Partneri/dev-it.svg";
-import Hedwell from "../../Assets/Images/Partneri/hedwell.png";
-import Fon from "../../Assets/Images/Partneri/fon.png";
-import Guarana from "../../Assets/Images/Partneri/guarana.png";
-import Prime from "../../Assets/Images/Partneri/prime-software.png";
+//zlatni partneri
 import raiffeisen from "../../Assets/Images/Partneri/raiffeisen.svg";
+
+//godisnji
+import devit from "../../Assets/Images/Partneri/godisnji/devit.png";
+import digitec from "../../Assets/Images/Partneri/godisnji/digitec.png";
+import fon from "../../Assets/Images/Partneri/godisnji/fon.png";
+import guarana from "../../Assets/Images/Partneri/godisnji/guarana.png";
+import hedwell from "../../Assets/Images/Partneri/godisnji/hedwell.png";
+import mainstream from "../../Assets/Images/Partneri/godisnji/mainstream.png";
+import prime from "../../Assets/Images/Partneri/godisnji/prime.png";
 
 //carousel
 import "slick-carousel/slick/slick.css";
@@ -25,34 +29,46 @@ const Pocetna = () => {
 
   const godisnjiPartneri = [
     {
-      partnerSlika: Prime,
-      partnerIme: "Prime",
-      pozadina: "#fff",
-      link: "https://www.primeholding.com/",
-    },
-    {
-      partnerSlika: Fon,
+      partnerSlika: fon,
       partnerIme: "Fon",
       pozadina: "#fff",
       link: "http://fon.bg.ac.rs/",
     },
     {
-      partnerSlika: Guarana,
-      partnerIme: "Guarana",
-      pozadina: "#a5de2f",
-      link: "https://guarana.rs/",
-    },
-    {
-      partnerSlika: Hedwell,
-      partnerIme: "Hedwell",
+      partnerSlika: prime,
+      partnerIme: "Prime",
       pozadina: "#fff",
-      link: "https://guarana.rs/",
+      link: "https://www.primeholding.com/",
     },
     {
-      partnerSlika: DevIt,
+      partnerSlika: mainstream,
+      partnerIme: "Mainstream",
+      pozadina: "#fff",
+      link: "https://www.mainstream.rs/",
+    },
+    {
+      partnerSlika: devit,
       partnerIme: "DevIT",
       pozadina: "#fff",
-      link: "https://guarana.rs/",
+      link: "https://www.devit.rs/",
+    },
+    {
+      partnerSlika: guarana,
+      partnerIme: "Guarana",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/",
+    },
+    {
+      partnerSlika: hedwell,
+      partnerIme: "Hedwell",
+      pozadina: "#fff",
+      link: "https://hedwell.com/",
+    },
+    {
+      partnerSlika: digitec,
+      partnerIme: "Digitec",
+      pozadina: "#fff",
+      link: "https://www.digitec.rs/reklamni_materijali",
     },
   ];
 
@@ -200,7 +216,7 @@ const Pocetna = () => {
               </div>
               <div className="partner-wrapper">
                 <div className="img-wrapper">
-                  <img src={Prime} alt="Prime Software" />
+                  <img src={prime} alt="Prime Software" />
                 </div>
               </div>
               <div className="partner-wrapper">
