@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 footer {
+  position: absolute;
   padding: 0 2.5rem;
   width: 100vw;
   @include box-center($justify: space-between);
@@ -17,6 +18,15 @@ footer {
     max-width: 100%;
     @include box-center($justify: space-between);
     gap: 0.8rem;
+    a {
+      color: #fff;
+    }
+    svg {
+      transition: color ease-in 0.25s;
+    }
+    svg:hover {
+      color: $crvena;
+    }
   }
   button {
     text-transform: uppercase;

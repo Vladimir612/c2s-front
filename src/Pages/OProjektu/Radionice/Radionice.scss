@@ -1,106 +1,26 @@
 @import "../../../global.scss";
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.radionica-item {
-  @include box-center($justify: flex-start);
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  &:last-child {
-    margin-bottom: 6rem;
-  }
-}
+@import "../../../global.scss";
 
-@media screen and (max-width: 768px) {
-  .wrap-radionica {
-    // margin: 2%;
-    flex-direction: column;
-    .predavaci {
-      width: 80%;
-    }
-    .opis {
-      width: 80%;
-    }
-  }
-}
-.wrap-radionica {
-  @include box-center($direction: row, $justify: center);
-  flex-wrap: wrap;
-  width: 100%;
-  //   height: fit-content;
-  //   padding: 30px;
-  overflow: hidden;
-  background-color: #b4afb3;
-  border-radius: 2rem;
-  //   margin: 2rem;
-  //   padding: 1rem 0.3rem 1rem 1rem;
-}
-.opis {
-  width: 50%;
-  p {
-    color: whitesmoke;
-  }
-  h1 {
-    color: whitesmoke;
-  }
-}
-.predavaci {
-  @include box-center($direction: column, $justify: space-between);
-  width: 50%;
-
-  p {
-    color: whitesmoke;
-    height: 50%;
-    align-self: baseline;
-  }
-  .slikePredavaca {
-    width: 15rem;
-    display: flex;
-    justify-content: center;
-    img {
+.radionice-container {
+  min-height: 100vh;
+  .presek-dana {
+    position: relative;
+    height: 1rem;
+    border-top: 1px solid $pozadina_siva;
+    border-right: 1px solid $pozadina_siva;
+    border-left: 1px solid $pozadina_siva;
+    margin: 5rem 2rem;
+    font-size: 1rem;
+    .krug-presek {
+      position: absolute;
+      top: -2.5rem;
+      left: calc(50% - 2.5rem);
+      bottom: 2.5rem;
+      width: 5rem;
+      height: 5rem;
+      background-color: $pozadina_siva;
       border-radius: 50%;
-      width: 90%;
+      @include box-center;
     }
-  }
-  .oPredavacu {
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 65%;
-    height: 100%;
-  }
-}
-.predavac1 {
-  @include box-center($direction: row, $justify: center);
-}
-.predavac2 {
-  @include box-center($direction: row, $justify: center);
-}
-
-.bottom-radionica {
-  @include box-center($direction: row, $justify: space-between);
-  width: 100%;
-  margin-top: 3%;
-
-  //background-color: aquamarine;
-  .details {
-    width: fit-content;
-    .dugmeOProjektu {
-      margin: 10%;
-      border: none;
-      background-color: #b4afb3;
-    }
-  }
-  .companyLink {
-    width: 50%;
-    height: 4rem;
-    // border: 2px solid black;
-    background-color: white;
-    border-radius: 1.5rem 0rem 0rem 0rem;
-  }
-  a {
-    text-decoration: none;
   }
 }

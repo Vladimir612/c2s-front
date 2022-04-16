@@ -1,103 +1,79 @@
 import React from "react";
 import "./Radionice.scss";
-import PredavacReact1 from "../../../Assets/Images/predavacReact1.jpg";
-import PredavacReact2 from "../../../Assets/Images/predavacReact2.jpg";
-import Logo1 from "../../../Assets/Images/logo1.png";
-import VisibilitySensor from "react-visibility-sensor";
+import radioniceSlika from "../../../Assets/Images/radionice.png";
+import RadionicaKartica from "./RadionicaKartica";
+import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-const Radionice = (props) => {
-  const handleDetails = () => {
-    setDetalji(!detalji);
-    // alert(detalji);
+const Radionice = () => {
+  const radionica1 = {
+    naslov: "REACT",
+    prviParagraf:
+      "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook. Od svog pojavljivanja 2011. godine pa sve do danas, React je ostao veoma popularan zbog svojih dodatnih karakteristika poput jednostavnosti i fleksibilnosti.",
+    drugiParagraf:
+      "Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu.",
+    predavac: {
+      ime: "Jovana Jovanovic",
+      vise: "Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook",
+      slika: slikaZaposleni,
+    },
+    predavac2: {
+      ime: "Milan Milanovic",
+      vise: "Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook",
+      slika: slikaZaposleni,
+    },
   };
-  const [detalji, setDetalji] = useState(false);
-  // 0 je otvoreno 1 je zatvoreno
-  const [visibleRadionica, setVisibleRadionica] = useState(false);
   return (
-    <VisibilitySensor
-      onChange={(isVisible) => {
-        if (isVisible && !visibleRadionica) {
-          setVisibleRadionica(true);
-        }
-        return;
-      }}
-      delayedCall
-      partialVisibility
-    >
-      <motion.div
-        className="radionica-item"
-        animate={visibleRadionica && { y: 0, opacity: 1 }}
-        initial={{
-          y: 80,
-          opacity: 0,
-        }}
-        transition={{ duration: 1 }}
-      >
-        <div className="wrap-radionica">
-          <div className="opis">
-            <h1>{props.imeRadionice}</h1>
-            <p>{props.tekstOpis}</p>
-          </div>
-          <div
-            className="predavaci"
-            style={{
-              flexDirection: detalji ? "row" : "column",
+    <div className="radionice-container">
+      <div className="o-projektu-uvod">
+        <div className="slika">
+          <motion.img
+            src={radioniceSlika}
+            alt="Radionice"
+            animate={{ y: 0, opacity: 1 }}
+            initial={{
+              y: -100,
+              opacity: 0,
             }}
-          >
-            <div className="predavac1">
-              <div className="slikePredavaca">
-                <img src={PredavacReact1} alt="zemaljac" />
-              </div>
-              <div
-                className="oPredavacu"
-                style={{
-                  display: detalji ? "none" : "block",
-                }}
-              >
-                <h2>{props.imePredavaca1}</h2>
-                <h4>Predavac</h4>
-                {/* ovde mozda za h4 da ide isto preko props ako nema moze da bude nes sem predavaca */}
-                <p>{props.tekstPredavac1}</p>
-              </div>
-            </div>
-            <div className="predavac2">
-              <div
-                className="oPredavacu"
-                style={{
-                  display: detalji ? "none" : "block",
-                }}
-              >
-                <h2>{props.imePredavaca2}</h2>
-                <h4>Predavac</h4>
-                <p>{props.tekstPredavac2}</p>
-              </div>
-              <div className="slikePredavaca">
-                <img
-                  src={PredavacReact2}
-                  className="predavac-img"
-                  alt="zemaljac"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="bottom-radionica">
-            <div className="details">
-              <button className="dugmeOProjektu" onClick={handleDetails}>
-                OIFJOD
-              </button>
-            </div>
-            <div className="companyLink">
-              <div className="logoKompanije">
-                <img src={Logo1} alt="kompanije studentima logo" />
-              </div>
-              <a href={props.link}> Saznaj vise o kompaniji</a>
-            </div>
-          </div>
+            transition={{ duration: 1 }}
+          />
         </div>
-      </motion.div>
-    </VisibilitySensor>
+        <motion.div
+          className="tekst"
+          animate={{ y: 0, opacity: 1 }}
+          initial={{
+            y: -100,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+        >
+          <h2>RADIONICE</h2>
+          <p>
+            Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
+            da dopunjuju svoja znanja iz najraznovrsnijih oblasti. Radionice
+            koje smo do sada održali pokrivale su frontend i backend
+            development, web development, web dizajn, grafički dizajn, game
+            development, data science, kao i mnoge tehnologije u pomenutim
+            oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
+            razvoju soft, odnosno mekih veština.
+          </p>
+        </motion.div>
+      </div>
+      <div className="presek-dana">
+        <div className="krug-presek">
+          <p>1.dan</p>
+        </div>
+      </div>
+      <RadionicaKartica radionica={radionica1} />
+      <RadionicaKartica radionica={radionica1} />
+      <div className="presek-dana">
+        <div className="krug-presek">
+          <p>2.dan</p>
+        </div>
+      </div>
+      <RadionicaKartica radionica={radionica1} />
+      <RadionicaKartica radionica={radionica1} />
+    </div>
   );
 };
 

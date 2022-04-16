@@ -1,1 +1,42 @@
-@import "../../global.scss";
+@import "../../../global.scss";
+@import "../../../global.scss";
+
+.speed-dating-container,
+.tech-challenge-container {
+  .kompanije {
+    margin: 1rem 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    h2 {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    a {
+      color: $tekst_siva;
+    }
+    .link-do-kompanije {
+      margin: 3rem 0;
+      padding: 1rem 0.5rem;
+      background: #fff;
+      border-radius: 2rem;
+      @include box-center($justify: space-around);
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .speed-dating-container,
+  .tech-challenge-container {
+    .kompanije {
+      .link-do-kompanije {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

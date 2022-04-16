@@ -1,0 +1,88 @@
+@import "../../global.scss";
+
+.ostali-partneri-container {
+  .hero-partneri {
+    margin-top: 3.8rem;
+    background: $crvena;
+    height: 25rem;
+    @include box-center;
+    p {
+      text-align: center;
+      padding: 0 20%;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+  .ostali-content {
+    position: relative;
+    .lopte-anim {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      &:nth-child(2) {
+        top: 50%;
+      }
+      .prva-grupa {
+        position: absolute;
+        left: 20%;
+        .lopta:first-child {
+          box-shadow: inset 10px -9px 31px 7px #000000eb,
+            7px 9px 16px 3px #0000004a;
+          animation-duration: 30s;
+          &::after {
+            box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
+          }
+        }
+      }
+      .druga-grupa {
+        position: absolute;
+        top: 60%;
+        right: 30%;
+      }
+      .treca-grupa {
+        position: absolute;
+        top: 30%;
+        right: 20%;
+        .lopta:first-child {
+          box-shadow: inset 6px -1px 37px 2px #000000a6,
+            7px 9px 16px 3px #0000004a;
+          z-index: 10;
+          position: absolute;
+          top: 2rem;
+          left: 3rem;
+          animation-duration: 30s;
+          &::after {
+            top: 2.2rem;
+            left: 5.1rem;
+            box-shadow: -32px -5px 30px 15px rgb(255 255 255 / 37%);
+          }
+        }
+      }
+    }
+  }
+  .ostali-partneri-slider {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    h3 {
+      padding-left: 2.5rem;
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ostali-partneri-container {
+    .ostali-partneri-slider {
+      h3 {
+        padding-left: 0;
+      }
+    }
+  }
+}

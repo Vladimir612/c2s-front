@@ -48,9 +48,27 @@ const Footer = (props) => {
         >
           kontakt
         </motion.button>
-        <BsInstagram size={30} color="#fff" />
-        <BsFacebook size={30} color="#fff" />
-        <BsLinkedin size={30} color="#fff" />
+        <a
+          href="https://www.instagram.com/fonis_fon/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsInstagram size={36} />
+        </a>
+        <a
+          href="https://www.facebook.com/fonis.rs/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsFacebook size={36} />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/fonis"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsLinkedin size={36} />
+        </a>
       </div>
     </footer>
   );

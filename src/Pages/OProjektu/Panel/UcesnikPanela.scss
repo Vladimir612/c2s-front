@@ -1,0 +1,83 @@
+@import "../../../global.scss";
+
+.ucesnik-panela {
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 30rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  .lopte-slika {
+    width: 5rem;
+    position: absolute;
+    top: 36%;
+    right: 5%;
+    transform: rotate(200deg);
+    img {
+      @include fit-image;
+    }
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+  &.moderator {
+    color: #fff;
+    background: $crvena;
+  }
+  &.panelista {
+    color: $pozadina_tamna;
+    background: $pozadina_siva;
+  }
+  .ucesnik {
+    @include box-center($justify: space-between);
+    gap: 2rem;
+    .img-wrapper {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        @include fit-image;
+      }
+    }
+    .podaci {
+      @include box-center($direction: column, $justify: space-around);
+      align-items: flex-start;
+      gap: 1rem;
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+  .rekao-je {
+    margin-top: 2rem;
+  }
+  .kompanija {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ucesnik-panela {
+    padding: 1rem;
+    padding-top: 3rem;
+    &:first-child {
+      padding-top: 1rem;
+    }
+    .ucesnik {
+      flex-direction: column;
+    }
+    .kompanija {
+      padding: 0.3rem 1.2rem;
+      border-top-right-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+    }
+  }
+}

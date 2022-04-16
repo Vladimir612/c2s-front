@@ -1,0 +1,42 @@
+@import "../../global.scss";
+
+.faq-question {
+  margin-bottom: 2rem;
+  .odgovor-wrapper {
+    overflow: hidden;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    font-weight: 300;
+    max-width: 60rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    &.hidden {
+      border: none;
+    }
+  }
+  p {
+    color: #fff;
+  }
+  .pitanje-wrapper {
+    @include box-center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    .prikazi-odgovor {
+      background: $crvena;
+      margin-right: 1rem;
+      cursor: pointer;
+      @include box-center;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+    }
+  }
+  .pitanje {
+    font-weight: 500;
+  }
+  a {
+    color: $crvena;
+    font-weight: 500;
+  }
+}

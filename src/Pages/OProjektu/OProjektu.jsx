@@ -1,164 +1,90 @@
-import React from "react";
-import { useState } from "react";
+import React, { useRef } from "react";
 import "./OProjektu.scss";
 import Radionice from "./Radionice/Radionice";
-import O_tema from "./O_tema/O_tema";
-import OtemaSlikaRadionice from "../../Assets/Images/otemaslika.png";
+import Panel from "./Panel/Panel";
+import SpeedDating from "./SpeedDating/SpeedDating";
+import TechChallenge from "./TechChallenge/TechChallenge";
+import Footer from "../../Components/Footer/Footer";
+import Nav from "./../../Components/Nav/Nav";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 
 const OProjektu = () => {
-  const [aktivanTab, setAktivanTab] = useState(1);
-  const handleRadionice = () => {
-    setAktivanTab(1);
-  };
-  const handlePanel = () => {
-    setAktivanTab(2);
-  };
-  const handleDating = () => {
-    setAktivanTab(3);
-  };
-  const handleTech = () => {
-    setAktivanTab(4);
-  };
+  const pocetakPocetna = useRef();
+  const location = useLocation();
+  let aktivnaStrana = -1;
+
+  switch (location.pathname) {
+    case "/nasi-partneri":
+      aktivnaStrana = -1;
+      break;
+    case "/o-projektu/radionice":
+      aktivnaStrana = 1;
+      break;
+    case "/o-projektu/panel":
+      aktivnaStrana = 2;
+      break;
+    case "/o-projektu/speed-dating":
+      aktivnaStrana = 3;
+      break;
+    case "/o-projektu/tech-challenge":
+      aktivnaStrana = 4;
+      break;
+    default:
+      aktivnaStrana = -1;
+      break;
+  }
 
   return (
-    <div className="wrap-oprojektu">
-      <div className="nav_OProjektu">
-        <button className="dugmeOProjektu" onClick={handleRadionice}>
-          <p>RADIONICE</p>
-        </button>
-        <button className="dugmeOProjektu" onClick={handlePanel}>
-          PANEL
-        </button>
-        <button className="dugmeOProjektu" onClick={handleDating}>
-          SPEED DATING
-        </button>
-        <button className="dugmeOProjektu" onClick={handleTech}>
-          TECH CHALLENGE
-        </button>
-      </div>
+    <>
+      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
+      <Nav />
+      <div className="o-projektu-container">
+        <div className="o-projektu-navigation">
+          <ul>
+            <li className={aktivnaStrana === 1 ? "active" : ""}>
+              <Link to="/o-projektu/radionice">RADIONICE</Link>
+            </li>
+            <li className={aktivnaStrana === 2 ? "active" : ""}>
+              <Link to="/o-projektu/panel">PANEL</Link>
+            </li>
+            <li className={aktivnaStrana === 3 ? "active" : ""}>
+              <Link to="/o-projektu/speed-dating">SPEED DATING</Link>
+            </li>
+            <li className={aktivnaStrana === 4 ? "active" : ""}>
+              <Link to="/o-projektu/tech-challenge">TECH CHALLENGE</Link>
+            </li>
+          </ul>
+        </div>
 
-      {aktivanTab === 1 && (
-        <div className="contentOProjektu">
-          <O_tema
-            ime="RADIONICE"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
-            slika={OtemaSlikaRadionice}
-          ></O_tema>
-          <Radionice
-            imeRadionice="REACT"
-            link="reak.t"
-            tekstOpis="Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-            imePredavaca1="JOVANA JOVANOVIC"
-            tekstPredavac1=" way is to change the percentage of the flex property of the
-            flex items to create different way is to change the percentage of the flex property of the
-            flex items to create different"
-            imePredavaca2="MARKO JOVANOVIC"
-            tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
-          ></Radionice>
-          <Radionice
-            imeRadionice="REACT"
-            link="reak.t"
-            tekstOpis="tracted by the rn looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-            imePredavaca1="JOVANA JOVANOVIC"
-            tekstPredavac1="OAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
-            imePredavaca2="MARKO JOVANOVIC"
-            tekstPredavac2="XXOAIHFushaefoioknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
-          ></Radionice>
-          <Radionice
-            imeRadionice="BLABLA"
-            link="reak.t"
-            tekstOpis="Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work:
-          Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example tAnother way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example t
-          Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work:
-          Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example tAnother way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example t"
-            tekstPrviPredavac="OAIHFushaefoijsiefposejfiusnfo weoifjweiufn owef lneiufwone fower oknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
-          ></Radionice>
-          <Radionice
-            imeRadionice="REACT"
-            link="reak.t"
-            tekstOpis="Another way is to change the percentage of the flex property of the
-          flex items to create different layouts for different screen sizes.
-          Note that we also have to include flex-wrap: wrap; on the flex
-          container for this example to work:"
-            tekstPrviPredavac="OAIHFushaefoijsiefposejfiusnfo weoifjweiufn owef lneiufwone fower oknewoifwoenf iuwenflksd foiwnefn sdnfoiwen fib"
-          ></Radionice>
+        <Routes>
+          <Route path="radionice" element={<Radionice />} />
+          <Route path="panel" element={<Panel />} />
+          <Route path="speed-dating" element={<SpeedDating />} />
+          <Route path="tech-challenge" element={<TechChallenge />} />
+        </Routes>
 
-          <div className="presek-dana">
-            <div className="krug-presek">
-              <p>1.dan</p>
-            </div>
+        <div className="donji-nav">
+          <p>POGLEDAJ I OSTALE STRANE</p>
+          <div className="o-projektu-navigation">
+            <ul>
+              <li className={aktivnaStrana === 1 ? "active" : ""}>
+                <Link to="/o-projektu/radionice">RADIONICE</Link>
+              </li>
+              <li className={aktivnaStrana === 2 ? "active" : ""}>
+                <Link to="/o-projektu/panel">PANEL</Link>
+              </li>
+              <li className={aktivnaStrana === 3 ? "active" : ""}>
+                <Link to="/o-projektu/speed-dating">SPEED DATING</Link>
+              </li>
+              <li className={aktivnaStrana === 4 ? "active" : ""}>
+                <Link to="/o-projektu/tech-challenge">TECH CHALLENGE</Link>
+              </li>
+            </ul>
           </div>
         </div>
-      )}
-      {aktivanTab === 2 && (
-        <div className="contentOProjektu">
-          <O_tema
-            ime="PANEL"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
-            slika={OtemaSlikaRadionice}
-          ></O_tema>
-          <Radionice></Radionice>
-          <Radionice></Radionice>
-          <Radionice></Radionice>
-        </div>
-      )}
-      {aktivanTab === 3 && (
-        <div className="contentOProjektu">
-          <O_tema
-            ime="SPEED DATING"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
-            slika={OtemaSlikaRadionice}
-          ></O_tema>
-          <Radionice></Radionice>
-        </div>
-      )}
-      {aktivanTab === 4 && (
-        <div className="contentOProjektu">
-          <O_tema
-            ime="TECH CHALLENGE"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
-            slika={OtemaSlikaRadionice}
-          ></O_tema>
-          <Radionice></Radionice>
-        </div>
-      )}
-
-      <div className="nav_OProjektu">
-        <button className="dugmeOProjektu" onClick={handleRadionice}>
-          <p>RADIONICE</p>
-        </button>
-        <button className="dugmeOProjektu" onClick={handlePanel}>
-          PANEL
-        </button>
-        <button className="dugmeOProjektu" onClick={handleDating}>
-          SPEED DATING
-        </button>
-        <button className="dugmeOProjektu" onClick={handleTech}>
-          TECH CHALLENGE
-        </button>
       </div>
-    </div>
+      <Footer pocetakPocetna={pocetakPocetna} />
+    </>
   );
 };
 

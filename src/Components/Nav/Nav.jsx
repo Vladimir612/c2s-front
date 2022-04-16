@@ -15,9 +15,11 @@ const Nav = () => {
     <>
       <div className="bg-container"></div>
       <nav>
-        <div className="logo-wrapper">
-          <img src={logo} alt="Fonis Logo" />
-        </div>
+        <Link to="/">
+          <div className="logo-wrapper">
+            <img src={logo} alt="Fonis Logo" />
+          </div>
+        </Link>
         <div
           className="hamburger-menu"
           onClick={() => {
@@ -81,14 +83,22 @@ const Nav = () => {
               <FaCaretDown color={oProjektuAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
-                animate={{ height: oProjektuAktiv ? "8.5rem" : 0 }}
+                animate={{ height: oProjektuAktiv ? "9.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <li>Radionice</li>
-                <li>Panel</li>
-                <li>Speed dating</li>
-                <li>Tech challenge</li>
+                <Link to="/o-projektu/radionice">
+                  <li>Radionice</li>
+                </Link>
+                <Link to="/o-projektu/panel">
+                  <li>Panel</li>
+                </Link>
+                <Link to="/o-projektu/speed-dating">
+                  <li>Speed dating</li>
+                </Link>
+                <Link to="/o-projektu/tech-challenge">
+                  <li>Tech challenge</li>
+                </Link>
               </motion.ul>
             </li>
 
@@ -112,15 +122,31 @@ const Nav = () => {
               <FaCaretDown color={nasiPartneriAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
-                animate={{ height: nasiPartneriAktiv ? "11rem" : 0 }}
+                animate={{ height: nasiPartneriAktiv ? "18.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <li>Raiffeisen</li>
-                <li>Addacta</li>
-                <li>Aisi</li>
-                <li>Prime software</li>
-                <li>Samos education</li>
+                <Link to="/nasi-partneri/raiffeisen">
+                  <li>Raiffeisen</li>
+                </Link>
+                <Link to="/nasi-partneri/adacta">
+                  <li>Adacta</li>
+                </Link>
+                <Link to="/nasi-partneri/eyesee">
+                  <li>Eyesee</li>
+                </Link>
+                <Link to="/nasi-partneri/prime-software">
+                  <li>Prime software</li>
+                </Link>
+                <Link to="/nasi-partneri/semos-education">
+                  <li>Semos education</li>
+                </Link>
+                <Link to="/nasi-partneri/a1">
+                  <li>A1</li>
+                </Link>
+                <Link to="/godisnji-naturalni-medijski">
+                  <li>Godisnji, naturalni i medijski partneri</li>
+                </Link>
               </motion.ul>
             </li>
             <Link
@@ -141,20 +167,10 @@ const Nav = () => {
             </Link>
           </ul>
         </div>
-        <motion.button
-          className="dugme-prijavi"
-          whileHover={{
-            scale: 1.1,
-          }}
-          whileTap={{
-            scale: 0.9,
-          }}
-        >
-          <Link
-            to="/prijava"
-            onClick={() => {
-              setMenuOpen(false);
-            }}
+        <div className="desno">
+          <motion.button
+            className="dugme-prijavi"
+            style={{ marginRight: "1rem" }}
             whileHover={{
               scale: 1.1,
             }}
@@ -162,9 +178,47 @@ const Nav = () => {
               scale: 0.9,
             }}
           >
-            Prijavi se
-          </Link>
-        </motion.button>
+            <Link
+              to="/generator"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              CV Generator
+            </Link>
+          </motion.button>
+
+          <motion.button
+            className="dugme-prijavi"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+          >
+            <Link
+              to="/prijava"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              Prijavi se
+            </Link>
+          </motion.button>
+        </div>
       </nav>
       <motion.div
         className="menu"
@@ -194,14 +248,22 @@ const Nav = () => {
 
             <motion.ul
               className="sub-linkovi"
-              animate={{ height: oProjektuAktiv ? "7.5rem" : 0 }}
+              animate={{ height: oProjektuAktiv ? "8.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <li>Radionice</li>
-              <li>Panel</li>
-              <li>Speed dating</li>
-              <li>Tech challenge</li>
+              <Link to="/o-projektu/radionice">
+                <li>Radionice</li>
+              </Link>
+              <Link to="/o-projektu/panel">
+                <li>Panel</li>
+              </Link>
+              <Link to="/o-projektu/speed-dating">
+                <li>Speed dating</li>
+              </Link>
+              <Link to="/o-projektu/tech-challenge">
+                <li>Tech challenge</li>
+              </Link>
             </motion.ul>
           </li>
           <Link
@@ -227,15 +289,66 @@ const Nav = () => {
 
             <motion.ul
               className="sub-linkovi"
-              animate={{ height: nasiPartneriAktiv ? "9.5rem" : 0 }}
+              animate={{ height: nasiPartneriAktiv ? "15.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <li>Raiffeisen</li>
-              <li>Addacta</li>
-              <li>Aisi</li>
-              <li>Prime software</li>
-              <li>Samos education</li>
+              <Link
+                to="/nasi-partneri/raiffeisen"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Raiffeisen</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/adacta"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Adacta</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/eyesee"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Eyesee</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/prime-software"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Prime software</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/semos-education"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Semos education</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/a1"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>A1</li>
+              </Link>
+              <Link
+                to="/godisnji-naturalni-medijski"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Godisnji, naturalni i medijski partneri</li>
+              </Link>
             </motion.ul>
           </li>
           <Link
@@ -254,6 +367,31 @@ const Nav = () => {
           >
             <li datacontent={"FAQ"}>FAQ</li>
           </Link>
+          <motion.button
+            className="dugme-prijavi"
+            style={{ marginRight: "1rem" }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
+          >
+            <Link
+              to="/generator"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              CV Generator
+            </Link>
+          </motion.button>
           <motion.button
             className="dugme-prijavi"
             whileHover={{
