@@ -13,7 +13,6 @@ import Generator from "./Pages/CVGenerator/Generator";
 function App() {
     return (
         <div className="App">
-            {/* <ScrollToTop /> */}
             <Routes>
                 <Route path="/" element={<Pocetna />} />
                 <Route path="/o-projektu" element={<OProjektu />} />
