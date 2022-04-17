@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./RadionicaKartica.scss";
 import { MdExpandMore } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
-import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
 
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
 
 import lopte2 from "../../../Assets/Images/krugovi-radionica.png";
+import { Link } from "react-router-dom";
 
 const RadionicaKartica = (props) => {
   const [prikaziDetaljnije, setPrikaziDetaljnije] = useState(false);
@@ -138,13 +138,18 @@ const RadionicaKartica = (props) => {
               <MdExpandMore size={45} color="#14191b" />
             </motion.div>
           </div>
-          <div className="saznaj-o-kompaniji">
-            <div className="img-wrapper">
-              <img src={raiffeisen} alt="Kompanija" />
+          <Link to={props.radionica.kompanija.link}>
+            <div className="saznaj-o-kompaniji">
+              <div className="img-wrapper">
+                <img
+                  src={props.radionica.kompanija.slika}
+                  alt={props.radionica.kompanija.ime}
+                />
+              </div>
+              <p>Saznaj više o kompaniji</p>
+              <BsArrowRight size={25} color="#14191b" />
             </div>
-            <p>Saznaj vise o kompaniji</p>
-            <BsArrowRight size={25} color="#14191b" />
-          </div>
+          </Link>
         </div>
       </motion.div>
     </VisibilitySensor>

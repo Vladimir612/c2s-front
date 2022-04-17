@@ -7,8 +7,12 @@ import { motion } from "framer-motion";
 import c2sSvetli from "../../Assets/Images/c2slogo_svetli.png";
 import PartneriSlider from "./PartneriSlider";
 
-//zlatni partneri
-import raiffeisen from "../../Assets/Images/Partneri/raiffeisen.svg";
+//pokrovitelji
+import raiffeisen from "../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
+import a1 from "../../Assets/Images/Partneri/pokrovitelji/a1.png";
+import adacta from "../../Assets/Images/Partneri/pokrovitelji/adacta.png";
+import eyesee from "../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
+import semos from "../../Assets/Images/Partneri/pokrovitelji/semos.png";
 
 //godisnji
 import devit from "../../Assets/Images/Partneri/godisnji/devit.png";
@@ -18,6 +22,27 @@ import guarana from "../../Assets/Images/Partneri/godisnji/guarana.png";
 import hedwell from "../../Assets/Images/Partneri/godisnji/hedwell.png";
 import mainstream from "../../Assets/Images/Partneri/godisnji/mainstream.png";
 import prime from "../../Assets/Images/Partneri/godisnji/prime.png";
+
+//robni
+import escape from "../../Assets/Images/Partneri/robni/escape.png";
+import nescafe from "../../Assets/Images/Partneri/robni/nescafe.png";
+
+//medijiski
+import BestBg from "../../Assets/Images/Partneri/medijski/BestBg.png";
+import BestNs from "../../Assets/Images/Partneri/medijski/BestNs.png";
+import caseFon from "../../Assets/Images/Partneri/medijski/case.png";
+import centarZaRazvoj from "../../Assets/Images/Partneri/medijski/centarZaRazvoj.png";
+import Eestec from "../../Assets/Images/Partneri/medijski/Eestec.png";
+import fonovCentar from "../../Assets/Images/Partneri/medijski/fonovCentar.png";
+import future from "../../Assets/Images/Partneri/medijski/future.png";
+import kancelarija from "../../Assets/Images/Partneri/medijski/kancelarija.png";
+import Probjave from "../../Assets/Images/Partneri/medijski/Probjave.png";
+import Savez from "../../Assets/Images/Partneri/medijski/Savez.png";
+import spof from "../../Assets/Images/Partneri/medijski/spof.png";
+import Suma from "../../Assets/Images/Partneri/medijski/Suma.png";
+import SvetKompjutera from "../../Assets/Images/Partneri/medijski/SvetKompjutera.png";
+import Unija from "../../Assets/Images/Partneri/medijski/Unija.png";
+import Viser from "../../Assets/Images/Partneri/medijski/Viser.png";
 
 //carousel
 import "slick-carousel/slick/slick.css";
@@ -72,7 +97,7 @@ const Pocetna = () => {
     },
   ];
 
-  const godisnjiSettings = {
+  const allSettings = {
     dots: false,
     infinite: true,
     arrows: false,
@@ -84,6 +109,126 @@ const Pocetna = () => {
     autoplaySpeed: 1500,
     centerPadding: "60px",
   };
+
+  const robniPartneri = [
+    {
+      partnerSlika: guarana,
+      partnerIme: "Guarana",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/",
+    },
+    {
+      partnerSlika: escape,
+      partnerIme: "Escape",
+      pozadina: "#fff",
+      link: "https://escapegame.rs/",
+    },
+    {
+      partnerSlika: nescafe,
+      partnerIme: "Nescafe",
+      pozadina: "#fff",
+      link: "https://www.nescafe.com/rs/nase-kafe/nescafe-2in1",
+    },
+  ];
+
+  const medijskiPartneri = [
+    {
+      partnerSlika: BestBg,
+      partnerIme: "Best Beograd",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: caseFon,
+      partnerIme: "Case study club",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: centarZaRazvoj,
+      partnerIme: "Centar za razvoj karijere",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: Eestec,
+      partnerIme: "Eestec",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: BestNs,
+      partnerIme: "Best Novi Sad",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: fon,
+      partnerIme: "FON",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: fonovCentar,
+      partnerIme: "Fonov centar za razvoj karijere",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: future,
+      partnerIme: "Future",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: kancelarija,
+      partnerIme: "Kancelarija",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: Probjave,
+      partnerIme: "prObjave",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: Savez,
+      partnerIme: "Savez studenata Fona",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: spof,
+      partnerIme: "SPOF",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: Suma,
+      partnerIme: "Suma",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: SvetKompjutera,
+      partnerIme: "Svet kompjutera",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: Unija,
+      partnerIme: "Unija",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+    {
+      partnerSlika: Viser,
+      partnerIme: "Viser",
+      pozadina: "#fff",
+      link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    },
+  ];
 
   return (
     <>
@@ -210,51 +355,83 @@ const Pocetna = () => {
             <h3>kompanije učesnice</h3>
             <div className="logoi-kompanija">
               <div className="partner-wrapper">
-                <div className="img-wrapper">
-                  <img src={raiffeisen} alt="Raiffeisen" />
-                </div>
+                <a
+                  href="https://www.raiffeisenbank.rs/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="img-wrapper">
+                    <img src={raiffeisen} alt="Raiffeisen" />
+                  </div>
+                </a>
               </div>
-              <div className="partner-wrapper">
-                <div className="img-wrapper">
-                  <img src={prime} alt="Prime Software" />
+              <a
+                href="https://www.primeholding.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="partner-wrapper">
+                  <div className="img-wrapper">
+                    <img src={prime} alt="Prime software" />
+                  </div>
                 </div>
-              </div>
-              <div className="partner-wrapper">
-                <div className="img-wrapper">
-                  <img src={raiffeisen} alt="Raiffeisen" />
+              </a>
+              <a
+                href="https://semosedu.com.mk/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="partner-wrapper">
+                  <div className="img-wrapper">
+                    <img src={semos} alt="Semos education" />
+                  </div>
                 </div>
-              </div>
-              <div className="partner-wrapper">
-                <div className="img-wrapper">
-                  <img src={raiffeisen} alt="Raiffeisen" />
+              </a>
+              <a href="https://a1.rs/privatni" target="_blank" rel="noreferrer">
+                <div className="partner-wrapper">
+                  <div className="img-wrapper">
+                    <img src={a1} alt="A1" />
+                  </div>
                 </div>
-              </div>
-              <div className="partner-wrapper">
-                <div className="img-wrapper">
-                  <img src={raiffeisen} alt="Raiffeisen" />
+              </a>
+              <a
+                href="https://www.adacta-fintech.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="partner-wrapper">
+                  <div className="img-wrapper">
+                    <img src={adacta} alt="Adacta" />
+                  </div>
                 </div>
-              </div>
-              <div className="partner-wrapper">
-                <div className="img-wrapper">
-                  <img src={raiffeisen} alt="Raiffeisen" />
+              </a>
+              <a
+                href="https://eyesee-research.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="partner-wrapper">
+                  <div className="img-wrapper">
+                    <img src={eyesee} alt="Eyesee" />
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="ostale-kompanije">
               <div className="godisnji-partneri">
-                <h3>godisnji partneri</h3>
+                <h3>godišnji partneri</h3>
                 <PartneriSlider
                   partneri={godisnjiPartneri}
-                  settings={godisnjiSettings}
+                  settings={allSettings}
                   width="12rem"
                   height="12rem"
                 />
               </div>
               <div className="naturalni-partneri">
-                <h3>naturalni partneri</h3>
+                <h3>robni partneri</h3>
                 <PartneriSlider
-                  partneri={godisnjiPartneri}
-                  settings={godisnjiSettings}
+                  partneri={robniPartneri}
+                  settings={allSettings}
                   width="12rem"
                   height="12rem"
                 />
@@ -262,8 +439,8 @@ const Pocetna = () => {
               <div className="medijski-partneri">
                 <h3>medijski partneri</h3>
                 <PartneriSlider
-                  partneri={godisnjiPartneri}
-                  settings={godisnjiSettings}
+                  partneri={medijskiPartneri}
+                  settings={allSettings}
                   width="12rem"
                   height="12rem"
                 />

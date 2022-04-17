@@ -5,7 +5,13 @@ import { BsArrowRight } from "react-icons/bs";
 import "./TechChallenge.scss";
 
 //kompanije
-import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
+import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
+import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
+import a1 from "../../../Assets/Images/Partneri/pokrovitelji/a1.png";
+import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
+import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
+import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
+
 import { motion } from "framer-motion";
 
 const TechChallenge = () => {
@@ -56,37 +62,46 @@ const TechChallenge = () => {
             <BsArrowRight size={35} color="#14191b" />
           </div>
         </Link>
-        <Link to="/nasi-partneri/raiffeisen">
+        <Link to="/nasi-partneri/semos-education">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={raiffeisen} alt="Raiffeisen" />
+              <img src={semos} alt="Semos-education" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
           </div>
         </Link>
-        <Link to="/nasi-partneri/raiffeisen">
+        <Link to="/nasi-partneri/a1">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={raiffeisen} alt="Raiffeisen" />
+              <img src={a1} alt="A1" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
           </div>
         </Link>
-        <Link to="/nasi-partneri/raiffeisen">
+        <Link to="/nasi-partneri/prime-software">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={raiffeisen} alt="Raiffeisen" />
+              <img src={prime} alt="Prime software" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
           </div>
         </Link>
-        <Link to="/nasi-partneri/raiffeisen">
+        <Link to="/nasi-partneri/adacta">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={raiffeisen} alt="Raiffeisen" />
+              <img src={adacta} alt="Adacta" />
+            </div>
+            <p>Saznaj više o kompaniji</p>
+            <BsArrowRight size={35} color="#14191b" />
+          </div>
+        </Link>
+        <Link to="/nasi-partneri/eyesee">
+          <div className="link-do-kompanije">
+            <div className="img-wrapper">
+              <img src={eyesee} alt="Eyesee" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />

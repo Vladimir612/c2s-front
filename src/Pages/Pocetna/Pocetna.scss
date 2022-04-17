@@ -244,6 +244,7 @@
         @include box-center($justify: space-around);
         flex-wrap: wrap;
         .partner-wrapper {
+          overflow: hidden;
           width: 13rem;
           height: 6rem;
           margin: 2rem 3.6rem;
@@ -253,7 +254,7 @@
           box-shadow: 0 32px 40px rgba(0, 0, 0, 0.15);
         }
         .img-wrapper {
-          width: 80%;
+          width: 90%;
           img {
             @include fit-image;
           }

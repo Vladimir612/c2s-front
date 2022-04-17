@@ -1,5 +1,8 @@
 import React from "react";
-import video from "../../Assets/Videos/prime.mp4";
+import primeVideo from "../../Assets/Videos/prime.mp4";
+import adactaVideo from "../../Assets/Videos/adacta.mp4";
+import semosVideo from "../../Assets/Videos/semos.mp4";
+import eyeseeVideo from "../../Assets/Videos/eyesee.mp4";
 import test2 from "../../Assets/Videos/test2.mp4";
 import "./NasiPartneri.scss";
 import Nav from "./../../Components/Nav/Nav";
@@ -108,7 +111,7 @@ const NasiPartneri = () => {
           path="adacta"
           element={
             <PartnerSnimak
-              video={video}
+              video={adactaVideo}
               zaposleni={zaposleniAdacta}
               prevLink="/nasi-partneri/a1"
               nextLink="/nasi-partneri/eyesee"
@@ -122,7 +125,7 @@ const NasiPartneri = () => {
           path="eyesee"
           element={
             <PartnerSnimak
-              video={test2}
+              video={eyeseeVideo}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/adacta"
               nextLink="/nasi-partneri/prime-software"
@@ -135,7 +138,7 @@ const NasiPartneri = () => {
           path="prime-software"
           element={
             <PartnerSnimak
-              video={video}
+              video={primeVideo}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/eyesee"
               nextLink="/nasi-partneri/semos-education"
@@ -148,11 +151,11 @@ const NasiPartneri = () => {
           path="semos-education"
           element={
             <PartnerSnimak
-              video={test2}
+              video={semosVideo}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/prime-software"
               nextLink="/nasi-partneri/raiffeisen"
-              partnerIme="Samos Education"
+              partnerIme="Semos Education"
               oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
             />
           }
@@ -161,7 +164,7 @@ const NasiPartneri = () => {
           path="raiffeisen"
           element={
             <PartnerSnimak
-              video={video}
+              video={test2}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/semos-education"
               nextLink="/nasi-partneri/a1"
@@ -174,7 +177,7 @@ const NasiPartneri = () => {
           path="a1"
           element={
             <PartnerSnimak
-              video={video}
+              video={test2}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/raiffeisen"
               nextLink="/nasi-partneri/adacta"

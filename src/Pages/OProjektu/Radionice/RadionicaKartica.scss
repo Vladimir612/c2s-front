@@ -64,6 +64,7 @@
       @include box-center($justify: space-between);
     }
     .saznaj-o-kompaniji {
+      min-width: 31rem;
       padding: 1rem;
       border-top-left-radius: 2rem;
       border-bottom-right-radius: 2rem;
@@ -74,6 +75,19 @@
       bottom: 0;
       right: 0;
       cursor: pointer;
+      p {
+        color: $tekst_siva;
+      }
+      .img-wrapper {
+        height: 3rem;
+        width: 9rem;
+        @include box-center;
+        img {
+          @include fit-image;
+          max-height: 100%;
+          height: initial;
+        }
+      }
     }
   }
 
@@ -131,6 +145,16 @@
         width: 100%;
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .radionica-kartica {
+    .bottom {
+      .saznaj-o-kompaniji {
+        min-width: initial;
       }
     }
   }
