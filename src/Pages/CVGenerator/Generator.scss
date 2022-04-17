@@ -157,4 +157,87 @@
         min-height: 5rem;
         margin-top: 0.5rem;
     }
+
+    .show-on-resize {
+        display: none;
+    }
+
+    .none {
+    }
+
+    .right-side {
+        .input-field {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    .cv-space {
+        margin-right: 0rem !important;
+    }
+
+    .input-space {
+        width: 70% !important;
+    }
+
+    .show-on-resize {
+        display: block !important;
+    }
+
+    .none {
+        display: none !important;
+    }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .input-field {
+            display: block !important;
+            width: 100%;
+        }
+        .pdf-dugme {
+            width: 100% !important;
+            margin-bottom: 1rem;
+            border: 0;
+            border-radius: 0.5rem;
+            height: 2rem;
+            margin-top: 0.5rem;
+            background-color: $crvena;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .input-space {
+        width: 100% !important;
+    }
+
+    .cv-space {
+        transform-origin: center top;
+        transform: scale(0.7);
+    }
+
+    .right-side {
+        .input-field {
+            width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cv-space {
+        transform-origin: center top;
+        transform: scale(0.5);
+    }
+
+    .right-side {
+        .input-field {
+            width: 50%;
+        }
+    }
 }

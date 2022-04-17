@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Generator.scss";
 import Nav from "../../Components/Nav/Nav";
-import { AiFillPhone, AiFillFilePdf } from "react-icons/ai";
+import {
+    AiFillPhone,
+    AiFillFilePdf,
+    AiFillEye,
+    AiFillEyeInvisible,
+} from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { BsGlobe } from "react-icons/bs";
 import TehnologijeInput from "./TehnologijeInput";
@@ -53,6 +58,8 @@ const Generator = () => {
         },
     ]);
 
+    const [showPreview, setShowPreview] = useState(false);
+
     const addTehnologija = () => {
         let newTehnologije = [...tehnologije];
         let obj = {
@@ -95,7 +102,38 @@ const Generator = () => {
                 style={render == false ? { margin: 0 } : {}}
             >
                 {render && (
-                    <div className="input-space">
+                    <div
+                        className={
+                            showPreview ? "input-space none" : "input-space"
+                        }
+                    >
+                        <div className="input-field">
+                            <motion.button
+                                className="pdf-dugme show-on-resize"
+                                onClick={() => {
+                                    setShowPreview(true);
+                                }}
+                                whileHover={{
+                                    scale: 1.05,
+                                }}
+                                whileTap={{
+                                    scale: 0.95,
+                                }}
+                            >
+                                <AiFillEye
+                                    size="1.2rem"
+                                    style={{ marginRight: "0.5rem" }}
+                                />
+                                <span
+                                    style={{
+                                        display: "inline-block",
+                                        transform: "translate(0,-4px)",
+                                    }}
+                                >
+                                    Pregledaj CV
+                                </span>
+                            </motion.button>
+                        </div>
                         <div className="input-field">
                             <label className="input-label">Tema</label>
                             <motion.select
@@ -252,129 +290,173 @@ const Generator = () => {
                     </div>
                 )}
                 <div
-                    className="cv-space"
-                    style={
-                        render == false
-                            ? {
-                                  margin: 0,
-                                  width: "800px",
-                                  height: "1120px",
-                              }
-                            : {}
+                    className={
+                        showPreview || !render
+                            ? "right-side"
+                            : "right-side none"
                     }
                 >
-                    <div className="left-pane">
-                        <h1 className="ime-prezime-cv">{nameInput}</h1>
-                        <img
-                            src={photoInput}
-                            onError={() => {
-                                document.querySelector(".photo-cv").src =
-                                    "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg";
+                    <div className="input-field">
+                        <motion.button
+                            className={
+                                render ? "pdf-dugme show-on-resize" : "none"
+                            }
+                            onClick={() => {
+                                setShowPreview(false);
                             }}
-                            className="photo-cv"
-                            style={{ borderColor: temaInput }}
-                        />
-                        <h2
-                            className="opis-cv"
-                            style={{ borderColor: temaInput }}
+                            whileHover={{
+                                scale: 1.05,
+                            }}
+                            whileTap={{
+                                scale: 0.95,
+                            }}
                         >
-                            O MENI
-                        </h2>
-                        <p className="opis-sadrzaj">{opisInput}</p>
-                        <h2
-                            className="opis-cv"
-                            style={{ borderColor: temaInput }}
-                        >
-                            TEHNOLOGIJE
-                        </h2>
-                        {tehnologije &&
-                            tehnologije.map((t) => {
-                                return (
-                                    <div className="tehnologija">
-                                        <p
-                                            className="tehnologija-naziv"
-                                            style={{
-                                                backgroundColor: temaInput,
-                                            }}
-                                        >
-                                            {t.tehnologijaInput}
-                                        </p>
-                                        <p className="tehnologija-nivo">
-                                            {t.nivoZnanjaInput}
-                                        </p>
-                                    </div>
-                                );
-                            })}
+                            <AiFillEyeInvisible
+                                size="1.2rem"
+                                style={{ marginRight: "0.5rem" }}
+                            />
+                            <span
+                                style={{
+                                    display: "inline-block",
+                                    transform: "translate(0,-4px)",
+                                }}
+                            >
+                                Unesi podatke
+                            </span>
+                        </motion.button>
                     </div>
-                    <div className="right-pane">
-                        <div
-                            className="contact-info"
-                            style={{ borderColor: temaInput }}
-                        >
-                            <AiFillPhone size="1.2rem" color={temaInput} />
-                            <p className="contact-content">{phoneInput}</p>
+                    <div
+                        className={
+                            showPreview || !render
+                                ? "cv-space"
+                                : "cv-space none"
+                        }
+                        style={
+                            render == false
+                                ? {
+                                      margin: 0,
+                                      width: "800px",
+                                      height: "1120px",
+                                  }
+                                : {}
+                        }
+                    >
+                        <div className="left-pane">
+                            <h1 className="ime-prezime-cv">{nameInput}</h1>
+                            <img
+                                src={photoInput}
+                                onError={() => {
+                                    document.querySelector(".photo-cv").src =
+                                        "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg";
+                                }}
+                                className="photo-cv"
+                                style={{ borderColor: temaInput }}
+                            />
+                            <h2
+                                className="opis-cv"
+                                style={{ borderColor: temaInput }}
+                            >
+                                O MENI
+                            </h2>
+                            <p className="opis-sadrzaj">{opisInput}</p>
+                            <h2
+                                className="opis-cv"
+                                style={{ borderColor: temaInput }}
+                            >
+                                TEHNOLOGIJE
+                            </h2>
+                            {tehnologije &&
+                                tehnologije.map((t) => {
+                                    return (
+                                        <div className="tehnologija">
+                                            <p
+                                                className="tehnologija-naziv"
+                                                style={{
+                                                    backgroundColor: temaInput,
+                                                }}
+                                            >
+                                                {t.tehnologijaInput}
+                                            </p>
+                                            <p className="tehnologija-nivo">
+                                                {t.nivoZnanjaInput}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
                         </div>
-                        <div
-                            className="contact-info"
-                            style={{ borderColor: temaInput }}
-                        >
-                            <MdEmail size="1.2rem" color={temaInput} />
-                            <p className="contact-content">{emailInput}</p>
-                        </div>
-                        <div
-                            className="contact-info"
-                            style={{ borderColor: temaInput }}
-                        >
-                            <BsGlobe size="1.2rem" color={temaInput} />
-                            <a href={websiteInput} className="contact-content">
-                                {websiteInput}
-                            </a>
-                        </div>
-                        <h2
-                            className="opis-cv-obr"
-                            style={{ borderColor: temaInput }}
-                        >
-                            OBRAZOVANJE
-                        </h2>
+                        <div className="right-pane">
+                            <div
+                                className="contact-info"
+                                style={{ borderColor: temaInput }}
+                            >
+                                <AiFillPhone size="1.2rem" color={temaInput} />
+                                <p className="contact-content">{phoneInput}</p>
+                            </div>
+                            <div
+                                className="contact-info"
+                                style={{ borderColor: temaInput }}
+                            >
+                                <MdEmail size="1.2rem" color={temaInput} />
+                                <p className="contact-content">{emailInput}</p>
+                            </div>
+                            <div
+                                className="contact-info"
+                                style={{ borderColor: temaInput }}
+                            >
+                                <BsGlobe size="1.2rem" color={temaInput} />
+                                <a
+                                    href={websiteInput}
+                                    className="contact-content"
+                                >
+                                    {websiteInput}
+                                </a>
+                            </div>
+                            <h2
+                                className="opis-cv-obr"
+                                style={{ borderColor: temaInput }}
+                            >
+                                OBRAZOVANJE
+                            </h2>
 
-                        {obrazovanje &&
-                            obrazovanje.map((o) => {
-                                return (
-                                    <div className="obrazovanje">
-                                        <h2 className="ustanova-naziv">
-                                            {o.input1}
-                                        </h2>
-                                        <p className="ustanova-vreme">
-                                            {o.input2}
-                                        </p>
-                                        <p className="ustanova-content">
-                                            {o.input3}
-                                        </p>
-                                    </div>
-                                );
-                            })}
-                        <h2
-                            className="opis-cv"
-                            style={{ borderColor: temaInput }}
-                        >
-                            RADNO ISKUSTVO
-                        </h2>
-                        {radnoIskustvo &&
-                            radnoIskustvo.map((r) => {
-                                return (
-                                    <div className="iskustvo">
-                                        <h2 className="iskustvo-naziv">
-                                            {r.input1}
-                                        </h2>
-                                        <p className="iskustvo-vreme">
-                                            {r.input2}
-                                        </p>
-                                        <p className="iskustvo-content">
-                                            {r.input3}
-                                        </p>
-                                    </div>
-                                );
-                            })}
+                            {obrazovanje &&
+                                obrazovanje.map((o) => {
+                                    return (
+                                        <div className="obrazovanje">
+                                            <h2 className="ustanova-naziv">
+                                                {o.input1}
+                                            </h2>
+                                            <p className="ustanova-vreme">
+                                                {o.input2}
+                                            </p>
+                                            <p className="ustanova-content">
+                                                {o.input3}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            <h2
+                                className="opis-cv"
+                                style={{ borderColor: temaInput }}
+                            >
+                                RADNO ISKUSTVO
+                            </h2>
+                            {radnoIskustvo &&
+                                radnoIskustvo.map((r) => {
+                                    return (
+                                        <div className="iskustvo">
+                                            <h2 className="iskustvo-naziv">
+                                                {r.input1}
+                                            </h2>
+                                            <p className="iskustvo-vreme">
+                                                {r.input2}
+                                            </p>
+                                            <p className="iskustvo-content">
+                                                {r.input3}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                        </div>
                     </div>
                 </div>
             </div>
