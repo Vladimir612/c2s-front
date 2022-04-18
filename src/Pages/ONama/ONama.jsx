@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./ONama.scss";
 import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
@@ -29,9 +29,13 @@ import Lopta from "./../../Utilities/Lopta/Lopta";
 
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
+import { scrollFunc } from "../../Components/Footer/Footer";
 
 const ONama = () => {
     const pocetakPocetna = useRef();
+    useEffect(() => {
+        scrollFunc(pocetakPocetna);
+    }, []);
     const [visibleSecond, setVisibleSecond] = useState(false);
 
     const coreTim = {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Generator.scss";
 import Nav from "../../Components/Nav/Nav";
@@ -12,8 +12,13 @@ import { MdEmail } from "react-icons/md";
 import { BsGlobe } from "react-icons/bs";
 import TehnologijeInput from "./TehnologijeInput";
 import MultifieldInputs from "./MultifieldInputs";
+import { scrollFunc } from "../../Components/Footer/Footer";
 
 const Generator = () => {
+    let generatorRef = useRef();
+    useEffect(() => {
+        scrollFunc(generatorRef);
+    }, []);
     const [nameInput, setNameInput] = useState("");
     const handleNameChange = (e) => setNameInput(e.target.value);
 
@@ -98,6 +103,7 @@ const Generator = () => {
         <>
             {render && <Nav />}
             <div
+                ref={generatorRef}
                 className="generator-wrapper"
                 style={render === false ? { margin: 0 } : {}}
             >

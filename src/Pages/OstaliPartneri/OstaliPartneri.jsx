@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
 import "./OstaliPartneri.scss";
-
+import { scrollFunc } from "../../Components/Footer/Footer";
 //godisnji
 import devit from "../../Assets/Images/Partneri/godisnji/devit.png";
 import digitec from "../../Assets/Images/Partneri/godisnji/digitec.png";
@@ -43,6 +43,9 @@ import Lopta from "../../Utilities/Lopta/Lopta";
 const OstaliPartneri = () => {
     const pocetakOstaliPartneri = useRef();
 
+    useEffect(() => {
+        scrollFunc(pocetakOstaliPartneri);
+    }, []);
     const godisnjiPartneri = [
         {
             partnerSlika: fon,

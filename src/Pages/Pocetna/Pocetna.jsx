@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Lopta from "./../../Utilities/Lopta/Lopta";
@@ -43,6 +43,7 @@ import Suma from "../../Assets/Images/Partneri/medijski/Suma.png";
 import SvetKompjutera from "../../Assets/Images/Partneri/medijski/SvetKompjutera.png";
 import Unija from "../../Assets/Images/Partneri/medijski/Unija.png";
 import Viser from "../../Assets/Images/Partneri/medijski/Viser.png";
+import { scrollFunc } from "../../Components/Footer/Footer";
 
 //carousel
 import "slick-carousel/slick/slick.css";
@@ -52,6 +53,9 @@ import { Link } from "react-router-dom";
 const Pocetna = () => {
     const pocetakPocetna = useRef();
 
+    useEffect(() => {
+        scrollFunc(pocetakPocetna);
+    }, []);
     const godisnjiPartneri = [
         {
             partnerSlika: fon,
