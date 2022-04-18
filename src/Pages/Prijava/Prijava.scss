@@ -10,6 +10,30 @@
     color: white;
 }
 
+.uspesna-prijava {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2rem;
+    img {
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    color: white;
+}
+
+.prijava-wrapper {
+    .none {
+        display: none;
+    }
+}
+
 .prijava-flex {
     display: flex;
     flex-direction: column;
@@ -17,6 +41,9 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
 
+    .none {
+        display: none;
+    }
     h2 {
         color: white;
         margin-bottom: 0.6rem;
@@ -179,6 +206,9 @@
     .prijava-flex {
         margin-inline: 2rem;
     }
+    .uspesna-prijava {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -194,5 +224,15 @@
     }
     .field-group {
         width: 100% !important;
+    }
+
+    .uspesna-prijava {
+        img {
+            width: 70%;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
     }
 }

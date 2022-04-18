@@ -26,26 +26,6 @@ const Radionice = () => {
             </div>
             <div className="input-group">
                 <div className="label-group">
-                    <label htmlFor="oblastiPrim" className="desc">
-                        Koje oblasti bi želeo/la da predavač pređe na ovoj
-                        radionici?*
-                    </label>
-                </div>
-                <div className="field-group">
-                    <Field
-                        name="oblastiPrim"
-                        className="field textarea"
-                        component="textarea"
-                    />
-                    <ErrorMessage
-                        name="oblastiPrim"
-                        component="div"
-                        className="error"
-                    />
-                </div>
-            </div>
-            <div className="input-group">
-                <div className="label-group">
                     <label htmlFor="sporRad" className="desc">
                         Ukoliko ne budeš primljen/na na prvu radionicu, koja je
                         druga na koju bi voleo/la da prisustvuješ?
@@ -67,19 +47,41 @@ const Radionice = () => {
             </div>
             <div className="input-group">
                 <div className="label-group">
-                    <label htmlFor="oblastiSpor" className="desc">
-                        Koje oblasti bi želeo/la da predavač pređe na ovoj
-                        radionici?
+                    <label htmlFor="trecRad" className="desc">
+                        Ukoliko ne budeš primljen/na ni na prvu ni na drugu
+                        radionicu, koja je treća na koju bi voleo/la da
+                        prisustvuješ?
+                    </label>
+                </div>
+                <div className="field-group">
+                    <Field component="select" name="trecRad" className="field">
+                        <option value="1">Prva radionica</option>
+                        <option value="2">Druga radionica</option>
+                        <option value="3">Treća radionica</option>
+                        <option value="4">Četvrta radionica</option>
+                    </Field>
+                    <ErrorMessage
+                        name="trecRad"
+                        component="div"
+                        className="error"
+                    />
+                </div>
+            </div>
+            <div className="input-group">
+                <div className="label-group">
+                    <label htmlFor="oblasti" className="desc">
+                        Koje oblasti bi želeo/la da predavač pređe na ovim
+                        radionicama?*
                     </label>
                 </div>
                 <div className="field-group">
                     <Field
-                        name="oblastiSpor"
+                        name="oblasti"
                         className="field textarea"
                         component="textarea"
                     />
                     <ErrorMessage
-                        name="oblastiSpor"
+                        name="oblastiTrec"
                         component="div"
                         className="error"
                     />

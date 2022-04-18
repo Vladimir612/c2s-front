@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
+import Footer, { scrollFunc } from "../../Components/Footer/Footer";
 import "./Prijava.scss";
 import { Formik, Form } from "formik";
 import OpsteInformacije from "./OpsteInformacije";
@@ -10,12 +10,15 @@ import Radionice from "./Radionice";
 import SpeedDating from "./SpeedDating";
 import TechChallenge from "./TechChallenge";
 import axios from "axios";
+import uspesnaPrijava from "../../Assets/Images/uspesnaPrijava.png";
 
 const Prijava = () => {
+    let prijavaRef = useRef();
     let [steps, setSteps] = useState(1);
     let [currentStep, setCurrentStep] = useState(0.2);
     let [next, setNext] = useState(false);
     let [submit, setSubmit] = useState(false);
+    let [success, setSuccess] = useState(false);
     let arr = [1, 2, 3, 4, 5];
     let forms = [
         <OpsteInformacije />,
@@ -24,11 +27,29 @@ const Prijava = () => {
         <SpeedDating />,
         <TechChallenge />,
     ];
+
+    useEffect(() => {
+        scrollFunc(prijavaRef);
+    }, []);
+
     return (
-        <>
+        <div className="prijava-wrapper" ref={prijavaRef}>
             <Nav />
             <div className="otvorene-prijave-message">Prijave su otvorene</div>
-            <div className="prijava-flex">
+            <motion.div
+                className={success ? "uspesna-prijava" : "none"}
+                animate={{ scale: 1 }}
+                initial={{ scale: 0 }}
+            >
+                <img src={uspesnaPrijava} alt="Uspesna prijava" />
+                <h2>PRIJAVA JE USPEŠNO POSLATA</h2>
+                <p>
+                    U narednom periodu ćemo ti poslati mejl. Sve bitne
+                    informacije ćemo objavljivati na instagramu, zato ne
+                    zaboravi da nas zapratiš na @fonis_fon.
+                </p>
+            </motion.div>
+            <div className={!success ? "prijava-flex" : "none"}>
                 <h2>PRIJAVA</h2>
                 <div className="prijava-container">
                     <div className="form-steps">
@@ -62,8 +83,8 @@ const Prijava = () => {
                             panel: "",
                             primRad: "1",
                             sporRad: "1",
-                            oblastiPrim: "",
-                            oblastiSpor: "",
+                            trecRad: "1",
+                            oblasti: "",
                             datingComp: [],
                             studyComp: [],
                             ucestvovao: "",
@@ -124,15 +145,8 @@ const Prijava = () => {
                                     errors.primRad = "Polje je obavezno";
                                 }
 
-                                if (!values.oblastiPrim) {
-                                    errors.oblastiPrim = "Polje je obavezno";
-                                }
-                                if (!values.sporRad) {
-                                    errors.sporRad = "Polje je obavezno";
-                                }
-
-                                if (!values.oblastiSpor) {
-                                    errors.oblastiSpor = "Polje je obavezno";
+                                if (!values.oblasti) {
+                                    errors.oblasti = "Polje je obavezno";
                                 }
                             } else if (
                                 values.parts[Math.ceil(currentStep) - 1] === "3"
@@ -194,15 +208,15 @@ const Prijava = () => {
                                                 radionice: [
                                                     {
                                                         naziv: values.primRad,
-                                                        motiovaciono:
-                                                            values.oblastiPrim,
                                                     },
                                                     {
                                                         naziv: values.sporRad,
-                                                        motiovaciono:
-                                                            values.oblastiSpor,
+                                                    },
+                                                    {
+                                                        naziv: values.trecRad,
                                                     },
                                                 ],
+                                                motivaciono: values.oblasti,
                                             }),
                                             ...(values.parts.includes("3") && {
                                                 speedDating: values.datingComp,
@@ -235,7 +249,7 @@ const Prijava = () => {
                                         postBody
                                     )
                                     .then((r) => {
-                                        console.log(r);
+                                        setSuccess(true);
                                     })
                                     .catch((e) => {
                                         console.log(e);
@@ -274,7 +288,11 @@ const Prijava = () => {
                                             onClick={() => {
                                                 setNext(false);
                                                 setSubmit(false);
+                                                setCurrentStep(
+                                                    Math.ceil(currentStep) - 1
+                                                );
                                             }}
+                                            type="button"
                                             className="white-dugme next"
                                             whileHover={{
                                                 scale: 1.05,
@@ -308,7 +326,11 @@ const Prijava = () => {
                                             onClick={() => {
                                                 setSubmit(false);
                                                 setNext(false);
+                                                setCurrentStep(
+                                                    Math.ceil(currentStep) - 1
+                                                );
                                             }}
+                                            type="button"
                                             className="white-dugme next"
                                             whileHover={{
                                                 scale: 1.05,
@@ -332,6 +354,7 @@ const Prijava = () => {
                                             whileTap={{
                                                 scale: 0.95,
                                             }}
+                                            //disabled={submit ? true : false}
                                         >
                                             POŠALJI PRIJAVU
                                         </motion.button>
@@ -342,8 +365,8 @@ const Prijava = () => {
                     </Formik>
                 </div>
             </div>
-            <Footer />
-        </>
+            <Footer pocetakPocetna={prijavaRef} />
+        </div>
     );
 };
 

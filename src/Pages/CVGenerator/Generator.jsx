@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Generator.scss";
 import Nav from "../../Components/Nav/Nav";
@@ -12,8 +12,15 @@ import { MdEmail } from "react-icons/md";
 import { BsGlobe } from "react-icons/bs";
 import TehnologijeInput from "./TehnologijeInput";
 import MultifieldInputs from "./MultifieldInputs";
+import Footer from "../../Components/Footer/Footer";
+import { scrollFunc } from "../../Components/Footer/Footer";
 
 const Generator = () => {
+    let generatorRef = useRef();
+    useEffect(() => {
+        scrollFunc(generatorRef);
+    }, []);
+
     const [nameInput, setNameInput] = useState("");
     const handleNameChange = (e) => setNameInput(e.target.value);
 
@@ -95,7 +102,7 @@ const Generator = () => {
     const [render, setRender] = useState(true);
 
     return (
-        <>
+        <div ref={generatorRef}>
             {render && <Nav />}
             <div
                 className="generator-wrapper"
@@ -385,82 +392,96 @@ const Generator = () => {
                                 })}
                         </div>
                         <div className="right-pane">
-                            <div
-                                className="contact-info"
-                                style={{ borderColor: temaInput }}
-                            >
-                                <AiFillPhone size="1.2rem" color={temaInput} />
-                                <p className="contact-content">{phoneInput}</p>
-                            </div>
-                            <div
-                                className="contact-info"
-                                style={{ borderColor: temaInput }}
-                            >
-                                <MdEmail size="1.2rem" color={temaInput} />
-                                <p className="contact-content">{emailInput}</p>
-                            </div>
-                            <div
-                                className="contact-info"
-                                style={{ borderColor: temaInput }}
-                            >
-                                <BsGlobe size="1.2rem" color={temaInput} />
-                                <a
-                                    href={websiteInput}
-                                    className="contact-content"
+                            <div>
+                                <div
+                                    className="contact-info"
+                                    style={{ borderColor: temaInput }}
                                 >
-                                    {websiteInput}
-                                </a>
+                                    <AiFillPhone
+                                        size="1.2rem"
+                                        color={temaInput}
+                                    />
+                                    <p className="contact-content">
+                                        {phoneInput}
+                                    </p>
+                                </div>
+                                <div
+                                    className="contact-info"
+                                    style={{ borderColor: temaInput }}
+                                >
+                                    <MdEmail size="1.2rem" color={temaInput} />
+                                    <p className="contact-content">
+                                        {emailInput}
+                                    </p>
+                                </div>
+                                <div
+                                    className="contact-info"
+                                    style={{ borderColor: temaInput }}
+                                >
+                                    <BsGlobe size="1.2rem" color={temaInput} />
+                                    <a
+                                        href={websiteInput}
+                                        className="contact-content"
+                                    >
+                                        {websiteInput}
+                                    </a>
+                                </div>
                             </div>
-                            <h2
-                                className="opis-cv-obr"
-                                style={{ borderColor: temaInput }}
-                            >
-                                OBRAZOVANJE
-                            </h2>
+                            <div>
+                                <h2
+                                    className="opis-cv-obr"
+                                    style={{ borderColor: temaInput }}
+                                >
+                                    OBRAZOVANJE
+                                </h2>
 
-                            {obrazovanje &&
-                                obrazovanje.map((o) => {
-                                    return (
-                                        <div className="obrazovanje">
-                                            <h2 className="ustanova-naziv">
-                                                {o.input1}
-                                            </h2>
-                                            <p className="ustanova-vreme">
-                                                {o.input2}
-                                            </p>
-                                            <p className="ustanova-content">
-                                                {o.input3}
-                                            </p>
-                                        </div>
-                                    );
-                                })}
-                            <h2
-                                className="opis-cv"
-                                style={{ borderColor: temaInput }}
-                            >
-                                RADNO ISKUSTVO
-                            </h2>
-                            {radnoIskustvo &&
-                                radnoIskustvo.map((r) => {
-                                    return (
-                                        <div className="iskustvo">
-                                            <h2 className="iskustvo-naziv">
-                                                {r.input1}
-                                            </h2>
-                                            <p className="iskustvo-vreme">
-                                                {r.input2}
-                                            </p>
-                                            <p className="iskustvo-content">
-                                                {r.input3}
-                                            </p>
-                                        </div>
-                                    );
-                                })}
+                                {obrazovanje &&
+                                    obrazovanje.map((o) => {
+                                        return (
+                                            <div className="obrazovanje">
+                                                <h2 className="ustanova-naziv">
+                                                    {o.input1}
+                                                </h2>
+                                                <p className="ustanova-vreme">
+                                                    {o.input2}
+                                                </p>
+                                                <p className="ustanova-content">
+                                                    {o.input3}
+                                                </p>
+                                            </div>
+                                        );
+                                    })}
+                            </div>
+                            <div>
+                                <h2
+                                    className="opis-cv"
+                                    style={{ borderColor: temaInput }}
+                                >
+                                    RADNO ISKUSTVO
+                                </h2>
+                                {radnoIskustvo &&
+                                    radnoIskustvo.map((r) => {
+                                        return (
+                                            <div className="iskustvo">
+                                                <h2 className="iskustvo-naziv">
+                                                    {r.input1}
+                                                </h2>
+                                                <p className="iskustvo-vreme">
+                                                    {r.input2}
+                                                </p>
+                                                <p className="iskustvo-content">
+                                                    {r.input3}
+                                                </p>
+                                            </div>
+                                        );
+                                    })}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+            <Footer pocetakPocetna={generatorRef} />
+        </div>
     );
 };
 
