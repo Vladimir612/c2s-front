@@ -52,3 +52,7 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: darken($pozadina_tamna, 20);
 }
+
+button {
+  cursor: pointer;
+}

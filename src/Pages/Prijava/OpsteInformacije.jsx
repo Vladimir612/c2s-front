@@ -123,7 +123,7 @@ const OpsteInformacije = () => {
             ili iskoristite naš CV generator:
           </div>
 
-          <Link to="/generator">
+          <Link to="/generator" target="_blank">
             <motion.button
               className="white-dugme"
               style={{ width: "100%", marginLeft: 0 }}

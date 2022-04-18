@@ -7,15 +7,13 @@ import koverta from "../../Assets/Images/koverta.svg";
 
 import { motion } from "framer-motion";
 import Lopta from "../../Utilities/Lopta/Lopta";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { scrollFunc } from "../../Components/Footer/Footer";
 import axios from "axios";
 
 const Faq = () => {
   const pocetakPocetna = useRef();
-  useEffect(() => {
-    scrollFunc(pocetakPocetna);
-  }, []);
+
   const [temaInput, setTemaInput] = useState("");
   const handleTemaInput = (e) => setTemaInput(e.target.value);
 
@@ -23,6 +21,27 @@ const Faq = () => {
   const handlePorukaInput = (e) => setPorukaInput(e.target.value);
 
   const [uspesnoPoslat, setUspesnoPoslat] = useState("");
+
+  const pocetakMejl = useRef();
+
+  const location = useLocation();
+  let aktivnaStrana = -1;
+
+  switch (location.pathname) {
+    case "/faq":
+      aktivnaStrana = 1;
+      break;
+    case "/faq/kontakt":
+      aktivnaStrana = 2;
+      break;
+    default:
+      aktivnaStrana = 3;
+      break;
+  }
+
+  useEffect(() => {
+    aktivnaStrana === 1 ? scrollFunc(pocetakPocetna) : scrollFunc(pocetakMejl);
+  }, []);
 
   return (
     <>
@@ -97,7 +116,9 @@ const Faq = () => {
             />
           </ul>
         </div>
-        <h3 class="naslov">Postavite nam pitanje</h3>
+        <h3 class="naslov" ref={pocetakMejl}>
+          Postavite nam pitanje
+        </h3>
         <div class="postavite-pitanje">
           <div class="img-wrapper">
             <img src={koverta} alt="Koverta" />
