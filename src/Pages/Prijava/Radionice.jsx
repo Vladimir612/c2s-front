@@ -12,6 +12,9 @@ const Radionice = () => {
                 </div>
                 <div className="field-group">
                     <Field component="select" name="primRad" className="field">
+                        <option value="" selected disabled hidden>
+                            Izaberite prvu radionicu
+                        </option>
                         <option value="1">Prva radionica</option>
                         <option value="2">Druga radionica</option>
                         <option value="3">Treća radionica</option>
@@ -33,6 +36,9 @@ const Radionice = () => {
                 </div>
                 <div className="field-group">
                     <Field component="select" name="sporRad" className="field">
+                        <option value="" selected disabled hidden>
+                            Izaberite drugu radionicu
+                        </option>
                         <option value="1">Prva radionica</option>
                         <option value="2">Druga radionica</option>
                         <option value="3">Treća radionica</option>
@@ -55,6 +61,9 @@ const Radionice = () => {
                 </div>
                 <div className="field-group">
                     <Field component="select" name="trecRad" className="field">
+                        <option value="" selected disabled hidden>
+                            Izaberite treću radionicu
+                        </option>{" "}
                         <option value="1">Prva radionica</option>
                         <option value="2">Druga radionica</option>
                         <option value="3">Treća radionica</option>
