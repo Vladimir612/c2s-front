@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Faq.scss";
 import FaqQuestion from "./FaqQuestion";
 import Nav from "./../../Components/Nav/Nav";
@@ -7,31 +7,22 @@ import koverta from "../../Assets/Images/koverta.svg";
 
 import { motion } from "framer-motion";
 import Lopta from "../../Utilities/Lopta/Lopta";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { scrollFunc } from "../../Components/Footer/Footer";
+import axios from "axios";
 
-const Faq = (props) => {
+const Faq = () => {
   const pocetakPocetna = useRef();
-  const pocetakMejl = useRef();
-
-  const location = useLocation();
-  let aktivnaStrana = -1;
-
-  switch (location.pathname) {
-    case "/faq":
-      aktivnaStrana = 1;
-      break;
-    case "/faq/kontakt":
-      aktivnaStrana = 2;
-      break;
-    default:
-      aktivnaStrana = 3;
-      break;
-  }
-
   useEffect(() => {
-    aktivnaStrana === 1 ? scrollFunc(pocetakPocetna) : scrollFunc(pocetakMejl);
+    scrollFunc(pocetakPocetna);
   }, []);
+  const [temaInput, setTemaInput] = useState("");
+  const handleTemaInput = (e) => setTemaInput(e.target.value);
+
+  const [porukaInput, setPorukaInput] = useState("");
+  const handlePorukaInput = (e) => setPorukaInput(e.target.value);
+
+  const [uspesnoPoslat, setUspesnoPoslat] = useState("");
 
   return (
     <>
@@ -111,27 +102,47 @@ const Faq = (props) => {
           <div class="img-wrapper">
             <img src={koverta} alt="Koverta" />
           </div>
-          <div class="mejl" ref={pocetakMejl}>
+          <div class="mejl">
             <div class="ime">
               <input
+                value={temaInput}
+                onChange={handleTemaInput}
                 class="unos unos1 polja"
                 type="text"
+                id="temaMejla"
                 name="text1"
                 placeholder="Mejl"
               />
             </div>
             <div class="poruka">
               <textarea
+                value={porukaInput}
+                onChange={handlePorukaInput}
                 class="unos unos2 polja"
                 name="poruka1"
+                id="porukaMejla"
                 rows="6"
                 cols="45"
                 wrap="virtual"
                 placeholder="Poruka"
               ></textarea>
             </div>
+            <div className="uspesno-poruka">{uspesnoPoslat}</div>
             <motion.button
               className="dugme-prijavi"
+              onClick={() => {
+                axios
+                  .post("https://digitalmark6.herokuapp.com/api/prijave", {
+                    email: temaInput,
+                    pitanje: porukaInput,
+                  })
+                  .then(() => {
+                    setUspesnoPoslat("Mejl je uspešno poslat");
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }}
               whileHover={{
                 scale: 1.02,
               }}
