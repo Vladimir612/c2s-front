@@ -1,9 +1,13 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "./ONama.scss";
 import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
-import nekiLjudi from "../../Assets/Images/ljudi.png";
 import Tim from "./Tim";
+
+import oC2su from "../../Assets/Images/oC2su.png";
+import oFonisu from "../../Assets/Images/oFonisu.png";
+
+import nekiLjudi from "../../Assets/Images/ljudi.png";
 
 //organizacioni tim
 import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.png";
@@ -25,13 +29,9 @@ import Lopta from "./../../Utilities/Lopta/Lopta";
 
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
-import { scrollFunc } from "../../Components/Footer/Footer";
 
 const ONama = () => {
     const pocetakPocetna = useRef();
-    useEffect(() => {
-        scrollFunc(pocetakPocetna);
-    }, []);
     const [visibleSecond, setVisibleSecond] = useState(false);
 
     const coreTim = {
@@ -170,7 +170,7 @@ const ONama = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <div class="img-wrapper">
-                            <img src={nekiLjudi} alt="fonis-slika" />
+                            <img src={oFonisu} alt="fonis-slika" />
                         </div>
                     </motion.div>
                 </div>
@@ -222,7 +222,7 @@ const ONama = () => {
                         </div>
                         <div className="right-content">
                             <div class="img-wrapper">
-                                <img src={nekiLjudi} alt="fonis-slika" />
+                                <img src={oC2su} alt="C2s slika" />
                             </div>
                         </div>
                     </motion.div>

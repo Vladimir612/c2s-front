@@ -126,9 +126,6 @@ const Nav = () => {
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/nasi-partneri/raiffeisen">
-                  <li>Raiffeisen</li>
-                </Link>
                 <Link to="/nasi-partneri/adacta">
                   <li>Adacta</li>
                 </Link>
@@ -140,6 +137,9 @@ const Nav = () => {
                 </Link>
                 <Link to="/nasi-partneri/semos-education">
                   <li>Semos education</li>
+                </Link>
+                <Link to="/nasi-partneri/raiffeisen">
+                  <li>Raiffeisen</li>
                 </Link>
                 <Link to="/nasi-partneri/a1">
                   <li>A1</li>
@@ -294,14 +294,6 @@ const Nav = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
-                to="/nasi-partneri/raiffeisen"
-                onClick={() => {
-                  setMenuOpen(false);
-                }}
-              >
-                <li>Raiffeisen</li>
-              </Link>
-              <Link
                 to="/nasi-partneri/adacta"
                 onClick={() => {
                   setMenuOpen(false);
@@ -332,6 +324,14 @@ const Nav = () => {
                 }}
               >
                 <li>Semos education</li>
+              </Link>
+              <Link
+                to="/nasi-partneri/raiffeisen"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                <li>Raiffeisen</li>
               </Link>
               <Link
                 to="/nasi-partneri/a1"

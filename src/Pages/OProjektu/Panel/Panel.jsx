@@ -5,7 +5,9 @@ import UcesnikPanela from "./UcesnikPanela";
 import "./Panel.scss";
 
 //kompanije
-import raiffeisen from "../../../Assets/Images/Partneri/raiffeisen.svg";
+import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
+import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
+
 import { motion } from "framer-motion";
 
 const Panel = () => {
@@ -25,8 +27,8 @@ const Panel = () => {
       rekaoJe:
         "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
       slika: slikaZaposleni,
-      slikaKompanije: raiffeisen,
-      linkKompanije: "/nasi-partneri/raiffeisen",
+      slikaKompanije: semos,
+      linkKompanije: "/nasi-partneri/semos-education",
     },
     {
       moderator: false,

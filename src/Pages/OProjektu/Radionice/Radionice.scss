@@ -21,6 +21,11 @@
       background-color: $pozadina_siva;
       border-radius: 50%;
       @include box-center;
+      p {
+        color: #14191b;
+        font-weight: 700;
+        transform: translateY(-4px);
+      }
     }
   }
 }

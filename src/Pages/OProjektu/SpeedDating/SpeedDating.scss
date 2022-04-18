@@ -25,6 +25,17 @@
         font-size: 1.4rem;
         font-weight: 500;
       }
+      .img-wrapper {
+        width: 12rem;
+        height: 5rem;
+        overflow: hidden;
+        @include box-center;
+        img {
+          @include fit-image;
+          height: initial;
+          max-height: 100%;
+        }
+      }
     }
   }
 }
