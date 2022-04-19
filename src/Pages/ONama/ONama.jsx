@@ -183,53 +183,36 @@ const ONama = () => {
             </div>
           </motion.div>
         </div>
-        <VisibilitySensor
-          onChange={(isVisible) => {
-            if (isVisible && !visibleSecond) {
-              setVisibleSecond(true);
-            }
-            return;
-          }}
-          delayedCall
-          partialVisibility
-        >
-          <motion.div
-            class="o-nama-flex"
-            animate={visibleSecond && { y: "0%" }}
-            initial={{
-              y: "50%",
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="left-content">
-              <h2>C2S</h2>
-              <p>
-                Kompanije studentima predstavlja projekat čiji je organizator
-                Udruženje studenata informatike FONIS, a za cilj ima da kroz
-                zabavan i interaktivan način omogući svim zainteresovanim
-                učesnicima da nauče nešto novo iz oblasti informacionih
-                tehnologija. Na panel diskusiji ćeš dobiti priliku da čuješ
-                savete i priče iz poslovnih praksi koje ti mogu značiti kada se
-                budeš našao na mestu praktikanta. Pored panel diskusije, na
-                radionicama, koje će drzati predstavnici kompanija, dobićeš
-                priliku da unaprediš svoje znanje u izabranoj oblasti iz ITa.
-                Tech challenge je deo projekta na kome je tvoj zadatak da nađeš
-                rešenje za realan problem sa kojim se susreću IT kompanije. Na
-                kraju, važan deo ovog projekta predstavlja i speed dating, gde
-                ćeš se naći u ulozi kandidata za posao ili praksu i tako dobiti
-                priliku da osetiš kako izgleda pravi intervju koji je neophodan
-                za ulazak u svaku IT kompaniju. Generalni pokrovitelji projekta
-                su Raiffeisen banka💵, Adacta💻, A1📞, Semos📚, Prime
-                software💿, Eye see⌨️. Čekamo tvoju prijavu! 👍🏼
-              </p>
+
+        <div class="o-nama-flex">
+          <div className="left-content">
+            <h2>C2S</h2>
+            <p>
+              Kompanije studentima predstavlja projekat čiji je organizator
+              Udruženje studenata informatike FONIS, a za cilj ima da kroz
+              zabavan i interaktivan način omogući svim zainteresovanim
+              učesnicima da nauče nešto novo iz oblasti informacionih
+              tehnologija. Na panel diskusiji ćeš dobiti priliku da čuješ savete
+              i priče iz poslovnih praksi koje ti mogu značiti kada se budeš
+              našao na mestu praktikanta. Pored panel diskusije, na radionicama,
+              koje će drzati predstavnici kompanija, dobićeš priliku da
+              unaprediš svoje znanje u izabranoj oblasti iz ITa. Tech challenge
+              je deo projekta na kome je tvoj zadatak da nađeš rešenje za realan
+              problem sa kojim se susreću IT kompanije. Na kraju, važan deo ovog
+              projekta predstavlja i speed dating, gde ćeš se naći u ulozi
+              kandidata za posao ili praksu i tako dobiti priliku da osetiš kako
+              izgleda pravi intervju koji je neophodan za ulazak u svaku IT
+              kompaniju. Generalni pokrovitelji projekta su Raiffeisen banka💵,
+              Adacta💻, A1📞, Semos📚, Prime software💿, Eye see⌨️. Čekamo tvoju
+              prijavu! 👍🏼
+            </p>
+          </div>
+          <div className="right-content">
+            <div class="img-wrapper">
+              <img src={oC2su} alt="C2s slika" />
             </div>
-            <div className="right-content">
-              <div class="img-wrapper">
-                <img src={oC2su} alt="C2s slika" />
-              </div>
-            </div>
-          </motion.div>
-        </VisibilitySensor>
+          </div>
+        </div>
         <div class="o-nama-timovi">
           <h2>ORGANIZACIONI TIM PROJEKTA</h2>
           <div class="o-nama-carousel">
