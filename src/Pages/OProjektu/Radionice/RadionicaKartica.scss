@@ -79,6 +79,7 @@
         color: $tekst_siva;
       }
       .img-wrapper {
+        overflow: hidden;
         height: 3rem;
         width: 9rem;
         @include box-center;
@@ -95,12 +96,10 @@
     @include box-center;
     gap: 1rem;
     .img-wrapper {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-      overflow: hidden;
       img {
         @include fit-image;
+        border-radius: 50%;
+        min-width: 11rem;
       }
     }
     .o-predavacu {

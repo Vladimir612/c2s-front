@@ -45,7 +45,11 @@ const UcesnikPanela = (props) => {
         <div className="ucesnik">
           <div className="slika">
             <div className="img-wrapper">
-              <img src={props.ucesnik.slika} alt={props.ucesnik.ime} />
+              <LazyLoadImage
+                effect="blur"
+                src={props.ucesnik.slika}
+                alt={props.ucesnik.ime}
+              />
             </div>
           </div>
           <div className="podaci">
@@ -58,7 +62,7 @@ const UcesnikPanela = (props) => {
           <Link to={props.ucesnik.linkKompanije}>
             <div className="kompanija">
               <div className="img-wrapper">
-                <LazyLoadImage
+                <img
                   effect="blur"
                   src={props.ucesnik.slikaKompanije}
                   alt="Slika kompanije"
