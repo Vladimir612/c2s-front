@@ -284,28 +284,32 @@ const Pocetna = () => {
                 </div>
               </div>
               <div className="dugmad-grupa">
-                <motion.button
-                  className="dugme crveno"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <Link to="/prijava">Prijavi se</Link>
-                </motion.button>
-                <motion.button
-                  className="dugme transparentno"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <Link to="/o-projektu/radionice">O projektu</Link>
-                </motion.button>
+                <Link to="/prijava">
+                  <motion.button
+                    className="dugme crveno"
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    Prijavi se
+                  </motion.button>
+                </Link>
+                <Link to="/o-projektu/radionice">
+                  <motion.button
+                    className="dugme transparentno"
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    O projektu
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
             <motion.div

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import techSlika from "../../../Assets/Images/tech-challenge.png";
+import techSlika from "../../../Assets/Images/tech-challenge.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import "./TechChallenge.scss";
 
@@ -12,33 +12,14 @@ import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
 import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
 import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
 
-import { motion } from "framer-motion";
-
 const TechChallenge = () => {
   return (
     <div className="tech-challenge-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <motion.img
-            src={techSlika}
-            alt="Tech challenge"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            transition={{ duration: 1 }}
-          />
+          <img src={techSlika} alt="Tech challenge" />
         </div>
-        <motion.div
-          className="tekst"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-        >
+        <div className="tekst">
           <h2>TECH CHALLENGE</h2>
           <p>
             Tokom studija, većina studenata nema priliku da oseti kako to
@@ -49,7 +30,7 @@ const TechChallenge = () => {
             pošalješ prijavu i 17. maja prezentuješ svoje rešenje jednoj od
             kompanija!
           </p>
-        </motion.div>
+        </div>
       </div>
       <div className="kompanije">
         <h2>KOMPANIJE</h2>

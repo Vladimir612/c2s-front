@@ -1,9 +1,8 @@
 import React from "react";
 import "./Radionice.scss";
-import radioniceSlika from "../../../Assets/Images/radionice.png";
+import radioniceSlika from "../../../Assets/Images/radionice.jpg";
 import RadionicaKartica from "./RadionicaKartica";
 import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
-import { motion } from "framer-motion";
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
 import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
 
@@ -58,26 +57,9 @@ const Radionice = () => {
     <div className="radionice-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <motion.img
-            src={radioniceSlika}
-            alt="Radionice"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            transition={{ duration: 1 }}
-          />
+          <img src={radioniceSlika} alt="Radionice" />
         </div>
-        <motion.div
-          className="tekst"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-        >
+        <div className="tekst">
           <h2>RADIONICE</h2>
           <p>
             Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
@@ -88,7 +70,7 @@ const Radionice = () => {
             oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
             razvoju soft, odnosno mekih veština.
           </p>
-        </motion.div>
+        </div>
       </div>
       <div className="presek-dana">
         <div className="krug-presek">

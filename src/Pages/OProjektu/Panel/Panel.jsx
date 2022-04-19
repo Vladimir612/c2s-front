@@ -1,5 +1,5 @@
 import React from "react";
-import panelSlika from "../../../Assets/Images/panel.png";
+import panelSlika from "../../../Assets/Images/panel.jpg";
 import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
 import UcesnikPanela from "./UcesnikPanela";
 import "./Panel.scss";
@@ -7,8 +7,6 @@ import "./Panel.scss";
 //kompanije
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
 import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
-
-import { motion } from "framer-motion";
 
 const Panel = () => {
   const ucesniciPanela = [
@@ -75,26 +73,9 @@ const Panel = () => {
     <div className="panel-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <motion.img
-            src={panelSlika}
-            alt="Panel"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            transition={{ duration: 1 }}
-          />
+          <img src={panelSlika} alt="Panel" />
         </div>
-        <motion.div
-          className="tekst"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-        >
+        <div className="tekst">
           <h2>TEMA PANELA</h2>
           <p>
             Svi naši članovi imaju prilike da uče o savremenim tehnologijama i
@@ -105,7 +86,7 @@ const Panel = () => {
             oblastima informacionih tehnologija. Pored toga, pažnju posvećujemo
             razvoju soft, odnosno mekih veština.
           </p>
-        </motion.div>
+        </div>
       </div>
       <div className="ucesnici-panela">
         {ucesniciPanela.map((ucesnik, index) => {

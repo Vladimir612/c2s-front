@@ -36,6 +36,7 @@
     @include box-center($justify: space-around);
     gap: 2rem;
     padding: 4rem 2rem;
+    min-height: calc(100vh - 8rem);
     .slika {
       display: contents;
       margin-right: 2rem;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import speedSlika from "../../../Assets/Images/speed-dating.png";
+import speedSlika from "../../../Assets/Images/speed-dating.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import "./SpeedDating.scss";
 
@@ -12,33 +12,14 @@ import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
 import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
 import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
 
-import { motion } from "framer-motion";
-
 const SpeedDating = () => {
   return (
     <div className="speed-dating-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <motion.img
-            src={speedSlika}
-            alt="Speed dating"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            transition={{ duration: 1 }}
-          />
+          <img src={speedSlika} alt="Speed dating" />
         </div>
-        <motion.div
-          className="tekst"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-        >
+        <div className="tekst">
           <h2>SPEED DATING</h2>
           <p>
             Intervju često predstavlja najbitniju fazu koja kandidate deli od
@@ -48,7 +29,7 @@ const SpeedDating = () => {
             svetlu HR predstavnicima kompanija, ali i da čuju više o kompaniji i
             o tome kako izgleda njihov proces selekcije.
           </p>
-        </motion.div>
+        </div>
       </div>
       <div className="kompanije">
         <h2>KOMPANIJE</h2>

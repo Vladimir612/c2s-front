@@ -4,25 +4,25 @@ import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
 import Tim from "./Tim";
 
-import oC2su from "../../Assets/Images/oC2su.png";
-import oFonisu from "../../Assets/Images/oFonisu.png";
+import oC2su from "../../Assets/Images/oC2su.jpg";
+import oFonisu from "../../Assets/Images/oFonisu.jpg";
 
 import nekiLjudi from "../../Assets/Images/ljudi.png";
 
 //organizacioni tim
-import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.png";
-import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.png";
-import coreTimSlika from "../../Assets/Images/organizacioniTim/coreTim.png";
-import crTimSlika from "../../Assets/Images/organizacioniTim/crTim.png";
-import dizajnTimSlika from "../../Assets/Images/organizacioniTim/dizajnTim.png";
-import hrTimSlika from "../../Assets/Images/organizacioniTim/hrTim.png";
-import itTimSlika from "../../Assets/Images/organizacioniTim/itTim.png";
-import KostaAcimovic from "../../Assets/Images/organizacioniTim/KostaAcimovic.png";
-import logistikaTimSlika from "../../Assets/Images/organizacioniTim/logistikaTim.png";
-import NemanjaVukelic from "../../Assets/Images/organizacioniTim/NemanjaVukelic.png";
-import prTimSlika from "../../Assets/Images/organizacioniTim/prTim.png";
-import StefanBozovic from "../../Assets/Images/organizacioniTim/StefanBozovic.png";
-import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLazarevic.png";
+import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.jpg";
+import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.jpg";
+import coreTimSlika from "../../Assets/Images/organizacioniTim/coreTim.jpg";
+import crTimSlika from "../../Assets/Images/organizacioniTim/crTim.jpg";
+import dizajnTimSlika from "../../Assets/Images/organizacioniTim/dizajnTim.jpg";
+import hrTimSlika from "../../Assets/Images/organizacioniTim/hrTim.jpg";
+import itTimSlika from "../../Assets/Images/organizacioniTim/itTim.jpg";
+import KostaAcimovic from "../../Assets/Images/organizacioniTim/KostaAcimovic.jpg";
+import logistikaTimSlika from "../../Assets/Images/organizacioniTim/logistikaTim.jpg";
+import NemanjaVukelic from "../../Assets/Images/organizacioniTim/NemanjaVukelic.jpg";
+import prTimSlika from "../../Assets/Images/organizacioniTim/prTim.jpg";
+import StefanBozovic from "../../Assets/Images/organizacioniTim/StefanBozovic.jpg";
+import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLazarevic.jpg";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Lopta from "./../../Utilities/Lopta/Lopta";
