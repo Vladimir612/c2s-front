@@ -1,10 +1,10 @@
 import React from "react";
 import primeVideo from "../../Assets/Videos/prime.mp4";
-import adactaVideo from "../../Assets/Videos/adacta.mp4";
-import semosVideo from "../../Assets/Videos/semos.mp4";
-import eyeseeVideo from "../../Assets/Videos/eyesee.mp4";
-import raiffeisenVideo from "../../Assets/Videos/raiffeisen.mp4";
-import a1Video from "../../Assets/Videos/a1.mp4";
+import adactaVideo from "../../Assets/Videos/adacta.webm";
+import semosVideo from "../../Assets/Videos/semos.webm";
+import eyeseeVideo from "../../Assets/Videos/eyesee.webm";
+import raiffeisenVideo from "../../Assets/Videos/raiffeisen.webm";
+import a1Video from "../../Assets/Videos/a1.webm";
 
 import "./NasiPartneri.scss";
 import Nav from "./../../Components/Nav/Nav";
