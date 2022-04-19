@@ -152,6 +152,7 @@ const Faq = () => {
             <motion.button
               className="dugme-prijavi"
               onClick={() => {
+                setUspesnoPoslat("Mejl je uspešno poslat");
                 axios
                   .post(
                     "https://digitalmark6.herokuapp.com/api/postavipitanje",
@@ -160,9 +161,6 @@ const Faq = () => {
                       pitanje: porukaInput,
                     }
                   )
-                  .then(() => {
-                    setUspesnoPoslat("Mejl je uspešno poslat");
-                  })
                   .catch((err) => {
                     console.log(err);
                   });
