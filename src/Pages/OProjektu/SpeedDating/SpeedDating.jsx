@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import speedSlika from "../../../Assets/Images/speed-dating.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import "./SpeedDating.scss";
+import Pdf from "../../../Assets/pravila.pdf";
 
 //kompanije
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
@@ -12,6 +13,7 @@ import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
 import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
 import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { motion } from "framer-motion";
 
 const SpeedDating = () => {
   return (
@@ -30,6 +32,19 @@ const SpeedDating = () => {
             svetlu HR predstavnicima kompanija, ali i da čuju više o kompaniji i
             o tome kako izgleda njihov proces selekcije.
           </p>
+          <a href={Pdf} target="_blank" rel="noreferrer">
+            <motion.button
+              className="dugme transparentno"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              Pročitaj pravilnik
+            </motion.button>
+          </a>
         </div>
       </div>
       <div className="kompanije">

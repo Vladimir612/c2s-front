@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Lopta from "./../../Utilities/Lopta/Lopta";
@@ -231,6 +231,38 @@ const Pocetna = () => {
     },
   ];
 
+  //timer
+  const [timerDays, setTimerDays] = useState();
+  const [timerHours, setTimerHours] = useState();
+  const [timerMinutes, setTimerMinutes] = useState();
+
+  let interval;
+
+  const startTimer = () => {
+    const countDownDate = new Date("May 10, 2022").getTime();
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+      const hours = Math.floor(
+        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
+
+      if (distance < 0) {
+        clearInterval(interval.curernt);
+      } else {
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+      }
+    });
+  };
+
+  useEffect(() => {
+    startTimer();
+  });
+
   return (
     <>
       <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
@@ -272,15 +304,15 @@ const Pocetna = () => {
               </p>
               <div className="timer">
                 <div className="dani">
-                  <p>14</p>
+                  <p>{timerDays}</p>
                   <p>dana</p>
                 </div>
                 <div className="sati">
-                  <p>08</p>
+                  <p>{timerHours}</p>
                   <p>sati</p>
                 </div>
                 <div className="minuti">
-                  <p>15</p>
+                  <p>{timerMinutes}</p>
                   <p>minuta</p>
                 </div>
               </div>

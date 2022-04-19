@@ -1,5 +1,5 @@
 import React from "react";
-import primeVideo from "../../Assets/Videos/prime.mp4";
+import primeVideo from "../../Assets/Videos/prime.webm";
 import adactaVideo from "../../Assets/Videos/adacta.webm";
 import semosVideo from "../../Assets/Videos/semos.webm";
 import eyeseeVideo from "../../Assets/Videos/eyesee.webm";

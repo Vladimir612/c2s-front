@@ -5,6 +5,9 @@ import Zaposleni from "./Zaposleni";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import { scrollFunc } from "../../Components/Footer/Footer";
+import LazyLoad from "react-lazyload";
+import loadingImage from "../../Assets/Images/loadingImage.jpg";
+
 const PartnerSnimak = (props) => {
   const pocetakPartneri = useRef();
 
@@ -33,9 +36,11 @@ const PartnerSnimak = (props) => {
       <div className="pocetak-pocetna" ref={pocetakPartneri}></div>
       <div className="partneri-container">
         <div className="video-wrapper">
-          <video autoPlay loop muted key={props.video}>
-            <source src={props.video} type="video/mp4" />
-          </video>
+          <LazyLoad>
+            <video autoPlay loop muted key={props.video} poster={loadingImage}>
+              <source src={props.video} type="video/mp4" />
+            </video>
+          </LazyLoad>
         </div>
         <div className="left-arrow">
           <Link to={props.prevLink}>
