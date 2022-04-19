@@ -9,6 +9,8 @@ import oFonisu from "../../Assets/Images/oFonisu.jpg";
 
 import nekiLjudi from "../../Assets/Images/ljudi.png";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 //organizacioni tim
 import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.jpg";
 import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.jpg";
@@ -179,7 +181,7 @@ const ONama = () => {
             transition={{ duration: 0.5 }}
           >
             <div class="img-wrapper">
-              <img src={oFonisu} alt="fonis-slika" />
+              <LazyLoadImage effect="blur" src={oFonisu} alt="fonis-slika" />
             </div>
           </motion.div>
         </div>

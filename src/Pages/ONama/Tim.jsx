@@ -1,6 +1,7 @@
 import React from "react";
 import "./Tim.scss";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Tim = (props) => {
   return (
@@ -15,7 +16,8 @@ const Tim = (props) => {
         <p>{props.tim.oTimu}</p>
         <div class="o-nama-coordinator">
           <div class="img-wrapper">
-            <img
+            <LazyLoadImage
+              effect="blur"
               src={props.tim.slikaKoordinatora}
               alt={props.tim.imeKoordinatora}
             />
@@ -28,7 +30,11 @@ const Tim = (props) => {
       </div>
       <div class="o-nama-content-img">
         <div className="img-wrapper">
-          <img src={props.tim.slikaTima} alt={props.tim.nazivTima} />
+          <LazyLoadImage
+            effect="blur"
+            src={props.tim.slikaTima}
+            alt={props.tim.nazivTima}
+          />
         </div>
       </div>
     </motion.div>
