@@ -3,7 +3,9 @@ import primeVideo from "../../Assets/Videos/prime.mp4";
 import adactaVideo from "../../Assets/Videos/adacta.mp4";
 import semosVideo from "../../Assets/Videos/semos.mp4";
 import eyeseeVideo from "../../Assets/Videos/eyesee.mp4";
-import test2 from "../../Assets/Videos/test2.mp4";
+import raiffeisenVideo from "../../Assets/Videos/raiffeisen.mp4";
+import a1Video from "../../Assets/Videos/a1.mp4";
+
 import "./NasiPartneri.scss";
 import Nav from "./../../Components/Nav/Nav";
 import zaposleni from "../../Assets/Images/Zaposleni/zaposleni.png";
@@ -164,7 +166,7 @@ const NasiPartneri = () => {
           path="raiffeisen"
           element={
             <PartnerSnimak
-              video={test2}
+              video={raiffeisenVideo}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/semos-education"
               nextLink="/nasi-partneri/a1"
@@ -177,7 +179,7 @@ const NasiPartneri = () => {
           path="a1"
           element={
             <PartnerSnimak
-              video={test2}
+              video={a1Video}
               zaposleni={zaposleniRaiffeisen}
               prevLink="/nasi-partneri/raiffeisen"
               nextLink="/nasi-partneri/adacta"

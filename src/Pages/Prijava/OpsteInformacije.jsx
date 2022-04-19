@@ -57,6 +57,7 @@ const OpsteInformacije = () => {
             <option value="2">Druga</option>
             <option value="3">Treća</option>
             <option value="4">Četvrta</option>
+            <option value="5">Master</option>
           </Field>
           <ErrorMessage name="year" component="div" className="error" />
         </div>
@@ -149,7 +150,7 @@ const OpsteInformacije = () => {
         <div className="field-group check-group">
           <label className="checkbox-group">
             <Field type="checkbox" name="newsletter" className="checkbox" />
-            Želim da mi stižu obaveštenja o FONIS-ovim aktivnostimas
+            Želim da mi stižu obaveštenja o FONIS-ovim aktivnostima
           </label>
         </div>
       </div>

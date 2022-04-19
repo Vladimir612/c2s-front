@@ -48,6 +48,7 @@
       overflow: hidden;
       width: 100%;
       img {
+        border-radius: 2rem;
         @include fit-image;
       }
     }

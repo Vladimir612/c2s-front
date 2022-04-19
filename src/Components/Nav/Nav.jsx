@@ -145,7 +145,7 @@ const Nav = () => {
                   <li>A1</li>
                 </Link>
                 <Link to="/godisnji-naturalni-medijski">
-                  <li>Godisnji, naturalni i medijski partneri</li>
+                  <li>Godišnji, robni i medijski partneri</li>
                 </Link>
               </motion.ul>
             </li>
@@ -168,9 +168,11 @@ const Nav = () => {
           </ul>
         </div>
         <div className="desno">
-          <motion.button
-            className="dugme-prijavi"
-            style={{ marginRight: "1rem" }}
+          <Link
+            to="/generator"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
             whileHover={{
               scale: 1.1,
             }}
@@ -178,11 +180,9 @@ const Nav = () => {
               scale: 0.9,
             }}
           >
-            <Link
-              to="/generator"
-              onClick={() => {
-                setMenuOpen(false);
-              }}
+            <motion.button
+              className="dugme-prijavi"
+              style={{ marginRight: "1rem" }}
               whileHover={{
                 scale: 1.1,
               }}
@@ -191,11 +191,14 @@ const Nav = () => {
               }}
             >
               CV Generator
-            </Link>
-          </motion.button>
+            </motion.button>
+          </Link>
 
-          <motion.button
-            className="dugme-prijavi"
+          <Link
+            to="/prijava"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
             whileHover={{
               scale: 1.1,
             }}
@@ -203,11 +206,8 @@ const Nav = () => {
               scale: 0.9,
             }}
           >
-            <Link
-              to="/prijava"
-              onClick={() => {
-                setMenuOpen(false);
-              }}
+            <motion.button
+              className="dugme-prijavi"
               whileHover={{
                 scale: 1.1,
               }}
@@ -216,8 +216,8 @@ const Nav = () => {
               }}
             >
               Prijavi se
-            </Link>
-          </motion.button>
+            </motion.button>
+          </Link>
         </div>
       </nav>
       <motion.div
@@ -347,7 +347,7 @@ const Nav = () => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Godisnji, naturalni i medijski partneri</li>
+                <li>Godišnji, robni i medijski partneri</li>
               </Link>
             </motion.ul>
           </li>
@@ -367,9 +367,11 @@ const Nav = () => {
           >
             <li datacontent={"FAQ"}>FAQ</li>
           </Link>
-          <motion.button
-            className="dugme-prijavi"
-            style={{ marginRight: "1rem" }}
+          <Link
+            to="/generator"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
             whileHover={{
               scale: 1.1,
             }}
@@ -377,11 +379,9 @@ const Nav = () => {
               scale: 0.9,
             }}
           >
-            <Link
-              to="/generator"
-              onClick={() => {
-                setMenuOpen(false);
-              }}
+            <motion.button
+              className="dugme-prijavi"
+              style={{ marginRight: "1rem" }}
               whileHover={{
                 scale: 1.1,
               }}
@@ -390,26 +390,26 @@ const Nav = () => {
               }}
             >
               CV Generator
-            </Link>
-          </motion.button>
-          <motion.button
-            className="dugme-prijavi"
-            whileHover={{
-              scale: 1.1,
-            }}
-            whileTap={{
-              scale: 0.9,
+            </motion.button>
+          </Link>
+          <Link
+            to="/prijava"
+            onClick={() => {
+              setMenuOpen(false);
             }}
           >
-            <Link
-              to="/prijava"
-              onClick={() => {
-                setMenuOpen(false);
+            <motion.button
+              className="dugme-prijavi"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
               }}
             >
               Prijavi se
-            </Link>
-          </motion.button>
+            </motion.button>
+          </Link>
         </ul>
       </motion.div>
     </>

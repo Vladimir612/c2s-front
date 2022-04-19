@@ -339,7 +339,7 @@ const Pocetna = () => {
             </div>
           </div>
           <div className="kako-postati-container">
-            <h3>Kako da postanes deo c2s-a?</h3>
+            <h3>Kako da postaneš deo c2s-a?</h3>
             <div className="kako">
               <p>1. Odaberi kompaniju sa kojom želiš da se upoznaš,</p>
               <p>2. Napiši prijavu,</p>
