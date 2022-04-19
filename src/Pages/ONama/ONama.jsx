@@ -27,7 +27,6 @@ import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLaza
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Lopta from "./../../Utilities/Lopta/Lopta";
 
-import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { scrollFunc } from "../../Components/Footer/Footer";
 
@@ -36,7 +35,6 @@ const ONama = () => {
   useEffect(() => {
     scrollFunc(pocetakPocetna);
   }, []);
-  const [visibleSecond, setVisibleSecond] = useState(false);
 
   const coreTim = {
     imeTima: "CORE TIM",
