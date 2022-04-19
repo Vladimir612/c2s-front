@@ -11,6 +11,7 @@ import a1 from "../../../Assets/Images/Partneri/pokrovitelji/a1.png";
 import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
 import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
 import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SpeedDating = () => {
   return (
@@ -36,7 +37,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/raiffeisen">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={raiffeisen} alt="Raiffeisen" />
+              <LazyLoadImage effect="blur" src={raiffeisen} alt="Raiffeisen" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -45,7 +46,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/semos-education">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={semos} alt="Semos-education" />
+              <LazyLoadImage effect="blur" src={semos} alt="Semos-education" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -54,7 +55,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/a1">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={a1} alt="A1" />
+              <LazyLoadImage effect="blur" src={a1} alt="A1" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -63,7 +64,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/prime-software">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={prime} alt="Prime software" />
+              <LazyLoadImage effect="blur" src={prime} alt="Prime software" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -72,7 +73,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/adacta">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={adacta} alt="Adacta" />
+              <LazyLoadImage effect="blur" src={adacta} alt="Adacta" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -81,7 +82,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/eyesee">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={eyesee} alt="Eyesee" />
+              <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />

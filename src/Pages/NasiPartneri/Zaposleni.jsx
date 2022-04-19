@@ -1,6 +1,7 @@
 import React from "react";
 import "./Zaposleni.scss";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Zaposleni = (props) => {
   return (
@@ -11,7 +12,8 @@ const Zaposleni = (props) => {
       transition={{ duration: 0.5 }}
     >
       <div className="zaposleni-wrapper">
-        <img
+        <LazyLoadImage
+          effect="blur"
           src={props.slikaZaposlenog}
           alt={props.imeZaposlenog}
           className="zaposleni-img"

@@ -5,6 +5,7 @@ import RadionicaKartica from "./RadionicaKartica";
 import slikaZaposleni from "../../../Assets/Images/Zaposleni/zaposleni.png";
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
 import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Radionice = () => {
   const radionica1 = {
@@ -57,7 +58,7 @@ const Radionice = () => {
     <div className="radionice-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <img src={radioniceSlika} alt="Radionice" />
+          <LazyLoadImage effect="blur" src={radioniceSlika} alt="Radionice" />
         </div>
         <div className="tekst">
           <h2>RADIONICE</h2>

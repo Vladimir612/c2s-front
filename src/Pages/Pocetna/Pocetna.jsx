@@ -48,6 +48,7 @@ import Viser from "../../Assets/Images/Partneri/medijski/Viser.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Pocetna = () => {
   const pocetakPocetna = useRef();
@@ -365,7 +366,11 @@ const Pocetna = () => {
                   rel="noreferrer"
                 >
                   <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
+                    <LazyLoadImage
+                      effect="blur"
+                      src={raiffeisen}
+                      alt="Raiffeisen"
+                    />
                   </div>
                 </a>
               </div>
@@ -376,7 +381,11 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={prime} alt="Prime software" />
+                    <LazyLoadImage
+                      effect="blur"
+                      src={prime}
+                      alt="Prime software"
+                    />
                   </div>
                 </div>
               </a>
@@ -387,14 +396,18 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={semos} alt="Semos education" />
+                    <LazyLoadImage
+                      effect="blur"
+                      src={semos}
+                      alt="Semos education"
+                    />
                   </div>
                 </div>
               </a>
               <a href="https://a1.rs/privatni" target="_blank" rel="noreferrer">
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={a1} alt="A1" />
+                    <LazyLoadImage effect="blur" src={a1} alt="A1" />
                   </div>
                 </div>
               </a>
@@ -405,7 +418,7 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={adacta} alt="Adacta" />
+                    <LazyLoadImage effect="blur" src={adacta} alt="Adacta" />
                   </div>
                 </div>
               </a>
@@ -416,7 +429,7 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={eyesee} alt="Eyesee" />
+                    <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
                   </div>
                 </div>
               </a>

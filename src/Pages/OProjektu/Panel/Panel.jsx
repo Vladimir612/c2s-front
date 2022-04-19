@@ -8,6 +8,8 @@ import "./Panel.scss";
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
 import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const Panel = () => {
   const ucesniciPanela = [
     {
@@ -73,7 +75,7 @@ const Panel = () => {
     <div className="panel-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <img src={panelSlika} alt="Panel" />
+          <LazyLoadImage effect="blur" src={panelSlika} alt="Panel" />
         </div>
         <div className="tekst">
           <h2>TEMA PANELA</h2>

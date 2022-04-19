@@ -8,6 +8,7 @@ import VisibilitySensor from "react-visibility-sensor";
 
 import lopte2 from "../../../Assets/Images/krugovi-radionica.png";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const RadionicaKartica = (props) => {
   const [prikaziDetaljnije, setPrikaziDetaljnije] = useState(false);
@@ -65,7 +66,8 @@ const RadionicaKartica = (props) => {
             >
               <div className="slika-predavac">
                 <div className="img-wrapper">
-                  <img
+                  <LazyLoadImage
+                    effect="blur"
                     src={props.radionica.predavac.slika}
                     alt={props.radionica.predavac.ime}
                   />
@@ -89,7 +91,8 @@ const RadionicaKartica = (props) => {
             <motion.div className="predavac">
               <div className="slika-predavac">
                 <div className="img-wrapper">
-                  <img
+                  <LazyLoadImage
+                    effect="blur"
                     src={props.radionica.predavac2.slika}
                     alt={props.radionica.predavac2.ime}
                   />
@@ -141,7 +144,8 @@ const RadionicaKartica = (props) => {
           <Link to={props.radionica.kompanija.link}>
             <div className="saznaj-o-kompaniji">
               <div className="img-wrapper">
-                <img
+                <LazyLoadImage
+                  effect="blur"
                   src={props.radionica.kompanija.slika}
                   alt={props.radionica.kompanija.ime}
                 />

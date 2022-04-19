@@ -7,8 +7,6 @@ import Tim from "./Tim";
 import oC2su from "../../Assets/Images/oC2su.jpg";
 import oFonisu from "../../Assets/Images/oFonisu.jpg";
 
-import nekiLjudi from "../../Assets/Images/ljudi.png";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 //organizacioni tim
@@ -44,7 +42,7 @@ const ONama = () => {
     imeTima: "CORE TIM",
     oTimu:
       "Tim koordinatora, glavni zaslužni i odgovorni za uspešnu realizaciju projekta, svojim iskustvom i znanjem uspešno je organizovao i upravljao celokupnim projektom. 🤓",
-    slikaKoordinatora: nekiLjudi,
+    slikaKoordinatora: AnjaPejovic,
     imeKoordinatora: "Ana Kesić",
     funkcijaKoordinatora: "Koordinatorka projekta",
     slikaTima: coreTimSlika,
