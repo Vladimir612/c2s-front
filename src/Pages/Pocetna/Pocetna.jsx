@@ -239,7 +239,7 @@ const Pocetna = () => {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("May 10, 2022").getTime();
+    const countDownDate = new Date("May 5, 2022").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
@@ -303,7 +303,7 @@ const Pocetna = () => {
               <p className="uvodni-tekst">
                 Unapredi svoje znanje učeći od iskusnih IT stručnjaka, oslobodi
                 se treme kroz simulaciju intervjua i izađi iz zone komfora.
-                Čekamo te od 14. do 17. maja. Prijave se uskoro otvaraju
+                Očekujemo te od 14. do 17. maja. Prijave se uskoro otvaraju
               </p>
               <div className="timer">
                 <div className="dani">

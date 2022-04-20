@@ -46,9 +46,17 @@ const Prijava = (props) => {
           <img src={uspesnaPrijava} alt="Uspesna prijava" />
           <h2>PRIJAVA JE USPEŠNO POSLATA</h2>
           <p>
-            U narednom periodu ćemo ti poslati mejl. Sve bitne informacije ćemo
-            objavljivati na instagramu, zato ne zaboravi da nas zapratiš na
-            @fonis_fon.
+            U narednom periodu će ti stići mejl. Sve bitne informacije ćemo
+            objavljivati na instagramu, zato ne zaboravi da nas zapratiš na{" "}
+            <a
+              href="https://www.instagram.com/fonis_fon/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#cc203a" }}
+            >
+              @fonis_fon
+            </a>
+            .
           </p>
         </motion.div>
         <div className={!success ? "prijava-flex" : "none"}>
@@ -88,7 +96,6 @@ const Prijava = (props) => {
                 clan1: "",
                 clan2: "",
                 clan3: "",
-                clan4: "",
                 datingComp: [],
                 studyComp: [],
                 ucestvovao: "",
@@ -216,9 +223,7 @@ const Prijava = (props) => {
                               "," +
                               values.clan2 +
                               "," +
-                              values.clan3 +
-                              "," +
-                              values.clan4,
+                              values.clan3,
                             kompanije: values.studyComp,
                           },
                         }),

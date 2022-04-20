@@ -9,7 +9,7 @@ const PanelDiskusija = () => {
         <div className="label-group">
           <label htmlFor="name" className="desc">
             S obzirom da je tema ovogodišnjeg panela “__________”, šta bi sve
-            voleo/la da čuješ od naših panelista?
+            voleo/la da čuješ od naših panelista?*
           </label>
         </div>
         <div className="field-group">

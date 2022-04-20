@@ -30,7 +30,8 @@ const OpsteInformacije = () => {
             Broj telefona*
           </label>
           <p className="more-info">
-            Dodatan komentar da je to za wa grupu oko koordinacije.
+            Potreban nam je zbog kreiranja grupe za koordinaciju u toku
+            projekta.
           </p>
         </div>
         <div className="field-group">
@@ -115,7 +116,10 @@ const OpsteInformacije = () => {
           <label htmlFor="cv" className="desc">
             Unesite link do CV-ja*
           </label>
-          <p className="more-info">Naglasiti da bude otključan.</p>
+          <p className="more-info">
+            Link do CV-a treba da bude validan i otključan, inače neće biti
+            omogućeno učestvovanje na projektu!
+          </p>
         </div>
         <div className="field-group">
           <Field name="cv" className="field" />

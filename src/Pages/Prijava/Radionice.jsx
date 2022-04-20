@@ -7,13 +7,13 @@ const Radionice = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="primRad" className="desc">
-            Izaberi radionicu na kojoj želiš da prisustvuješ.
+            Izaberi radionicu na kojoj želiš da prisustvuješ. *
           </label>
         </div>
         <div className="field-group">
           <Field component="select" name="primRad" className="field">
             <option value="" selected disabled hidden>
-              Izaberite prvu radionicu
+              Izaberi prvu radionicu
             </option>
             <option value="Prva radionica">Prva radionica</option>
             <option value="Druga radionica">Druga radionica</option>
@@ -32,8 +32,9 @@ const Radionice = () => {
         <div className="field-group">
           <Field component="select" name="sporRad" className="field">
             <option value="" selected disabled hidden>
-              Izaberite drugu radionicu
+              Izaberi drugu radionicu
             </option>
+            <option value="">Ne želim drugu opciju</option>
             <option value="Prva radionica">Prva radionica</option>
             <option value="Druga radionica">Druga radionica</option>
             <option value="Treća radionica">Treća radionica</option>
@@ -51,8 +52,9 @@ const Radionice = () => {
         <div className="field-group">
           <Field component="select" name="trecRad" className="field">
             <option value="" selected disabled hidden>
-              Izaberite treću radionicu
+              Izaberi treću radionicu
             </option>{" "}
+            <option value="">Ne želim treću opciju</option>
             <option value="Prva radionica">Prva radionica</option>
             <option value="Druga radionica">Druga radionica</option>
             <option value="Treća radionica">Treća radionica</option>
@@ -64,7 +66,7 @@ const Radionice = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="oblasti" className="desc">
-            Šta te motiviše da se u daljoj karijeri baviš IT-jem?
+            Šta te motiviše da se u daljoj karijeri baviš IT-jem? *
           </label>
         </div>
         <div className="field-group">
@@ -73,7 +75,7 @@ const Radionice = () => {
             className="field textarea"
             component="textarea"
           />
-          <ErrorMessage name="oblastiTrec" component="div" className="error" />
+          <ErrorMessage name="oblasti" component="div" className="error" />
         </div>
       </div>
     </div>

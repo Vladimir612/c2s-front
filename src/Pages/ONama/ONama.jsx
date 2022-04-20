@@ -38,7 +38,7 @@ const ONama = () => {
   }, []);
 
   const coreTim = {
-    imeTima: "CORE TIM",
+    imeTima: "TIM KOORDINATORA",
     oTimu:
       "Tim koordinatora, glavni zaslužni i odgovorni za uspešnu realizaciju projekta, svojim iskustvom i znanjem uspešno je organizovao i upravljao celokupnim projektom. 🤓",
     slikaKoordinatora: AnaKesic,
@@ -47,12 +47,12 @@ const ONama = () => {
     slikaTima: coreTimSlika,
   };
   const itTim = {
-    imeTima: "IT TIM",
+    imeTima: "TIM ZA INFORMACIONE TEHNOLOGIJE",
     oTimu:
       "Tim za informacione tehnologije marljivo je radio na izradi veb sajta projekta gde možete pronaći sve neophodne informacije u vezi projekta. 💻",
     slikaKoordinatora: VladimirLazarevic,
     imeKoordinatora: "Vladimir Lazarević",
-    funkcijaKoordinatora: "Koordinator IT tima",
+    funkcijaKoordinatora: "Koordinator tima za informacione tehnologije",
     slikaTima: itTimSlika,
   };
   const dizajnTim = {
@@ -65,42 +65,42 @@ const ONama = () => {
     slikaTima: dizajnTimSlika,
   };
   const crTim = {
-    imeTima: "CR TIM",
+    imeTima: "TIM ZA KORPORATIVNE ODNOSE",
     oTimu:
       "Tim za odnose sa kompanijama je zaslužan za ostvarivanje partnerstava koji doprinose realizaciji projekta na visokom nivou. 💰",
     slikaKoordinatora: AnjaPejovic,
     imeKoordinatora: "Anja Pejović",
-    funkcijaKoordinatora: "Koordinatorka CR tima",
+    funkcijaKoordinatora: "Koordinatorka tima za korporativne odnose",
     slikaTima: crTimSlika,
   };
 
   const hrTim = {
-    imeTima: "HR TIM",
+    imeTima: "TIM ZA LJUDSKE RESURSE",
     oTimu:
       "Tim za ljudske resurse vodio je računa da članovi svih organizacionih timova dostignu svoj pun potencijal i upravljao selekcijom prijavljenih kandidata. 👩🏻‍🤝‍👨🏼",
     slikaKoordinatora: KostaAcimovic,
     imeKoordinatora: "Kosta Aćimović",
-    funkcijaKoordinatora: "Koordinator HR tima",
+    funkcijaKoordinatora: "Koordinator tima za ljudske resurse",
     slikaTima: hrTimSlika,
   };
 
   const prTim = {
-    imeTima: "PR TIM",
+    imeTima: "TIM ZA ODNOSE SA JAVNOŠĆU",
     oTimu:
       "Tim za odnose sa javnošću bio je zadužen za novinarske poslove poput pisanja tekstova, promocije, prezentovanje samog projekta u najboljem svetlu, kao i ostvarivanje medijskih saradnji. 🗞",
     slikaKoordinatora: BojanaCelovic,
     imeKoordinatora: "Bojana Ćelović",
-    funkcijaKoordinatora: "Koordinatorka PR tima",
+    funkcijaKoordinatora: "Koordinatorka tima za odnose sa javnošću",
     slikaTima: prTimSlika,
   };
 
   const logistikaTim = {
-    imeTima: "LOGISTIKA",
+    imeTima: "TIM ZA LOGISTIKU",
     oTimu:
       "Tim za logistiku osmislio je operacioni plan celokupnog događaja i postarao se da sve prođe u najboljem redu. 📆",
     slikaKoordinatora: NemanjaVukelic,
     imeKoordinatora: "Nemanja Vukelić",
-    funkcijaKoordinatora: "Koordinator logistike",
+    funkcijaKoordinatora: "Koordinator tima za logistiku",
     slikaTima: logistikaTimSlika,
   };
 
@@ -156,7 +156,7 @@ const ONama = () => {
             }}
             transition={{ duration: 0.5 }}
           >
-            <h2>O FONISU</h2>
+            <h2>O FONIS-u</h2>
             <p>
               Udruženje studenata informatike FONIS je studentska, nevladina i
               neprofitna organizacija sa Fakulteta organizacionih nauka. Okuplja
@@ -289,11 +289,11 @@ const ONama = () => {
             </div>
             {vidljivTim === 0 && <Tim tim={coreTim} />}
             {vidljivTim === 1 && <Tim tim={itTim} />}
-            {vidljivTim === 2 && <Tim tim={dizajnTim} />}
-            {vidljivTim === 3 && <Tim tim={crTim} />}
-            {vidljivTim === 4 && <Tim tim={hrTim} />}
-            {vidljivTim === 5 && <Tim tim={prTim} />}
-            {vidljivTim === 6 && <Tim tim={logistikaTim} />}
+            {vidljivTim === 2 && <Tim tim={hrTim} />}
+            {vidljivTim === 3 && <Tim tim={dizajnTim} />}
+            {vidljivTim === 4 && <Tim tim={crTim} />}
+            {vidljivTim === 5 && <Tim tim={logistikaTim} />}
+            {vidljivTim === 6 && <Tim tim={prTim} />}
           </div>
         </div>
       </div>

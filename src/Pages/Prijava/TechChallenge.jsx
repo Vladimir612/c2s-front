@@ -8,7 +8,7 @@ const TechChallenge = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="fonMail" className="desc">
-            Ukoliko imaš FON-ov mail, unesi ga.
+            Unesi FON-ov mail ukoliko ga imaš.
           </label>
         </div>
         <div className="field-group">
@@ -19,7 +19,8 @@ const TechChallenge = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="ucestvovao" className="desc">
-            Da li si do sad učestvovao/la u rešavanju IT studije slučaja?*
+            Da li si do sad učestvovao/la u rešavanju IT studije slučaja, ako
+            jesi kakvi su ti utisci?*
           </label>
         </div>
         <div className="field-group">
@@ -30,7 +31,7 @@ const TechChallenge = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="tehnologije" className="desc">
-            Sa kojim tehnologijama si upoznat/a?
+            Sa kojim tehnologijama si upoznat/a?*
           </label>
         </div>
         <div className="field-group">
@@ -42,18 +43,19 @@ const TechChallenge = () => {
       <div className="input-group">
         <div className="label-group">
           <label className="desc">
-            S kim bi želeo/la da radiš studiju slučaja?
+            S kim bi želeo/la da radiš studiju slučaja (unesite puno ime i
+            prezime)?
           </label>
           <p className="more-info">
-            Unesite puno ime i prezime osoba. Timovi se mogu sastojati od 3 ili
-            4 osobe. Moguće je i individualno prijavljivanje.
+            Prijavljivanje je individualno, ali ćemo pokušati da vas spojimo u
+            timove prema vašim željama u zavisnosti od vaših prijava. Timovi se
+            mogu sastojati od 3 ili 4 osobe.
           </p>
         </div>
         <div className="field-group">
           <Field name="clan1" className="field" />
           <Field name="clan2" className="field" />
           <Field name="clan3" className="field" />
-          <Field name="clan4" className="field" />
         </div>
       </div>
 
