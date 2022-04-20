@@ -171,6 +171,29 @@ const OpsteInformacije = () => {
             </div>
             <div className="input-group">
                 <div className="label-group">
+                    <label htmlFor="saglasnost" className="desc">
+                        Saglasnost*
+                    </label>
+                </div>
+                <div className="field-group check-group">
+                    <label className="checkbox-group">
+                        <Field
+                            type="checkbox"
+                            name="saglasnost"
+                            className="checkbox"
+                        />
+                        Saglasan/na sam da se moji podaci podele sa kompanijama
+                        učesnicama projekta
+                    </label>
+                    <ErrorMessage
+                        name="saglasnost"
+                        component="div"
+                        className="error"
+                    />
+                </div>
+            </div>
+            <div className="input-group">
+                <div className="label-group">
                     <label htmlFor="newsletter" className="desc">
                         Email novosti i obaveštenja
                     </label>

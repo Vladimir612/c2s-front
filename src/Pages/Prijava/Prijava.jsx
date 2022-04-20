@@ -106,6 +106,7 @@ const Prijava = (props) => {
                                 ucestvovao: "",
                                 tehnologije: "",
                                 newsletter: false,
+                                saglasnost: false,
                             }}
                             validate={(values) => {
                                 const errors = {};
@@ -149,6 +150,10 @@ const Prijava = (props) => {
                                     if (!values.cv) {
                                         errors.cv = "Polje je obavezno";
                                     }
+
+                                    if (!values.saglasnost)
+                                        errors.saglasnost =
+                                            "Polje mora biti otkačeno";
                                 } else if (
                                     values.parts[Math.ceil(currentStep) - 1] ===
                                     "1"
