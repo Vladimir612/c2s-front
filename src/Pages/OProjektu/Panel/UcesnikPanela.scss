@@ -33,9 +33,11 @@
     gap: 1rem;
     .img-wrapper {
       img {
-        min-width: 10rem;
+        width: 10rem;
+        height: 10rem;
         border-radius: 50%;
-        @include fit-image;
+        object-fit: cover;
+        object-position: top;
       }
     }
     .podaci {

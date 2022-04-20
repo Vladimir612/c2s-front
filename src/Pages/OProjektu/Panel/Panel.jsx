@@ -7,6 +7,18 @@ import "./Panel.scss";
 //kompanije
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
 import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
+import a1 from "../../../Assets/Images/Partneri/pokrovitelji/a1.png";
+import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
+import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
+import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
+
+//panelisti
+import AnaNikolic from "../../../Assets/Images/Partneri/A1/panel/AnaNikolic.jpg";
+import IvanDivic from "../../../Assets/Images/Partneri/Adacta/panel/IvanDivic.jpg";
+import StefanGavrilovic from "../../../Assets/Images/Partneri/Raiffeisen/zaposleni/StefanGavrilovic.jpg";
+import GoranVidic from "../../../Assets/Images/Partneri/Prime/panel/GoranVidic.jpg";
+// import AnaNikolic from "../../../Assets/Images/Partneri/Semos/panel/AnaNikolic.jpg";
+import VukPaskovic from "../../../Assets/Images/Partneri/Eyesee/panel/VukPaskovic.jpg";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -22,53 +34,63 @@ const Panel = () => {
     },
     {
       moderator: false,
-      ime: "Jovana Jovanovic",
+      ime: "Ana Nikolic",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: AnaNikolic,
+      slikaKompanije: a1,
+      linkKompanije: "/nasi-partneri/a1",
+    },
+    {
+      moderator: false,
+      ime: "Ivan Divić",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: IvanDivic,
+      slikaKompanije: adacta,
+      linkKompanije: "/nasi-partneri/adacta",
+    },
+    {
+      moderator: false,
+      ime: "Stefan Gavrilović",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: StefanGavrilovic,
+      slikaKompanije: raiffeisen,
+      linkKompanije: "/nasi-partneri/raiffeisen",
+    },
+    {
+      moderator: false,
+      ime: "Goran Vidić",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: GoranVidic,
+      slikaKompanije: prime,
+      linkKompanije: "/nasi-partneri/prime-software",
+    },
+    {
+      moderator: false,
+      ime: "Vuk Pašković",
+      pozicija: "Profesor na Faкultetu organizacionih nauka",
+      rekaoJe:
+        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
+      slika: VukPaskovic,
+      slikaKompanije: eyesee,
+      linkKompanije: "/nasi-partneri/eyesee",
+    },
+    {
+      moderator: false,
+      ime: "Covek iz semosa",
       pozicija: "Profesor na Faкultetu organizacionih nauka",
       rekaoJe:
         "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
       slika: slikaZaposleni,
       slikaKompanije: semos,
       linkKompanije: "/nasi-partneri/semos-education",
-    },
-    {
-      moderator: false,
-      ime: "Jovana Jovanovic",
-      pozicija: "Profesor na Faкultetu organizacionih nauka",
-      rekaoJe:
-        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
-      slika: slikaZaposleni,
-      slikaKompanije: raiffeisen,
-      linkKompanije: "/nasi-partneri/raiffeisen",
-    },
-    {
-      moderator: false,
-      ime: "Jovana Jovanovic",
-      pozicija: "Profesor na Faкultetu organizacionih nauka",
-      rekaoJe:
-        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
-      slika: slikaZaposleni,
-      slikaKompanije: raiffeisen,
-      linkKompanije: "/nasi-partneri/raiffeisen",
-    },
-    {
-      moderator: false,
-      ime: "Jovana Jovanovic",
-      pozicija: "Profesor na Faкultetu organizacionih nauka",
-      rekaoJe:
-        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
-      slika: slikaZaposleni,
-      slikaKompanije: raiffeisen,
-      linkKompanije: "/nasi-partneri/raiffeisen",
-    },
-    {
-      moderator: false,
-      ime: "Jovana Jovanovic",
-      pozicija: "Profesor na Faкultetu organizacionih nauka",
-      rekaoJe:
-        "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook.",
-      slika: slikaZaposleni,
-      slikaKompanije: raiffeisen,
-      linkKompanije: "/nasi-partneri/raiffeisen",
     },
   ];
   return (

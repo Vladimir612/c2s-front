@@ -1,15 +1,5 @@
 @import "../../global.scss";
 
-.otvorene-prijave-message {
-  width: 100%;
-  text-align: center;
-  display: block;
-  background-color: $crvena;
-  margin-top: 4rem;
-  padding: 0.35rem;
-  color: white;
-}
-
 .uspesna-prijava {
   @include box-center($direction: column, $justify: space-around);
   min-height: calc(100vh - 5rem);
@@ -41,7 +31,6 @@
 .prijava-flex {
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
   margin-bottom: 4rem;
   padding: 4rem;
   .none {

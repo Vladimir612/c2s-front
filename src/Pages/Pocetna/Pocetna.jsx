@@ -266,6 +266,9 @@ const Pocetna = () => {
   return (
     <>
       <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
+      <Link to="/prijava">
+        <div className="otvorene-prijave-message">Prijave su otvorene</div>
+      </Link>
       <div className="pocetna-container">
         <Nav />
         <div className="hero-section">

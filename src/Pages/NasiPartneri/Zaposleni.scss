@@ -2,7 +2,7 @@
 
 .zaposleni {
   width: 18rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   @include box-center($direction: column);
   background: $pozadina_tamna;
   border-radius: 1rem;
@@ -17,6 +17,8 @@
     font-size: 1.5rem;
   }
   .zaposleni-img {
+    @include fit-image;
+    object-position: top;
     width: 8rem;
     height: 8rem;
     border-radius: 50%;

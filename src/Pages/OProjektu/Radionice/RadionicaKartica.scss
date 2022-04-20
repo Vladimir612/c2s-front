@@ -92,14 +92,28 @@
     }
   }
 
+  .right.sakriveno {
+    .predavac {
+      &.duplikat {
+        height: initial !important;
+      }
+    }
+  }
+
   .predavac {
     @include box-center;
     gap: 1rem;
+    &.duplikat {
+      opacity: 0;
+      height: 0;
+    }
+
     .img-wrapper {
       img {
         @include fit-image;
         border-radius: 50%;
-        min-width: 11rem;
+        width: 10rem;
+        height: 10rem;
       }
     }
     .o-predavacu {
