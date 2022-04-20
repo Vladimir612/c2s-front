@@ -1,26 +1,14 @@
 @import "../../global.scss";
 
-.otvorene-prijave-message {
-  width: 100%;
-  text-align: center;
-  display: block;
-  background-color: $crvena;
-  margin-top: 4rem;
-  padding: 0.35rem;
-  color: white;
-}
-
 .uspesna-prijava {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include box-center($direction: column, $justify: space-around);
+  min-height: calc(100vh - 5rem);
   width: 40%;
   margin: 0 auto;
   text-align: center;
   margin-top: 2rem;
   img {
-    margin-bottom: 1rem;
+    width: 50%;
   }
   h2 {
     font-size: 2rem;
@@ -34,13 +22,17 @@
   }
 }
 
+.prijava-container {
+  button {
+    border-radius: 2rem;
+  }
+}
+
 .prijava-flex {
   display: flex;
   flex-direction: column;
-  margin-inline: 20%;
-  margin-top: 4rem;
   margin-bottom: 4rem;
-
+  padding: 4rem;
   .none {
     display: none;
   }
@@ -79,9 +71,10 @@
     }
 
     .input-page {
+      padding: 2rem;
+      padding-bottom: 0rem;
       display: flex;
       flex-direction: column;
-      padding-inline: 1.5rem;
     }
 
     .input-title {
@@ -99,7 +92,7 @@
       width: 100%;
       padding: 12px;
       border: none;
-      border-radius: 10px;
+      border-radius: 2rem;
       box-sizing: border-box;
       resize: vertical;
       background-color: #ffd8d8;
@@ -155,19 +148,12 @@
       border: none;
       margin-right: 1rem;
       transform: translateY(2px);
-      accent-color: #ffd8d8;
     }
 
     .another-option {
       color: white;
       text-align: center;
       margin-top: 0.5rem;
-    }
-
-    .next {
-      margin-left: 2.5%;
-      width: 95% !important;
-      margin-bottom: 1rem;
     }
 
     .white-dugme {
@@ -192,8 +178,7 @@
     }
 
     .button-group {
-      display: flex;
-      justify-content: space-between;
+      @include box-center;
     }
 
     .label-group-middle {
@@ -204,7 +189,8 @@
 
 @media only screen and (max-width: 800px) {
   .prijava-flex {
-    margin-inline: 2rem;
+    padding: 1rem;
+    padding-top: 4rem;
   }
   .uspesna-prijava {
     width: 90%;

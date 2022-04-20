@@ -13,6 +13,9 @@ const RadionicaKartica = (props) => {
   const [prikaziDetaljnije, setPrikaziDetaljnije] = useState(false);
   const [vidljivaRadionica, setVidljivaRadionica] = useState(false);
 
+  const istiPredavaci =
+    props.radionica.predavac.ime === props.radionica.predavac2.ime;
+
   return (
     <VisibilitySensor
       onChange={(isVisible) => {
@@ -86,7 +89,9 @@ const RadionicaKartica = (props) => {
                 <p className="predavac-vise">{props.radionica.predavac.vise}</p>
               </motion.div>
             </motion.div>
-            <motion.div className="predavac">
+            <motion.div
+              className={istiPredavaci ? "predavac duplikat" : "predavac"}
+            >
               <div className="slika-predavac">
                 <div className="img-wrapper">
                   <img

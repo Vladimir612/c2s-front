@@ -5,6 +5,8 @@ import Zaposleni from "./Zaposleni";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import { scrollFunc } from "../../Components/Footer/Footer";
+import LazyLoad from "react-lazyload";
+
 const PartnerSnimak = (props) => {
   const pocetakPartneri = useRef();
 
@@ -33,17 +35,19 @@ const PartnerSnimak = (props) => {
       <div className="pocetak-pocetna" ref={pocetakPartneri}></div>
       <div className="partneri-container">
         <div className="video-wrapper">
-          <video autoPlay loop muted key={props.video}>
-            <source src={props.video} type="video/mp4" />
-          </video>
+          <LazyLoad>
+            <video autoPlay loop muted key={props.video} poster={props.poster}>
+              <source src={props.video} type="video/mp4" />
+            </video>
+          </LazyLoad>
         </div>
         <div className="left-arrow">
-          <Link to={props.prevLink}>
+          <Link to={props.prevLink} onClick={() => setVidljivZaposleni(0)}>
             <FiChevronLeft size={40} color="#b4afb3" />
           </Link>
         </div>
         <div className="right-arrow">
-          <Link to={props.nextLink}>
+          <Link to={props.nextLink} onClick={() => setVidljivZaposleni(0)}>
             <FiChevronRight size={40} color="#b4afb3" />
           </Link>
         </div>

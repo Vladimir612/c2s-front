@@ -68,7 +68,7 @@ const OProjektu = () => {
         </Routes>
 
         <div className="donji-nav">
-          <p>POGLEDAJ I OSTALE STRANE</p>
+          <p>POGLEDAJ I OSTALE DELOVE</p>
           <div className="o-projektu-navigation">
             <ul>
               <li className={aktivnaStrana === 1 ? "active" : ""}>

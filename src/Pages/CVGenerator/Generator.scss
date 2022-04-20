@@ -2,246 +2,245 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 .generator-wrapper {
-    margin-top: 5rem;
+  .right-side.none {
+    width: 50%;
+    @include box-center;
+  }
+  margin-top: 5rem;
+  @include box-center;
+  align-items: flex-start;
+  .input-space {
+    width: 50%;
+
+    .input-field {
+      @include box-center;
+      color: white;
+      font-size: 18px;
+      padding-inline: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .area-field {
+      color: white;
+      font-size: 18px;
+      padding-inline: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .input-label {
+      padding-right: 1rem;
+      width: 10rem;
+    }
+
+    .area-label {
+      border-bottom: 2px solid $crvena;
+    }
+
+    .pdf-dugme {
+      width: 100%;
+      border: 0;
+      border-radius: 0.5rem;
+      height: 2rem;
+      margin-top: 0.5rem;
+      background-color: $crvena;
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .cv-space {
     @include box-center;
     align-items: flex-start;
-    .input-space {
-        width: 50%;
-
-        .input-field {
-            @include box-center;
-            color: white;
-            font-size: 18px;
-            padding-inline: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .area-field {
-            color: white;
-            font-size: 18px;
-            padding-inline: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .input-label {
-            padding-right: 1rem;
-            width: 10rem;
-        }
-
-        .area-label {
-            border-bottom: 2px solid $crvena;
-        }
-
-        .pdf-dugme {
-            width: 100%;
-            border: 0;
-            border-radius: 0.5rem;
-            height: 2rem;
-            margin-top: 0.5rem;
-            background-color: $crvena;
-            color: white;
-            font-weight: bold;
-        }
+    background-color: #e2e2e2;
+    width: 50%;
+    min-width: 700px;
+    min-height: 990px;
+    font-family: "Josefin Sans", sans-serif;
+    .left-pane {
+      padding: 2rem;
+      width: 48%;
+      display: flex;
+      flex-direction: column;
     }
 
-    .cv-space {
-        @include box-center;
-        margin-right: 2rem;
-        align-items: flex-start;
-        background-color: #e2e2e2;
-        width: 50%;
-        min-width: 700px;
-        min-height: 990px;
-        font-family: "Josefin Sans", sans-serif;
-
-        .left-pane {
-            padding: 2rem;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .ime-prezime-cv {
-            font-size: 2.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .opis-cv,
-        .opis-cv-obr {
-            border-bottom: 3px solid black;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-        }
-
-        .opis-cv-obr {
-            margin-top: 4rem;
-        }
-
-        .ustanova-naziv,
-        .iskustvo-naziv {
-            margin-bottom: 0.2rem;
-        }
-
-        .ustanova-vreme,
-        .iskustvo-vreme {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 0.2rem;
-        }
-
-        .ustanova-content,
-        .iskustvo-content {
-            margin-bottom: 2rem;
-        }
-
-        .right-pane {
-            width: 60%;
-            padding-top: 2rem;
-            margin-right: 4rem;
-            display: flex;
-            min-height: 900px;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .contact-info {
-            display: flex;
-            border-bottom: 3px solid black;
-            padding-bottom: 0.2rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .contact-content {
-            margin-left: 1rem;
-            margin-top: 0.2rem;
-        }
-
-        .photo-cv {
-            width: 90%;
-            border-radius: 50%;
-            border: 3px solid black;
-            padding: 0.2rem;
-            object-fit: cover;
-        }
-
-        .tehnologija {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .tehnologija-naziv {
-            background-color: black;
-            color: white;
-            padding-inline: 1rem;
-            padding-block: 0.2rem;
-            border-radius: 1rem;
-        }
-
-        .tehnologija-nivo {
-            padding-top: 0.2rem;
-        }
+    .ime-prezime-cv {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
     }
 
-    textarea,
-    input[type="text"],
-    select {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 10px;
-        box-sizing: border-box;
-        resize: vertical;
-        background-color: #e2e2e2;
-        outline: none;
-        resize: none;
+    .opis-cv,
+    .opis-cv-obr {
+      border-bottom: 3px solid black;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
 
-    textarea {
-        min-height: 5rem;
-        margin-top: 0.5rem;
+    .opis-cv-obr {
+      margin-top: 4rem;
     }
 
-    .show-on-resize {
-        display: none;
+    .ustanova-naziv,
+    .iskustvo-naziv {
+      margin-bottom: 0.2rem;
     }
 
-    .none {
+    .ustanova-vreme,
+    .iskustvo-vreme {
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 0.2rem;
     }
 
-    .right-side {
-        .input-field {
-            display: none;
-        }
+    .ustanova-content,
+    .iskustvo-content {
+      margin-bottom: 2rem;
     }
+
+    .right-pane {
+      width: 52%;
+      padding-top: 2rem;
+      margin-right: 4rem;
+      display: flex;
+      min-height: 900px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      display: flex;
+      border-bottom: 3px solid black;
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-content {
+      margin-left: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    .photo-cv {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 50%;
+      border: 3px solid black;
+      padding: 0.2rem;
+      object-fit: cover;
+    }
+
+    .tehnologija {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .tehnologija-naziv {
+      background-color: black;
+      color: white;
+      padding-inline: 1rem;
+      padding-block: 0.2rem;
+      border-radius: 1rem;
+    }
+
+    .tehnologija-nivo {
+      padding-top: 0.2rem;
+    }
+  }
+
+  textarea,
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #e2e2e2;
+    outline: none;
+    resize: none;
+  }
+
+  textarea {
+    min-height: 5rem;
+    margin-top: 0.5rem;
+  }
+
+  .show-on-resize {
+    display: none;
+  }
+  .right-side {
+    .input-field {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width: 1120px) {
-    .cv-space {
-        margin-right: 0rem !important;
-    }
+  .cv-space {
+    margin-right: 0rem !important;
+  }
 
-    .input-space {
-        width: 70% !important;
-    }
+  .input-space {
+    width: 70% !important;
+  }
 
-    .show-on-resize {
-        display: block !important;
-    }
+  .show-on-resize {
+    display: block !important;
+  }
 
-    .none {
-        display: none !important;
-    }
+  .none {
+    display: none !important;
+  }
 
-    .right-side {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .input-field {
-            display: block !important;
-            width: 100%;
-        }
-        .pdf-dugme {
-            width: 100% !important;
-            margin-bottom: 1rem;
-            border: 0;
-            border-radius: 0.5rem;
-            height: 2rem;
-            margin-top: 0.5rem;
-            background-color: $crvena;
-            color: white;
-            font-weight: bold;
-        }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .input-field {
+      display: block !important;
+      width: 100%;
     }
+    .pdf-dugme {
+      width: 100% !important;
+      margin-bottom: 1rem;
+      border: 0;
+      border-radius: 0.5rem;
+      height: 2rem;
+      margin-top: 0.5rem;
+      background-color: $crvena;
+      color: white;
+      font-weight: bold;
+    }
+  }
 }
 
 @media only screen and (max-width: 750px) {
-    .input-space {
-        width: 100% !important;
-    }
+  .input-space {
+    width: 100% !important;
+  }
 
-    .cv-space {
-        transform-origin: center top;
-        transform: scale(0.7);
-    }
+  .cv-space {
+    transform-origin: center top;
+    transform: scale(0.7);
+  }
 
-    .right-side {
-        .input-field {
-            width: 70%;
-        }
+  .right-side {
+    .input-field {
+      width: 70%;
     }
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .cv-space {
-        transform-origin: center top;
-        transform: scale(0.5);
-    }
+  .cv-space {
+    transform-origin: center top;
+    transform: scale(0.5);
+  }
 
-    .right-side {
-        .input-field {
-            width: 50%;
-        }
+  .right-side {
+    .input-field {
+      width: 50%;
     }
+  }
 }

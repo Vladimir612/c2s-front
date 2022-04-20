@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import speedSlika from "../../../Assets/Images/speed-dating.png";
+import speedSlika from "../../../Assets/Images/speed-dating.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import "./SpeedDating.scss";
+import Pdf from "../../../Assets/pravila.pdf";
 
 //kompanije
 import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
@@ -11,7 +12,7 @@ import a1 from "../../../Assets/Images/Partneri/pokrovitelji/a1.png";
 import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
 import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
 import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 
 const SpeedDating = () => {
@@ -19,26 +20,9 @@ const SpeedDating = () => {
     <div className="speed-dating-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <motion.img
-            src={speedSlika}
-            alt="Speed dating"
-            animate={{ y: 0, opacity: 1 }}
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            transition={{ duration: 1 }}
-          />
+          <img src={speedSlika} alt="Speed dating" />
         </div>
-        <motion.div
-          className="tekst"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          transition={{ duration: 1 }}
-        >
+        <div className="tekst">
           <h2>SPEED DATING</h2>
           <p>
             Intervju često predstavlja najbitniju fazu koja kandidate deli od
@@ -48,14 +32,27 @@ const SpeedDating = () => {
             svetlu HR predstavnicima kompanija, ali i da čuju više o kompaniji i
             o tome kako izgleda njihov proces selekcije.
           </p>
-        </motion.div>
+          <a href={Pdf} target="_blank" rel="noreferrer">
+            <motion.button
+              className="dugme transparentno"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              Pročitaj pravilnik
+            </motion.button>
+          </a>
+        </div>
       </div>
       <div className="kompanije">
         <h2>KOMPANIJE</h2>
         <Link to="/nasi-partneri/raiffeisen">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={raiffeisen} alt="Raiffeisen" />
+              <LazyLoadImage effect="blur" src={raiffeisen} alt="Raiffeisen" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -64,7 +61,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/semos-education">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={semos} alt="Semos-education" />
+              <LazyLoadImage effect="blur" src={semos} alt="Semos-education" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -73,7 +70,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/a1">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={a1} alt="A1" />
+              <LazyLoadImage effect="blur" src={a1} alt="A1" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -82,7 +79,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/prime-software">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={prime} alt="Prime software" />
+              <LazyLoadImage effect="blur" src={prime} alt="Prime software" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -91,7 +88,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/adacta">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={adacta} alt="Adacta" />
+              <LazyLoadImage effect="blur" src={adacta} alt="Adacta" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />
@@ -100,7 +97,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/eyesee">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <img src={eyesee} alt="Eyesee" />
+              <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />

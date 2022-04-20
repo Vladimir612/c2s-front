@@ -4,30 +4,30 @@ import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
 import Tim from "./Tim";
 
-import oC2su from "../../Assets/Images/oC2su.png";
-import oFonisu from "../../Assets/Images/oFonisu.png";
+import oC2su from "../../Assets/Images/oC2su.jpg";
+import oFonisu from "../../Assets/Images/oFonisu.jpg";
 
-import nekiLjudi from "../../Assets/Images/ljudi.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 //organizacioni tim
-import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.png";
-import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.png";
-import coreTimSlika from "../../Assets/Images/organizacioniTim/coreTim.png";
-import crTimSlika from "../../Assets/Images/organizacioniTim/crTim.png";
-import dizajnTimSlika from "../../Assets/Images/organizacioniTim/dizajnTim.png";
-import hrTimSlika from "../../Assets/Images/organizacioniTim/hrTim.png";
-import itTimSlika from "../../Assets/Images/organizacioniTim/itTim.png";
-import KostaAcimovic from "../../Assets/Images/organizacioniTim/KostaAcimovic.png";
-import logistikaTimSlika from "../../Assets/Images/organizacioniTim/logistikaTim.png";
-import NemanjaVukelic from "../../Assets/Images/organizacioniTim/NemanjaVukelic.png";
-import prTimSlika from "../../Assets/Images/organizacioniTim/prTim.png";
-import StefanBozovic from "../../Assets/Images/organizacioniTim/StefanBozovic.png";
-import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLazarevic.png";
+import AnaKesic from "../../Assets/Images/organizacioniTim/AnaKesic.jpg";
+import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.jpg";
+import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.jpg";
+import coreTimSlika from "../../Assets/Images/organizacioniTim/coreTim.jpg";
+import crTimSlika from "../../Assets/Images/organizacioniTim/crTim.jpg";
+import dizajnTimSlika from "../../Assets/Images/organizacioniTim/dizajnTim.jpg";
+import hrTimSlika from "../../Assets/Images/organizacioniTim/hrTim.jpg";
+import itTimSlika from "../../Assets/Images/organizacioniTim/itTim.jpg";
+import KostaAcimovic from "../../Assets/Images/organizacioniTim/KostaAcimovic.jpg";
+import logistikaTimSlika from "../../Assets/Images/organizacioniTim/logistikaTim.jpg";
+import NemanjaVukelic from "../../Assets/Images/organizacioniTim/NemanjaVukelic.jpg";
+import prTimSlika from "../../Assets/Images/organizacioniTim/prTim.jpg";
+import StefanBozovic from "../../Assets/Images/organizacioniTim/StefanBozovic.jpg";
+import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLazarevic.jpg";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Lopta from "./../../Utilities/Lopta/Lopta";
 
-import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 import { scrollFunc } from "../../Components/Footer/Footer";
 
@@ -36,24 +36,23 @@ const ONama = () => {
   useEffect(() => {
     scrollFunc(pocetakPocetna);
   }, []);
-  const [visibleSecond, setVisibleSecond] = useState(false);
 
   const coreTim = {
-    imeTima: "CORE TIM",
+    imeTima: "TIM KOORDINATORA",
     oTimu:
       "Tim koordinatora, glavni zaslužni i odgovorni za uspešnu realizaciju projekta, svojim iskustvom i znanjem uspešno je organizovao i upravljao celokupnim projektom. 🤓",
-    slikaKoordinatora: nekiLjudi,
+    slikaKoordinatora: AnaKesic,
     imeKoordinatora: "Ana Kesić",
     funkcijaKoordinatora: "Koordinatorka projekta",
     slikaTima: coreTimSlika,
   };
   const itTim = {
-    imeTima: "IT TIM",
+    imeTima: "TIM ZA INFORMACIONE TEHNOLOGIJE",
     oTimu:
       "Tim za informacione tehnologije marljivo je radio na izradi veb sajta projekta gde možete pronaći sve neophodne informacije u vezi projekta. 💻",
     slikaKoordinatora: VladimirLazarevic,
     imeKoordinatora: "Vladimir Lazarević",
-    funkcijaKoordinatora: "Koordinator IT tima",
+    funkcijaKoordinatora: "Koordinator tima za informacione tehnologije",
     slikaTima: itTimSlika,
   };
   const dizajnTim = {
@@ -66,42 +65,42 @@ const ONama = () => {
     slikaTima: dizajnTimSlika,
   };
   const crTim = {
-    imeTima: "CR TIM",
+    imeTima: "TIM ZA KORPORATIVNE ODNOSE",
     oTimu:
       "Tim za odnose sa kompanijama je zaslužan za ostvarivanje partnerstava koji doprinose realizaciji projekta na visokom nivou. 💰",
     slikaKoordinatora: AnjaPejovic,
     imeKoordinatora: "Anja Pejović",
-    funkcijaKoordinatora: "Koordinatorka CR tima",
+    funkcijaKoordinatora: "Koordinatorka tima za korporativne odnose",
     slikaTima: crTimSlika,
   };
 
   const hrTim = {
-    imeTima: "HR TIM",
+    imeTima: "TIM ZA LJUDSKE RESURSE",
     oTimu:
       "Tim za ljudske resurse vodio je računa da članovi svih organizacionih timova dostignu svoj pun potencijal i upravljao selekcijom prijavljenih kandidata. 👩🏻‍🤝‍👨🏼",
     slikaKoordinatora: KostaAcimovic,
     imeKoordinatora: "Kosta Aćimović",
-    funkcijaKoordinatora: "Koordinator HR tima",
+    funkcijaKoordinatora: "Koordinator tima za ljudske resurse",
     slikaTima: hrTimSlika,
   };
 
   const prTim = {
-    imeTima: "PR TIM",
+    imeTima: "TIM ZA ODNOSE SA JAVNOŠĆU",
     oTimu:
       "Tim za odnose sa javnošću bio je zadužen za novinarske poslove poput pisanja tekstova, promocije, prezentovanje samog projekta u najboljem svetlu, kao i ostvarivanje medijskih saradnji. 🗞",
     slikaKoordinatora: BojanaCelovic,
     imeKoordinatora: "Bojana Ćelović",
-    funkcijaKoordinatora: "Koordinatorka PR tima",
+    funkcijaKoordinatora: "Koordinatorka tima za odnose sa javnošću",
     slikaTima: prTimSlika,
   };
 
   const logistikaTim = {
-    imeTima: "LOGISTIKA",
+    imeTima: "TIM ZA LOGISTIKU",
     oTimu:
       "Tim za logistiku osmislio je operacioni plan celokupnog događaja i postarao se da sve prođe u najboljem redu. 📆",
     slikaKoordinatora: NemanjaVukelic,
     imeKoordinatora: "Nemanja Vukelić",
-    funkcijaKoordinatora: "Koordinator logistike",
+    funkcijaKoordinatora: "Koordinator tima za logistiku",
     slikaTima: logistikaTimSlika,
   };
 
@@ -157,7 +156,7 @@ const ONama = () => {
             }}
             transition={{ duration: 0.5 }}
           >
-            <h2>O FONISU</h2>
+            <h2>O FONIS-u</h2>
             <p>
               Udruženje studenata informatike FONIS je studentska, nevladina i
               neprofitna organizacija sa Fakulteta organizacionih nauka. Okuplja
@@ -179,57 +178,40 @@ const ONama = () => {
             transition={{ duration: 0.5 }}
           >
             <div class="img-wrapper">
-              <img src={oFonisu} alt="fonis-slika" />
+              <LazyLoadImage effect="blur" src={oFonisu} alt="fonis-slika" />
             </div>
           </motion.div>
         </div>
-        <VisibilitySensor
-          onChange={(isVisible) => {
-            if (isVisible && !visibleSecond) {
-              setVisibleSecond(true);
-            }
-            return;
-          }}
-          delayedCall
-          partialVisibility
-        >
-          <motion.div
-            class="o-nama-flex"
-            animate={visibleSecond && { y: "0%" }}
-            initial={{
-              y: "50%",
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="left-content">
-              <h2>C2S</h2>
-              <p>
-                Kompanije studentima predstavlja projekat čiji je organizator
-                Udruženje studenata informatike FONIS, a za cilj ima da kroz
-                zabavan i interaktivan način omogući svim zainteresovanim
-                učesnicima da nauče nešto novo iz oblasti informacionih
-                tehnologija. Na panel diskusiji ćeš dobiti priliku da čuješ
-                savete i priče iz poslovnih praksi koje ti mogu značiti kada se
-                budeš našao na mestu praktikanta. Pored panel diskusije, na
-                radionicama, koje će drzati predstavnici kompanija, dobićeš
-                priliku da unaprediš svoje znanje u izabranoj oblasti iz ITa.
-                Tech challenge je deo projekta na kome je tvoj zadatak da nađeš
-                rešenje za realan problem sa kojim se susreću IT kompanije. Na
-                kraju, važan deo ovog projekta predstavlja i speed dating, gde
-                ćeš se naći u ulozi kandidata za posao ili praksu i tako dobiti
-                priliku da osetiš kako izgleda pravi intervju koji je neophodan
-                za ulazak u svaku IT kompaniju. Generalni pokrovitelji projekta
-                su Raiffeisen banka💵, Adacta💻, A1📞, Semos📚, Prime
-                software💿, Eye see⌨️. Čekamo tvoju prijavu! 👍🏼
-              </p>
+
+        <div class="o-nama-flex">
+          <div className="left-content">
+            <h2>C2S</h2>
+            <p>
+              Kompanije studentima predstavlja projekat čiji je organizator
+              Udruženje studenata informatike FONIS, a za cilj ima da kroz
+              zabavan i interaktivan način omogući svim zainteresovanim
+              učesnicima da nauče nešto novo iz oblasti informacionih
+              tehnologija. Na panel diskusiji ćeš dobiti priliku da čuješ savete
+              i priče iz poslovnih praksi koje ti mogu značiti kada se budeš
+              našao na mestu praktikanta. Pored panel diskusije, na radionicama,
+              koje će drzati predstavnici kompanija, dobićeš priliku da
+              unaprediš svoje znanje u izabranoj oblasti iz ITa. Tech challenge
+              je deo projekta na kome je tvoj zadatak da nađeš rešenje za realan
+              problem sa kojim se susreću IT kompanije. Na kraju, važan deo ovog
+              projekta predstavlja i speed dating, gde ćeš se naći u ulozi
+              kandidata za posao ili praksu i tako dobiti priliku da osetiš kako
+              izgleda pravi intervju koji je neophodan za ulazak u svaku IT
+              kompaniju. Generalni pokrovitelji projekta su Raiffeisen banka💵,
+              Adacta💻, A1📞, Semos📚, Prime software💿, Eye see⌨️. Čekamo tvoju
+              prijavu! 👍🏼
+            </p>
+          </div>
+          <div className="right-content">
+            <div class="img-wrapper">
+              <img src={oC2su} alt="C2s slika" />
             </div>
-            <div className="right-content">
-              <div class="img-wrapper">
-                <img src={oC2su} alt="C2s slika" />
-              </div>
-            </div>
-          </motion.div>
-        </VisibilitySensor>
+          </div>
+        </div>
         <div class="o-nama-timovi">
           <h2>ORGANIZACIONI TIM PROJEKTA</h2>
           <div class="o-nama-carousel">
@@ -307,11 +289,11 @@ const ONama = () => {
             </div>
             {vidljivTim === 0 && <Tim tim={coreTim} />}
             {vidljivTim === 1 && <Tim tim={itTim} />}
-            {vidljivTim === 2 && <Tim tim={dizajnTim} />}
-            {vidljivTim === 3 && <Tim tim={crTim} />}
-            {vidljivTim === 4 && <Tim tim={hrTim} />}
-            {vidljivTim === 5 && <Tim tim={prTim} />}
-            {vidljivTim === 6 && <Tim tim={logistikaTim} />}
+            {vidljivTim === 2 && <Tim tim={hrTim} />}
+            {vidljivTim === 3 && <Tim tim={dizajnTim} />}
+            {vidljivTim === 4 && <Tim tim={crTim} />}
+            {vidljivTim === 5 && <Tim tim={logistikaTim} />}
+            {vidljivTim === 6 && <Tim tim={prTim} />}
           </div>
         </div>
       </div>

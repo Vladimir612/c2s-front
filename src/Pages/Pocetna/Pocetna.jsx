@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Lopta from "./../../Utilities/Lopta/Lopta";
@@ -48,6 +48,7 @@ import Viser from "../../Assets/Images/Partneri/medijski/Viser.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Pocetna = () => {
   const pocetakPocetna = useRef();
@@ -230,9 +231,44 @@ const Pocetna = () => {
     },
   ];
 
+  //timer
+  const [timerDays, setTimerDays] = useState();
+  const [timerHours, setTimerHours] = useState();
+  const [timerMinutes, setTimerMinutes] = useState();
+
+  let interval;
+
+  const startTimer = () => {
+    const countDownDate = new Date("May 5, 2022").getTime();
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+      const hours = Math.floor(
+        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
+
+      if (distance < 0) {
+        clearInterval(interval.curernt);
+      } else {
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+      }
+    });
+  };
+
+  useEffect(() => {
+    startTimer();
+  });
+
   return (
     <>
       <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
+      <Link to="/prijava">
+        <div className="otvorene-prijave-message">Prijave su otvorene</div>
+      </Link>
       <div className="pocetna-container">
         <Nav />
         <div className="hero-section">
@@ -267,45 +303,49 @@ const Pocetna = () => {
               <p className="uvodni-tekst">
                 Unapredi svoje znanje učeći od iskusnih IT stručnjaka, oslobodi
                 se treme kroz simulaciju intervjua i izađi iz zone komfora.
-                Čekamo te od 14. do 17. maja. Prijave se uskoro otvaraju
+                Očekujemo te od 14. do 17. maja. Prijave se uskoro otvaraju
               </p>
               <div className="timer">
                 <div className="dani">
-                  <p>14</p>
+                  <p>{timerDays}</p>
                   <p>dana</p>
                 </div>
                 <div className="sati">
-                  <p>08</p>
+                  <p>{timerHours}</p>
                   <p>sati</p>
                 </div>
                 <div className="minuti">
-                  <p>15</p>
+                  <p>{timerMinutes}</p>
                   <p>minuta</p>
                 </div>
               </div>
               <div className="dugmad-grupa">
-                <motion.button
-                  className="dugme crveno"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <Link to="/prijava">Prijavi se</Link>
-                </motion.button>
-                <motion.button
-                  className="dugme transparentno"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <Link to="/o-projektu/radionice">O projektu</Link>
-                </motion.button>
+                <Link to="/prijava">
+                  <motion.button
+                    className="dugme crveno"
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    Prijavi se
+                  </motion.button>
+                </Link>
+                <Link to="/o-projektu/radionice">
+                  <motion.button
+                    className="dugme transparentno"
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    O projektu
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
             <motion.div
@@ -339,7 +379,7 @@ const Pocetna = () => {
             </div>
           </div>
           <div className="kako-postati-container">
-            <h3>Kako da postanes deo c2s-a?</h3>
+            <h3>Kako da postaneš deo c2s-a?</h3>
             <div className="kako">
               <p>1. Odaberi kompaniju sa kojom želiš da se upoznaš,</p>
               <p>2. Napiši prijavu,</p>
@@ -361,7 +401,11 @@ const Pocetna = () => {
                   rel="noreferrer"
                 >
                   <div className="img-wrapper">
-                    <img src={raiffeisen} alt="Raiffeisen" />
+                    <LazyLoadImage
+                      effect="blur"
+                      src={raiffeisen}
+                      alt="Raiffeisen"
+                    />
                   </div>
                 </a>
               </div>
@@ -372,7 +416,11 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={prime} alt="Prime software" />
+                    <LazyLoadImage
+                      effect="blur"
+                      src={prime}
+                      alt="Prime software"
+                    />
                   </div>
                 </div>
               </a>
@@ -383,14 +431,18 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={semos} alt="Semos education" />
+                    <LazyLoadImage
+                      effect="blur"
+                      src={semos}
+                      alt="Semos education"
+                    />
                   </div>
                 </div>
               </a>
               <a href="https://a1.rs/privatni" target="_blank" rel="noreferrer">
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={a1} alt="A1" />
+                    <LazyLoadImage effect="blur" src={a1} alt="A1" />
                   </div>
                 </div>
               </a>
@@ -401,7 +453,7 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={adacta} alt="Adacta" />
+                    <LazyLoadImage effect="blur" src={adacta} alt="Adacta" />
                   </div>
                 </div>
               </a>
@@ -412,7 +464,7 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <img src={eyesee} alt="Eyesee" />
+                    <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
                   </div>
                 </div>
               </a>

@@ -33,346 +33,363 @@ const Prijava = (props) => {
     }, []);
 
     return (
-        <div className="prijava-wrapper" ref={prijavaRef}>
-            <Nav />
-            <div className="otvorene-prijave-message">Prijave su otvorene</div>
-            <motion.div
-                className={success ? "uspesna-prijava" : "none"}
-                animate={{ scale: 1 }}
-                initial={{ scale: 0 }}
-            >
-                <img src={uspesnaPrijava} alt="Uspesna prijava" />
-                <h2>PRIJAVA JE USPEŠNO POSLATA</h2>
-                <p>
-                    U narednom periodu ćemo ti poslati mejl. Sve bitne
-                    informacije ćemo objavljivati na instagramu, zato ne
-                    zaboravi da nas zapratiš na @fonis_fon.
-                </p>
-            </motion.div>
-            <div className={!success ? "prijava-flex" : "none"}>
-                <h2>PRIJAVA</h2>
-                <div className="prijava-container">
-                    <div className="form-steps">
-                        <div
-                            className="gradient-background"
-                            style={{ flexGrow: currentStep }}
+        <>
+            <div className="pocetak-pocetna" ref={prijavaRef}></div>
+            <div className="prijava-wrapper">
+                <Nav />
+
+                <motion.div
+                    className={success ? "uspesna-prijava" : "none"}
+                    animate={{ scale: 1 }}
+                    initial={{ scale: 0 }}
+                >
+                    <img src={uspesnaPrijava} alt="Uspesna prijava" />
+                    <h2>PRIJAVA JE USPEŠNO POSLATA</h2>
+                    <p>
+                        U narednom periodu će ti stići mejl. Sve bitne
+                        informacije ćemo objavljivati na instagramu, zato ne
+                        zaboravi da nas zapratiš na{" "}
+                        <a
+                            href="https://www.instagram.com/fonis_fon/"
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{ color: "#cc203a" }}
                         >
+                            @fonis_fon
+                        </a>
+                        .
+                    </p>
+                </motion.div>
+                <div className={!success ? "prijava-flex" : "none"}>
+                    <h2>PRIJAVA</h2>
+                    <div className="prijava-container">
+                        <div className="form-steps">
+                            <div
+                                className="gradient-background"
+                                style={{ flexGrow: currentStep }}
+                            >
+                                {arr.map((v, i) => {
+                                    if (i < currentStep)
+                                        return (
+                                            <div className="step-marked">
+                                                {v}
+                                            </div>
+                                        );
+                                    return <></>;
+                                })}
+                            </div>
                             {arr.map((v, i) => {
-                                if (i < currentStep)
-                                    return (
-                                        <div className="step-marked">{v}</div>
-                                    );
+                                if (i >= currentStep && i < steps - 1)
+                                    return <div className="step">{v}</div>;
                                 return <></>;
                             })}
                         </div>
-                        {arr.map((v, i) => {
-                            if (i >= currentStep && i < steps - 1)
-                                return <div className="step">{v}</div>;
-                            return <></>;
-                        })}
-                    </div>
-                    <Formik
-                        initialValues={{
-                            email: "",
-                            phone: "",
-                            faculty: "",
-                            name: "",
-                            cv: "",
-                            year: "1",
-                            parts: ["0"],
-                            panel: "",
-                            primRad: "",
-                            sporRad: "",
-                            trecRad: "",
-                            oblasti: "",
-                            datingComp: [],
-                            studyComp: [],
-                            ucestvovao: "",
-                            tehnologije: "",
-                            newsletter: false,
-                            saglasnost: false,
-                        }}
-                        validate={(values) => {
-                            const errors = {};
-                            if (
-                                values.parts[Math.ceil(currentStep) - 1] === "0"
-                            ) {
-                                if (!values.email) {
-                                    errors.email = "Polje je obavezno";
-                                } else if (
-                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                                        values.email
-                                    )
-                                ) {
-                                    errors.email = "Invalid email address";
-                                }
-
-                                if (!values.name) {
-                                    errors.name = "Polje je obavezno";
-                                }
-
-                                if (!values.phone) {
-                                    errors.phone = "Polje je obavezno";
-                                }
-
-                                if (!values.faculty) {
-                                    errors.faculty = "Polje je obavezno";
-                                }
-
-                                if (!values.year) {
-                                    errors.faculty = "Polje je obavezno";
-                                }
-
+                        <Formik
+                            initialValues={{
+                                email: "",
+                                phone: "",
+                                faculty: "",
+                                name: "",
+                                cv: "",
+                                year: "1",
+                                parts: ["0"],
+                                panel: "",
+                                primRad: "",
+                                sporRad: "",
+                                trecRad: "",
+                                oblasti: "",
+                                clan1: "",
+                                clan2: "",
+                                clan3: "",
+                                datingComp: [],
+                                studyComp: [],
+                                ucestvovao: "",
+                                tehnologije: "",
+                                newsletter: false,
+                            }}
+                            validate={(values) => {
+                                const errors = {};
                                 if (
-                                    !values.parts ||
-                                    values.parts.length === 1
+                                    values.parts[Math.ceil(currentStep) - 1] ===
+                                    "0"
                                 ) {
-                                    errors.parts = "Polje je obavezno";
-                                }
+                                    if (!values.email) {
+                                        errors.email = "Polje je obavezno";
+                                    } else if (
+                                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                                            values.email
+                                        )
+                                    ) {
+                                        errors.email = "Invalid email address";
+                                    }
 
-                                if (!values.cv) {
-                                    errors.cv = "Polje je obavezno";
-                                }
+                                    if (!values.name) {
+                                        errors.name = "Polje je obavezno";
+                                    }
 
-                                if (values.saglasnost === false)
-                                    errors.saglasnost =
-                                        "Polje mora biti označeno";
-                            } else if (
-                                values.parts[Math.ceil(currentStep) - 1] === "1"
-                            ) {
-                                if (!values.panel) {
-                                    errors.panel = "Polje je obavezno";
-                                }
-                            } else if (
-                                values.parts[Math.ceil(currentStep) - 1] === "2"
-                            ) {
-                                if (!values.primRad) {
-                                    errors.primRad = "Polje je obavezno";
-                                }
+                                    if (!values.phone) {
+                                        errors.phone = "Polje je obavezno";
+                                    }
 
-                                if (!values.oblasti) {
-                                    errors.oblasti = "Polje je obavezno";
-                                }
-                            } else if (
-                                values.parts[Math.ceil(currentStep) - 1] === "3"
-                            ) {
-                                if (values.datingComp.length === 0) {
-                                    errors.datingComp =
-                                        "Najmanje jedna kompanija mora biti izabrana";
-                                } else if (values.datingComp.length > 2) {
-                                    errors.datingComp =
-                                        "Najviše dve kompanije mogu biti izabrane";
-                                }
-                            } else if (
-                                values.parts[Math.ceil(currentStep) - 1] === "4"
-                            ) {
-                                if (values.studyComp.length === 0) {
-                                    errors.studyComp =
-                                        "Najmanje jedna kompanija mora biti izabrana";
-                                } else if (values.studyComp.length > 2) {
-                                    errors.studyComp =
-                                        "Najviše dve kompanije mogu biti izabrane";
-                                }
+                                    if (!values.faculty) {
+                                        errors.faculty = "Polje je obavezno";
+                                    }
 
-                                if (!values.ucestvovao) {
-                                    errors.ucestvovao = "Polje je obavezno";
-                                }
+                                    if (!values.year) {
+                                        errors.faculty = "Polje je obavezno";
+                                    }
 
-                                if (!values.tehnologije) {
-                                    errors.tehnologije = "Polje je obavezno";
+                                    if (
+                                        !values.parts ||
+                                        values.parts.length === 1
+                                    ) {
+                                        errors.parts = "Polje je obavezno";
+                                    }
+
+                                    if (!values.cv) {
+                                        errors.cv = "Polje je obavezno";
+                                    }
+                                } else if (
+                                    values.parts[Math.ceil(currentStep) - 1] ===
+                                    "1"
+                                ) {
+                                    if (!values.panel) {
+                                        errors.panel = "Polje je obavezno";
+                                    }
+                                } else if (
+                                    values.parts[Math.ceil(currentStep) - 1] ===
+                                    "2"
+                                ) {
+                                    if (!values.primRad) {
+                                        errors.primRad = "Polje je obavezno";
+                                    }
+
+                                    if (!values.oblasti) {
+                                        errors.oblasti = "Polje je obavezno";
+                                    }
+                                } else if (
+                                    values.parts[Math.ceil(currentStep) - 1] ===
+                                    "3"
+                                ) {
+                                    if (values.datingComp.length === 0) {
+                                        errors.datingComp =
+                                            "Najmanje jedna kompanija mora biti izabrana";
+                                    }
+                                } else if (
+                                    values.parts[Math.ceil(currentStep) - 1] ===
+                                    "4"
+                                ) {
+                                    if (values.studyComp.length === 0) {
+                                        errors.studyComp =
+                                            "Najmanje jedna kompanija mora biti izabrana";
+                                    } else if (values.studyComp.length > 3) {
+                                        errors.studyComp =
+                                            "Najviše tri kompanije mogu biti izabrane";
+                                    }
+
+                                    if (!values.ucestvovao) {
+                                        errors.ucestvovao = "Polje je obavezno";
+                                    }
+
+                                    if (!values.tehnologije) {
+                                        errors.tehnologije =
+                                            "Polje je obavezno";
+                                    }
                                 }
-                            }
-                            return errors;
-                        }}
-                        onSubmit={async (values, { setSubmitting }) => {
-                            if (!submit) {
-                                if (next) {
-                                    if (currentStep <= 1)
-                                        setSteps(values.parts.length + 1);
-                                    setCurrentStep(Math.ceil(currentStep) + 1);
+                                return errors;
+                            }}
+                            onSubmit={async (values, { setSubmitting }) => {
+                                if (!submit) {
+                                    if (next) {
+                                        if (currentStep <= 1)
+                                            setSteps(values.parts.length + 1);
+                                        setCurrentStep(
+                                            Math.ceil(currentStep) + 1
+                                        );
+                                    } else {
+                                        setCurrentStep(
+                                            Math.ceil(currentStep) - 1
+                                        );
+                                    }
                                 } else {
-                                    setCurrentStep(Math.ceil(currentStep) - 1);
-                                }
-                            } else {
-                                let postBody = {
-                                    prijava: {
-                                        imePrezime: values.name,
-                                        emailPriv: values.email,
-                                        newsletter: values.newsletter,
-                                        brojTelefona: values.phone,
-                                        linkCv: values.cv,
-                                        fakultet: values.faculty,
-                                        godinaStudija: values.year,
-                                        zelja: {
-                                            ...(values.parts.includes("1") && {
-                                                panel: {
-                                                    staBiCuli: values.panel,
-                                                },
-                                            }),
-                                            ...(values.parts.includes("2") && {
-                                                radionice: {
-                                                    sveRadionice: [
-                                                        values.primRad,
+                                    let postBody = {
+                                        prijava: {
+                                            imePrezime: values.name,
+                                            emailPriv: values.email,
+                                            newsletter: values.newsletter,
+                                            brojTelefona: values.phone,
+                                            linkCv: values.cv,
+                                            fakultet: values.faculty,
+                                            godinaStudija: values.year,
+                                            zelja: {
+                                                ...(values.parts.includes(
+                                                    "1"
+                                                ) && {
+                                                    panel: {
+                                                        staBiCuli: values.panel,
+                                                    },
+                                                }),
+                                                ...(values.parts.includes(
+                                                    "2"
+                                                ) && {
+                                                    radionice: {
+                                                        sveRadionice: [
+                                                            values.primRad,
 
-                                                        values.sporRad,
+                                                            values.sporRad,
 
-                                                        values.trecRad,
-                                                    ],
-                                                    motivaciono: values.oblasti,
-                                                },
-                                            }),
-                                            ...(values.parts.includes("3") && {
-                                                speedDating: values.datingComp,
-                                            }),
-                                            ...(values.parts.includes("4") && {
-                                                techChallenge: {
-                                                    emailFon: values.fonMain,
-                                                    prethodnoIskustvo:
-                                                        values.ucestvovao,
-                                                    tehnologije:
-                                                        values.tehnologije,
-                                                    saKim:
-                                                        values.clan1 +
-                                                        "," +
-                                                        values.clan2 +
-                                                        "," +
-                                                        values.clan3 +
-                                                        "," +
-                                                        values.clan4,
-                                                    kompanije: values.studyComp,
-                                                },
-                                            }),
+                                                            values.trecRad,
+                                                        ],
+                                                        motivaciono:
+                                                            values.oblasti,
+                                                    },
+                                                }),
+                                                ...(values.parts.includes(
+                                                    "3"
+                                                ) && {
+                                                    speedDating:
+                                                        values.datingComp,
+                                                }),
+                                                ...(values.parts.includes(
+                                                    "4"
+                                                ) && {
+                                                    techChallenge: {
+                                                        emailFon:
+                                                            values.fonMain,
+                                                        prethodnoIskustvo:
+                                                            values.ucestvovao,
+                                                        tehnologije:
+                                                            values.tehnologije,
+                                                        saKim:
+                                                            values.clan1 +
+                                                            "," +
+                                                            values.clan2 +
+                                                            "," +
+                                                            values.clan3,
+                                                        kompanije:
+                                                            values.studyComp,
+                                                    },
+                                                }),
+                                            },
                                         },
-                                    },
-                                };
+                                    };
 
-                                axios
-                                    .post(
-                                        "https://digitalmark6.herokuapp.com/api/prijave",
-                                        postBody
-                                    )
-                                    .then((r) => {
-                                        setSuccess(true);
-                                    })
-                                    .catch((e) => {
-                                        console.log(e);
-                                    });
-                            }
-                            setSubmitting(false);
-                        }}
-                    >
-                        {({ values, validateForm }) => (
-                            <Form>
-                                {
-                                    forms[
-                                        values.parts[Math.ceil(currentStep) - 1]
-                                    ]
+                                    setSuccess(true);
+
+                                    axios
+                                        .post(
+                                            "https://digitalmark6.herokuapp.com/api/prijave",
+                                            postBody
+                                        )
+                                        .catch((e) => {
+                                            console.log(e);
+                                        });
                                 }
+                                setSubmitting(false);
+                            }}
+                        >
+                            {({ values, validateForm }) => (
+                                <Form>
+                                    {
+                                        forms[
+                                            values.parts[
+                                                Math.ceil(currentStep) - 1
+                                            ]
+                                        ]
+                                    }
 
-                                {currentStep <= 1 ? (
-                                    <motion.button
-                                        onClick={() => {
-                                            setNext(true);
-                                            setSubmit(false);
-                                        }}
-                                        className="white-dugme next"
-                                        whileHover={{
-                                            scale: 1.05,
-                                        }}
-                                        whileTap={{
-                                            scale: 0.95,
-                                        }}
-                                    >
-                                        SLEDEĆE
-                                    </motion.button>
-                                ) : currentStep < steps - 1 ? (
-                                    <div className="button-group">
-                                        <motion.button
-                                            onClick={() => {
-                                                setNext(false);
-                                                setSubmit(false);
-                                                setCurrentStep(
-                                                    Math.ceil(currentStep) - 1
-                                                );
-                                            }}
-                                            type="button"
-                                            className="white-dugme next"
-                                            whileHover={{
-                                                scale: 1.05,
-                                            }}
-                                            whileTap={{
-                                                scale: 0.95,
-                                            }}
-                                        >
-                                            PRETHODNO
-                                        </motion.button>
-
+                                    {currentStep <= 1 ? (
                                         <motion.button
                                             onClick={() => {
                                                 setNext(true);
                                                 setSubmit(false);
                                             }}
-                                            className="red-dugme next"
-                                            whileHover={{
-                                                scale: 1.05,
-                                            }}
+                                            className="white-dugme next"
                                             whileTap={{
                                                 scale: 0.95,
                                             }}
                                         >
                                             SLEDEĆE
                                         </motion.button>
-                                    </div>
-                                ) : (
-                                    <div className="button-group">
-                                        <motion.button
-                                            onClick={() => {
-                                                setSubmit(false);
-                                                setNext(false);
-                                                setCurrentStep(
-                                                    Math.ceil(currentStep) - 1
-                                                );
-                                            }}
-                                            type="button"
-                                            className="white-dugme next"
-                                            whileHover={{
-                                                scale: 1.05,
-                                            }}
-                                            whileTap={{
-                                                scale: 0.95,
-                                            }}
-                                        >
-                                            PRETHODNO
-                                        </motion.button>
+                                    ) : currentStep < steps - 1 ? (
+                                        <div className="button-group">
+                                            <motion.button
+                                                onClick={() => {
+                                                    setNext(false);
+                                                    setSubmit(false);
+                                                    setCurrentStep(
+                                                        Math.ceil(currentStep) -
+                                                            1
+                                                    );
+                                                }}
+                                                type="button"
+                                                className="white-dugme next"
+                                                whileTap={{
+                                                    scale: 0.95,
+                                                }}
+                                            >
+                                                PRETHODNO
+                                            </motion.button>
 
-                                        <motion.button
-                                            onClick={() => {
-                                                setNext(true);
-                                                setSubmit(true);
-                                            }}
-                                            className="red-dugme next"
-                                            whileHover={{
-                                                scale: 1.05,
-                                            }}
-                                            whileTap={{
-                                                scale: 0.95,
-                                            }}
-                                            //disabled={submit ? true : false}
-                                        >
-                                            POŠALJI PRIJAVU
-                                        </motion.button>
-                                    </div>
-                                )}
-                            </Form>
-                        )}
-                    </Formik>
+                                            <motion.button
+                                                onClick={() => {
+                                                    setNext(true);
+                                                    setSubmit(false);
+                                                }}
+                                                className="red-dugme next"
+                                                whileTap={{
+                                                    scale: 0.95,
+                                                }}
+                                            >
+                                                SLEDEĆE
+                                            </motion.button>
+                                        </div>
+                                    ) : (
+                                        <div className="button-group">
+                                            <motion.button
+                                                onClick={() => {
+                                                    setSubmit(false);
+                                                    setNext(false);
+                                                    setCurrentStep(
+                                                        Math.ceil(currentStep) -
+                                                            1
+                                                    );
+                                                }}
+                                                type="button"
+                                                className="white-dugme next"
+                                                whileTap={{
+                                                    scale: 0.95,
+                                                }}
+                                            >
+                                                PRETHODNO
+                                            </motion.button>
+
+                                            <motion.button
+                                                onClick={() => {
+                                                    setNext(true);
+                                                    setSubmit(true);
+                                                }}
+                                                className="red-dugme next"
+                                                whileTap={{
+                                                    scale: 0.95,
+                                                }}
+                                                //disabled={submit ? true : false}
+                                            >
+                                                POŠALJI PRIJAVU
+                                            </motion.button>
+                                        </div>
+                                    )}
+                                </Form>
+                            )}
+                        </Formik>
+                    </div>
                 </div>
+                <Footer
+                    pocetakPocetna={prijavaRef}
+                    pocetakMejl={props.pocetakMejl}
+                />
             </div>
-            <Footer
-                pocetakPocetna={prijavaRef}
-                pocetakMejl={props.pocetakMejl}
-            />
-        </div>
+        </>
     );
 };
 

@@ -38,7 +38,8 @@ const OpsteInformacije = () => {
                         Broj telefona*
                     </label>
                     <p className="more-info">
-                        Dodatan komentar da je to za wa grupu oko koordinacije.
+                        Potreban nam je zbog kreiranja grupe za koordinaciju u
+                        toku projekta.
                     </p>
                 </div>
                 <div className="field-group">
@@ -73,6 +74,7 @@ const OpsteInformacije = () => {
                         <option value="2">Druga</option>
                         <option value="3">Treća</option>
                         <option value="4">Četvrta</option>
+                        <option value="5">Master</option>
                     </Field>
                     <ErrorMessage
                         name="year"
@@ -138,7 +140,10 @@ const OpsteInformacije = () => {
                     <label htmlFor="cv" className="desc">
                         Unesite link do CV-ja*
                     </label>
-                    <p className="more-info">Naglasiti da bude otključan.</p>
+                    <p className="more-info">
+                        Link do CV-a treba da bude validan i otključan, inače
+                        neće biti omogućeno učestvovanje na projektu!
+                    </p>
                 </div>
                 <div className="field-group">
                     <Field name="cv" className="field" />
@@ -166,29 +171,6 @@ const OpsteInformacije = () => {
             </div>
             <div className="input-group">
                 <div className="label-group">
-                    <label htmlFor="saglasnost" className="desc">
-                        Saglasnost*
-                    </label>
-                </div>
-                <div className="field-group check-group">
-                    <label className="checkbox-group">
-                        <Field
-                            type="checkbox"
-                            name="saglasnost"
-                            className="checkbox"
-                        />
-                        Saglasan/na sam da se moji podaci podele sa kompanijama
-                        učesnicama projekta
-                    </label>
-                    <ErrorMessage
-                        name="saglasnost"
-                        component="div"
-                        className="error"
-                    />
-                </div>
-            </div>
-            <div className="input-group">
-                <div className="label-group">
                     <label htmlFor="newsletter" className="desc">
                         Email novosti i obaveštenja
                     </label>
@@ -200,7 +182,7 @@ const OpsteInformacije = () => {
                             name="newsletter"
                             className="checkbox"
                         />
-                        Želim da mi stižu obaveštenja o FONIS-ovim aktivnostimas
+                        Želim da mi stižu obaveštenja o FONIS-ovim aktivnostima
                     </label>
                 </div>
             </div>

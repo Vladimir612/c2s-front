@@ -10,8 +10,8 @@
   .lopte-slika {
     width: 5rem;
     position: absolute;
-    top: 5%;
-    left: 45%;
+    top: 2%;
+    left: 50%;
     img {
       @include fit-image;
     }
@@ -79,6 +79,7 @@
         color: $tekst_siva;
       }
       .img-wrapper {
+        overflow: hidden;
         height: 3rem;
         width: 9rem;
         @include box-center;
@@ -91,16 +92,28 @@
     }
   }
 
+  .right.sakriveno {
+    .predavac {
+      &.duplikat {
+        height: initial !important;
+      }
+    }
+  }
+
   .predavac {
     @include box-center;
     gap: 1rem;
+    &.duplikat {
+      opacity: 0;
+      height: 0;
+    }
+
     .img-wrapper {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-      overflow: hidden;
       img {
         @include fit-image;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
       }
     }
     .o-predavacu {

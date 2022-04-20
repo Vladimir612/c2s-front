@@ -24,7 +24,6 @@ const Agenda = () => {
             <Lopta boja="crvena" width="5rem" height="5rem" />
           </div>
           <div className="druga-grupa">
-            <Lopta boja="bela" width="6.5rem" height="6.5rem" />
             <Lopta boja="crvena" width="5rem" height="5rem" />
           </div>
           <div className="treca-grupa">
@@ -147,10 +146,6 @@ const Agenda = () => {
               },
               {
                 vreme: "16:00 - 18:00",
-                desavanje: "TECH CHALLENGE (III smena)",
-              },
-              {
-                vreme: "14:00 - 14:15",
                 desavanje: "ZATVARANJE PROJEKTA",
               },
             ]}

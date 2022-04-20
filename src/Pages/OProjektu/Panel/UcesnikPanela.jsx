@@ -5,6 +5,8 @@ import "./UcesnikPanela.scss";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import lopte2 from "../../../Assets/Images/krugovi-radionica.png";
 
 const UcesnikPanela = (props) => {
@@ -43,7 +45,11 @@ const UcesnikPanela = (props) => {
         <div className="ucesnik">
           <div className="slika">
             <div className="img-wrapper">
-              <img src={props.ucesnik.slika} alt={props.ucesnik.ime} />
+              <LazyLoadImage
+                effect="blur"
+                src={props.ucesnik.slika}
+                alt={props.ucesnik.ime}
+              />
             </div>
           </div>
           <div className="podaci">
@@ -56,7 +62,11 @@ const UcesnikPanela = (props) => {
           <Link to={props.ucesnik.linkKompanije}>
             <div className="kompanija">
               <div className="img-wrapper">
-                <img src={props.ucesnik.slikaKompanije} alt="Slika kompanije" />
+                <img
+                  effect="blur"
+                  src={props.ucesnik.slikaKompanije}
+                  alt="Slika kompanije"
+                />
               </div>
             </div>
           </Link>

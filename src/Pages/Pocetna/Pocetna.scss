@@ -6,7 +6,7 @@
   left: 0;
 }
 .pocetna-container {
-  margin-top: 6rem;
+  margin-top: 8rem;
   .hero-section {
     min-height: 100vh;
     overflow: hidden;
@@ -313,7 +313,7 @@
 
 @media only screen and (max-width: 800px) {
   .pocetna-container {
-    margin-top: 3rem;
+    margin-top: 5rem;
     .content {
       flex-direction: column-reverse;
       .staklo-container {
