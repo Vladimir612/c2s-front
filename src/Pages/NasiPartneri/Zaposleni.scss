@@ -3,6 +3,7 @@
 .zaposleni {
   width: 22rem;
   max-width: 90vw;
+  min-height: 24rem;
   padding: 1rem;
   @include box-center($direction: column);
   background: $pozadina_tamna;

@@ -117,10 +117,10 @@ const TechChallenge = () => {
             <Field
               type="checkbox"
               name="studyComp"
-              value="Semos education"
+              value="Semos Education"
               className="checkbox"
             />
-            Semos education
+            Semos Education
           </label>
           <ErrorMessage name="studyComp" component="div" className="error" />
         </div>

@@ -63,10 +63,10 @@ const SpeedDating = () => {
             <Field
               type="checkbox"
               name="datingComp"
-              value="Semos education"
+              value="Semos Education"
               className="checkbox"
             />
-            Semos education
+            Semos Education
           </label>
           <ErrorMessage name="datingComp" component="div" className="error" />
         </div>

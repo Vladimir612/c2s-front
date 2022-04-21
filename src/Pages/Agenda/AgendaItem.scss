@@ -61,12 +61,14 @@
     align-items: flex-start;
     gap: 2rem;
     .left-content {
+      padding: 1rem;
       h3 {
         text-align: left;
       }
     }
     .right-content {
-      width: 18rem;
+      padding: 1rem;
+      width: 18.3rem;
       transform: translateX(0);
       span:nth-child(1) {
         padding: 1rem 1rem 1rem 0;

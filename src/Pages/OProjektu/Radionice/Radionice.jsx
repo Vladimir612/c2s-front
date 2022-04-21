@@ -32,19 +32,19 @@ import NikolaGarabandic from "../../../Assets/Images/Partneri/Semos/radionice/Ni
 
 const Radionice = () => {
   const radionica1 = {
-    naslov: "Konvergentni sistemi za naplatu",
+    naslov: "Izazovi u B2C monetizaciji 5G usluga",
     prviParagraf:
-      "Konvergentni sistemi za naplatu objedinjuju online i offline sisteme za naplatu i adresiraju nove modele za monetizaciju koje donose 5G sistemi. Dinamično tržište donosi potrebu za fleksibilnim biznis modelima, prilagođenim krajnjim korisnicima. Konvergenti sistemi za naplatu postaju presudni za određivanje pozicije na konkurentnom tržištu jer pružaju podršku za brzo primenljive (time-to-market) personalizovane biznis modele sa osvrtom na korisničko iskustvo (naplata u realnom vremenu) i niske troškove održavanja (skalabilnost i sposobnost integracije).",
+      "Konvergentni sistemi za naplatu objedinjuju online i offline sisteme za naplatu i adresiraju nove modele za monetizaciju koje donose 5G sistemi. Dinamično tržište donosi potrebu za fleksibilnim biznis modelima, prilagođenim krajnjim korisnicima.",
     drugiParagraf:
-      "Konvergentni sistemi za naplatu objedinjuju online i offline sisteme za naplatu i adresiraju nove modele za monetizaciju koje donose 5G sistemi. Dinamično tržište donosi potrebu za fleksibilnim biznis modelima, prilagođenim krajnjim korisnicima. Konvergenti sistemi za naplatu postaju presudni za određivanje pozicije na konkurentnom tržištu jer pružaju podršku za brzo primenljive (time-to-market) personalizovane biznis modele sa osvrtom na korisničko iskustvo (naplata u realnom vremenu) i niske troškove održavanja (skalabilnost i sposobnost integracije).",
+      "Konvergentni sistemi za naplatu postaju presudni za određivanje pozicije na konkurentnom tržištu jer pružaju podršku za brzo primenljive (time-to-market) personalizovane biznis modele sa osvrtom na korisničko iskustvo (naplata u realnom vremenu) i niske troškove održavanja (skalabilnost i sposobnost integracije).",
     predavac: {
       ime: "Mihajlo Milanović",
-      vise: "Rođen 1990. godine u Beogradu. Završio je 2013. godine osnovne studije na Elektrotehničkom fakultetu Univerziteta u Beogradu, na smeru telekomunikacije i informacione tehnologije. Master studije je završio na istom odseku 2014. godine. Ponosni je član A1 tima od 2021. godine na poziciji Stariji stručnjak za informacione tehnologije i servise. Ima 8 godina iskustva u radu u telekomunikacionoj industriji na projektima integracije i održavanja sveobuhvatnih softverskih rešenja za kontrolu naplate usluga.",
+      vise: "Osnovne i master studije završio je na Elektrotehničkom fakultetu, na smeru telekomunikacije i informacione tehnologije. Ponosni je član A1 tima od 2021. godine na poziciji Stariji stručnjak za informacione tehnologije i servise. Ima 8 godina iskustva u radu u telekomunikacionoj industriji na projektima integracije i održavanja sveobuhvatnih softverskih rešenja za kontrolu naplate usluga.",
       slika: MihajloMilanovic,
     },
     predavac2: {
       ime: "Ana Nikolić",
-      vise: "Završila osnovne studije na Fakultetu organizacionih nauka, smer informacioni sistemi i tehnologije. Tokom završne godine studija dobila je studentsku praksu u kompaniji A1 Srbija. Nakon završene prakse započela je svoju karijeru u IT sektoru, gde se 5 godina na poziciji IT Service Expert-a bavila podrškom sistema za naplatu. Odnedavno je napredovala na poziciju IT Business Analyst-a. Ana se redovno bavi sportom, voli čitanje i uvek želi da bude u toku sa novim tehnologijama, kao i načinima poboljšanja svakodnevnog rada.",
+      vise: "Završila osnovne studije na FON-u, smer informacioni sistemi i tehnologije. Nakon završene studentske prakse u kompaniji A1 Srbija započela je svoju karijeru u IT sektoru, gde se 5 godina na poziciji IT Service Expert-a bavila podrškom sistema za naplatu. Odnedavno je napredovala na poziciju IT Business Analyst-a. Ana se redovno bavi sportom, voli čitanje i uvek želi da bude u toku sa novim tehnologijama, kao i načinima poboljšanja svakodnevnog rada.",
       slika: AnaNikolic,
     },
     kompanija: {
@@ -57,9 +57,9 @@ const Radionice = () => {
   const radionica2 = {
     naslov: "Uvod u Angular",
     prviParagraf:
-      "Ako želite da naučite osnove Angular framework-a i zajedno sa iskusnim predavačem prođete kroz razvoj Angular Web aplikacije koirsteći TypeScript, kao i kreiranje ekstenzije za Visual Studio Code, imaćete priliku za to na radionici koju će držati predstavnici iz kompanije Adacta. Predavači na ovoj radionici biće Goran Vujanović i Nenad Maričić, zaposleni u kompaniji Adacta.",
+      "Ako želite da naučite osnove Angular-a i zajedno sa iskusnim predavačem prođete kroz razvoj Angular Web aplikacije koristeći TypeScript, kao i kreiranje ekstenzije za Visual Studio Code, imaćete priliku za to na radionici koju će držati predstavnici iz kompanije Adacta. Nakon uvodnog predavanja gde možete da naučite više o razvoju web aplikacija sa fokusom na Single Page aplikacije, Angular i TypeScript, bićete u prilici da čujete opis osnovnih koncepata koji se koriste u Angular aplikaciji.",
     drugiParagraf:
-      "Ako želite da naučite osnove Angular framework-a i zajedno sa iskusnim predavačem prođete kroz razvoj Angular Web aplikacije koirsteći TypeScript, kao i kreiranje ekstenzije za Visual Studio Code, imaćete priliku za to na radionici koju će držati predstavnici iz kompanije Adacta.Nakon uvodnog predavanja gde možete da naučite više o razvoju web aplikacija sa fokusom na SPA (Single Page Application), Angular i TypeScript, HTML i CSS bićete u prilici da čujete opis osnovnih koncepata koji se koriste u Angular aplikaciji, ali i to koje su prednosti i mane u odnosu na druge tehnologije. Prvi dan radionice će u velikoj meri biti posvećen praktičnom radu - uz podršku predavača moći ćete da napravite i pokrenete Angular aplikaciju po zadatim zahtevima.Drugi dan biće posvećen predavanju o ekstenzijama za Visual Studio Code, kako je moguće napraviti ekstenziju koristeći Angular i TypeScript, koja su ograničenja i slično. Praktičan rad biće obeležen pravljenjem ekstenzije za Visual Studio Code koristeći Angular aplikaciju sa prvog dana radionice. Predavači na ovoj radionici biće Goran Vujanović i Nenad Maričić, zaposleni u kompaniji Adacta.",
+      "Prvi dan radionice će u velikoj meri biti posvećen praktičnom radu - uz podršku predavača moći ćete da napravite i pokrenete Angular aplikaciju po zadatim zahtevima. Drugi dan biće posvećen predavanju o ekstenzijama za Visual Studio Code nakon čega će se na bazi Angular aplikacije praviti ekstenzija.",
     predavac: {
       ime: "Goran Vujanović",
       vise: "Goran Vujanović je iskusni tim lider i developer, sa više od 10 godina iskustva u razvoju softvera za različite finansijske institucije koristeći C#, .NET, Angular, SQL i mnoge druge tehnologije. Trenutno radi na poziciji Technical Team Lead-a u Adacti i vođa je frontend tima koji razvija novu verziju AdInsure-a, core rešenja za osiguranje.",
@@ -78,19 +78,19 @@ const Radionice = () => {
   };
 
   const radionica3 = {
-    naslov: "Lorem 1",
+    naslov: "Machine learning",
     prviParagraf:
-      "Želite da bez ponovnog osvežavanja stranice rešite probleme koji nastaju prilikom kreiranja velikih aplikacija u kojima se podaci i informacije menjaju u toku vremena? Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook. Od svog pojavljivanja 2011. godine pa sve do danas, React je ostao veoma popularan zbog svojih dodatnih karakteristika poput jednostavnosti i fleksibilnosti.",
+      "Kreiraj real-world aplikaciju od nule uz React, TypeScript, Chakra UI i Zustand. Na ovoj radionici imaćeš priliku da kreiraš Emotion Viewer aplikaciju od nule i uz to naučiš neke od najsavremenijih tehnologija koje se koriste u EyeSee-u. Ova aplikacija će moći da izlista video snimke, pregleda ih i utvrdi koju emociju pokazuje tester na video snimku. ",
     drugiParagraf:
-      "Zadužen je za onaj deo aplikacije koji korisnik vidi i sa kojim može da ostvari interakciju, odnosno za korisnički interfejs (UI). Za samo nekoliko godina, React je postao jedna od najčesće korišćenih JS biblioteka, dok su web developeri sa ovim veštinama veoma traženi. Zvuči primamljivo, zar ne? U tom slučaju, opredelite se za React At Its Finest radionicu.",
+      "Poslednji deo radionice će biti rezervisan za Facial Coding eksperta/stručnjaka iz EyeSee-a koji će ti pokazati kako algoritam može da određuje emocije koristeći mašinsko učenje. Aplikacije ovog tipa imaju veliku primenu i pozadinu u istraživačkim kompanijama kao što je EyeSee, tako da će ti ono što učiš na ovoj radionici pružiti znanje koje ćeš moći da primeniš u bliskoj budućnosti.",
     predavac: {
       ime: "Nikola Mihajlović",
-      vise: "Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook",
+      vise: "Nikola od 2020. radi u EyeSee-u kao JavaScript developer, pri čemu najviše koristi React, Node.js, Electron i Chrome ekstenzije. Kao IT edukator predaje skoro pet godina. Predavanja su mu fokusirana na JavaScript, klijentsku i serversku stranu. Takođe, učestvovao je u izradi nekih open-source projekata.",
       slika: NikolaMihajlovic,
     },
     predavac2: {
       ime: "Vladimir Matić",
-      vise: "Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook Onda se pripremite za našu radionicu React At Its Finest. Stvorio ga je Jordan Valke, programer u kompaniji Facebook",
+      vise: "Vladimir je Computer Vision i Machine Learning Research Scientist. Trenutno u EyeSee-u razvija novi sistem prepoznavanja lica kako bi razumeo ljudsko ponašanje. Doktorirao je u oblasti primenjenog mašinskog učenja (KU Leuven, Belgija). Pored toga, bio je istraživač-saradnik (2 godine) kao i vanredni profesor i prodekan (2 godine).",
       slika: VladimirMatic,
     },
     kompanija: {
@@ -124,7 +124,7 @@ const Radionice = () => {
   };
 
   const radionica5 = {
-    naslov: "Lorem 2",
+    naslov: "DevOps pristup razvoju softvera",
     prviParagraf:
       "Ovladavanje temom agilnog razvoja softvera postaje sve više traženo u oblasti informacionih tehnologija. Priliku za upoznavanje sa ovom oblašću i primenu alata na konkretnom, prethodno razvijenom projektu imaćete upravo na radionici koju će držati zaposleni u kompaniji Raiffeisen banka.",
     drugiParagraf:
@@ -147,11 +147,11 @@ const Radionice = () => {
   };
 
   const radionica6 = {
-    naslov: "Game Development",
+    naslov: "Uvod u 3D Game Development",
     prviParagraf:
-      "Ako želiš da uđeš u svet Game Development-a i zajedno sa iskusnim predavačem prođeš kroz korišćenje ključnih alata potrebnih za kreiranje 3D igara, onda je radionica koju će držati kompanija Semos pravi izbor za tebe. Zajedno sa predavačem ćeš proći kroz kontrolisanje karaktera u cilju izvršavanja korisničke naredbe, implementaciju skripti u cilju pravljenja osnovne gameplay mehanike, kao i buildovanje i pokretanje kompletnog projekta na računarima.",
+      "Ako želiš da uđeš u svet Game Development-a i zajedno sa iskusnim predavačem prođeš kroz korišćenje ključnih alata potrebnih za kreiranje 3D igara, onda je radionica koju će držati kompanija Semos pravi izbor za tebe.",
     drugiParagraf:
-      "Ako želiš da uđeš u svet Game Development-a i zajedno sa iskusnim predavačem prođeš kroz korišćenje ključnih alata potrebnih za kreiranje 3D igara, onda je radionica koju će držati kompanija Semos pravi izbor za tebe. Zajedno sa predavačem ćeš proći kroz kontrolisanje karaktera u cilju izvršavanja korisničke naredbe, implementaciju skripti u cilju pravljenja osnovne gameplay mehanike, kao i buildovanje i pokretanje kompletnog projekta na računarima.",
+      "Zajedno sa predavačem ćeš proći kroz kontrolisanje karaktera u cilju izvršavanja korisničke naredbe, implementaciju skripti u cilju pravljenja osnovne gameplay mehanike, kao i buildovanje i pokretanje kompletnog projekta na računarima.",
     predavac: {
       ime: "Nikola Garabandić",
       vise: "Nikola Garabandić je završio osnovne akademske studije na Fakultetu tehničkih nauka na smeru softversko inženjerstvo i informacione tehnologije. Svoje prve game development korake je napravio još u srednjoj elektrotehničkoj školi Mihajlo Pupin gde je učio da pravi igre u C-u i nakon toga u Javi. Unity-jem je počeo profesionalno da se bavi 2017. godine kada je zajedno sa svojim prijateljem pokrenuo firmu Stick & Rope. Od 2019. godine je angažovan od strane M2H i Blackmill Studija (za koje radi i danas) na ispravci bagova na igrama koje pripadaju WW1 Game Series franšizi, Tannenberg i Verdun, i na radu na najnovijoj igri franšize - Isonzo.",

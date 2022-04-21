@@ -380,15 +380,21 @@ const Pocetna = () => {
             </div>
           </div>
           <div className="kako-postati-container">
-            <h3>KAKO DA POSTANEŠ DEO C2S-a?</h3>
+            <h3>ZAŠTO DA POSTANEŠ DEO C2S-a?</h3>
             <div className="kako">
-              <p>1. Odaberi kompaniju sa kojom želiš da se upoznaš,</p>
-              <p>2. Napiši prijavu,</p>
-              <p>3. Pošalji prijavu,</p>
-              <p>4. Sačekaj mejl kojim ti javljamo da si primljen/a,</p>
               <p>
-                5. Provedi 4 dana unapređujući svoje znanje i upoznajući se sa
-                nekim od najboljih kompanija u Srbiji.
+                Kompanije studentima predstavlja projekat čiji je organizator
+                Udruženje studenata informatike FONIS koji za cilj ima da kroz
+                interaktivan način omogući svim zainteresovanim učesnicima da
+                nauče nešto novo iz oblasti informacionih tehnologija. Projekat
+                će se održati od 14. do 17. maja i sastoji se iz panel
+                diskusije, šest IT radionica, speed dating-a i Tech Challenge-a.
+                Generalni pokrovitelji projekta ove godine su kompanije
+                Raiffeisen banka, Adacta, A1, Semos Education, Prime Software i
+                EyeSee. Ukoliko želiš da budeš deo ovogodišnjeg C2S-a, odaberi
+                jednu ili više kompanija sa kojim želiš da se upoznaš, sastavi i
+                pošalji prijavu i provedi 4 dana unapređujući svoje kompetencije
+                i znanje!
               </p>
             </div>
           </div>
@@ -435,7 +441,7 @@ const Pocetna = () => {
                     <LazyLoadImage
                       effect="blur"
                       src={semos}
-                      alt="Semos education"
+                      alt="Semos Education"
                     />
                   </div>
                 </div>

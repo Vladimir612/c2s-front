@@ -23,10 +23,10 @@ import PartnerSnimak from "./PartnerSnimak";
 import RenataColic from "../../Assets/Images/Partneri/A1/zaposleni/RenataColic.jpg";
 import UrosKomlenovic from "../../Assets/Images/Partneri/A1/zaposleni/UrosKomlenovic.jpg";
 
-import MarijaTucovic from "../../Assets/Images/Partneri/Adacta/zaposleni/MarijaTucovic.jpg";
-import MarkoDekic from "../../Assets/Images/Partneri/Adacta/zaposleni/MarkoDekic.jpg";
+// import MarijaTucovic from "../../Assets/Images/Partneri/Adacta/zaposleni/MarijaTucovic.jpg";
+// import MarkoDekic from "../../Assets/Images/Partneri/Adacta/zaposleni/MarkoDekic.jpg";
 import MarkoVukovic from "../../Assets/Images/Partneri/Adacta/zaposleni/MarkoVukovic.jpg";
-import NikolaAleksic from "../../Assets/Images/Partneri/Adacta/zaposleni/NikolaAleksic.jpg";
+// import NikolaAleksic from "../../Assets/Images/Partneri/Adacta/zaposleni/NikolaAleksic.jpg";
 import UnaGvozdenov from "../../Assets/Images/Partneri/Adacta/zaposleni/UnaGvozdenov.jpg";
 
 import MilosZivanic from "../../Assets/Images/Partneri/Eyesee/zaposleni/MilosZivanic.jpg";
@@ -90,30 +90,30 @@ const NasiPartneri = () => {
   ];
 
   const zaposleniAdacta = [
-    {
-      ime: "Marija Tucović",
-      zaposleniJeRekao:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
-      slika: MarijaTucovic,
-    },
-    {
-      ime: "Marko Dekić",
-      zaposleniJeRekao:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
-      slika: MarkoDekic,
-    },
+    // {
+    //   ime: "Marija Tucović",
+    //   zaposleniJeRekao:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
+    //   slika: MarijaTucovic,
+    // },
+    // {
+    //   ime: "Marko Dekić",
+    //   zaposleniJeRekao:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
+    //   slika: MarkoDekic,
+    // },
     {
       ime: "Marko Vuković",
       zaposleniJeRekao:
         "U Adactu me je privukao AdInsure koji pokriva sve core procese osiguranja i uspešno je implementiran u više država. Svako osiguravajuće društvo je specifično i dinamično, pa je samim tim izazov veći da se jednim rešenjem sve to podrži. Baza znanja je široka i uvek ima nešto novo da se nauči od iskusnih kolega.",
       slika: MarkoVukovic,
     },
-    {
-      ime: "Nikola Aleksić",
-      zaposleniJeRekao:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
-      slika: NikolaAleksic,
-    },
+    // {
+    //   ime: "Nikola Aleksić",
+    //   zaposleniJeRekao:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
+    //   slika: NikolaAleksic,
+    // },
     {
       ime: "Una Gvozdenov",
       zaposleniJeRekao:
@@ -126,19 +126,19 @@ const NasiPartneri = () => {
     {
       ime: "Miloš Živanić",
       zaposleniJeRekao:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
+        "Pridružio sam se timu za istraživanje i razvoj pre dve godine kao JavaScript developer. Projekti na kojima radimo su dinamični i kompleksni, što mi daje priliku da se stalno unapređujem i upoznajem sa novim tehnologijama. Najveće prednosti su opuštena atmosfera i odličan tim, uvek spreman da uskoči u pomoć.",
       slika: MilosZivanic,
     },
     {
       ime: "Nikola Miljević",
       zaposleniJeRekao:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
+        "Nekoliko stvari se ističe u EyeSee-u: rad na izazovnim projektima je ogromna prilika za učenje; korišćenje najnovijih tehnologija; proizvodi svetske klase; i odličan menadžment koji je uspeo da poveća prihode tokom pandemije tako da kompanija bude sigurna. Odličan tim i radno okruženje bez pritiska.",
       slika: NikolaMiljevic,
     },
     {
       ime: "Vladimir Matić",
       zaposleniJeRekao:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos corporis neque non ex, provident ut dolorem rem eaque suscipit.",
+        "Na nedeljnom nivou, EyeSee analizira stotine korisničkih video snimaka kroz projekte istraživanja tržišta. Ako voliš video processing, Computer Vision i Deep Learning, ovo je savršeno mesto za tebe da razviješ state-of-the-art AI modele za analizu emocija i ponašanja, u agilnom i motivisanom timu.",
       slika: VladimirMatic,
     },
   ];
@@ -253,7 +253,7 @@ const NasiPartneri = () => {
               prevLink="/nasi-partneri/adacta"
               nextLink="/nasi-partneri/prime-software"
               partnerIme="EyeSee"
-              oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
+              oPartneru="EyeSee je najbrže rastuća kompanija koja se bavi bihevioralnim istraživanjima, sa sedištima u Njujorku, Antverpenu, Parizu, Londonu, Singapuru, Meksiko Sitiju i Beogradu. Da bi razumeli svoje mušterije i korisnike, pa samim tim uticali na uspeh svog brenda i proizvoda, kompanije pribegavaju istraživanju tržišta. Udruživanjem konvencionalnih i bihevioralnih metoda utvrđuju šta je to što ljudima privlači pažnju, izaziva reakcije ili se prodaje u supermarketima ili na ogromnim e-commerce sajtovima. Usluge i tehnologiju kompanije EyeSee koriste mnoge globalne firme poput Twitter-a, Microsoft-a, Google-a, Colgate-a. Eyesee je unapredio starije, nepouzdane i subjektivne metode istraživanja uvodeći inovativne metode poput eye-tracking-a, facial coding-a, merenja brzine odgovora i virtuelne kupovine. EyeSee sjedinjava naučni pristup, najmoderniju tehnologiju i istraživanja, da bi pružili dublje razumevanje ljudskog ponašanja. Vode se sloganom Razumi ponašanje, rasti brže."
               poster={eyeseeLoading}
               vidljivZaposleni={vidljivZaposleni}
               setVidljivZaposleni={setVidljivZaposleni}

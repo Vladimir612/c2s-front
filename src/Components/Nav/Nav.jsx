@@ -97,7 +97,7 @@ const Nav = () => {
                   <li>Speed dating</li>
                 </Link>
                 <Link to="/o-projektu/tech-challenge">
-                  <li>Tech challenge</li>
+                  <li>Tech Challenge</li>
                 </Link>
               </motion.ul>
             </li>
@@ -136,7 +136,7 @@ const Nav = () => {
                   <li>Prime software</li>
                 </Link>
                 <Link to="/nasi-partneri/semos-education">
-                  <li>Semos education</li>
+                  <li>Semos Education</li>
                 </Link>
                 <Link to="/nasi-partneri/raiffeisen">
                   <li>Raiffeisen banka</li>
@@ -262,7 +262,7 @@ const Nav = () => {
                 <li>Speed dating</li>
               </Link>
               <Link to="/o-projektu/tech-challenge">
-                <li>Tech challenge</li>
+                <li>Tech Challenge</li>
               </Link>
             </motion.ul>
           </li>
@@ -323,7 +323,7 @@ const Nav = () => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Semos education</li>
+                <li>Semos Education</li>
               </Link>
               <Link
                 to="/nasi-partneri/raiffeisen"

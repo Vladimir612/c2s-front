@@ -132,7 +132,7 @@ const RadionicaKartica = (props) => {
             {!prikaziDetaljnije ? (
               <p>Prikaži detaljnije</p>
             ) : (
-              <p>Sakrij detaljnije</p>
+              <p>Sakrij detalje</p>
             )}
             <motion.div
               className="strelica-wrapper"
