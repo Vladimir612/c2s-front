@@ -8,7 +8,7 @@ const TechChallenge = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="fonMail" className="desc">
-            Unesi FON-ov mail ukoliko ga imaš.
+            Unesi FON-ov imejl ukoliko ga imaš.
           </label>
         </div>
         <div className="field-group">
@@ -19,7 +19,7 @@ const TechChallenge = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="ucestvovao" className="desc">
-            Da li si do sad učestvovao/la u rešavanju IT studije slučaja, ako
+            Da li si do sad učestvovao/la u rešavanju IT studije slučaja i ako
             jesi kakvi su ti utisci?*
           </label>
         </div>
@@ -48,8 +48,8 @@ const TechChallenge = () => {
           </label>
           <p className="more-info">
             Prijavljivanje je individualno, ali ćemo pokušati da vas spojimo u
-            timove prema vašim željama u zavisnosti od vaših prijava. Timovi se
-            mogu sastojati od 3 ili 4 osobe.
+            timove prema vašim željama u zavisnosti od prijava. Timovi se mogu
+            sastojati od 3 ili 4 osobe.
           </p>
         </div>
         <div className="field-group">

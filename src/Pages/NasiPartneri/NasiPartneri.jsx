@@ -213,7 +213,7 @@ const NasiPartneri = () => {
           </Link>
           <Link to="semos-education" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 4 ? "active" : ""}>
-              Semos education
+              Semos Education
             </li>
           </Link>
           <Link to="raiffeisen" onClick={() => setVidljivZaposleni(0)}>

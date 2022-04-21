@@ -20,7 +20,7 @@ const TechChallenge = () => {
     <div className="tech-challenge-container">
       <div className="o-projektu-uvod">
         <div className="slika">
-          <LazyLoadImage effect="blur" src={techSlika} alt="Tech challenge" />
+          <LazyLoadImage effect="blur" src={techSlika} alt="Tech Challenge" />
         </div>
         <div className="tekst">
           <h2>TECH CHALLENGE</h2>
