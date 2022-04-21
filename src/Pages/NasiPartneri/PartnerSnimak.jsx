@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "./NasiPartneri.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Zaposleni from "./Zaposleni";
@@ -13,19 +13,19 @@ const PartnerSnimak = (props) => {
   useEffect(() => {
     scrollFunc(pocetakPartneri);
   }, []);
-  const [vidljivZaposleni, setVidljivZaposleni] = useState(0);
+
   const handleMoveZaposleni = (napred) => {
     if (napred) {
-      if (vidljivZaposleni === props.zaposleni.length - 1) {
-        setVidljivZaposleni(0);
+      if (props.vidljivZaposleni === props.zaposleni.length - 1) {
+        props.setVidljivZaposleni(0);
       } else {
-        setVidljivZaposleni(vidljivZaposleni + 1);
+        props.setVidljivZaposleni(props.vidljivZaposleni + 1);
       }
     } else {
-      if (vidljivZaposleni === 0) {
-        setVidljivZaposleni(props.zaposleni.length - 1);
+      if (props.vidljivZaposleni === 0) {
+        props.setVidljivZaposleni(props.zaposleni.length - 1);
       } else {
-        setVidljivZaposleni(vidljivZaposleni - 1);
+        props.setVidljivZaposleni(props.vidljivZaposleni - 1);
       }
     }
   };
@@ -42,12 +42,18 @@ const PartnerSnimak = (props) => {
           </LazyLoad>
         </div>
         <div className="left-arrow">
-          <Link to={props.prevLink} onClick={() => setVidljivZaposleni(0)}>
+          <Link
+            to={props.prevLink}
+            onClick={() => props.setVidljivZaposleni(0)}
+          >
             <FiChevronLeft size={40} color="#b4afb3" />
           </Link>
         </div>
         <div className="right-arrow">
-          <Link to={props.nextLink} onClick={() => setVidljivZaposleni(0)}>
+          <Link
+            to={props.nextLink}
+            onClick={() => props.setVidljivZaposleni(0)}
+          >
             <FiChevronRight size={40} color="#b4afb3" />
           </Link>
         </div>
@@ -60,7 +66,7 @@ const PartnerSnimak = (props) => {
           <div className="zaposleni-slider">
             {props.zaposleni.map(
               (radnik, index) =>
-                vidljivZaposleni === index && (
+                props.vidljivZaposleni === index && (
                   <Zaposleni
                     key={index}
                     slikaZaposlenog={radnik.slika}

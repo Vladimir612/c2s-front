@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import primeVideo from "../../Assets/Videos/prime.webm";
 import adactaVideo from "../../Assets/Videos/adacta.webm";
 import semosVideo from "../../Assets/Videos/semos.webm";
@@ -194,33 +194,34 @@ const NasiPartneri = () => {
     },
   ];
 
+  const [vidljivZaposleni, setVidljivZaposleni] = useState(0);
   return (
     <>
       <Nav />
       <div className="partneri-nav">
         <ul>
-          <Link to="adacta">
+          <Link to="adacta" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 1 ? "active" : ""}>Adacta</li>
           </Link>
-          <Link to="eyesee">
+          <Link to="eyesee" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 2 ? "active" : ""}>EyeSee</li>
           </Link>
-          <Link to="prime-software">
+          <Link to="prime-software" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 3 ? "active" : ""}>
               Prime software
             </li>
           </Link>
-          <Link to="semos-education">
+          <Link to="semos-education" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 4 ? "active" : ""}>
               Semos education
             </li>
           </Link>
-          <Link to="raiffeisen">
+          <Link to="raiffeisen" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 5 ? "active" : ""}>
               Raiffeisen banka
             </li>
           </Link>
-          <Link to="a1">
+          <Link to="a1" onClick={() => setVidljivZaposleni(0)}>
             <li className={aktivnaStrana === 6 ? "active" : ""}>A1</li>
           </Link>
         </ul>
@@ -237,6 +238,8 @@ const NasiPartneri = () => {
               partnerIme="Adacta"
               oPartneru="Adacta je međunarodna softverska kompanija osnovana u Ljubljani 1989.godine. Danas ima oko 400 članova u više evropskih gradova: Ljubljani, Mariboru, Beogradu, Moskvi, Brnu, Zagrebu i Amsterdamu. Njihov produkt - AdInsure je moćna platforma koja podržava sve core procese u osiguravajućoj kući. Vizija kompanije je integrisanje najnovijih platformi, tehnologija i razvoja za stvaranje inovativnih rešenja sa fokusom na potrebe osiguranja. Tehnologije koje koriste su C#, Angular, SaaS, HTML, JS, MySQL, Oracle, TypeScript… Adacta nudi odlične mogućnosti za početak karijere, podršku kolega, fleksibilnost, izazove, napredovanje i zabavu."
               poster={adactaLoading}
+              vidljivZaposleni={vidljivZaposleni}
+              setVidljivZaposleni={setVidljivZaposleni}
             />
           }
         />
@@ -252,6 +255,8 @@ const NasiPartneri = () => {
               partnerIme="EyeSee"
               oPartneru="Kompanije studentima je projekat Udruženja studenata informatike FONIS koji za cilj ima prenošenje znanja i povezivanje studenata sa IT kompanijama. Ove godine će doživeti izdanje obojeno novim bojama, obogaćen sadržajem koji će svim studentima pružiti priliku da usvoje nova IT znanja i steknu uvid u kom smeru mogu da nastave svoj put. Projekat se održava u onlajn formatu i mogu učestvovati studenti svih fakulteta. Sastoji se iz panel diskusije, IT radionica i speed dating-a i traje od 10. do 14. maja. Generalni pokrovitelj projekta je kompanija Levi9 koja će studentima predstaviti poslovanje, koje tehnologije koriste u svom radu, ali i na koji način teže da okupe najtalentovanije profesionalce i omoguće im da se kontinuirano usavršavaju u inspirativnom okruženju visokih tehnologija."
               poster={eyeseeLoading}
+              vidljivZaposleni={vidljivZaposleni}
+              setVidljivZaposleni={setVidljivZaposleni}
             />
           }
         />
@@ -266,6 +271,8 @@ const NasiPartneri = () => {
               partnerIme="prime software"
               oPartneru="Prime Software je deo kompanije Prime Holding JSC. Kancelarije ove kompanije su locirane u šest gradova u Bugarskoj. Sedište kompanije je u Plovdivu, dok Prime Software posluje u Nišu. Prime Holding JSC uključuje vodeće bugarske IT kompanije, od kojih su neke osnovane pre više od 17 godina. Kompanija se bavi razvojem softvera, IT konsultacijama, integracijom softvera, podrškom proizvodima i profesionalnim uslugama. Njihova tehnička ekspertiza uključuje razvoj i konsalting u tehnologijama PHP, Java, C, C++, C#, Scala, R, Python, JavaScript i slično. Njihov tim primenjuje najbolje prakse u razvoju softvera u oblasti FinTech-a, Blockchain-a, Salesforce-a, Network Infrastructure-a i DevOps-a za brojne klijente iz Sjedinjenih Američkih Država, Evrope i sa Bliskog Istoka."
               poster={primeLoading}
+              vidljivZaposleni={vidljivZaposleni}
+              setVidljivZaposleni={setVidljivZaposleni}
             />
           }
         />
@@ -280,6 +287,8 @@ const NasiPartneri = () => {
               partnerIme="Semos Education"
               oPartneru="Semos Education je lider u oblasti IT obuka u regionu. Ponosno ističu da su jedan od osnivača i članica LLPA, odnosno „Leading Learning Partners Association“, za stručno usavršavanje kadrova domaćih i internacionalnih kompanija iz celog sveta. Tokom 26 godina rada, razvili su preko 300 edukativnih programa, koje je pohađalo preko 100.000 ljudi i postavili visoke standarde razvijajući širok spektar IT treninga. Obuke koje organizuju su zvanične, akreditovane i sertifikovane od strane najvećih svetskih softverskih kompanija. Takođe, njihov portfolio sadrži obuke iz oblasti projektnog menadžmenta (Scrum, ITIL), kreativnih industrija (Unity, Autodesk, Adobe), Open Source treninge (Angular, React, Node, Python), kao i specijalizovane, prilagođene trening programe."
               poster={semosLoading}
+              vidljivZaposleni={vidljivZaposleni}
+              setVidljivZaposleni={setVidljivZaposleni}
             />
           }
         />
@@ -294,6 +303,8 @@ const NasiPartneri = () => {
               partnerIme="Raiffeisen banka"
               oPartneru="Raiffeisen banka a.d. Beograd je jedna od vodećih banaka u Srbiji po svim najvažnijim kriterijumima. Svoje poslovanje u Srbiji započela je 2001. godine, kao prva domaća banka u stoprocentnom stranom vlasništvu. Posluje u okviru grupacije Raiffeisen Bank International, jedne od najvećih bankarskih grupacija u srednjoj i istočnoj Evropi. Mreža Raiffeisen banke pokriva 81 poslovnicu širom Srbije, u njoj radi više od 1.500 zaposlenih, a kapital banke iznosi preko pola milijarde evra. Raiffeisen banka je dobitnik brojnih prestižnih priznanja za Najbolju banku, dodeljenih od strane renomiranih finansijskih magazina tokom njenog poslovanja u Srbiji, titule Najbolja digitalna banka kojom ju je dve godine zaredom nagrađivao magazin Global Finance (2020. i 2021), kao i dvostruke titule Najbolja banka u oblasti privatnog bankarstva u 2021. godini (EMEA Finance i Global Finance)."
               poster={raiffeisenLoading}
+              vidljivZaposleni={vidljivZaposleni}
+              setVidljivZaposleni={setVidljivZaposleni}
             />
           }
         />
@@ -308,6 +319,8 @@ const NasiPartneri = () => {
               partnerIme="A1"
               oPartneru="A1 Srbija je deo Telekom Austrija Grupe koja posluje u 7 zemalja, što joj omogućava brži razvoj kroz internacionalnu saradnju. Više od 1.500 zaposlenih ove kompanije posvećeno je kreiranju inovativnih rešenja i usluga, omogućavajući da 2.4 miliona korisnika, u skladu sa svojim potrebama, odaberu i na najbolji način iskoriste mogućnosti koje digitalizacija nudi. Kompanija se vodi time da svaki pojedinac ima moć da napravi velike promene i da uz pomoć tehnologije ta moć zaista može preoblikovati naša iskustva i učiniti svet boljim mestom."
               poster={a1Loading}
+              vidljivZaposleni={vidljivZaposleni}
+              setVidljivZaposleni={setVidljivZaposleni}
             />
           }
         />
