@@ -15,6 +15,7 @@ import prime from "../../Assets/Images/Partneri/godisnji/prime.png";
 //robni
 import escape from "../../Assets/Images/Partneri/robni/escape.png";
 import nescafe from "../../Assets/Images/Partneri/robni/nescafe.png";
+import dragibravo from "../../Assets/Images/Partneri/robni/DragiBravo.jpg";
 
 //medijiski
 import BestBg from "../../Assets/Images/Partneri/medijski/BestBg.png";
@@ -136,10 +137,10 @@ const OstaliPartneri = () => {
 
   const robniPartneri = [
     {
-      partnerSlika: guarana,
-      partnerIme: "Guarana",
+      partnerSlika: dragibravo,
+      partnerIme: "Dragi Bravo",
       pozadina: "#fff",
-      link: "https://knjaz.rs/portfolio/guarana/",
+      link: "https://www.instagram.com/dragibravo/",
     },
     {
       partnerSlika: escape,
@@ -154,10 +155,10 @@ const OstaliPartneri = () => {
       link: "https://www.nescafe.com/rs/nase-kafe/nescafe-2in1",
     },
     {
-      partnerSlika: guarana,
-      partnerIme: "Guarana",
+      partnerSlika: dragibravo,
+      partnerIme: "Dragi Bravo",
       pozadina: "#fff",
-      link: "https://knjaz.rs/portfolio/guarana/",
+      link: "https://www.instagram.com/dragibravo/",
     },
     {
       partnerSlika: escape,
@@ -322,7 +323,7 @@ const OstaliPartneri = () => {
               height="12rem"
             />
           </div>
-          <div className="ostali-partneri-slider">
+          <div className="ostali-partneri-slider" style={{ display: "none" }}>
             <h3>MEDIJSKI PARTNERI</h3>
             <PartneriSlider
               partneri={medijskiPartneri}

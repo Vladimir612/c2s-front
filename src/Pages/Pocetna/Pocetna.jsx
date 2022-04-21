@@ -26,6 +26,7 @@ import prime from "../../Assets/Images/Partneri/godisnji/prime.png";
 //robni
 import escape from "../../Assets/Images/Partneri/robni/escape.png";
 import nescafe from "../../Assets/Images/Partneri/robni/nescafe.png";
+import dragibravo from "../../Assets/Images/Partneri/robni/DragiBravo.jpg";
 
 //medijiski
 import BestBg from "../../Assets/Images/Partneri/medijski/BestBg.png";
@@ -113,8 +114,8 @@ const Pocetna = () => {
 
   const robniPartneri = [
     {
-      partnerSlika: guarana,
-      partnerIme: "Guarana",
+      partnerSlika: dragibravo,
+      partnerIme: "Dragi Bravo",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/",
     },
@@ -239,7 +240,7 @@ const Pocetna = () => {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("May 5, 2022").getTime();
+    const countDownDate = new Date("May 6, 2022").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
@@ -303,7 +304,7 @@ const Pocetna = () => {
               <p className="uvodni-tekst">
                 Unapredi svoje znanje učeći od iskusnih IT stručnjaka, oslobodi
                 se treme kroz simulaciju intervjua i izađi iz zone komfora.
-                Očekujemo te od 14. do 17. maja. Prijave se uskoro otvaraju
+                Očekujemo te od 14. do 17. maja.
               </p>
               <div className="timer">
                 <div className="dani">
@@ -379,7 +380,7 @@ const Pocetna = () => {
             </div>
           </div>
           <div className="kako-postati-container">
-            <h3>Kako da postaneš deo c2s-a?</h3>
+            <h3>KAKO DA POSTANEŠ DEO C2S-a?</h3>
             <div className="kako">
               <p>1. Odaberi kompaniju sa kojom želiš da se upoznaš,</p>
               <p>2. Napiši prijavu,</p>
@@ -464,7 +465,7 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
+                    <LazyLoadImage effect="blur" src={eyesee} alt="EyeSee" />
                   </div>
                 </div>
               </a>
@@ -488,7 +489,7 @@ const Pocetna = () => {
                   height="12rem"
                 />
               </div>
-              <div className="medijski-partneri">
+              <div className="medijski-partneri" style={{ display: "none" }}>
                 <h3>medijski partneri</h3>
                 <PartneriSlider
                   partneri={medijskiPartneri}

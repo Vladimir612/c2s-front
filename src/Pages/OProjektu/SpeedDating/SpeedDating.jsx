@@ -26,13 +26,19 @@ const SpeedDating = () => {
           <h2>SPEED DATING</h2>
           <p>
             Intervju često predstavlja najbitniju fazu koja kandidate deli od
-            željenog posla. Speed dating predstavlja petnaestominutnu simulaciju
-            intervjua, gde će se delagati naći u ulozi kandidata za posao ili
-            praksu. Kroz ovu simulaciju imaće priliku da pokažu sebe u najboljem
-            svetlu HR predstavnicima kompanija, ali i da čuju više o kompaniji i
-            o tome kako izgleda njihov proces selekcije.
+            željenog posla. Speed dating, kao petnaestominutna simulacija
+            intervjua, prilika je da se nađeš u ulozi kandidata za posao ili
+            praksu, pripremiš za budući susret sa poslodavcima i oslobodiš
+            treme. Pored toga, moći ćeš da pokažeš sebe u najboljem svetlu HR
+            predstavnicima kompanija, ali i da čuješ više o kompaniji i o tome
+            kako izgleda njihov proces selekcije.
           </p>
-          <a href={Pdf} target="_blank" rel="noreferrer">
+          <a
+            href={Pdf}
+            target="_blank"
+            rel="noreferrer"
+            style={{ display: "none" }}
+          >
             <motion.button
               className="dugme transparentno"
               whileHover={{
@@ -97,7 +103,7 @@ const SpeedDating = () => {
         <Link to="/nasi-partneri/eyesee">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
+              <LazyLoadImage effect="blur" src={eyesee} alt="EyeSee" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />

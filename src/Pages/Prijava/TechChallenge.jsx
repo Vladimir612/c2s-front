@@ -90,10 +90,10 @@ const TechChallenge = () => {
             <Field
               type="checkbox"
               name="studyComp"
-              value="Eyesee"
+              value="EyeSee"
               className="checkbox"
             />
-            Eyesee
+            EyeSee
           </label>
           <label className="checkbox-group">
             <Field
@@ -111,7 +111,7 @@ const TechChallenge = () => {
               value="Raiffeisen"
               className="checkbox"
             />
-            Raiffeisen
+            Raiffeisen banka
           </label>
           <label className="checkbox-group">
             <Field

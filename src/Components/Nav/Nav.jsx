@@ -76,10 +76,10 @@ const Nav = () => {
                 setNasiPartneriAktiv(false);
                 setOProjektuAktiv(!oProjektuAktiv);
               }}
-              datacontent={"O Projektu"}
+              datacontent={"O projektu"}
               className={oProjektuAktiv ? "active" : ""}
             >
-              <span>O Projektu</span>
+              <span>O projektu</span>
               <FaCaretDown color={oProjektuAktiv ? "#fff" : "#ffffffb3"} />
               <motion.ul
                 className="sub-linkovi"
@@ -91,7 +91,7 @@ const Nav = () => {
                   <li>Radionice</li>
                 </Link>
                 <Link to="/o-projektu/panel">
-                  <li>Panel</li>
+                  <li>Panel diskusija</li>
                 </Link>
                 <Link to="/o-projektu/speed-dating">
                   <li>Speed dating</li>
@@ -130,7 +130,7 @@ const Nav = () => {
                   <li>Adacta</li>
                 </Link>
                 <Link to="/nasi-partneri/eyesee">
-                  <li>Eyesee</li>
+                  <li>EyeSee</li>
                 </Link>
                 <Link to="/nasi-partneri/prime-software">
                   <li>Prime software</li>
@@ -139,13 +139,13 @@ const Nav = () => {
                   <li>Semos education</li>
                 </Link>
                 <Link to="/nasi-partneri/raiffeisen">
-                  <li>Raiffeisen</li>
+                  <li>Raiffeisen banka</li>
                 </Link>
                 <Link to="/nasi-partneri/a1">
                   <li>A1</li>
                 </Link>
                 <Link to="/godisnji-naturalni-medijski">
-                  <li>Godišnji, robni i medijski partneri</li>
+                  <li>Godišnji i robni partneri</li>
                 </Link>
               </motion.ul>
             </li>
@@ -190,7 +190,7 @@ const Nav = () => {
                 scale: 0.9,
               }}
             >
-              CV Generator
+              CV generator
             </motion.button>
           </Link>
 
@@ -256,7 +256,7 @@ const Nav = () => {
                 <li>Radionice</li>
               </Link>
               <Link to="/o-projektu/panel">
-                <li>Panel</li>
+                <li>Panel diskusija</li>
               </Link>
               <Link to="/o-projektu/speed-dating">
                 <li>Speed dating</li>
@@ -307,7 +307,7 @@ const Nav = () => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Eyesee</li>
+                <li>EyeSee</li>
               </Link>
               <Link
                 to="/nasi-partneri/prime-software"
@@ -331,7 +331,7 @@ const Nav = () => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Raiffeisen</li>
+                <li>Raiffeisen banka</li>
               </Link>
               <Link
                 to="/nasi-partneri/a1"
@@ -347,7 +347,7 @@ const Nav = () => {
                   setMenuOpen(false);
                 }}
               >
-                <li>Godišnji, robni i medijski partneri</li>
+                <li>Godišnji i robni partneri</li> {/* izmeniti */}
               </Link>
             </motion.ul>
           </li>
@@ -389,7 +389,7 @@ const Nav = () => {
                 scale: 0.9,
               }}
             >
-              CV Generator
+              CV generator
             </motion.button>
           </Link>
           <Link

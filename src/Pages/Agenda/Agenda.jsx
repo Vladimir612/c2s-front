@@ -66,7 +66,7 @@ const Agenda = () => {
               },
               {
                 vreme: "11:15 - 13:00",
-                desavanje: "PANEL",
+                desavanje: "PANEL DISKUSIJA",
               },
               {
                 vreme: "13:00 - 13:15",

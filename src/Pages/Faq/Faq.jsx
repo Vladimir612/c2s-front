@@ -77,17 +77,22 @@ const Faq = () => {
               question="Za koliko radionica se mogu prijaviti?"
               answer={
                 <p>
-                  Maksimalno se možeš prijaviti za 3 radionice, ali ćeš biti
-                  primljen/a samo na jednu.
+                  Prijava je koncipirana tako da delegat vrši odabir maksimalno
+                  tri radionice od kojih može biti primljen samo na jednu.
+                  Prisustvo na više radionica od strane jednog delegata nije
+                  moguće zbog istovremenog odvijanja samih radionica.
                 </p>
               }
             />
             <FaqQuestion
-              question="Za koliko tech-challenge-a se mogu prijaviti?"
+              question="Za koliko Tech Challenge-a se mogu prijaviti?"
               answer={
                 <p>
-                  Maksimalno se možeš prijaviti za 3 , ali ćeš biti primljen/a
-                  samo na jedan.
+                  Prijava je koncipirana tako da delegat vrši odabir maksimalno
+                  tri Tech Challenge-a od kojih može biti primljen samo na
+                  jedan. Učešće na više Tech Challenge-a od strane jednog
+                  delegata nije moguće zbog istovremenog odvijanja prezentacije
+                  rešenja Tech Challenge-a.
                 </p>
               }
             />
@@ -95,12 +100,11 @@ const Faq = () => {
               question="Gde i kada će biti održan projekat?"
               answer={
                 <p>
-                  Panel diskusija i radionice će biti održane 14. i 15. maja na
-                  Fakultetu organizacionih nauka, dok će Speed dating biti
-                  realizovan u prostorijama ____ 16. maja. Tech challenge i
-                  zatvaranje projekta će se održati ___ 17. Maja. Detaljnu
-                  agendu možeš promaći na stranici
-                  <Link to="/agenda"> AGENDA</Link>.
+                  Panel diskusija i radionice će se održati 14. i 15. maja na
+                  Fakultetu organizacionih nauka, dok će u prostorijama Envoy
+                  Conference centra 16. maja biti realizovan Speed dating, a 17.
+                  maja Tech Challenge i zatvaranje projekta. Detaljnu agendu
+                  možeš pronaći na <Link to="/agenda"> AGENDA</Link>.
                 </p>
               }
             />
@@ -108,9 +112,11 @@ const Faq = () => {
               question="Da li je neophodno poslati CV za učešće na speed dating-u?"
               answer={
                 <p>
-                  Za učešće na speed dating-u je neophodno poslati CV. Ukoliko
-                  već nemate svoj CV, možete ga napraviti na našoj stranici
-                  <Link to="/generator"> CV GENERATOR</Link>
+                  Za učešće na C2S-u je neophodno poslati CV. Korisno je ako
+                  imaš svoj jer te baš on može istaći u procesu selekcije u
+                  odnosu na druge delegate, ali ukoliko nemaš možeš da ga
+                  kreiraš uz pomoć CV generatora na stranici{" "}
+                  <Link to="/generator"> CV GENERATOR</Link>.
                 </p>
               }
             />

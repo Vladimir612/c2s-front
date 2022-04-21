@@ -25,15 +25,20 @@ const TechChallenge = () => {
         <div className="tekst">
           <h2>TECH CHALLENGE</h2>
           <p>
-            Tokom studija, većina studenata nema priliku da oseti kako to
-            izgleda rešavanje realnih IT problema na radnom mestu. Upravo zbog
-            toga cilj ovog dela projekta je da se članovi timova upoznaju i
-            ponude rešenje za IT studiju slučaja. Za učešće na ovom delu
-            projekta neophodno je da okupiš tim ili se samostalno prijaviš,
-            pošalješ prijavu i 17. maja prezentuješ svoje rešenje jednoj od
-            kompanija!
+            Tokom studija većina studenata nema priliku da oseti kako to izgleda
+            rešavanje realnih IT problema na radnom mestu. Upravo zbog toga,
+            cilj ovog dela projekta je da unaprediš svoj timski rad i izađeš iz
+            zone komfora tako što ćeš zajedno sa članovima svog tima pronaći i
+            prezentovati najbolje rešenje za IT studiju slučaja. Za učešće na
+            Tech Challenge-u neophodno je da pošalješ prijavu i 17. maja zajedno
+            sa timom prezentuješ svoje rešenje jednoj od kompanija!
           </p>
-          <a href={Pdf} target="_blank" rel="noreferrer">
+          <a
+            href={Pdf}
+            target="_blank"
+            rel="noreferrer"
+            style={{ display: "none" }}
+          >
             <motion.button
               className="dugme transparentno"
               whileHover={{
@@ -98,7 +103,7 @@ const TechChallenge = () => {
         <Link to="/nasi-partneri/eyesee">
           <div className="link-do-kompanije">
             <div className="img-wrapper">
-              <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
+              <LazyLoadImage effect="blur" src={eyesee} alt="EyeSee" />
             </div>
             <p>Saznaj više o kompaniji</p>
             <BsArrowRight size={35} color="#14191b" />

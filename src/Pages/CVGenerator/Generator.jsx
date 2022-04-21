@@ -101,9 +101,9 @@ const Generator = () => {
 
   return (
     <>
+      <div className="pocetak-pocetna" ref={generatorRef}></div>
       {render && <Nav />}
       <div
-        ref={generatorRef}
         className="generator-wrapper"
         style={render === false ? { margin: 0 } : {}}
       >
@@ -271,7 +271,7 @@ const Generator = () => {
                 values={radnoIskustvo}
                 addValue={addRadnoIskustvo}
                 setValues={setRadnoIskustvo}
-                placeholder1="Backend developer - Raiffeisen"
+                placeholder1="Backend developer - Raiffeisen banka"
                 placeholder2="Jul 2020 - Trenutno"
               />
             </div>

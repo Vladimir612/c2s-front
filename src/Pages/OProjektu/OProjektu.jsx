@@ -49,7 +49,7 @@ const OProjektu = () => {
               <Link to="/o-projektu/radionice">RADIONICE</Link>
             </li>
             <li className={aktivnaStrana === 2 ? "active" : ""}>
-              <Link to="/o-projektu/panel">PANEL</Link>
+              <Link to="/o-projektu/panel">PANEL DISKUSIJA</Link>
             </li>
             <li className={aktivnaStrana === 3 ? "active" : ""}>
               <Link to="/o-projektu/speed-dating">SPEED DATING</Link>
@@ -75,7 +75,7 @@ const OProjektu = () => {
                 <Link to="/o-projektu/radionice">RADIONICE</Link>
               </li>
               <li className={aktivnaStrana === 2 ? "active" : ""}>
-                <Link to="/o-projektu/panel">PANEL</Link>
+                <Link to="/o-projektu/panel">PANEL DISKUSIJA</Link>
               </li>
               <li className={aktivnaStrana === 3 ? "active" : ""}>
                 <Link to="/o-projektu/speed-dating">SPEED DATING</Link>

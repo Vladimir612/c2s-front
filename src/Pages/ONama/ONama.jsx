@@ -40,7 +40,7 @@ const ONama = () => {
   const coreTim = {
     imeTima: "TIM KOORDINATORA",
     oTimu:
-      "Tim koordinatora, glavni zaslužni i odgovorni za uspešnu realizaciju projekta, svojim iskustvom i znanjem uspešno je organizovao i upravljao celokupnim projektom. 🤓",
+      "Tim koordinatora čini sedam vrednih i entuzijastičnih mladih ljudi koji svakodnevno neumorno rade da ovogodišnji projekat nadmaši sva očekivanja. Svojim znanjem i iskustvom predvodi i upravlja organizacijom celog događaja.",
     slikaKoordinatora: AnaKesic,
     imeKoordinatora: "Ana Kesić",
     funkcijaKoordinatora: "Koordinatorka projekta",
@@ -49,7 +49,7 @@ const ONama = () => {
   const itTim = {
     imeTima: "TIM ZA INFORMACIONE TEHNOLOGIJE",
     oTimu:
-      "Tim za informacione tehnologije marljivo je radio na izradi veb sajta projekta gde možete pronaći sve neophodne informacije u vezi projekta. 💻",
+      "Tim za informacione tehnologije zadužen je za izradu veb sajta projekta Kompanije studentima, kao najvažnijeg komunikacionog kanala na kom se mogu pronaći sve važne informacije o održavanju projekta.",
     slikaKoordinatora: VladimirLazarevic,
     imeKoordinatora: "Vladimir Lazarević",
     funkcijaKoordinatora: "Koordinator tima za informacione tehnologije",
@@ -58,7 +58,7 @@ const ONama = () => {
   const dizajnTim = {
     imeTima: "DIZAJN TIM",
     oTimu:
-      "Tim za dizajn kroz vizuelnu prezentaciju projekta pokazao je svoju kreativnost i veštine. 🎨",
+      "Tim za dizajn zaslužan je za osmišljavanje i kreiranje celokupnog vizuelnog identiteta ovogodišnjeg C2S-a. Kroz izradu brojnih štampanih i digitalnih publikacija približavaju projekat učesnicima i pokazuju svoju kreativnost i veštine.",
     slikaKoordinatora: StefanBozovic,
     imeKoordinatora: "Stefan Božović",
     funkcijaKoordinatora: "Koordinator dizajn tima",
@@ -67,7 +67,7 @@ const ONama = () => {
   const crTim = {
     imeTima: "TIM ZA KORPORATIVNE ODNOSE",
     oTimu:
-      "Tim za odnose sa kompanijama je zaslužan za ostvarivanje partnerstava koji doprinose realizaciji projekta na visokom nivou. 💰",
+      "Tim za korporativne odnose posvećen je sklapanju i održavanju saradnji sa brojnim kompanijama koje nam pružaju podršku da projekat održimo na visokom nivou. Formiraju brojna finansijska, naturalna i robna partnerstva i omogućavaju učesnicima što bolji ugođaj.",
     slikaKoordinatora: AnjaPejovic,
     imeKoordinatora: "Anja Pejović",
     funkcijaKoordinatora: "Koordinatorka tima za korporativne odnose",
@@ -77,7 +77,7 @@ const ONama = () => {
   const hrTim = {
     imeTima: "TIM ZA LJUDSKE RESURSE",
     oTimu:
-      "Tim za ljudske resurse vodio je računa da članovi svih organizacionih timova dostignu svoj pun potencijal i upravljao selekcijom prijavljenih kandidata. 👩🏻‍🤝‍👨🏼",
+      "Tim za ljudske resurse trudi se da ojača koheziju celog organizacionog tima, kao i da svaki član tima dostigne svoj puni potencijal. Upravlja selekcijom kandidata, komunicira sa učesnicima projekta i tu je da odgovori na sva njihova pitanja i nedoumice.",
     slikaKoordinatora: KostaAcimovic,
     imeKoordinatora: "Kosta Aćimović",
     funkcijaKoordinatora: "Koordinator tima za ljudske resurse",
@@ -87,7 +87,7 @@ const ONama = () => {
   const prTim = {
     imeTima: "TIM ZA ODNOSE SA JAVNOŠĆU",
     oTimu:
-      "Tim za odnose sa javnošću bio je zadužen za novinarske poslove poput pisanja tekstova, promocije, prezentovanje samog projekta u najboljem svetlu, kao i ostvarivanje medijskih saradnji. 🗞",
+      "Tim za odnose sa javnošću radi na kreiranju marketing strategije C2S-a, kako bi na što bolji način približio projekat studentima i predstavio njegovu vrednost. Zaslužan je za sklapanje medijskih saradnji i zajedno sa dizajnom, kreiranje objava i tekstova za društvene mreže.",
     slikaKoordinatora: BojanaCelovic,
     imeKoordinatora: "Bojana Ćelović",
     funkcijaKoordinatora: "Koordinatorka tima za odnose sa javnošću",
@@ -97,7 +97,7 @@ const ONama = () => {
   const logistikaTim = {
     imeTima: "TIM ZA LOGISTIKU",
     oTimu:
-      "Tim za logistiku osmislio je operacioni plan celokupnog događaja i postarao se da sve prođe u najboljem redu. 📆",
+      "Tim za logistiku kreira operacioni plan održavanja celokupnog događaja i pronalazi prostor u kojem će se organizovati. Na danima projekta tu je da se postara da se sve odigra u najboljem redu i da učesnici sa C2S-a odu sa prelepim uspomenama.",
     slikaKoordinatora: NemanjaVukelic,
     imeKoordinatora: "Nemanja Vukelić",
     funkcijaKoordinatora: "Koordinator tima za logistiku",
@@ -164,7 +164,7 @@ const ONama = () => {
               predavanjima, kursevima, takmičenjima i seminarima, rada na
               projektima, kao i ostvarivanja stručnih praksi u IT oblastima.
               Zajedničkim zalaganjem svih članova udruženja, FONIS već dugi niz
-              godina radi na organizaciji i realizaciji nekoliko edukativnih i
+              godina radi na organizaciji i realizaciji više edukativnih i
               takmičarskih projekata iz sveta IT-ja, među kojima je i upravo
               projekat Kompanije studentima.
             </p>
@@ -188,22 +188,24 @@ const ONama = () => {
             <h2>C2S</h2>
             <p>
               Kompanije studentima predstavlja projekat čiji je organizator
-              Udruženje studenata informatike FONIS, a za cilj ima da kroz
-              zabavan i interaktivan način omogući svim zainteresovanim
+              Udruženje studenata informatike FONIS koji za cilj ima da na
+              inovativan i interaktivan način omogući svim zainteresovanim
               učesnicima da nauče nešto novo iz oblasti informacionih
               tehnologija. Na panel diskusiji ćeš dobiti priliku da čuješ savete
               i priče iz poslovnih praksi koje ti mogu značiti kada se budeš
               našao na mestu praktikanta. Pored panel diskusije, na radionicama,
               koje će drzati predstavnici kompanija, dobićeš priliku da
-              unaprediš svoje znanje u izabranoj oblasti iz ITa. Tech challenge
-              je deo projekta na kome je tvoj zadatak da nađeš rešenje za realan
-              problem sa kojim se susreću IT kompanije. Na kraju, važan deo ovog
-              projekta predstavlja i speed dating, gde ćeš se naći u ulozi
+              unaprediš svoje znanje u izabranoj oblasti iz IT-ja. Tech
+              Challenge je deo projekta takmičarskog karaktera na kome je tvoj
+              zadatak da zajedno sa članovima svog tima pronađeš rešenje za
+              realan problem sa kojim se susreću IT kompanije u svom poslovanju.
+              One koji se najbolje pokažu ocekuju i nagrade. Na kraju, važan deo
+              ovog projekta predstavlja i speed dating, gde ćeš se naći u ulozi
               kandidata za posao ili praksu i tako dobiti priliku da osetiš kako
               izgleda pravi intervju koji je neophodan za ulazak u svaku IT
-              kompaniju. Generalni pokrovitelji projekta su Raiffeisen banka💵,
-              Adacta💻, A1📞, Semos📚, Prime software💿, Eye see⌨️. Čekamo tvoju
-              prijavu! 👍🏼
+              kompaniju. Generalni pokrovitelji projekta ove godine su
+              Raiffeisen banka, Adacta, A1, Semos Education, Prime software,
+              EyeSee. Čekamo tvoju prijavu!
             </p>
           </div>
           <div className="right-content">
