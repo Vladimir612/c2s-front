@@ -26,6 +26,7 @@ import prime from "../../Assets/Images/Partneri/godisnji/prime.png";
 //robni
 import escape from "../../Assets/Images/Partneri/robni/escape.png";
 import nescafe from "../../Assets/Images/Partneri/robni/nescafe.png";
+import dragibravo from "../../Assets/Images/Partneri/robni/DragiBravo.jpg";
 
 //medijiski
 import BestBg from "../../Assets/Images/Partneri/medijski/BestBg.png";
@@ -113,8 +114,8 @@ const Pocetna = () => {
 
   const robniPartneri = [
     {
-      partnerSlika: guarana,
-      partnerIme: "Guarana",
+      partnerSlika: dragibravo,
+      partnerIme: "Dragi Bravo",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/",
     },
@@ -239,7 +240,7 @@ const Pocetna = () => {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("May 5, 2022").getTime();
+    const countDownDate = new Date("May 6, 2022").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
@@ -303,7 +304,7 @@ const Pocetna = () => {
               <p className="uvodni-tekst">
                 Unapredi svoje znanje učeći od iskusnih IT stručnjaka, oslobodi
                 se treme kroz simulaciju intervjua i izađi iz zone komfora.
-                Očekujemo te od 14. do 17. maja. Prijave se uskoro otvaraju
+                Očekujemo te od 14. do 17. maja.
               </p>
               <div className="timer">
                 <div className="dani">
@@ -379,15 +380,21 @@ const Pocetna = () => {
             </div>
           </div>
           <div className="kako-postati-container">
-            <h3>Kako da postaneš deo c2s-a?</h3>
+            <h3>ZAŠTO DA POSTANEŠ DEO C2S-a?</h3>
             <div className="kako">
-              <p>1. Odaberi kompaniju sa kojom želiš da se upoznaš,</p>
-              <p>2. Napiši prijavu,</p>
-              <p>3. Pošalji prijavu,</p>
-              <p>4. Sačekaj mejl kojim ti javljamo da si primljen/a,</p>
               <p>
-                5. Provedi 4 dana unapređujući svoje znanje i upoznajući se sa
-                nekim od najboljih kompanija u Srbiji.
+                Kompanije studentima predstavlja projekat čiji je organizator
+                Udruženje studenata informatike FONIS koji za cilj ima da kroz
+                interaktivan način omogući svim zainteresovanim učesnicima da
+                nauče nešto novo iz oblasti informacionih tehnologija. Projekat
+                će se održati od 14. do 17. maja i sastoji se iz panel
+                diskusije, šest IT radionica, speed dating-a i Tech Challenge-a.
+                Generalni pokrovitelji projekta ove godine su kompanije
+                Raiffeisen banka, Adacta, A1, Semos Education, Prime Software i
+                EyeSee. Ukoliko želiš da budeš deo ovogodišnjeg C2S-a, odaberi
+                jednu ili više kompanija sa kojim želiš da se upoznaš, sastavi i
+                pošalji prijavu i provedi 4 dana unapređujući svoje kompetencije
+                i znanje!
               </p>
             </div>
           </div>
@@ -434,7 +441,7 @@ const Pocetna = () => {
                     <LazyLoadImage
                       effect="blur"
                       src={semos}
-                      alt="Semos education"
+                      alt="Semos Education"
                     />
                   </div>
                 </div>
@@ -464,7 +471,7 @@ const Pocetna = () => {
               >
                 <div className="partner-wrapper">
                   <div className="img-wrapper">
-                    <LazyLoadImage effect="blur" src={eyesee} alt="Eyesee" />
+                    <LazyLoadImage effect="blur" src={eyesee} alt="EyeSee" />
                   </div>
                 </div>
               </a>
@@ -488,7 +495,7 @@ const Pocetna = () => {
                   height="12rem"
                 />
               </div>
-              <div className="medijski-partneri">
+              <div className="medijski-partneri" style={{ display: "none" }}>
                 <h3>medijski partneri</h3>
                 <PartneriSlider
                   partneri={medijskiPartneri}

@@ -101,9 +101,9 @@ const Generator = () => {
 
     return (
         <>
+            <div className="pocetak-pocetna" ref={generatorRef}></div>
             {render && <Nav />}
             <div
-                ref={generatorRef}
                 className="generator-wrapper"
                 style={render === false ? { margin: 0 } : {}}
             >
@@ -201,55 +201,47 @@ const Generator = () => {
                                 maxLength={1000}
                             />
                         </div>
-                        <div>
-                            <div className="input-field">
-                                <label
-                                    className="input-label"
-                                    for="brojTelefona"
-                                >
-                                    Broj telefona
-                                </label>
-                                <motion.input
-                                    whileFocus={{ scale: 1.02 }}
-                                    type="text"
-                                    name="brojTelefona"
-                                    id="brojTelefona"
-                                    placeholder="+381 60 123 4567"
-                                    value={phoneInput}
-                                    onChange={handlePhoneChange}
-                                />
-                            </div>
-                            <div className="input-field">
-                                <label className="input-label" for="email">
-                                    E-mail
-                                </label>
-                                <motion.input
-                                    whileFocus={{ scale: 1.02 }}
-                                    type="text"
-                                    name="email"
-                                    id="email"
-                                    placeholder="example@example.com"
-                                    value={emailInput}
-                                    onChange={handleEmailChange}
-                                />
-                            </div>
-                            <div className="input-field">
-                                <label
-                                    className="input-label"
-                                    for="websiteLink"
-                                >
-                                    Website
-                                </label>
-                                <motion.input
-                                    whileFocus={{ scale: 1.02 }}
-                                    type="text"
-                                    name="websiteLink"
-                                    id="websiteLink"
-                                    placeholder="https://www.instagram.com/stefan.jov01/"
-                                    value={websiteInput}
-                                    onChange={handleWebsiteChange}
-                                />
-                            </div>
+                        <div className="input-field">
+                            <label className="input-label" for="brojTelefona">
+                                Broj telefona
+                            </label>
+                            <motion.input
+                                whileFocus={{ scale: 1.02 }}
+                                type="text"
+                                name="brojTelefona"
+                                id="brojTelefona"
+                                placeholder="+381 60 123 4567"
+                                value={phoneInput}
+                                onChange={handlePhoneChange}
+                            />
+                        </div>
+                        <div className="input-field">
+                            <label className="input-label" for="email">
+                                E-mail
+                            </label>
+                            <motion.input
+                                whileFocus={{ scale: 1.02 }}
+                                type="text"
+                                name="email"
+                                id="email"
+                                placeholder="example@example.com"
+                                value={emailInput}
+                                onChange={handleEmailChange}
+                            />
+                        </div>
+                        <div className="input-field">
+                            <label className="input-label" for="websiteLink">
+                                Website
+                            </label>
+                            <motion.input
+                                whileFocus={{ scale: 1.02 }}
+                                type="text"
+                                name="websiteLink"
+                                id="websiteLink"
+                                placeholder="https://www.instagram.com/stefan.jov01/"
+                                value={websiteInput}
+                                onChange={handleWebsiteChange}
+                            />
                         </div>
                         <div className="area-field">
                             <label className="area-label" for="opis">
@@ -288,7 +280,7 @@ const Generator = () => {
                                 values={radnoIskustvo}
                                 addValue={addRadnoIskustvo}
                                 setValues={setRadnoIskustvo}
-                                placeholder1="Backend developer - Raiffeisen"
+                                placeholder1="Backend developer - Raiffeisen banka"
                                 placeholder2="Jul 2020 - Trenutno"
                             />
                         </div>

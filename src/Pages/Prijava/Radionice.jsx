@@ -15,10 +15,18 @@ const Radionice = () => {
             <option value="" selected disabled hidden>
               Izaberi prvu radionicu
             </option>
-            <option value="Prva radionica">Prva radionica</option>
-            <option value="Druga radionica">Druga radionica</option>
-            <option value="Treća radionica">Treća radionica</option>
-            <option value="Četvrta radionica">Četvrta radionica</option>
+            <option value="Izazovi u B2C monetizaciji 5G usluga">
+              Izazovi u B2C monetizaciji 5G usluga
+            </option>
+            <option value="Uvod u Angular">Uvod u Angular</option>
+            <option value="Machine learning">Machine learning</option>
+            <option value="Spring Boot">Spring Boot</option>
+            <option value="DevOps pristup razvoju softvera">
+              DevOps pristup razvoju softvera
+            </option>
+            <option value="Uvod u 3D Game Development">
+              Uvod u 3D Game Development
+            </option>
           </Field>
           <ErrorMessage name="primRad" component="div" className="error" />
         </div>
@@ -35,10 +43,18 @@ const Radionice = () => {
               Izaberi drugu radionicu
             </option>
             <option value="">Ne želim drugu opciju</option>
-            <option value="Prva radionica">Prva radionica</option>
-            <option value="Druga radionica">Druga radionica</option>
-            <option value="Treća radionica">Treća radionica</option>
-            <option value="Četvrta radionica">Četvrta radionica</option>
+            <option value="Izazovi u B2C monetizaciji 5G usluga">
+              Izazovi u B2C monetizaciji 5G usluga
+            </option>
+            <option value="Uvod u Angular">Uvod u Angular</option>
+            <option value="Machine learning">Machine learning</option>
+            <option value="Spring Boot">Spring Boot</option>
+            <option value="DevOps pristup razvoju softvera">
+              DevOps pristup razvoju softvera
+            </option>
+            <option value="Uvod u 3D Game Development">
+              Uvod u 3D Game Development
+            </option>
           </Field>
           <ErrorMessage name="sporRad" component="div" className="error" />
         </div>
@@ -55,10 +71,18 @@ const Radionice = () => {
               Izaberi treću radionicu
             </option>{" "}
             <option value="">Ne želim treću opciju</option>
-            <option value="Prva radionica">Prva radionica</option>
-            <option value="Druga radionica">Druga radionica</option>
-            <option value="Treća radionica">Treća radionica</option>
-            <option value="Četvrta radionica">Četvrta radionica</option>
+            <option value="Izazovi u B2C monetizaciji 5G usluga">
+              Izazovi u B2C monetizaciji 5G usluga
+            </option>
+            <option value="Uvod u Angular">Uvod u Angular</option>
+            <option value="Machine learning">Machine learning</option>
+            <option value="Spring Boot">Spring Boot</option>
+            <option value="DevOps pristup razvoju softvera">
+              DevOps pristup razvoju softvera
+            </option>
+            <option value="Uvod u 3D Game Development">
+              Uvod u 3D Game Development
+            </option>
           </Field>
           <ErrorMessage name="trecRad" component="div" className="error" />
         </div>

@@ -36,10 +36,10 @@ const SpeedDating = () => {
             <Field
               type="checkbox"
               name="datingComp"
-              value="Eyesee"
+              value="EyeSee"
               className="checkbox"
             />
-            Eyesee
+            EyeSee
           </label>
           <label className="checkbox-group">
             <Field
@@ -57,16 +57,16 @@ const SpeedDating = () => {
               value="Raiffeisen"
               className="checkbox"
             />
-            Raiffeisen
+            Raiffeisen banka
           </label>
           <label className="checkbox-group">
             <Field
               type="checkbox"
               name="datingComp"
-              value="Semos education"
+              value="Semos Education"
               className="checkbox"
             />
-            Semos education
+            Semos Education
           </label>
           <ErrorMessage name="datingComp" component="div" className="error" />
         </div>

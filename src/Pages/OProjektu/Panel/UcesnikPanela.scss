@@ -1,6 +1,8 @@
 @import "../../../global.scss";
 
 .ucesnik-panela {
+  min-height: 31rem;
+  align-self: flex-start;
   overflow: hidden;
   position: relative;
   margin: 1rem;
@@ -29,6 +31,7 @@
     background: $pozadina_siva;
   }
   .ucesnik {
+    width: 77%;
     @include box-center($justify: space-between);
     gap: 1rem;
     .img-wrapper {
@@ -80,9 +83,9 @@
   .ucesnik-panela {
     padding: 1rem;
     padding-top: 5.5rem;
-    &:first-child {
-      padding-top: 1rem;
-    }
+    // &:first-child {
+    //   padding-top: 1rem;
+    // }
     .ucesnik {
       flex-direction: column;
       .podaci h3 {

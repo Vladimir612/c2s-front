@@ -85,7 +85,7 @@ const RadionicaKartica = (props) => {
                 transition={{ duration: 0.5 }}
               >
                 <p className="predavac-ime">{props.radionica.predavac.ime}</p>
-                <p className="predavac-indikator">PREDAVAC</p>
+                <p className="predavac-indikator">PREDAVAČ</p>
                 <p className="predavac-vise">{props.radionica.predavac.vise}</p>
               </motion.div>
             </motion.div>
@@ -111,7 +111,7 @@ const RadionicaKartica = (props) => {
                 transition={{ duration: 0.5 }}
               >
                 <p className="predavac-ime">{props.radionica.predavac2.ime}</p>
-                <p className="predavac-indikator">PREDAVAC</p>
+                <p className="predavac-indikator">PREDAVAČ</p>
                 <p className="predavac-vise">
                   {props.radionica.predavac2.vise}
                 </p>
@@ -130,9 +130,9 @@ const RadionicaKartica = (props) => {
             onClick={() => setPrikaziDetaljnije(!prikaziDetaljnije)}
           >
             {!prikaziDetaljnije ? (
-              <p>Prikazi detaljnije</p>
+              <p>Prikaži detaljnije</p>
             ) : (
-              <p>Sakrij detaljnije</p>
+              <p>Sakrij detalje</p>
             )}
             <motion.div
               className="strelica-wrapper"

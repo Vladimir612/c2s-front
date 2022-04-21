@@ -8,8 +8,9 @@ const PanelDiskusija = () => {
       <div className="input-group">
         <div className="label-group">
           <label htmlFor="name" className="desc">
-            S obzirom da je tema ovogodišnjeg panela “__________”, šta bi sve
-            voleo/la da čuješ od naših panelista?*
+            S obzirom na to da je tema ovogodišnjeg panela{" "}
+            <i>Budi i ti deo uspešnih priča</i> šta bi sve voleo/la da čuješ od
+            naših panelista?*
           </label>
         </div>
         <div className="field-group">

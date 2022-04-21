@@ -57,16 +57,16 @@ const Agenda = () => {
         <h2>AGENDA</h2>
         <div className="agenda-content">
           <AgendaItem
-            datum="15 MAJ"
+            datum="14. MAJ"
             mesto="Fakultet organizacionih nauka"
             raspored={[
               {
                 vreme: "10:30 - 11:15",
-                desavanje: "OTVARANJE PROJEKTA",
+                desavanje: "SVEČANO OTVARANJE PROJEKTA",
               },
               {
                 vreme: "11:15 - 13:00",
-                desavanje: "PANEL",
+                desavanje: "PANEL DISKUSIJA",
               },
               {
                 vreme: "13:00 - 13:15",
@@ -96,7 +96,7 @@ const Agenda = () => {
           />
           <AgendaItem
             obrnuto={true}
-            datum="16 MAJ"
+            datum="15. MAJ"
             mesto="Fakultet organizacionih nauka"
             raspored={[
               {
@@ -122,8 +122,8 @@ const Agenda = () => {
             ]}
           />
           <AgendaItem
-            datum="17 MAJ"
-            mesto="Fakultet organizacionih nauka"
+            datum="16. MAJ"
+            mesto="Envoy Conference Centar"
             raspored={[
               {
                 vreme: "12:00 - 15:00",
@@ -133,8 +133,8 @@ const Agenda = () => {
           />
           <AgendaItem
             obrnuto={true}
-            datum="18 MAJ"
-            mesto="Fakultet organizacionih nauka"
+            datum="17. MAJ"
+            mesto="Envoy Conference Centar"
             raspored={[
               {
                 vreme: "10:00 - 13:00",
@@ -146,7 +146,7 @@ const Agenda = () => {
               },
               {
                 vreme: "16:00 - 18:00",
-                desavanje: "ZATVARANJE PROJEKTA",
+                desavanje: "SVEČANO ZATVARANJE PROJEKTA",
               },
             ]}
           />

@@ -35,6 +35,8 @@
     @include box-center;
     gap: 3rem;
     .left {
+      font-size: 1.45rem;
+      align-self: flex-start;
       z-index: 1;
       width: 50%;
       h2 {

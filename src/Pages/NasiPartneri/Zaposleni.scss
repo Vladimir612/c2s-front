@@ -1,7 +1,9 @@
 @import "../../global.scss";
 
 .zaposleni {
-  width: 18rem;
+  width: 22rem;
+  max-width: 90vw;
+  min-height: 24rem;
   padding: 1rem;
   @include box-center($direction: column);
   background: $pozadina_tamna;
@@ -14,17 +16,18 @@
     color: $naslov_tamna;
     margin-bottom: 1rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .zaposleni-img {
     @include fit-image;
     object-position: top;
-    width: 8rem;
-    height: 8rem;
+    width: 6.5rem;
+    height: 6.5rem;
     border-radius: 50%;
     margin-bottom: 1rem;
   }
   .zaposleni-je-rekao {
     text-align: center;
+    font-size: 0.9rem;
   }
 }
