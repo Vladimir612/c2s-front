@@ -55,7 +55,7 @@ const Radionice = () => {
   };
 
   const radionica2 = {
-    naslov: "Uvod u Angular",
+    naslov: "Angular: Razvoj web aplikacije i VS Code ekstenzije",
     prviParagraf:
       "Ako želite da naučite osnove Angular-a i zajedno sa iskusnim predavačem prođete kroz razvoj Angular Web aplikacije koristeći TypeScript, kao i kreiranje ekstenzije za Visual Studio Code, imaćete priliku za to na radionici koju će držati predstavnici iz kompanije Adacta. Nakon uvodnog predavanja gde možete da naučite više o razvoju web aplikacija sa fokusom na Single Page aplikacije, Angular i TypeScript, bićete u prilici da čujete opis osnovnih koncepata koji se koriste u Angular aplikaciji.",
     drugiParagraf:
@@ -78,7 +78,7 @@ const Radionice = () => {
   };
 
   const radionica3 = {
-    naslov: "Machine learning",
+    naslov: "React: Razvoj Emotion Viewer aplikacije",
     prviParagraf:
       "Kreiraj real-world aplikaciju od nule uz React, TypeScript, Chakra UI i Zustand. Na ovoj radionici imaćeš priliku da kreiraš Emotion Viewer aplikaciju od nule i uz to naučiš neke od najsavremenijih tehnologija koje se koriste u EyeSee-u. Ova aplikacija će moći da izlista video snimke, pregleda ih i utvrdi koju emociju pokazuje tester na video snimku. ",
     drugiParagraf:
@@ -101,7 +101,7 @@ const Radionice = () => {
   };
 
   const radionica4 = {
-    naslov: "Spring Boot",
+    naslov: "Spring Boot: Razvoj API backend sistema",
     prviParagraf:
       "Kada govorimo o zahtevima tržišta u IT industriji, ukoliko pogledate trenutno stanje na bilo kom poslovnom portalu, videćete da je tražnja za Java programerima koji vladaju Spring radnim okruženjem ogromna. Zašto je to tako? Odgovor na to pitanje ćete dobiti na ovoj dvodnevnoj radionici. Cilj radionice jeste da zajedno izgradimo API backend sistem koristeći Spring Boot radno okruženje, koristeći najbolje prakse na tržištu i prateći principe clean code-a.",
     drugiParagraf:

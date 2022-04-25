@@ -74,7 +74,7 @@ const Agenda = () => {
               },
               {
                 vreme: "13:15 - 14:30",
-                desavanje: "RADIONICA I",
+                desavanje: "RADIONICE",
               },
               {
                 vreme: "14:30 - 15:00",
@@ -82,7 +82,7 @@ const Agenda = () => {
               },
               {
                 vreme: "15:00 - 16:15",
-                desavanje: "RADIONICA II",
+                desavanje: "RADIONICE",
               },
               {
                 vreme: "16:15 - 16:30",
@@ -90,7 +90,7 @@ const Agenda = () => {
               },
               {
                 vreme: "16:30 - 17:30",
-                desavanje: "RADIONICA III",
+                desavanje: "RADIONICE",
               },
             ]}
           />
@@ -101,7 +101,7 @@ const Agenda = () => {
             raspored={[
               {
                 vreme: "11:00 - 12:15",
-                desavanje: "RADIONICA IV",
+                desavanje: "RADIONICE",
               },
               {
                 vreme: "12:15 - 12:45",
@@ -109,7 +109,7 @@ const Agenda = () => {
               },
               {
                 vreme: "12:45 - 14:00",
-                desavanje: "RADIONICA V",
+                desavanje: "RADIONICE",
               },
               {
                 vreme: "14:00 - 14:15",
@@ -117,7 +117,7 @@ const Agenda = () => {
               },
               {
                 vreme: "14:15 - 15:15",
-                desavanje: "RADIONICA VI",
+                desavanje: "RADIONICE",
               },
             ]}
           />

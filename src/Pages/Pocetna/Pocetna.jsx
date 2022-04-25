@@ -117,7 +117,7 @@ const Pocetna = () => {
       partnerSlika: dragibravo,
       partnerIme: "Dragi Bravo",
       pozadina: "#fff",
-      link: "https://knjaz.rs/portfolio/guarana/",
+      link: "https://www.instagram.com/dragibravo/",
     },
     {
       partnerSlika: escape,
