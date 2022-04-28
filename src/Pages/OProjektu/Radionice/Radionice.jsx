@@ -5,7 +5,7 @@ import RadionicaKartica from "./RadionicaKartica";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 //kompanije
-import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
+// import raiffeisen from "../../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
 import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
 import a1 from "../../../Assets/Images/Partneri/pokrovitelji/a1.png";
 import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
@@ -25,10 +25,11 @@ import VladimirMatic from "../../../Assets/Images/Partneri/Eyesee/zaposleni/Vlad
 import DraganKocic from "../../../Assets/Images/Partneri/Prime/radionice/DraganKocic.jpg";
 import MilicaMilekic from "../../../Assets/Images/Partneri/Prime/radionice/MilicaMilekic.jpg";
 
-import IvaKrcmar from "../../../Assets/Images/Partneri/Raiffeisen/radionice/IvaKrcmar.jpg";
-import MarkoMilosevic from "../../../Assets/Images/Partneri/Raiffeisen/radionice/MarkoMilosevic.jpg";
+// import IvaKrcmar from "../../../Assets/Images/Partneri/Raiffeisen/radionice/IvaKrcmar.jpg";
+// import MarkoMilosevic from "../../../Assets/Images/Partneri/Raiffeisen/radionice/MarkoMilosevic.jpg";
 
 import NikolaGarabandic from "../../../Assets/Images/Partneri/Semos/radionice/NikolaGarabandic.jpg";
+import RaiffeisenKartica from "../../../Components/RaiffeisenKartica/RaiffeisenKartica";
 
 const Radionice = () => {
   const radionica1 = {
@@ -123,28 +124,28 @@ const Radionice = () => {
     },
   };
 
-  const radionica5 = {
-    naslov: "DevOps pristup razvoju softvera",
-    prviParagraf:
-      "Ovladavanje temom agilnog razvoja softvera postaje sve više traženo u oblasti informacionih tehnologija. Priliku za upoznavanje sa ovom oblašću i primenu alata na konkretnom, prethodno razvijenom projektu imaćete upravo na radionici koju će držati zaposleni u kompaniji Raiffeisen banka.",
-    drugiParagraf:
-      "Ukoliko se odlučite za radionicu kompanije Raiffeisen banka trebalo bi pre samog dolaska da imate implementiranu aplikaciju u nekoj od predloženih tehnologija (JavaScript, Java, Python, C#), čiju kompleksnost određujete samostalno. Prilikom razvoja aplikacije, potrebno je verzionisati kod korišćenjem Git-a, dok bi ciljana platforma za kreiranje repozitorijuma bi bio Gitlab. Drugi dan dan radionice biće posvećen DevOps pristupu, gde bi bila obrađena kontejnerizacija projekata i upoznavanje sa pisanjem CI/CD skripti.",
-    predavac: {
-      ime: "Iva Krčmar",
-      vise: "Iva Krčmar je rođena 1993. godine u Beogradu, završila Petu ekonomsku školu Rakovica i student je završne godine na Fakultetu organizacionih nauka u Beogradu, smer informacioni sistemi i tehnologije. Od 2018. godine radi u razvojnom timu Raiffeisen banke kao web developer. Imala je priliku da radi na razvoju projekata kako za fizička, tako i za pravna lica.  Deo je agilnog tima koji se pretežno bavi razvojem online kredita i tekućih računa za small business klijente.",
-      slika: IvaKrcmar,
-    },
-    predavac2: {
-      ime: "Mirko Milošević",
-      vise: "Mirko Milošević je rođen 1993. godine u Beogradu, gde je i završio Trinaestu beogradsku gimnaziju i Elektrotehnički fakultet, smer računarska tehnika i informatika. Tokom studiranja učestvovao u radu međunarodnih studentskih organizacija. Od 2018. godine radi za Raiffeisen banku kao backend developer na njihovim digitalnim proizvodima. Deo je agilnog tima koji se pretežno bavi razvojem online kredita i tekućih računa za small business klijente.",
-      slika: MarkoMilosevic,
-    },
-    kompanija: {
-      ime: "Raiffeisen",
-      link: "/nasi-partneri/raiffeisen",
-      slika: raiffeisen,
-    },
-  };
+  // const radionica5 = {
+  //   naslov: "DevOps pristup razvoju softvera",
+  //   prviParagraf:
+  //     "Ovladavanje temom agilnog razvoja softvera postaje sve više traženo u oblasti informacionih tehnologija. Priliku za upoznavanje sa ovom oblašću i primenu alata na konkretnom, prethodno razvijenom projektu imaćete upravo na radionici koju će držati zaposleni u kompaniji Raiffeisen banka.",
+  //   drugiParagraf:
+  //     "Ukoliko se odlučite za radionicu kompanije Raiffeisen banka trebalo bi pre samog dolaska da imate implementiranu aplikaciju u nekoj od predloženih tehnologija (JavaScript, Java, Python, C#), čiju kompleksnost određujete samostalno. Prilikom razvoja aplikacije, potrebno je verzionisati kod korišćenjem Git-a, dok bi ciljana platforma za kreiranje repozitorijuma bi bio Gitlab. Drugi dan dan radionice biće posvećen DevOps pristupu, gde bi bila obrađena kontejnerizacija projekata i upoznavanje sa pisanjem CI/CD skripti.",
+  //   predavac: {
+  //     ime: "Iva Krčmar",
+  //     vise: "Iva Krčmar je rođena 1993. godine u Beogradu, završila Petu ekonomsku školu Rakovica i student je završne godine na Fakultetu organizacionih nauka u Beogradu, smer informacioni sistemi i tehnologije. Od 2018. godine radi u razvojnom timu Raiffeisen banke kao web developer. Imala je priliku da radi na razvoju projekata kako za fizička, tako i za pravna lica.  Deo je agilnog tima koji se pretežno bavi razvojem online kredita i tekućih računa za small business klijente.",
+  //     slika: IvaKrcmar,
+  //   },
+  //   predavac2: {
+  //     ime: "Mirko Milošević",
+  //     vise: "Mirko Milošević je rođen 1993. godine u Beogradu, gde je i završio Trinaestu beogradsku gimnaziju i Elektrotehnički fakultet, smer računarska tehnika i informatika. Tokom studiranja učestvovao u radu međunarodnih studentskih organizacija. Od 2018. godine radi za Raiffeisen banku kao backend developer na njihovim digitalnim proizvodima. Deo je agilnog tima koji se pretežno bavi razvojem online kredita i tekućih računa za small business klijente.",
+  //     slika: MarkoMilosevic,
+  //   },
+  //   kompanija: {
+  //     ime: "Raiffeisen",
+  //     link: "/nasi-partneri/raiffeisen",
+  //     slika: raiffeisen,
+  //   },
+  // };
 
   const radionica6 = {
     naslov: "Uvod u 3D Game Development",
@@ -190,22 +191,13 @@ const Radionice = () => {
           </p>
         </div>
       </div>
-      {/* <div className="presek-dana">
-        <div className="krug-presek">
-          <p>1.dan</p>
-        </div>
-      </div> */}
       <RadionicaKartica radionica={radionica1} />
       <RadionicaKartica radionica={radionica2} />
       <RadionicaKartica radionica={radionica3} />
-      {/* <div className="presek-dana">
-        <div className="krug-presek">
-          <p>2.dan</p>
-        </div>
-      </div> */}
       <RadionicaKartica radionica={radionica4} />
-      <RadionicaKartica radionica={radionica5} />
+      {/* <RadionicaKartica radionica={radionica5} /> */}
       <RadionicaKartica radionica={radionica6} />
+      <RaiffeisenKartica />
     </div>
   );
 };
