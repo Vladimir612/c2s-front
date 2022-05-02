@@ -53,6 +53,13 @@ const RadionicaKartica = (props) => {
               transition={{ duration: 0.5 }}
             >
               {props.radionica.drugiParagraf}
+              <br></br>
+              {props.radionica.naslov === "Uvod u 3D Game Development" && (
+                <span style={{ color: "#cc203a" }}>
+                  Napomena: Za ovu radionicu potrebno je poneti sopstveni
+                  laptop.
+                </span>
+              )}
             </motion.p>
           </div>
           <motion.div

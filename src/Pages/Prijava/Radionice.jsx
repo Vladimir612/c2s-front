@@ -18,9 +18,15 @@ const Radionice = () => {
             <option value="Izazovi u B2C monetizaciji 5G usluga">
               Izazovi u B2C monetizaciji 5G usluga
             </option>
-            <option value="Uvod u Angular">Uvod u Angular</option>
-            <option value="Machine learning">Machine learning</option>
-            <option value="Spring Boot">Spring Boot</option>
+            <option value="Uvod u Angular">
+              Angular: Razvoj web aplikacije i VS Code ekstenzije
+            </option>
+            <option value="Machine learning">
+              React: Razvoj Emotion Viewer aplikacije
+            </option>
+            <option value="Spring Boot">
+              Spring Boot: Razvoj API backend sistema
+            </option>
             <option value="DevOps pristup razvoju softvera">
               DevOps pristup razvoju softvera
             </option>
@@ -46,9 +52,15 @@ const Radionice = () => {
             <option value="Izazovi u B2C monetizaciji 5G usluga">
               Izazovi u B2C monetizaciji 5G usluga
             </option>
-            <option value="Uvod u Angular">Uvod u Angular</option>
-            <option value="Machine learning">Machine learning</option>
-            <option value="Spring Boot">Spring Boot</option>
+            <option value="Uvod u Angular">
+              Angular: Razvoj web aplikacije i VS Code ekstenzije
+            </option>
+            <option value="Machine learning">
+              React: Razvoj Emotion Viewer aplikacije
+            </option>
+            <option value="Spring Boot">
+              Spring Boot: Razvoj API backend sistema
+            </option>
             <option value="DevOps pristup razvoju softvera">
               DevOps pristup razvoju softvera
             </option>
@@ -74,9 +86,15 @@ const Radionice = () => {
             <option value="Izazovi u B2C monetizaciji 5G usluga">
               Izazovi u B2C monetizaciji 5G usluga
             </option>
-            <option value="Uvod u Angular">Uvod u Angular</option>
-            <option value="Machine learning">Machine learning</option>
-            <option value="Spring Boot">Spring Boot</option>
+            <option value="Uvod u Angular">
+              Angular: Razvoj web aplikacije i VS Code ekstenzije
+            </option>
+            <option value="Machine learning">
+              React: Razvoj Emotion Viewer aplikacije
+            </option>
+            <option value="Spring Boot">
+              Spring Boot: Razvoj API backend sistema
+            </option>
             <option value="DevOps pristup razvoju softvera">
               DevOps pristup razvoju softvera
             </option>
