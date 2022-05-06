@@ -194,7 +194,7 @@ const Nav = () => {
             </motion.button>
           </Link>
 
-          <Link
+          {/* <Link
             to="/prijava"
             onClick={() => {
               setMenuOpen(false);
@@ -217,7 +217,7 @@ const Nav = () => {
             >
               Prijavi se
             </motion.button>
-          </Link>
+          </Link> */}
         </div>
       </nav>
       <motion.div
@@ -392,7 +392,7 @@ const Nav = () => {
               CV generator
             </motion.button>
           </Link>
-          <Link
+          {/* <Link
             to="/prijava"
             onClick={() => {
               setMenuOpen(false);
@@ -409,7 +409,7 @@ const Nav = () => {
             >
               Prijavi se
             </motion.button>
-          </Link>
+          </Link> */}
         </ul>
       </motion.div>
     </>

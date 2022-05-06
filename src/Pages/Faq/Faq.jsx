@@ -67,9 +67,7 @@ const Faq = () => {
                 <p>
                   Mogu se prijaviti studenti svih fakulteta koji žele da kroz
                   učesće na projektu steknu nova znanja i iskustva iz oblasti
-                  informacionih tehnologija. Prijave se nalaze na stranici
-                  <Link to="/prijava"> PRIJAVA</Link> i traju do 5. maja do
-                  23:59č.
+                  informacionih tehnologija. Prijave su trenutno zatvorene.
                 </p>
               }
             />

@@ -126,7 +126,7 @@ const Agenda = () => {
             mesto="Envoy Conference Centar"
             raspored={[
               {
-                vreme: "12:00 - 15:00",
+                vreme: "11:00 - 17:00",
                 desavanje: "SPEED DATING",
               },
             ]}

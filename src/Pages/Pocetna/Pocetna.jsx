@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Lopta from "./../../Utilities/Lopta/Lopta";
@@ -232,37 +232,37 @@ const Pocetna = () => {
     },
   ];
 
-  //timer
-  const [timerDays, setTimerDays] = useState();
-  const [timerHours, setTimerHours] = useState();
-  const [timerMinutes, setTimerMinutes] = useState();
+  // //timer
+  // const [timerDays, setTimerDays] = useState();
+  // const [timerHours, setTimerHours] = useState();
+  // const [timerMinutes, setTimerMinutes] = useState();
 
-  let interval;
+  // let interval;
 
-  const startTimer = () => {
-    const countDownDate = new Date("May 6, 2022").getTime();
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
-      const hours = Math.floor(
-        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
+  // const startTimer = () => {
+  //   const countDownDate = new Date("May 6, 2022").getTime();
+  //   interval = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const distance = countDownDate - now;
+  //     const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+  //     const hours = Math.floor(
+  //       (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
+  //     );
+  //     const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
 
-      if (distance < 0) {
-        clearInterval(interval.curernt);
-      } else {
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-      }
-    });
-  };
+  //     if (distance < 0) {
+  //       clearInterval(interval.curernt);
+  //     } else {
+  //       setTimerDays(days);
+  //       setTimerHours(hours);
+  //       setTimerMinutes(minutes);
+  //     }
+  //   });
+  // };
 
-  useEffect(() => {
-    startTimer();
-  });
+  // useEffect(() => {
+  //   startTimer();
+  // });
 
   return (
     <>
@@ -307,7 +307,7 @@ const Pocetna = () => {
                 Očekujemo te od 14. do 17. maja.
               </p>
               <div className="timer">
-                <div className="dani">
+                {/* <div className="dani">
                   <p>{timerDays}</p>
                   <p>dana</p>
                 </div>
@@ -318,10 +318,11 @@ const Pocetna = () => {
                 <div className="minuti">
                   <p>{timerMinutes}</p>
                   <p>minuta</p>
-                </div>
+                </div> */}
+                <p>PRIJAVE SU ZATVORENE!</p>
               </div>
               <div className="dugmad-grupa">
-                <Link to="/prijava">
+                {/* <Link to="/prijava">
                   <motion.button
                     className="dugme crveno"
                     whileHover={{
@@ -333,7 +334,7 @@ const Pocetna = () => {
                   >
                     Prijavi se
                   </motion.button>
-                </Link>
+                </Link> */}
                 <Link to="/o-projektu/radionice">
                   <motion.button
                     className="dugme transparentno"

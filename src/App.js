@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Pocetna from "./Pages/Pocetna/Pocetna";
 import Error from "./Pages/Error/Error";
-import Prijava from "./Pages/Prijava/Prijava";
+// import Prijava from "./Pages/Prijava/Prijava";
 import Faq from "./Pages/Faq/Faq";
 import NasiPartneri from "./Pages/NasiPartneri/NasiPartneri";
 import ONama from "./Pages/ONama/ONama";
@@ -25,7 +25,7 @@ function App() {
           element={<OstaliPartneri />}
         />
         <Route path="/faq/*" element={<Faq />} />
-        <Route path="/prijava" element={<Prijava />} />
+        {/* <Route path="/prijava" element={<Prijava />} /> */}
         <Route path="/generator" element={<Generator />} />
         <Route path="*" element={<Error />} />
       </Routes>
