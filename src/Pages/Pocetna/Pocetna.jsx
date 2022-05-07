@@ -433,7 +433,7 @@ const Pocetna = () => {
                 </div>
               </a>
               <a
-                href="https://semosedu.com.mk/"
+                href="https://semosedu.com.mk/Pocetna.aspx"
                 target="_blank"
                 rel="noreferrer"
               >
