@@ -25,14 +25,14 @@ const Footer = (props) => {
         <img src={c2sSvetli} alt="c2s logo" />
       </div>
       <motion.button
-        className="dugme sivo"
+        className="btn sivo"
         whileHover={{
           scale: 1.1,
         }}
         whileTap={{
           scale: 0.9,
         }}
-        onClick={() => scrollFunc(props.pocetakPocetna)}
+        onClick={() => scrollFunc(props.pageStartRef)}
       >
         idi na vrh
         <BsArrowUpShort size={25} color="#14191b" />
@@ -40,7 +40,7 @@ const Footer = (props) => {
       <div className="kontakt-section">
         <Link to="/faq/kontakt">
           <motion.button
-            className="dugme transparentno"
+            className="btn transparentno"
             whileHover={{
               scale: 1.1,
             }}

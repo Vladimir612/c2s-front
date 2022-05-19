@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.zaposleni {
+.employee {
   width: 22rem;
   max-width: 90vw;
   min-height: 24rem;
@@ -9,16 +9,16 @@
   background: $pozadina_tamna;
   border-radius: 1rem;
   box-shadow: 0 2px 15px #000;
-  .zaposleni-wrapper {
+  .employee-wrapper {
     @include box-center($direction: column);
   }
-  .zaposleni-name {
+  .employee-name {
     color: $naslov_tamna;
     margin-bottom: 1rem;
     text-align: center;
     font-size: 1.3rem;
   }
-  .zaposleni-img {
+  .employee-img {
     @include fit-image;
     object-position: top;
     width: 6.5rem;
@@ -26,7 +26,7 @@
     border-radius: 50%;
     margin-bottom: 1rem;
   }
-  .zaposleni-je-rekao {
+  .employee-has-told {
     text-align: center;
     font-size: 0.9rem;
   }

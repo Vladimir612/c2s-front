@@ -19,7 +19,7 @@ const TechChallenge = () => {
   return (
     <div className="tech-challenge-container">
       <div className="o-projektu-uvod">
-        <div className="slika">
+        <div className="photo">
           <LazyLoadImage effect="blur" src={techSlika} alt="Tech Challenge" />
         </div>
         <div className="tekst">
@@ -40,7 +40,7 @@ const TechChallenge = () => {
             style={{ display: "none" }}
           >
             <motion.button
-              className="dugme transparentno"
+              className="btn transparentno"
               whileHover={{
                 scale: 1.1,
               }}

@@ -130,7 +130,7 @@ const OpsteInformacije = () => {
 
           <Link to="/generator" target="_blank">
             <motion.button
-              className="white-dugme"
+              className="white-btn"
               style={{ width: "100%", marginLeft: 0 }}
               type="button"
               whileHover={{

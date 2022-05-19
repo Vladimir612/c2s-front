@@ -39,7 +39,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PartneriSlider from "./../Pocetna/PartneriSlider";
 import { motion } from "framer-motion";
-import Lopta from "../../Utilities/Lopta/Lopta";
+import Ball from "../../Utilities/Ball/Ball";
 
 const OstaliPartneri = () => {
   const pocetakOstaliPartneri = useRef();
@@ -50,43 +50,43 @@ const OstaliPartneri = () => {
   const godisnjiPartneri = [
     {
       partnerSlika: fon,
-      partnerIme: "Fon",
+      partnerName: "Fon",
       pozadina: "#fff",
       link: "http://fon.bg.ac.rs/",
     },
     {
       partnerSlika: prime,
-      partnerIme: "Prime",
+      partnerName: "Prime",
       pozadina: "#fff",
       link: "https://www.primeholding.com/",
     },
     {
       partnerSlika: mainstream,
-      partnerIme: "Mainstream",
+      partnerName: "Mainstream",
       pozadina: "#fff",
       link: "https://www.mainstream.rs/",
     },
     {
       partnerSlika: devit,
-      partnerIme: "DevIT",
+      partnerName: "DevIT",
       pozadina: "#fff",
       link: "https://www.devit.rs/",
     },
     {
       partnerSlika: guarana,
-      partnerIme: "Guarana",
+      partnerName: "Guarana",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/",
     },
     {
       partnerSlika: hedwell,
-      partnerIme: "Hedwell",
+      partnerName: "Hedwell",
       pozadina: "#fff",
       link: "https://hedwell.com/",
     },
     {
       partnerSlika: digitec,
-      partnerIme: "Digitec",
+      partnerName: "Digitec",
       pozadina: "#fff",
       link: "https://www.digitec.rs/reklamni_materijali",
     },
@@ -138,37 +138,37 @@ const OstaliPartneri = () => {
   const robniPartneri = [
     {
       partnerSlika: dragibravo,
-      partnerIme: "Dragi Bravo",
+      partnerName: "Dragi Bravo",
       pozadina: "#fff",
       link: "https://www.instagram.com/dragibravo/",
     },
     {
       partnerSlika: escape,
-      partnerIme: "Escape",
+      partnerName: "Escape",
       pozadina: "#fff",
       link: "https://escapegame.rs/",
     },
     {
       partnerSlika: nescafe,
-      partnerIme: "Nescafe",
+      partnerName: "Nescafe",
       pozadina: "#fff",
       link: "https://www.nescafe.com/rs/nase-kafe/nescafe-2in1",
     },
     {
       partnerSlika: dragibravo,
-      partnerIme: "Dragi Bravo",
+      partnerName: "Dragi Bravo",
       pozadina: "#fff",
       link: "https://www.instagram.com/dragibravo/",
     },
     {
       partnerSlika: escape,
-      partnerIme: "Escape",
+      partnerName: "Escape",
       pozadina: "#fff",
       link: "https://escapegame.rs/",
     },
     {
       partnerSlika: nescafe,
-      partnerIme: "Nescafe",
+      partnerName: "Nescafe",
       pozadina: "#fff",
       link: "https://www.nescafe.com/rs/nase-kafe/nescafe-2in1",
     },
@@ -177,97 +177,97 @@ const OstaliPartneri = () => {
   const medijskiPartneri = [
     {
       partnerSlika: BestBg,
-      partnerIme: "Best Beograd",
+      partnerName: "Best Beograd",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: caseFon,
-      partnerIme: "Case study club",
+      partnerName: "Case study club",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: centarZaRazvoj,
-      partnerIme: "Centar za razvoj karijere",
+      partnerName: "Centar za razvoj karijere",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: Eestec,
-      partnerIme: "Eestec",
+      partnerName: "Eestec",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: BestNs,
-      partnerIme: "Best Novi Sad",
+      partnerName: "Best Novi Sad",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: fon,
-      partnerIme: "FON",
+      partnerName: "FON",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: fonovCentar,
-      partnerIme: "Fonov centar za razvoj karijere",
+      partnerName: "Fonov centar za razvoj karijere",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: future,
-      partnerIme: "Future",
+      partnerName: "Future",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: kancelarija,
-      partnerIme: "Kancelarija",
+      partnerName: "Kancelarija",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: Probjave,
-      partnerIme: "prObjave",
+      partnerName: "prObjave",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: Savez,
-      partnerIme: "Savez studenata Fona",
+      partnerName: "Savez studenata Fona",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: spof,
-      partnerIme: "SPOF",
+      partnerName: "SPOF",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: Suma,
-      partnerIme: "Suma",
+      partnerName: "Suma",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: SvetKompjutera,
-      partnerIme: "Svet kompjutera",
+      partnerName: "Svet kompjutera",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: Unija,
-      partnerIme: "Unija",
+      partnerName: "Unija",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
     {
       partnerSlika: Viser,
-      partnerIme: "Viser",
+      partnerName: "Viser",
       pozadina: "#fff",
       link: "https://knjaz.rs/portfolio/guarana/", //!treba
     },
@@ -275,10 +275,10 @@ const OstaliPartneri = () => {
 
   return (
     <>
-      <div className="pocetak-pocetna" ref={pocetakOstaliPartneri}></div>
+      <div className="ref-start" ref={pocetakOstaliPartneri}></div>
       <Nav />
-      <div className="ostali-partneri-container">
-        <div className="hero-partneri">
+      <div className="ostali-partners-container">
+        <div className="hero-partners">
           <motion.p
             animate={{ opacity: 1 }}
             initial={{
@@ -291,42 +291,42 @@ const OstaliPartneri = () => {
           </motion.p>
         </div>
         <div className="ostali-content">
-          <div className="lopte-anim">
-            <div className="prva-grupa">
-              <Lopta boja="bela" width="3rem" height="3rem" />
-              <Lopta boja="crvena" width="5rem" height="5rem" />
+          <div className="balls-anim">
+            <div className="first-group">
+              <Ball boja="white" width="3rem" height="3rem" />
+              <Ball boja="red" width="5rem" height="5rem" />
             </div>
-            <div className="druga-grupa">
-              <Lopta boja="bela" width="6.5rem" height="6.5rem" />
-              <Lopta boja="crvena" width="5rem" height="5rem" />
+            <div className="second-group">
+              <Ball boja="white" width="6.5rem" height="6.5rem" />
+              <Ball boja="red" width="5rem" height="5rem" />
             </div>
-            <div className="treca-grupa">
-              <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
-              <Lopta boja="crvena" width="5rem" height="5rem" />
+            <div className="third-group">
+              <Ball boja="transparentna" width="4.5rem" height="4.5rem" />
+              <Ball boja="red" width="5rem" height="5rem" />
             </div>
           </div>
-          <div className="ostali-partneri-slider">
+          <div className="ostali-partners-slider">
             <h3>GODIŠNJI PARTNERI</h3>
             <PartneriSlider
-              partneri={godisnjiPartneri}
+              partners={godisnjiPartneri}
               settings={allSettings}
               width="12rem"
               height="12rem"
             />
           </div>
-          <div className="ostali-partneri-slider">
+          <div className="ostali-partners-slider">
             <h3>ROBNI PARTNERI</h3>
             <PartneriSlider
-              partneri={robniPartneri}
+              partners={robniPartneri}
               settings={allSettings}
               width="12rem"
               height="12rem"
             />
           </div>
-          <div className="ostali-partneri-slider" style={{ display: "none" }}>
+          <div className="ostali-partners-slider" style={{ display: "none" }}>
             <h3>MEDIJSKI PARTNERI</h3>
             <PartneriSlider
-              partneri={medijskiPartneri}
+              partners={medijskiPartneri}
               settings={allSettings}
               width="12rem"
               height="12rem"
@@ -334,7 +334,7 @@ const OstaliPartneri = () => {
           </div>
         </div>
       </div>
-      <Footer pocetakPocetna={pocetakOstaliPartneri} />
+      <Footer pageStartRef={pocetakOstaliPartneri} />
     </>
   );
 };

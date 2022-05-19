@@ -1,16 +1,16 @@
 @import "../../global.scss";
 .input-wrapper {
-    margin-top: 1rem;
-    .ime-wrapper {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 0.5rem;
-        .obrisi-dugme {
-            margin-left: 1rem;
-            width: 2.8rem;
-            border-radius: 0.5rem;
-            border: 0;
-            background-color: $crvena;
-        }
+  margin-top: 1rem;
+  .name-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    .delete-btn {
+      margin-left: 1rem;
+      width: 2.8rem;
+      border-radius: 0.5rem;
+      border: 0;
+      background-color: $red;
     }
+  }
 }

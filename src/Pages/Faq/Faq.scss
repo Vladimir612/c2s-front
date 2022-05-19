@@ -1,146 +1,146 @@
 @import "../../global.scss";
 
 .faq-container {
-    margin: 0 2rem;
-    margin-top: 3.8rem;
-    padding: 2rem 3rem;
-    .lopte-anim {
-        z-index: -1;
-        position: absolute;
-        top: 5rem;
-        left: 0;
-        width: 100vw;
-        height: 60%;
-        &:nth-child(2) {
-            top: calc(100vh + 10%);
+  margin: 0 2rem;
+  margin-top: 3.8rem;
+  padding: 2rem 3rem;
+  .balls-anim {
+    z-index: -1;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100vw;
+    height: 60%;
+    &:nth-child(2) {
+      top: calc(100vh + 10%);
+    }
+    .first-group {
+      position: absolute;
+      top: 20%;
+      right: 40%;
+      .ball:first-child {
+        box-shadow: inset 10px -9px 31px 7px #000000eb,
+          7px 9px 16px 3px #0000004a;
+        animation-duration: 30s;
+        &::after {
+          box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
         }
-        .prva-grupa {
-            position: absolute;
-            top: 20%;
-            right: 40%;
-            .lopta:first-child {
-                box-shadow: inset 10px -9px 31px 7px #000000eb,
-                    7px 9px 16px 3px #0000004a;
-                animation-duration: 30s;
-                &::after {
-                    box-shadow: 0 3px 15px 19px rgb(255 255 255 / 47%);
-                }
-            }
-        }
-        .druga-grupa {
-            position: absolute;
-            top: 80%;
-            right: 10%;
-        }
+      }
     }
-    .questions {
-        @include box-center;
-        justify-content: flex-start;
+    .second-group {
+      position: absolute;
+      top: 80%;
+      right: 10%;
     }
-    .naslov {
-        color: #fff;
-        h2 {
-            font-size: 1.6rem;
-        }
-        h3 {
-            font-size: 1.4rem;
-        }
-        margin-bottom: 2rem;
+  }
+  .questions {
+    @include box-center;
+    justify-content: flex-start;
+  }
+  .heading {
+    color: #fff;
+    h2 {
+      font-size: 1.6rem;
     }
-    .mejl {
-        @include box-center($direction: column);
-        height: fit-content;
-        width: 100%;
-        .ime {
-            width: 100%;
-        }
-        .poruka {
-            width: 100%;
-        }
+    h3 {
+      font-size: 1.4rem;
     }
+    margin-bottom: 2rem;
+  }
+  .mail {
+    @include box-center($direction: column);
+    height: fit-content;
+    width: 100%;
+    .name {
+      width: 100%;
+    }
+    .message {
+      width: 100%;
+    }
+  }
 
-    .unos {
-        border: 1px solid #5f6368;
-        background-color: rgb(196, 196, 196);
-        border-radius: 1rem;
-        margin-bottom: 0.6rem;
-        padding-left: 0.4rem;
-        outline: 0px none transparent;
-    }
+  .inp {
+    border: 1px solid #5f6368;
+    background-color: rgb(196, 196, 196);
+    border-radius: 1rem;
+    margin-bottom: 0.6rem;
+    padding-left: 0.4rem;
+    outline: 0px none transparent;
+  }
 
-    .unos1 {
-        height: 2.15rem;
-    }
+  .input1 {
+    height: 2.15rem;
+  }
 
-    .unos2 {
-        height: 8rem;
-        padding-top: 0.4rem;
-    }
+  .input2 {
+    height: 8rem;
+    padding-top: 0.4rem;
+  }
 
-    .oko-dugme {
-        position: relative;
-        margin-top: -0.3rem;
-        width: 100%;
-    }
+  .oko-btn {
+    position: relative;
+    margin-top: -0.3rem;
+    width: 100%;
+  }
 
-    .polja {
-        width: 100%;
-    }
+  .fields {
+    width: 100%;
+  }
 
-    textarea {
-        resize: none;
-    }
+  textarea {
+    resize: none;
+  }
 
-    .odg {
-        position: relative;
-        border: 1px solid white;
-        overflow: hidden;
-        border-radius: 1.5rem;
-        padding: 1rem;
-        background-color: rgb(24, 29, 31);
+  .odg {
+    position: relative;
+    border: 1px solid white;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(24, 29, 31);
+  }
+  .ask-question {
+    @include box-center;
+    justify-content: flex-start;
+    max-width: 60rem;
+    .img-wrapper {
+      width: 50%;
+      max-width: 18rem;
+      img {
+        @include fit-image;
+      }
     }
-    .postavite-pitanje {
-        @include box-center;
-        justify-content: flex-start;
-        max-width: 60rem;
-        .img-wrapper {
-            width: 50%;
-            max-width: 18rem;
-            img {
-                @include fit-image;
-            }
-        }
-    }
-    .dugme-prijavi {
-        background: $crvena;
-        border-radius: 2rem;
-        width: 100%;
-        padding: 0.8rem 3rem;
-        cursor: pointer;
-        color: $aktivni_link;
-        outline: none;
-        border: none;
-        box-shadow: 2px 2px 9px #000000cc;
-    }
+  }
+  .btn-prijavi {
+    background: $red;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 0.8rem 3rem;
+    cursor: pointer;
+    color: $aktivni_link;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 9px #000000cc;
+  }
 
-    .uspesno-poruka {
-        font-size: 0.9rem;
-        color: limegreen;
-        font-style: italic;
-        align-self: flex-start;
-        margin-bottom: 0.5rem;
-    }
+  .success-message {
+    font-size: 0.9rem;
+    color: limegreen;
+    font-style: italic;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 700px) {
-    .faq-container {
-        padding: 3rem 0 0 0;
-        .postavite-pitanje {
-            flex-direction: column;
-            gap: 2rem;
-            .img-wrapper {
-                width: 90%;
-            }
-        }
+  .faq-container {
+    padding: 3rem 0 0 0;
+    .ask-question {
+      flex-direction: column;
+      gap: 2rem;
+      .img-wrapper {
+        width: 90%;
+      }
     }
+  }
 }

@@ -14,7 +14,7 @@
   .agenda-content {
     @include box-center($direction: column);
   }
-  .lopte-anim {
+  .balls-anim {
     z-index: 0;
     position: absolute;
     top: 0;
@@ -24,10 +24,10 @@
     &:nth-child(2) {
       top: 50%;
     }
-    .prva-grupa {
+    .first-group {
       position: absolute;
       left: 20%;
-      .lopta:first-child {
+      .ball:first-child {
         box-shadow: inset 10px -9px 31px 7px #000000eb,
           7px 9px 16px 3px #0000004a;
         animation-duration: 30s;
@@ -36,16 +36,16 @@
         }
       }
     }
-    .druga-grupa {
+    .second-group {
       position: absolute;
       top: 60%;
       right: 30%;
     }
-    .treca-grupa {
+    .third-group {
       position: absolute;
       top: 30%;
       right: 20%;
-      .lopta:first-child {
+      .ball:first-child {
         box-shadow: inset 6px -1px 37px 2px #000000a6,
           7px 9px 16px 3px #0000004a;
         z-index: 10;
@@ -62,8 +62,8 @@
     }
   }
 
-  .linija-lopte {
-    .linija {
+  .line-balls {
+    .line {
       position: absolute;
       top: 4rem;
       left: 50%;
@@ -82,7 +82,7 @@
       );
     }
   }
-  .lopte {
+  .balls {
     img {
       position: absolute;
       transform: translateX(-50%);
@@ -104,11 +104,11 @@
 
 @media only screen and (max-width: 1170px) {
   .agenda-container {
-    .linija-lopte {
-      .linija {
+    .line-balls {
+      .line {
         left: 4rem;
       }
-      .lopte {
+      .balls {
         img {
           left: 4rem;
         }
@@ -132,11 +132,11 @@
 @media only screen and (max-width: 550px) {
   .agenda-container {
     padding-left: 1.5rem;
-    .linija-lopte {
-      .linija {
+    .line-balls {
+      .line {
         left: 1rem;
       }
-      .lopte {
+      .balls {
         img {
           left: 1rem;
         }

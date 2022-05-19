@@ -10,51 +10,51 @@ import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { scrollFunc } from "../../Components/Footer/Footer";
 
 const OProjektu = () => {
-  const pocetakPocetna = useRef();
+  const pageStartRef = useRef();
   useEffect(() => {
-    scrollFunc(pocetakPocetna);
+    scrollFunc(pageStartRef);
   }, []);
   const location = useLocation();
-  let aktivnaStrana = -1;
+  let activePage = -1;
 
   switch (location.pathname) {
     case "/nasi-partneri":
-      aktivnaStrana = -1;
+      activePage = -1;
       break;
     case "/o-projektu/radionice":
-      aktivnaStrana = 1;
+      activePage = 1;
       break;
     case "/o-projektu/panel":
-      aktivnaStrana = 2;
+      activePage = 2;
       break;
     case "/o-projektu/speed-dating":
-      aktivnaStrana = 3;
+      activePage = 3;
       break;
     case "/o-projektu/tech-challenge":
-      aktivnaStrana = 4;
+      activePage = 4;
       break;
     default:
-      aktivnaStrana = -1;
+      activePage = -1;
       break;
   }
 
   return (
     <>
-      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
+      <div className="ref-start" ref={pageStartRef}></div>
       <Nav />
       <div className="o-projektu-container">
         <div className="o-projektu-navigation">
           <ul>
-            <li className={aktivnaStrana === 1 ? "active" : ""}>
+            <li className={activePage === 1 ? "active" : ""}>
               <Link to="/o-projektu/radionice">RADIONICE</Link>
             </li>
-            <li className={aktivnaStrana === 2 ? "active" : ""}>
+            <li className={activePage === 2 ? "active" : ""}>
               <Link to="/o-projektu/panel">PANEL DISKUSIJA</Link>
             </li>
-            <li className={aktivnaStrana === 3 ? "active" : ""}>
+            <li className={activePage === 3 ? "active" : ""}>
               <Link to="/o-projektu/speed-dating">SPEED DATING</Link>
             </li>
-            <li className={aktivnaStrana === 4 ? "active" : ""}>
+            <li className={activePage === 4 ? "active" : ""}>
               <Link to="/o-projektu/tech-challenge">TECH CHALLENGE</Link>
             </li>
           </ul>
@@ -71,23 +71,23 @@ const OProjektu = () => {
           <p>POGLEDAJ I OSTALE DELOVE</p>
           <div className="o-projektu-navigation">
             <ul>
-              <li className={aktivnaStrana === 1 ? "active" : ""}>
+              <li className={activePage === 1 ? "active" : ""}>
                 <Link to="/o-projektu/radionice">RADIONICE</Link>
               </li>
-              <li className={aktivnaStrana === 2 ? "active" : ""}>
+              <li className={activePage === 2 ? "active" : ""}>
                 <Link to="/o-projektu/panel">PANEL DISKUSIJA</Link>
               </li>
-              <li className={aktivnaStrana === 3 ? "active" : ""}>
+              <li className={activePage === 3 ? "active" : ""}>
                 <Link to="/o-projektu/speed-dating">SPEED DATING</Link>
               </li>
-              <li className={aktivnaStrana === 4 ? "active" : ""}>
+              <li className={activePage === 4 ? "active" : ""}>
                 <Link to="/o-projektu/tech-challenge">TECH CHALLENGE</Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <Footer pocetakPocetna={pocetakPocetna} />
+      <Footer pageStartRef={pageStartRef} />
     </>
   );
 };

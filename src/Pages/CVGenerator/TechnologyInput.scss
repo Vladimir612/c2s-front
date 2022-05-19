@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.technology-wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+
+  .technology-input {
+    margin-right: 1rem;
+  }
+
+  .technology-lvl-input {
+    margin-right: 1rem;
+  }
+
+  .delete-btn {
+    width: 6rem;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: $red;
+  }
+}

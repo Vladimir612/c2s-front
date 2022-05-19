@@ -1,9 +1,9 @@
 @import "../../global.scss";
 
-.ostali-partneri-container {
-  .hero-partneri {
+.ostali-partners-container {
+  .hero-partners {
     margin-top: 3.8rem;
-    background: $crvena;
+    background: $red;
     padding: 2rem 0;
     @include box-center;
     p {
@@ -16,7 +16,7 @@
   }
   .ostali-content {
     position: relative;
-    .lopte-anim {
+    .balls-anim {
       z-index: -1;
       position: absolute;
       top: 0;
@@ -26,10 +26,10 @@
       &:nth-child(2) {
         top: 50%;
       }
-      .prva-grupa {
+      .first-group {
         position: absolute;
         left: 20%;
-        .lopta:first-child {
+        .ball:first-child {
           box-shadow: inset 10px -9px 31px 7px #000000eb,
             7px 9px 16px 3px #0000004a;
           animation-duration: 30s;
@@ -38,16 +38,16 @@
           }
         }
       }
-      .druga-grupa {
+      .second-group {
         position: absolute;
         top: 60%;
         right: 30%;
       }
-      .treca-grupa {
+      .third-group {
         position: absolute;
         top: 30%;
         right: 20%;
-        .lopta:first-child {
+        .ball:first-child {
           box-shadow: inset 6px -1px 37px 2px #000000a6,
             7px 9px 16px 3px #0000004a;
           z-index: 10;
@@ -64,7 +64,7 @@
       }
     }
   }
-  .ostali-partneri-slider {
+  .ostali-partners-slider {
     margin-top: 2rem;
     padding: 1rem 2rem;
     h3 {
@@ -78,8 +78,8 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .ostali-partneri-container {
-    .ostali-partneri-slider {
+  .ostali-partners-container {
+    .ostali-partners-slider {
       h3 {
         padding-left: 0;
       }

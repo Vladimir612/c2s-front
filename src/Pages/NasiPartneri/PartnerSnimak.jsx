@@ -8,32 +8,32 @@ import { scrollFunc } from "../../Components/Footer/Footer";
 import LazyLoad from "react-lazyload";
 
 const PartnerSnimak = (props) => {
-  const pocetakPartneri = useRef();
+  const pageStartRef = useRef();
 
   useEffect(() => {
-    scrollFunc(pocetakPartneri);
+    scrollFunc(pageStartRef);
   }, []);
 
-  const handleMoveZaposleni = (napred) => {
-    if (napred) {
-      if (props.vidljivZaposleni === props.zaposleni.length - 1) {
-        props.setVidljivZaposleni(0);
+  const handleMoveEmployees = (forward) => {
+    if (forward) {
+      if (props.visibleEmployee === props.employee.length - 1) {
+        props.setVisibleEmployee(0);
       } else {
-        props.setVidljivZaposleni(props.vidljivZaposleni + 1);
+        props.setVisibleEmployee(props.visibleEmployee + 1);
       }
     } else {
-      if (props.vidljivZaposleni === 0) {
-        props.setVidljivZaposleni(props.zaposleni.length - 1);
+      if (props.visibleEmployee === 0) {
+        props.setVisibleEmployee(props.employee.length - 1);
       } else {
-        props.setVidljivZaposleni(props.vidljivZaposleni - 1);
+        props.setVisibleEmployee(props.visibleEmployee - 1);
       }
     }
   };
 
   return (
     <>
-      <div className="pocetak-pocetna" ref={pocetakPartneri}></div>
-      <div className="partneri-container">
+      <div className="ref-start" ref={pageStartRef}></div>
+      <div className="partners-container">
         <div className="video-wrapper">
           <LazyLoad>
             <video autoPlay loop muted key={props.video} poster={props.poster}>
@@ -42,61 +42,55 @@ const PartnerSnimak = (props) => {
           </LazyLoad>
         </div>
         <div className="left-arrow">
-          <Link
-            to={props.prevLink}
-            onClick={() => props.setVidljivZaposleni(0)}
-          >
+          <Link to={props.prevLink} onClick={() => props.setVisibleEmployee(0)}>
             <FiChevronLeft size={40} color="#b4afb3" />
           </Link>
         </div>
         <div className="right-arrow">
-          <Link
-            to={props.nextLink}
-            onClick={() => props.setVidljivZaposleni(0)}
-          >
+          <Link to={props.nextLink} onClick={() => props.setVisibleEmployee(0)}>
             <FiChevronRight size={40} color="#b4afb3" />
           </Link>
         </div>
 
         <div className="content">
           <div className="o-kompaniji">
-            <h2>{props.partnerIme}</h2>
-            <p>{props.oPartneru}</p>
+            <h2>{props.partnerName}</h2>
+            <p>{props.aboutPartner}</p>
           </div>
-          <div className="zaposleni-slider">
-            {props.zaposleni.map(
+          <div className="employee-slider">
+            {props.employee.map(
               (radnik, index) =>
-                props.vidljivZaposleni === index && (
+                props.visibleEmployee === index && (
                   <Zaposleni
                     key={index}
-                    slikaZaposlenog={radnik.slika}
-                    imeZaposlenog={radnik.ime}
+                    slikaZaposlenog={radnik.photo}
+                    imeZaposlenog={radnik.name}
                     zaposleniJeRekao={radnik.zaposleniJeRekao}
                   />
                 )
             )}
-            <div className="zaposleni-nav">
-              <div className="zaposleni-levo">
+            <div className="employee-nav">
+              <div className="employee-levo">
                 <FiChevronLeft
                   color="#fff"
                   size={25}
                   style={{ cursor: "pointer" }}
-                  onClick={() => handleMoveZaposleni(false)}
+                  onClick={() => handleMoveEmployees(false)}
                 />
               </div>
-              <div className="zaposleni-desno">
+              <div className="employee-desno">
                 <FiChevronRight
                   color="#fff"
                   size={25}
                   style={{ cursor: "pointer" }}
-                  onClick={() => handleMoveZaposleni(true)}
+                  onClick={() => handleMoveEmployees(true)}
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Footer pocetakPocetna={pocetakPartneri} />
+      <Footer pageStartRef={pageStartRef} />
     </>
   );
 };

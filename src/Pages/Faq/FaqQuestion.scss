@@ -8,7 +8,7 @@
   backdrop-filter: blur(18px);
   border-radius: 1.5rem;
   width: fit-content;
-  .odgovor-wrapper {
+  .answer-wrapper {
     overflow: hidden;
     font-weight: 300;
     max-width: 60rem;
@@ -19,12 +19,12 @@
   p {
     color: #fff;
   }
-  .pitanje-wrapper {
+  .question-wrapper {
     @include box-center;
     justify-content: flex-start;
     margin-bottom: 1rem;
-    .prikazi-odgovor {
-      background: $crvena;
+    .show-answer {
+      background: $red;
       margin-right: 1rem;
       cursor: pointer;
       @include box-center;
@@ -34,11 +34,11 @@
       border-radius: 50%;
     }
   }
-  .pitanje {
+  .question {
     font-weight: 500;
   }
   a {
-    color: $crvena;
+    color: $red;
     font-weight: 500;
   }
 }

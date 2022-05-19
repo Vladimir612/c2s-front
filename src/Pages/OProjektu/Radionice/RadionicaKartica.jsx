@@ -14,7 +14,7 @@ const RadionicaKartica = (props) => {
   const [vidljivaRadionica, setVidljivaRadionica] = useState(false);
 
   const istiPredavaci =
-    props.radionica.predavac.ime === props.radionica.predavac2.ime;
+    props.radionica.predavac.name === props.radionica.predavac2.name;
 
   return (
     <VisibilitySensor
@@ -37,11 +37,11 @@ const RadionicaKartica = (props) => {
         transition={{ duration: 1 }}
       >
         <div className="top">
-          <div className="lopte-slika">
+          <div className="balls-photo">
             <img src={lopte2} alt="Lopte" />
           </div>
           <div className="left">
-            <h2>{props.radionica.naslov}</h2>
+            <h2>{props.radionica.heading}</h2>
             <p>{props.radionica.prviParagraf}</p>
             <motion.p
               animate={{
@@ -54,7 +54,7 @@ const RadionicaKartica = (props) => {
             >
               {props.radionica.drugiParagraf}
               <br></br>
-              {props.radionica.naslov === "Uvod u 3D Game Development" && (
+              {props.radionica.heading === "Uvod u 3D Game Development" && (
                 <span style={{ color: "#cc203a" }}>
                   Napomena: Za ovu radionicu potrebno je poneti sopstveni
                   laptop.
@@ -73,11 +73,11 @@ const RadionicaKartica = (props) => {
               initial={{ height: "0rem" }}
               transition={{ duration: 0.5 }}
             >
-              <div className="slika-predavac">
+              <div className="photo-predavac">
                 <div className="img-wrapper">
                   <img
-                    src={props.radionica.predavac.slika}
-                    alt={props.radionica.predavac.ime}
+                    src={props.radionica.predavac.photo}
+                    alt={props.radionica.predavac.name}
                   />
                 </div>
               </div>
@@ -91,7 +91,7 @@ const RadionicaKartica = (props) => {
                 initial={{ height: "0rem", width: "0rem", opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="predavac-ime">{props.radionica.predavac.ime}</p>
+                <p className="predavac-name">{props.radionica.predavac.name}</p>
                 <p className="predavac-indikator">PREDAVAČ</p>
                 <p className="predavac-vise">{props.radionica.predavac.vise}</p>
               </motion.div>
@@ -99,11 +99,11 @@ const RadionicaKartica = (props) => {
             <motion.div
               className={istiPredavaci ? "predavac duplikat" : "predavac"}
             >
-              <div className="slika-predavac">
+              <div className="photo-predavac">
                 <div className="img-wrapper">
                   <img
-                    src={props.radionica.predavac2.slika}
-                    alt={props.radionica.predavac2.ime}
+                    src={props.radionica.predavac2.photo}
+                    alt={props.radionica.predavac2.name}
                   />
                 </div>
               </div>
@@ -117,7 +117,9 @@ const RadionicaKartica = (props) => {
                 initial={{ height: "0rem", width: "0rem", opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="predavac-ime">{props.radionica.predavac2.ime}</p>
+                <p className="predavac-name">
+                  {props.radionica.predavac2.name}
+                </p>
                 <p className="predavac-indikator">PREDAVAČ</p>
                 <p className="predavac-vise">
                   {props.radionica.predavac2.vise}
@@ -128,7 +130,7 @@ const RadionicaKartica = (props) => {
         </div>
         <div className="bottom">
           {prikaziDetaljnije && (
-            <div className="lopte-slika">
+            <div className="balls-photo">
               <img src={lopte2} alt="Lopte" />
             </div>
           )}
@@ -154,8 +156,8 @@ const RadionicaKartica = (props) => {
             <div className="saznaj-o-kompaniji">
               <div className="img-wrapper">
                 <img
-                  src={props.radionica.kompanija.slika}
-                  alt={props.radionica.kompanija.ime}
+                  src={props.radionica.kompanija.photo}
+                  alt={props.radionica.kompanija.name}
                 />
               </div>
               <p>Saznaj više o kompaniji</p>

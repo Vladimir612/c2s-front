@@ -181,7 +181,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="dugme-prijavi"
+              className="btn-prijavi"
               style={{ marginRight: "1rem" }}
               whileHover={{
                 scale: 1.1,
@@ -207,7 +207,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="dugme-prijavi"
+              className="btn-prijavi"
               whileHover={{
                 scale: 1.1,
               }}
@@ -380,7 +380,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="dugme-prijavi"
+              className="btn-prijavi"
               style={{ marginRight: "1rem" }}
               whileHover={{
                 scale: 1.1,
@@ -399,7 +399,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="dugme-prijavi"
+              className="btn-prijavi"
               whileHover={{
                 scale: 1.1,
               }}

@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.partneri-nav {
+.partners-nav {
   position: absolute;
   top: 4.5rem;
   left: 50%;
@@ -20,17 +20,17 @@
       border-bottom: 4px solid $tekst_tamna;
       transition: all ease-in 0.2s;
       &.active {
-        border-bottom: 4px solid $crvena;
-        color: $crvena;
+        border-bottom: 4px solid $red;
+        color: $red;
       }
       &:hover {
-        color: $crvena;
+        color: $red;
       }
     }
   }
 }
 
-.partneri-container {
+.partners-container {
   min-height: calc(100vh - 3.8rem);
   margin-top: 3.8rem;
   overflow: hidden;
@@ -100,14 +100,14 @@
     }
   }
 }
-.zaposleni-slider {
+.employee-slider {
   @include box-center($direction: column);
-  .zaposleni-nav {
+  .employee-nav {
     width: 5rem;
     margin-top: 1rem;
     @include box-center($justify: space-around);
-    .zaposleni-levo,
-    .zaposleni-desno {
+    .employee-levo,
+    .employee-desno {
       width: 2rem;
       height: 2rem;
       background: rgba(180, 175, 179, 0.2);
@@ -119,7 +119,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .partneri-nav {
+  .partners-nav {
     left: 1rem;
     transform: initial;
     border-bottom-right-radius: 1rem;
@@ -130,7 +130,7 @@
       padding-right: 0.5rem;
     }
   }
-  .partneri-container {
+  .partners-container {
     .video-wrapper {
       height: 20rem;
       z-index: 2;

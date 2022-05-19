@@ -37,23 +37,23 @@ const UcesnikPanela = (props) => {
         transition={{ duration: 1 }}
       >
         {!props.ucesnik.moderator && (
-          <div className="lopte-slika">
+          <div className="balls-photo">
             <img src={lopte2} alt="Lopte" />
           </div>
         )}
         <h2>{props.ucesnik.moderator ? "MODERATOR PANELA" : "PANELISTA"}</h2>
         <div className="ucesnik">
-          <div className="slika">
+          <div className="photo">
             <div className="img-wrapper">
               <LazyLoadImage
                 effect="blur"
-                src={props.ucesnik.slika}
-                alt={props.ucesnik.ime}
+                src={props.ucesnik.photo}
+                alt={props.ucesnik.name}
               />
             </div>
           </div>
           <div className="podaci">
-            <h3>{props.ucesnik.ime}</h3>
+            <h3>{props.ucesnik.name}</h3>
             <p>{props.ucesnik.pozicija}</p>
           </div>
         </div>

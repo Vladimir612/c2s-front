@@ -8,8 +8,8 @@ nav {
   width: 100vw;
   top: 0;
   background: transparent;
-  .dugme-prijavi {
-    background: $crvena;
+  .btn-prijavi {
+    background: $red;
     border-radius: 2rem;
     padding: 0.4rem 1.9rem;
     color: $aktivni_link;
@@ -76,7 +76,7 @@ nav {
           display: none;
         }
         &:hover {
-          color: $crvena;
+          color: $red;
         }
       }
     }
@@ -141,9 +141,9 @@ nav {
       }
     }
   }
-  .dugme-prijavi {
+  .btn-prijavi {
     cursor: pointer;
-    background: $crvena;
+    background: $red;
     border-radius: 2rem;
     padding: 0.4rem 1.9rem;
     color: $aktivni_link;

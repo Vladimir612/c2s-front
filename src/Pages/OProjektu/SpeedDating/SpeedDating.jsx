@@ -19,7 +19,7 @@ const SpeedDating = () => {
   return (
     <div className="speed-dating-container">
       <div className="o-projektu-uvod">
-        <div className="slika">
+        <div className="photo">
           <img src={speedSlika} alt="Speed dating" />
         </div>
         <div className="tekst">
@@ -40,7 +40,7 @@ const SpeedDating = () => {
             style={{ display: "none" }}
           >
             <motion.button
-              className="dugme transparentno"
+              className="btn transparentno"
               whileHover={{
                 scale: 1.1,
               }}

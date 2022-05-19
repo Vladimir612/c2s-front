@@ -33,16 +33,16 @@
     }
 
     .area-label {
-      border-bottom: 2px solid $crvena;
+      border-bottom: 2px solid $red;
     }
 
-    .pdf-dugme {
+    .pdf-btn {
       width: 100%;
       border: 0;
       border-radius: 0.5rem;
       height: 2rem;
       margin-top: 0.5rem;
-      background-color: $crvena;
+      background-color: $red;
       color: white;
       font-weight: bold;
     }
@@ -63,36 +63,36 @@
       flex-direction: column;
     }
 
-    .ime-prezime-cv {
+    .fullname-cv {
       font-size: 2.4rem;
       margin-bottom: 1rem;
     }
 
-    .opis-cv,
-    .opis-cv-obr {
+    .description-cv,
+    .description-cv-edu {
       border-bottom: 3px solid black;
       margin-bottom: 1rem;
       margin-top: 1rem;
     }
 
-    .opis-cv-obr {
+    .description-cv-edu {
       margin-top: 4rem;
     }
 
-    .ustanova-naziv,
-    .iskustvo-naziv {
+    .institution-name,
+    .experience-name {
       margin-bottom: 0.2rem;
     }
 
-    .ustanova-vreme,
-    .iskustvo-vreme {
+    .institution-time,
+    .experience-time {
       font-size: 18px;
       font-style: italic;
       margin-bottom: 0.2rem;
     }
 
-    .ustanova-content,
-    .iskustvo-content {
+    .institution-content,
+    .experience-content {
       margin-bottom: 2rem;
     }
 
@@ -127,13 +127,13 @@
       object-fit: cover;
     }
 
-    .tehnologija {
+    .technology {
       display: flex;
       justify-content: space-between;
       margin-bottom: 0.5rem;
     }
 
-    .tehnologija-naziv {
+    .technology-name {
       background-color: black;
       color: white;
       padding-inline: 1rem;
@@ -141,7 +141,7 @@
       border-radius: 1rem;
     }
 
-    .tehnologija-nivo {
+    .technology-lvl {
       padding-top: 0.2rem;
     }
   }
@@ -201,14 +201,14 @@
       display: block !important;
       width: 100%;
     }
-    .pdf-dugme {
+    .pdf-btn {
       width: 100% !important;
       margin-bottom: 1rem;
       border: 0;
       border-radius: 0.5rem;
       height: 2rem;
       margin-top: 0.5rem;
-      background-color: $crvena;
+      background-color: $red;
       color: white;
       font-weight: bold;
     }

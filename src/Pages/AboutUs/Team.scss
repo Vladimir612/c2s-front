@@ -1,9 +1,9 @@
 @import "../../global.scss";
 
-.tim-content {
+.team-content {
   @include box-center;
   align-items: flex-start;
-  .tim-content-text {
+  .team-content-text {
     width: 60%;
     padding: 1rem;
     h2 {
@@ -24,7 +24,7 @@
         object-position: top;
       }
     }
-    .o-nama-coordinator {
+    .about-us-coordinator {
       @include box-center;
       margin-top: 2rem;
       gap: 2rem;
@@ -40,7 +40,7 @@
       }
     }
   }
-  .o-nama-content-img {
+  .about-us-content-img {
     width: 40%;
     padding: 1rem;
     .img-wrapper {
@@ -56,12 +56,12 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .tim-content {
+  .team-content {
     flex-direction: column;
-    .tim-content-text {
+    .team-content-text {
       width: 100%;
     }
-    .o-nama-content-img {
+    .about-us-content-img {
       margin-top: 2rem;
       width: 100%;
     }
@@ -69,12 +69,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .tim-content {
-    .tim-content-text {
-      .o-nama-coordinator {
+  .team-content {
+    .team-content-text {
+      .about-us-coordinator {
         flex-direction: column;
       }
-      .o-nama-coordinator-text {
+      .about-us-coordinator-text {
         @include box-center($direction: column);
       }
     }
@@ -82,8 +82,8 @@
 }
 
 @media only screen and (max-width: 850px) {
-  .tim-content {
-    .tim-content-text {
+  .team-content {
+    .team-content-text {
       h2 {
         text-align: center;
       }

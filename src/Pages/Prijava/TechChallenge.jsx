@@ -30,13 +30,13 @@ const TechChallenge = () => {
       </div>
       <div className="input-group">
         <div className="label-group">
-          <label htmlFor="tehnologije" className="desc">
+          <label htmlFor="technologies" className="desc">
             Sa kojim tehnologijama si upoznat/a?*
           </label>
         </div>
         <div className="field-group">
-          <Field name="tehnologije" className="field" />
-          <ErrorMessage name="tehnologije" component="div" className="error" />
+          <Field name="technologies" className="field" />
+          <ErrorMessage name="technologies" component="div" className="error" />
         </div>
       </div>
 

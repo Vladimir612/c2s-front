@@ -4,21 +4,21 @@ import Error from "./Pages/Error/Error";
 // import Prijava from "./Pages/Prijava/Prijava";
 import Faq from "./Pages/Faq/Faq";
 import NasiPartneri from "./Pages/NasiPartneri/NasiPartneri";
-import ONama from "./Pages/ONama/ONama";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 import Agenda from "./Pages/Agenda/Agenda";
 import OProjektu from "./Pages/OProjektu/OProjektu";
 import Generator from "./Pages/CVGenerator/Generator";
 import OstaliPartneri from "./Pages/OstaliPartneri/OstaliPartneri";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Routes>
         <Route path="/" element={<Pocetna />} />
         <Route path="/2022" element={<Pocetna />} />
         <Route path="/o-projektu/*" element={<OProjektu />} />
         <Route path="/agenda" element={<Agenda />} />
-        <Route path="/o-nama" element={<ONama />} />
+        <Route path="/o-nama" element={<AboutUs />} />
         <Route path="/nasi-partneri/*" element={<NasiPartneri />} />
         <Route
           path="/godisnji-naturalni-medijski"
@@ -31,6 +31,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

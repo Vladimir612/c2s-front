@@ -9,7 +9,7 @@
   width: 30rem;
   border-radius: 2rem;
   padding: 2rem;
-  .lopte-slika {
+  .balls-photo {
     width: 5rem;
     position: absolute;
     top: 36%;
@@ -24,7 +24,7 @@
   }
   &.moderator {
     color: #fff;
-    background: $crvena;
+    background: $red;
   }
   &.panelista {
     color: $pozadina_tamna;

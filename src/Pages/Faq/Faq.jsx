@@ -6,60 +6,60 @@ import Footer from "../../Components/Footer/Footer";
 import koverta from "../../Assets/Images/koverta.svg";
 
 import { motion } from "framer-motion";
-import Lopta from "../../Utilities/Lopta/Lopta";
+import Ball from "../../Utilities/Ball/Ball";
 import { Link, useLocation } from "react-router-dom";
 import { scrollFunc } from "../../Components/Footer/Footer";
 import axios from "axios";
 
 const Faq = () => {
-  const pocetakPocetna = useRef();
+  const pageStartRef = useRef();
 
-  const [temaInput, setTemaInput] = useState("");
-  const handleTemaInput = (e) => setTemaInput(e.target.value);
+  const [themeInput, setThemeInput] = useState("");
+  const handleThemeInput = (e) => setThemeInput(e.target.value);
 
-  const [porukaInput, setPorukaInput] = useState("");
-  const handlePorukaInput = (e) => setPorukaInput(e.target.value);
+  const [msgInput, setMsgInput] = useState("");
+  const handlePorukaInput = (e) => setMsgInput(e.target.value);
 
   const [uspesnoPoslat, setUspesnoPoslat] = useState("");
 
-  const pocetakMejl = useRef();
+  const mailStart = useRef();
 
   const location = useLocation();
-  let aktivnaStrana = -1;
+  let activePage = -1;
 
   switch (location.pathname) {
     case "/faq":
-      aktivnaStrana = 1;
+      activePage = 1;
       break;
     case "/faq/kontakt":
-      aktivnaStrana = 2;
+      activePage = 2;
       break;
     default:
-      aktivnaStrana = 3;
+      activePage = 3;
       break;
   }
 
   useEffect(() => {
-    aktivnaStrana === 1 ? scrollFunc(pocetakPocetna) : scrollFunc(pocetakMejl);
+    activePage === 1 ? scrollFunc(pageStartRef) : scrollFunc(mailStart);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
-      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
+      <div className="ref-start" ref={pageStartRef}></div>
       <Nav />
       <div className="faq-container">
-        <div className="lopte-anim">
-          <div className="prva-grupa">
-            <Lopta boja="bela" width="3rem" height="3rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
+        <div className="balls-anim">
+          <div className="first-group">
+            <Ball boja="white" width="3rem" height="3rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
           </div>
-          <div className="druga-grupa">
-            <Lopta boja="bela" width="6.5rem" height="6.5rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
+          <div className="second-group">
+            <Ball boja="white" width="6.5rem" height="6.5rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
           </div>
         </div>
-        <h2 className="naslov">FAQ</h2>
-        <div class="questions">
+        <h2 className="heading">FAQ</h2>
+        <div className="questions">
           <ul>
             <FaqQuestion
               question="Ko se sve može prijaviti za učesće na projektu Kompanije studentima?"
@@ -120,49 +120,49 @@ const Faq = () => {
             />
           </ul>
         </div>
-        <h3 class="naslov" ref={pocetakMejl}>
+        <h3 className="heading" ref={mailStart}>
           Postavite nam pitanje
         </h3>
-        <div class="postavite-pitanje">
-          <div class="img-wrapper">
+        <div className="ask-question">
+          <div className="img-wrapper">
             <img src={koverta} alt="Koverta" />
           </div>
-          <div class="mejl">
-            <div class="ime">
+          <div className="mail">
+            <div className="name">
               <input
-                value={temaInput}
-                onChange={handleTemaInput}
-                class="unos unos1 polja"
+                value={themeInput}
+                onChange={handleThemeInput}
+                className="inp input1 fields"
                 type="text"
-                id="temaMejla"
+                id="mailTheme"
                 name="text1"
-                placeholder="Mejl"
+                placeholder="Mail"
               />
             </div>
-            <div class="poruka">
+            <div className="message">
               <textarea
-                value={porukaInput}
+                value={msgInput}
                 onChange={handlePorukaInput}
-                class="unos unos2 polja"
-                name="poruka1"
-                id="porukaMejla"
+                className="inp input2 fields"
+                name="message1"
+                id="mailMsg"
                 rows="6"
                 cols="45"
                 wrap="virtual"
                 placeholder="Poruka"
               ></textarea>
             </div>
-            <div className="uspesno-poruka">{uspesnoPoslat}</div>
+            <div className="success-message">{uspesnoPoslat}</div>
             <motion.button
-              className="dugme-prijavi"
+              className="btn-prijavi"
               onClick={() => {
-                setUspesnoPoslat("Mejl je uspešno poslat");
+                setUspesnoPoslat("Mail je uspešno poslat");
                 axios
                   .post(
                     "https://digitalmark6.herokuapp.com/api/postavipitanje",
                     {
-                      email: temaInput,
-                      pitanje: porukaInput,
+                      email: themeInput,
+                      question: msgInput,
                     }
                   )
                   .catch((err) => {
@@ -181,7 +181,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-      <Footer pocetakPocetna={pocetakPocetna} />
+      <Footer pageStartRef={pageStartRef} />
     </>
   );
 };

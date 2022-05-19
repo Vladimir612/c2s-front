@@ -3,156 +3,157 @@ import Footer from "../../Components/Footer/Footer";
 import Nav from "./../../Components/Nav/Nav";
 import "./Agenda.scss";
 import AgendaItem from "./AgendaItem";
-import agendaLopta from "../../Assets/Images/agenda-lopta.svg";
-import Lopta from "./../../Utilities/Lopta/Lopta";
+import agendaBall from "../../Assets/Images/agenda-ball.svg";
+import Ball from "./../../Utilities/Ball/Ball";
 import { scrollFunc } from "../../Components/Footer/Footer";
 
 const Agenda = () => {
-  const pocetakPocetna = useRef();
+  const pageStartRef = useRef();
+
   useEffect(() => {
-    scrollFunc(pocetakPocetna);
+    scrollFunc(pageStartRef);
   }, []);
 
   return (
     <>
-      <div className="pocetak-pocetna" ref={pocetakPocetna}></div>
+      <div className="ref-start" ref={pageStartRef}></div>
       <Nav />
       <div className="agenda-container">
-        <div className="lopte-anim">
-          <div className="prva-grupa">
-            <Lopta boja="bela" width="3rem" height="3rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
+        <div className="balls-anim">
+          <div className="first-group">
+            <Ball boja="white" width="3rem" height="3rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
           </div>
-          <div className="druga-grupa">
-            <Lopta boja="crvena" width="5rem" height="5rem" />
+          <div className="second-group">
+            <Ball boja="red" width="5rem" height="5rem" />
           </div>
-          <div className="treca-grupa">
-            <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
-          </div>
-        </div>
-        <div className="lopte-anim">
-          <div className="prva-grupa">
-            <Lopta boja="bela" width="3rem" height="3rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
-          </div>
-          <div className="druga-grupa">
-            <Lopta boja="bela" width="6.5rem" height="6.5rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
-          </div>
-          <div className="treca-grupa">
-            <Lopta boja="transparentna" width="4.5rem" height="4.5rem" />
-            <Lopta boja="crvena" width="5rem" height="5rem" />
+          <div className="third-group">
+            <Ball boja="transparentna" width="4.5rem" height="4.5rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
           </div>
         </div>
-        <div className="linija-lopte">
-          <div className="linija"></div>
-          <div className="lopte">
-            <img src={agendaLopta} alt="lopta c2s" />
-            <img src={agendaLopta} alt="lopta c2s" />
-            <img src={agendaLopta} alt="lopta c2s" />
-            <img src={agendaLopta} alt="lopta c2s" />
+        <div className="balls-anim">
+          <div className="first-group">
+            <Ball boja="white" width="3rem" height="3rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
+          </div>
+          <div className="second-group">
+            <Ball boja="white" width="6.5rem" height="6.5rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
+          </div>
+          <div className="third-group">
+            <Ball boja="transparentna" width="4.5rem" height="4.5rem" />
+            <Ball boja="red" width="5rem" height="5rem" />
+          </div>
+        </div>
+        <div className="line-balls">
+          <div className="line"></div>
+          <div className="balls">
+            <img src={agendaBall} alt="ball c2s" />
+            <img src={agendaBall} alt="ball c2s" />
+            <img src={agendaBall} alt="ball c2s" />
+            <img src={agendaBall} alt="ball c2s" />
           </div>
         </div>
         <h2>AGENDA</h2>
         <div className="agenda-content">
           <AgendaItem
-            datum="14. MAJ"
-            mesto="Fakultet organizacionih nauka"
-            raspored={[
+            date="14. MAJ"
+            location="Fakultet organizacionih nauka"
+            schedule={[
               {
-                vreme: "10:30 - 11:15",
-                desavanje: "SVEČANO OTVARANJE PROJEKTA",
+                time: "10:30 - 11:15",
+                event: "SVEČANO OTVARANJE PROJEKTA",
               },
               {
-                vreme: "11:15 - 13:00",
-                desavanje: "PANEL DISKUSIJA",
+                time: "11:15 - 13:00",
+                event: "PANEL DISKUSIJA",
               },
               {
-                vreme: "13:00 - 13:15",
-                desavanje: "PAUZA",
+                time: "13:00 - 13:15",
+                event: "PAUZA",
               },
               {
-                vreme: "13:15 - 14:30",
-                desavanje: "RADIONICE",
+                time: "13:15 - 14:30",
+                event: "RADIONICE",
               },
               {
-                vreme: "14:30 - 15:00",
-                desavanje: "PAUZA",
+                time: "14:30 - 15:00",
+                event: "PAUZA",
               },
               {
-                vreme: "15:00 - 16:15",
-                desavanje: "RADIONICE",
+                time: "15:00 - 16:15",
+                event: "RADIONICE",
               },
               {
-                vreme: "16:15 - 16:30",
-                desavanje: "PAUZA",
+                time: "16:15 - 16:30",
+                event: "PAUZA",
               },
               {
-                vreme: "16:30 - 17:30",
-                desavanje: "RADIONICE",
-              },
-            ]}
-          />
-          <AgendaItem
-            obrnuto={true}
-            datum="15. MAJ"
-            mesto="Fakultet organizacionih nauka"
-            raspored={[
-              {
-                vreme: "11:00 - 12:15",
-                desavanje: "RADIONICE",
-              },
-              {
-                vreme: "12:15 - 12:45",
-                desavanje: "PAUZA",
-              },
-              {
-                vreme: "12:45 - 14:00",
-                desavanje: "RADIONICE",
-              },
-              {
-                vreme: "14:00 - 14:15",
-                desavanje: "PAUZA",
-              },
-              {
-                vreme: "14:15 - 15:15",
-                desavanje: "RADIONICE",
+                time: "16:30 - 17:30",
+                event: "RADIONICE",
               },
             ]}
           />
           <AgendaItem
-            datum="16. MAJ"
-            mesto="Envoy Conference Centar"
-            raspored={[
+            reverse={true}
+            date="15. MAJ"
+            location="Fakultet organizacionih nauka"
+            schedule={[
               {
-                vreme: "11:00 - 17:00",
-                desavanje: "SPEED DATING",
+                time: "11:00 - 12:15",
+                event: "RADIONICE",
+              },
+              {
+                time: "12:15 - 12:45",
+                event: "PAUZA",
+              },
+              {
+                time: "12:45 - 14:00",
+                event: "RADIONICE",
+              },
+              {
+                time: "14:00 - 14:15",
+                event: "PAUZA",
+              },
+              {
+                time: "14:15 - 15:15",
+                event: "RADIONICE",
               },
             ]}
           />
           <AgendaItem
-            obrnuto={true}
-            datum="17. MAJ"
-            mesto="Envoy Conference Centar"
-            raspored={[
+            date="16. MAJ"
+            location="Envoy Conference Centar"
+            schedule={[
               {
-                vreme: "10:00 - 13:00",
-                desavanje: "TECH CHALLENGE (I smena)",
+                time: "11:00 - 17:00",
+                event: "SPEED DATING",
+              },
+            ]}
+          />
+          <AgendaItem
+            reverse={true}
+            date="17. MAJ"
+            location="Envoy Conference Centar"
+            schedule={[
+              {
+                time: "10:00 - 13:00",
+                event: "TECH CHALLENGE (I smena)",
               },
               {
-                vreme: "13:00 - 16:00",
-                desavanje: "TECH CHALLENGE (II smena)",
+                time: "13:00 - 16:00",
+                event: "TECH CHALLENGE (II smena)",
               },
               {
-                vreme: "16:00 - 18:00",
-                desavanje: "SVEČANO ZATVARANJE PROJEKTA",
+                time: "16:00 - 18:00",
+                event: "SVEČANO ZATVARANJE PROJEKTA",
               },
             ]}
           />
         </div>
       </div>
-      <Footer pocetakPocetna={pocetakPocetna} />
+      <Footer pageStartRef={pageStartRef} />
     </>
   );
 };

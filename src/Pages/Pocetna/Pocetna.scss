@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.pocetak-pocetna {
+.ref-start {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,18 +17,18 @@
     min-height: 100vh;
     background: $pozadina_siva;
   }
-  .lopte {
+  .balls {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100vw;
     height: 100%;
-    .prva-grupa {
+    .first-group {
       position: absolute;
       top: 20%;
       left: 8%;
-      .lopta:first-child {
+      .ball:first-child {
         box-shadow: inset 10px -9px 31px 7px #000000eb,
           7px 9px 16px 3px #0000004a;
         animation-duration: 38s;
@@ -37,11 +37,11 @@
         }
       }
     }
-    .druga-grupa {
+    .second-group {
       position: absolute;
       top: 60%;
       right: 18%;
-      .lopta:last-child {
+      .ball:last-child {
         box-shadow: inset 10px -9px 51px 11px #000000eb,
           7px 9px 16px 3px #0000004a;
         animation-duration: 60s;
@@ -52,11 +52,11 @@
         }
       }
     }
-    .treca-grupa {
+    .third-group {
       position: absolute;
       top: 15%;
       right: 28%;
-      .lopta:first-child {
+      .ball:first-child {
         box-shadow: inset 6px -1px 37px 2px #000000a6,
           7px 9px 16px 3px #0000004a;
         z-index: 10;
@@ -96,7 +96,7 @@
       font-weight: 300;
       padding-left: 1rem;
       span {
-        color: $crvena;
+        color: $red;
       }
     }
     .uvodni-tekst {
@@ -106,7 +106,7 @@
     }
     .timer {
       @include box-center($justify: space-around);
-      background: $crvena;
+      background: $red;
       padding: 1rem 0;
       color: $aktivni_link;
       div {
@@ -153,18 +153,18 @@
     }
   }
   .kompanije-section {
-    .lopte {
+    .balls {
       z-index: 0;
       position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100%;
-      .prva-grupa {
+      .first-group {
         position: absolute;
         top: 40%;
         left: 20%;
-        .lopta:first-child {
+        .ball:first-child {
           box-shadow: inset 10px -9px 31px 7px #000000eb,
             7px 9px 16px 3px #0000004a;
           animation-duration: 30s;
@@ -173,11 +173,11 @@
           }
         }
       }
-      .druga-grupa {
+      .second-group {
         position: absolute;
         top: 60%;
         right: 30%;
-        .lopta:last-child {
+        .ball:last-child {
           box-shadow: inset 10px -9px 31px 7px #000000b8,
             7px 9px 16px 3px #0000004a;
           animation-duration: 60s;
@@ -188,11 +188,11 @@
           }
         }
       }
-      .treca-grupa {
+      .third-group {
         position: absolute;
         top: 30%;
         right: 20%;
-        .lopta:first-child {
+        .ball:first-child {
           box-shadow: inset 6px -1px 37px 2px #000000a6,
             7px 9px 16px 3px #0000004a;
           z-index: 10;
@@ -270,9 +270,9 @@
       gap: 25%;
       margin-bottom: 5rem;
       margin-top: 3rem;
-      .godisnji-partneri,
-      .naturalni-partneri,
-      .medijski-partneri {
+      .godisnji-partners,
+      .naturalni-partners,
+      .medijski-partners {
         margin-top: 1rem;
         width: 12rem;
         h3 {
@@ -328,9 +328,9 @@
   }
 }
 
-//partneri
+//partners
 
-.partneri {
+.partners {
   padding: 4rem;
   padding-top: 5rem;
   margin-bottom: 10rem;

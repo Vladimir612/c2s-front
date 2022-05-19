@@ -7,7 +7,7 @@
   border-radius: 2rem;
   padding: 2rem;
   color: $pozadina_tamna;
-  .lopte-slika {
+  .balls-photo {
     width: 5rem;
     position: absolute;
     top: 2%;
@@ -17,7 +17,7 @@
     }
   }
   .bottom {
-    .lopte-slika {
+    .balls-photo {
       width: 5rem;
       position: absolute;
       top: initial;
@@ -120,7 +120,7 @@
     }
     .o-predavacu {
       overflow: hidden;
-      .predavac-ime {
+      .predavac-name {
         font-weight: 600;
         text-transform: uppercase;
         font-size: 1.6rem;
@@ -139,7 +139,7 @@
 @media only screen and (max-width: 1050px) {
   .radionica-kartica {
     padding: 2rem 0.7rem 7rem 0.7rem;
-    .lopte-slika {
+    .balls-photo {
       display: none;
     }
     .top {
