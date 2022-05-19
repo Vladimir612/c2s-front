@@ -167,7 +167,7 @@ const Nav = () => {
             </Link>
           </ul>
         </div>
-        <div className="desno">
+        <div className="right">
           <Link
             to="/generator"
             onClick={() => {

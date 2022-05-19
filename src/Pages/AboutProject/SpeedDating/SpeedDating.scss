@@ -1,0 +1,68 @@
+@import "../../../global.scss";
+@import "../../../global.scss";
+
+.speed-dating-container,
+.tech-challenge-container {
+  button {
+    border-radius: 2rem;
+    padding: 0.4rem 1.9rem;
+    color: #fff;
+    outline: none;
+    box-shadow: 2px 6px 13px #00000026;
+    margin-top: 1rem;
+    &.transparent {
+      border: 2px solid #fff;
+      background: transparent;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .companies {
+    margin: 1rem 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    h2 {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    a {
+      color: $text_dark;
+    }
+    .link-do-kompanije {
+      margin: 3rem 0;
+      padding: 1rem 0.5rem;
+      background: #fff;
+      border-radius: 2rem;
+      @include box-center($justify: space-around);
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+      .img-wrapper {
+        width: 12rem;
+        height: 5rem;
+        overflow: hidden;
+        @include box-center;
+        img {
+          @include fit-image;
+          height: initial;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .speed-dating-container,
+  .tech-challenge-container {
+    .companies {
+      .link-do-kompanije {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

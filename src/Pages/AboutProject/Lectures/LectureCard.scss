@@ -1,0 +1,197 @@
+@import "../../../global.scss";
+
+.lecture-card {
+  position: relative;
+  margin: 3rem 2rem;
+  background: $bg_gray;
+  border-radius: 2rem;
+  padding: 2rem;
+  color: $bg_dark;
+  .balls-photo {
+    width: 5rem;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    img {
+      @include fit-image;
+    }
+  }
+  .bottom {
+    .balls-photo {
+      width: 5rem;
+      position: absolute;
+      top: initial;
+      bottom: 5%;
+      left: 35%;
+      transform: rotate(-40deg);
+      img {
+        @include fit-image;
+      }
+    }
+  }
+  .top {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    @include box-center;
+    gap: 3rem;
+    .left {
+      font-size: 1.45rem;
+      align-self: flex-start;
+      z-index: 1;
+      width: 50%;
+      h2 {
+        font-size: 2.1rem;
+        color: #000;
+      }
+      p {
+        margin: 1rem 0;
+        overflow: hidden;
+      }
+    }
+    .right {
+      z-index: 1;
+      width: 50%;
+      @include box-center($direction: column);
+      gap: 2rem;
+      &.hidden {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .bottom {
+    @include box-center($justify: space-between);
+    .show-hide {
+      cursor: pointer;
+      @include box-center($justify: space-between);
+    }
+    .find-about-company {
+      min-width: 31rem;
+      padding: 1rem;
+      border-top-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      @include box-center($justify: space-between);
+      gap: 2rem;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+      p {
+        color: $text_dark;
+      }
+      .img-wrapper {
+        overflow: hidden;
+        height: 3rem;
+        width: 9rem;
+        @include box-center;
+        img {
+          @include fit-image;
+          max-height: 100%;
+          height: initial;
+        }
+      }
+    }
+  }
+
+  .right.hidden {
+    .lecturer {
+      &.duplicate {
+        height: initial !important;
+      }
+    }
+  }
+
+  .lecturer {
+    @include box-center;
+    gap: 1rem;
+    &.duplicate {
+      opacity: 0;
+      height: 0;
+    }
+
+    .img-wrapper {
+      img {
+        @include fit-image;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+    .about-lecturer {
+      overflow: hidden;
+      .lecturer-name {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: #000;
+      }
+      .lecturer-indicator {
+        margin: 0.3rem 0;
+      }
+    }
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .lecture-card {
+    padding: 2rem 0.7rem 7rem 0.7rem;
+    .balls-photo {
+      display: none;
+    }
+    .top {
+      flex-direction: column;
+      .left,
+      .right {
+        width: 100%;
+      }
+    }
+    .bottom {
+      height: 9rem;
+      width: 100%;
+      flex-direction: column !important;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .find-about-company {
+        width: 100%;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .lecture-card {
+    .bottom {
+      .find-about-company {
+        min-width: initial;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .lecture-card {
+    .lecturer {
+      flex-direction: column !important;
+    }
+    .top {
+      .right {
+        &.hidden {
+          flex-direction: column;
+          .lecturer {
+            margin-top: 2rem;
+          }
+          .lecturer:nth-last-child(1) {
+            margin-top: 4rem;
+          }
+        }
+      }
+    }
+  }
+}

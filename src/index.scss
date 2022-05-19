@@ -5,7 +5,7 @@ body {
   font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $pozadina_tamna;
+  background-color: $bg_dark;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
@@ -44,20 +44,20 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $pozadina_tamna;
+  background: $bg_dark;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darken($pozadina_tamna, 20);
+  background: darken($bg_dark, 20);
 }
 
 button {
   cursor: pointer;
 }
 
-.otvorene-prijave-message {
+.opened-applications-message {
   width: 100%;
   text-align: center;
   background-color: $red;
@@ -68,7 +68,7 @@ button {
 }
 
 @media only screen and (max-width: 1275px) {
-  .otvorene-prijave-message {
+  .opened-applications-message {
     top: 3rem;
   }
 }

@@ -1,0 +1,33 @@
+@import "../../global.scss";
+
+.employee {
+  width: 22rem;
+  max-width: 90vw;
+  min-height: 24rem;
+  padding: 1rem;
+  @include box-center($direction: column);
+  background: $bg_dark;
+  border-radius: 1rem;
+  box-shadow: 0 2px 15px #000;
+  .employee-wrapper {
+    @include box-center($direction: column);
+  }
+  .employee-name {
+    color: $heading_white;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .employee-img {
+    @include fit-image;
+    object-position: top;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  .employee-has-told {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

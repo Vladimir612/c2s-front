@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Pocetna from "./Pages/Pocetna/Pocetna";
+import Home from "./Pages/Home/Home";
 import Error from "./Pages/Error/Error";
 // import Prijava from "./Pages/Prijava/Prijava";
 import Faq from "./Pages/Faq/Faq";
-import NasiPartneri from "./Pages/NasiPartneri/NasiPartneri";
+import OurPartners from "./Pages/OurPartners/OurPartners";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Agenda from "./Pages/Agenda/Agenda";
-import OProjektu from "./Pages/OProjektu/OProjektu";
+import AboutProject from "./Pages/AboutProject/AboutProject";
 import Generator from "./Pages/CVGenerator/Generator";
 import OstaliPartneri from "./Pages/OstaliPartneri/OstaliPartneri";
 
@@ -14,12 +14,12 @@ const App = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Pocetna />} />
-        <Route path="/2022" element={<Pocetna />} />
-        <Route path="/o-projektu/*" element={<OProjektu />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/2022" element={<Home />} />
+        <Route path="/o-projektu/*" element={<AboutProject />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/o-nama" element={<AboutUs />} />
-        <Route path="/nasi-partneri/*" element={<NasiPartneri />} />
+        <Route path="/nasi-partneri/*" element={<OurPartners />} />
         <Route
           path="/godisnji-naturalni-medijski"
           element={<OstaliPartneri />}

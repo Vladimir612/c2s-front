@@ -18,9 +18,9 @@ const Faq = () => {
   const handleThemeInput = (e) => setThemeInput(e.target.value);
 
   const [msgInput, setMsgInput] = useState("");
-  const handlePorukaInput = (e) => setMsgInput(e.target.value);
+  const handleMsgInput = (e) => setMsgInput(e.target.value);
 
-  const [uspesnoPoslat, setUspesnoPoslat] = useState("");
+  const [successfullySent, setSuccessfullySent] = useState("");
 
   const mailStart = useRef();
 
@@ -142,7 +142,7 @@ const Faq = () => {
             <div className="message">
               <textarea
                 value={msgInput}
-                onChange={handlePorukaInput}
+                onChange={handleMsgInput}
                 className="inp input2 fields"
                 name="message1"
                 id="mailMsg"
@@ -152,11 +152,11 @@ const Faq = () => {
                 placeholder="Poruka"
               ></textarea>
             </div>
-            <div className="success-message">{uspesnoPoslat}</div>
+            <div className="success-message">{successfullySent}</div>
             <motion.button
               className="btn-prijavi"
               onClick={() => {
-                setUspesnoPoslat("Mail je uspešno poslat");
+                setSuccessfullySent("Mail je uspešno poslat");
                 axios
                   .post(
                     "https://digitalmark6.herokuapp.com/api/postavipitanje",

@@ -283,7 +283,7 @@ const Generator = () => {
               treba da izaberete određene postavke. Kao destination birate PDF,
               za Pages birate Custom i unosite 1-1. Nakon toga otvorite više
               opcija i postavite margine na None, izaberete opciju da se prikaze
-              pozadina i iskljucite opciju za header-e i footer-e.
+              bgColor i iskljucite opciju za header-e i footer-e.
             </p>
             <div className="input-field">
               <motion.button

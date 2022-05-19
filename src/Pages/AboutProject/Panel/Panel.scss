@@ -1,0 +1,9 @@
+@import "../../../global.scss";
+
+.panel-participants {
+  margin: 1rem;
+  @include box-center($justify: center, $direction: row);
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
-const Radionice = () => {
+const Lectures = () => {
   return (
     <div className="input-page">
       <h3 className="input-title">RADIONICE:</h3>
@@ -124,4 +124,4 @@ const Radionice = () => {
   );
 };
 
-export default Radionice;
+export default Lectures;

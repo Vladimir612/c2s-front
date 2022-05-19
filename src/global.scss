@@ -1,18 +1,18 @@
-//boje
+//colors
 $red: #cc203a;
 
-$aktivni_link: #fff;
+$active_link: #fff;
 
-$pozadina_tamna: #14191b;
-$pozadina_siva: #b4afb3;
+$bg_dark: #14191b;
+$bg_gray: #b4afb3;
 
-$naslov_tamna: #fff;
-$tekst_tamna: #ffffffb3;
+$heading_white: #fff;
+$text_gray: #ffffffb3;
 
-$naslov_siva: #14191b;
-$tekst_siva: #14191bb3;
+$heading_dark: #14191b;
+$text_dark: #14191bb3;
 
-$pozadina_nav_oprojektu: #292929;
+$bg_nav: #292929;
 
 //mixins
 @mixin box-center($direction: row, $justify: center) {

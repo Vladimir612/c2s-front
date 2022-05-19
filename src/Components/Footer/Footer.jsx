@@ -37,10 +37,10 @@ const Footer = (props) => {
         idi na vrh
         <BsArrowUpShort size={25} color="#14191b" />
       </motion.button>
-      <div className="kontakt-section">
+      <div className="contact-section">
         <Link to="/faq/kontakt">
           <motion.button
-            className="btn transparentno"
+            className="btn transparent"
             whileHover={{
               scale: 1.1,
             }}

@@ -1,0 +1,105 @@
+@import "../../../global.scss";
+
+.participant-of-panel {
+  min-height: 31rem;
+  align-self: flex-start;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 30rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  .balls-photo {
+    width: 5rem;
+    position: absolute;
+    top: 36%;
+    right: 5%;
+    transform: rotate(200deg);
+    img {
+      @include fit-image;
+    }
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+  &.moderator {
+    color: #fff;
+    background: $red;
+  }
+  &.panelist {
+    color: $bg_dark;
+    background: $bg_gray;
+  }
+  .participant {
+    width: 77%;
+    @include box-center($justify: space-between);
+    gap: 1rem;
+    .img-wrapper {
+      img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    .data {
+      @include box-center($direction: column, $justify: space-around);
+      align-items: flex-start;
+      gap: 1rem;
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+  .has-told {
+    margin-top: 2rem;
+  }
+  .company {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 12rem;
+    height: 5rem;
+    overflow: hidden;
+    .img-wrapper {
+      width: 100%;
+      height: 100%;
+      img {
+        @include fit-image;
+        height: initial;
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .participant-of-panel {
+    padding: 1rem;
+    padding-top: 5.5rem;
+    // &:first-child {
+    //   padding-top: 1rem;
+    // }
+    .participant {
+      flex-direction: column;
+      .data h3 {
+        width: 100%;
+        text-align: center;
+      }
+      .data p {
+        text-align: center;
+      }
+    }
+    .company {
+      padding: 0.3rem 1.2rem;
+      border-top-right-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+    }
+  }
+}

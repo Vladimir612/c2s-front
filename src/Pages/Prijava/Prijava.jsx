@@ -6,7 +6,7 @@ import { Formik, Form } from "formik";
 import OpsteInformacije from "./OpsteInformacije";
 import { motion } from "framer-motion";
 import PanelDiskusija from "./PanelDiskusija";
-import Radionice from "./Radionice";
+import Lectures from "./Lectures";
 import SpeedDating from "./SpeedDating";
 import TechChallenge from "./TechChallenge";
 import axios from "axios";
@@ -23,7 +23,7 @@ const Prijava = (props) => {
   let forms = [
     <OpsteInformacije />,
     <PanelDiskusija />,
-    <Radionice />,
+    <Lectures />,
     <SpeedDating />,
     <TechChallenge />,
   ];

@@ -28,7 +28,7 @@ const Agenda = () => {
             <Ball boja="red" width="5rem" height="5rem" />
           </div>
           <div className="third-group">
-            <Ball boja="transparentna" width="4.5rem" height="4.5rem" />
+            <Ball boja="transparent" width="4.5rem" height="4.5rem" />
             <Ball boja="red" width="5rem" height="5rem" />
           </div>
         </div>
@@ -42,7 +42,7 @@ const Agenda = () => {
             <Ball boja="red" width="5rem" height="5rem" />
           </div>
           <div className="third-group">
-            <Ball boja="transparentna" width="4.5rem" height="4.5rem" />
+            <Ball boja="transparent" width="4.5rem" height="4.5rem" />
             <Ball boja="red" width="5rem" height="5rem" />
           </div>
         </div>
