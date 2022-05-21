@@ -27,7 +27,7 @@ const Panel = () => {
             Eyesee, Goran Vidić iz kompanije Prime Software i Marija Milanović
             iz kompanije Semos Education. Ukoliko želiš da čuješ više o tome
             kako funkcioniše rad u velikim kompanijama, šta je sve potrebno za
-            rad u njima i koje su tajne za postizanje uspeha, prijavi se za
+            rad u njima i koje su tajne za postizanje uspeha, application se za
             panel diskusiju i saznaj kako da kreiraš svoju uspešnu priču!
           </p>
         </div>

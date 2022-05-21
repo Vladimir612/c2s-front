@@ -25,7 +25,7 @@ const Footer = (props) => {
         <img src={c2sSvetli} alt="c2s logo" />
       </div>
       <motion.button
-        className="btn sivo"
+        className="btn gray"
         whileHover={{
           scale: 1.1,
         }}

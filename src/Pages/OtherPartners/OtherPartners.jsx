@@ -74,7 +74,7 @@ const OtherPartners = () => {
               height="12rem"
             />
           </div>
-          <div className="other-partners-slider" style={{ display: "none" }}>
+          <div className="other-partners-slider">
             <h3>MEDIJSKI PARTNERI</h3>
             <PartnersSlider
               partners={mediaPartners}

@@ -11,23 +11,39 @@ import prime from "./Images/Partners/godisnji/prime.png";
 import escape from "./Images/Partners/robni/escape.png";
 import nescafe from "./Images/Partners/robni/nescafe.png";
 import dragibravo from "./Images/Partners/robni/DragiBravo.jpg";
+import equilibrio from "./Images/Partners/robni/equilibrio.jpg";
+import gorstak from "./Images/Partners/robni/gorstak.jpg";
+import jdp from "./Images/Partners/robni/jdp.jpg";
+import museum from "./Images/Partners/robni/museum.jpg";
+import stark from "./Images/Partners/robni/stark.jpg";
+import vajat from "./Images/Partners/robni/vajat.jpg";
+import atlantic from "./Images/Partners/robni/atlantic.jpg";
 
 //medijiski
-import BestBg from "./Images/Partners/medijski/BestBg.png";
-import BestNs from "./Images/Partners/medijski/BestNs.png";
+import bestBg from "./Images/Partners/medijski/bestBg.png";
 import caseFon from "./Images/Partners/medijski/case.png";
-import centarZaRazvoj from "./Images/Partners/medijski/centarZaRazvoj.png";
-import Eestec from "./Images/Partners/medijski/Eestec.png";
+import eestec from "./Images/Partners/medijski/eestec.png";
 import fonovCentar from "./Images/Partners/medijski/fonovCentar.png";
-import future from "./Images/Partners/medijski/future.png";
 import kancelarija from "./Images/Partners/medijski/kancelarija.png";
-import Probjave from "./Images/Partners/medijski/Probjave.png";
-import Savez from "./Images/Partners/medijski/Savez.png";
+import savez from "./Images/Partners/medijski/savez.png";
 import spof from "./Images/Partners/medijski/spof.png";
-import Suma from "./Images/Partners/medijski/Suma.png";
-import SvetKompjutera from "./Images/Partners/medijski/SvetKompjutera.png";
-import Unija from "./Images/Partners/medijski/Unija.png";
-import Viser from "./Images/Partners/medijski/Viser.png";
+import suma from "./Images/Partners/medijski/suma.png";
+import svetKompjutera from "./Images/Partners/medijski/svetKompjutera.png";
+import unija from "./Images/Partners/medijski/unija.png";
+import viser from "./Images/Partners/medijski/viser.jpg";
+import brainz from "./Images/Partners/medijski/brainz.jpg";
+import cysecor from "./Images/Partners/medijski/cysecor.jpg";
+import electron from "./Images/Partners/medijski/electron.jpg";
+import itNetwork from "./Images/Partners/medijski/itNetwork.jpg";
+import magazinStudent from "./Images/Partners/medijski/magazinStudent.jpg";
+import masinski from "./Images/Partners/medijski/masinski.jpg";
+import mingl from "./Images/Partners/medijski/mingl.jpg";
+import orgViser from "./Images/Partners/medijski/orgViser.jpg";
+import prObjave from "./Images/Partners/medijski/prObjave.png";
+import studGrad from "./Images/Partners/medijski/studGrad.jpg";
+import studZivot from "./Images/Partners/medijski/studZivot.jpg";
+import suetf from "./Images/Partners/medijski/suetf.jpg";
+import youth from "./Images/Partners/medijski/youth.jpg";
 
 export const allSettings = {
   dots: false,
@@ -150,120 +166,198 @@ export const naturalPartners = [
     link: "https://www.nescafe.com/rs/nase-kafe/nescafe-2in1",
   },
   {
-    partnerImage: dragibravo,
-    partnerName: "Dragi Bravo",
+    partnerImage: equilibrio,
+    partnerName: "Equilibrio",
     bgColor: "#fff",
-    link: "https://www.instagram.com/dragibravo/",
+    link: "https://www.stranijezici.com/",
   },
   {
-    partnerImage: escape,
-    partnerName: "Escape",
+    partnerImage: gorstak,
+    partnerName: "Gorštak",
     bgColor: "#fff",
-    link: "https://escapegame.rs/",
+    link: "https://gorstak.org/",
   },
   {
-    partnerImage: nescafe,
-    partnerName: "Nescafe",
+    partnerImage: jdp,
+    partnerName: "Jugoslovensko dramsko pozorište",
     bgColor: "#fff",
-    link: "https://www.nescafe.com/rs/nase-kafe/nescafe-2in1",
+    link: "https://www.jdp.rs/rs/",
+  },
+  {
+    partnerImage: museum,
+    partnerName: "Selfie museum expose",
+    bgColor: "#fff",
+    link: "https://selfiemuseum.rs/",
+  },
+  {
+    partnerImage: stark,
+    partnerName: "Štark",
+    bgColor: "#fff",
+    link: "https://www.stark.rs/",
+  },
+  {
+    partnerImage: vajat,
+    partnerName: "Stepin vajat",
+    bgColor: "#fff",
+    link: "https://www.burgers.rs/",
+  },
+  {
+    partnerImage: atlantic,
+    partnerName: "Atlantic",
+    bgColor: "#fff",
+    link: "https://www.atlanticgrupa.com/en/",
   },
 ];
 
 export const mediaPartners = [
   {
-    partnerImage: BestBg,
+    partnerImage: bestBg,
     partnerName: "Best Beograd",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
+  },
+  {
+    partnerImage: brainz,
+    partnerName: "Brainz",
+    bgColor: "#fff",
+    link: "#",
   },
   {
     partnerImage: caseFon,
     partnerName: "Case study club",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: centarZaRazvoj,
-    partnerName: "Centar za razvoj karijere",
-    bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    partnerImage: cysecor,
+    partnerName: "Cysecor",
+    bgColor: "#121e2a",
+    link: "#",
   },
   {
-    partnerImage: Eestec,
-    partnerName: "Eestec",
+    partnerImage: eestec,
+    partnerName: "eestec",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: BestNs,
-    partnerName: "Best Novi Sad",
+    partnerImage: electron,
+    partnerName: "electron",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
     partnerImage: fon,
     partnerName: "FON",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
     partnerImage: fonovCentar,
     partnerName: "Fonov centar za razvoj karijere",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: future,
-    partnerName: "Future",
+    partnerImage: itNetwork,
+    partnerName: "itNetwork",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
     partnerImage: kancelarija,
     partnerName: "Kancelarija",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: Probjave,
+    partnerImage: magazinStudent,
+    partnerName: "magazinStudent",
+    bgColor: "#fff",
+    link: "#",
+  },
+  {
+    partnerImage: masinski,
+    partnerName: "masinski",
+    bgColor: "#fff",
+    link: "#",
+  },
+  {
+    partnerImage: mingl,
+    partnerName: "mingl",
+    bgColor: "#fff",
+    link: "#",
+  },
+  {
+    partnerImage: orgViser,
+    partnerName: "Studentska organizacija Viser",
+    bgColor: "#242424",
+    link: "#",
+  },
+  {
+    partnerImage: prObjave,
     partnerName: "prObjave",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: Savez,
+    partnerImage: savez,
     partnerName: "Savez studenata Fona",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
     partnerImage: spof,
     partnerName: "SPOF",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: Suma,
-    partnerName: "Suma",
+    partnerImage: studGrad,
+    partnerName: "studGrad",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: SvetKompjutera,
+    partnerImage: studZivot,
+    partnerName: "studZivot",
+    bgColor: "#fff",
+    link: "#",
+  },
+  {
+    partnerImage: suetf,
+    partnerName: "suetf",
+    bgColor: "#fff",
+    link: "#",
+  },
+  {
+    partnerImage: suma,
+    partnerName: "suma",
+    bgColor: "#fff",
+    link: "#",
+  },
+  {
+    partnerImage: svetKompjutera,
     partnerName: "Svet kompjutera",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: Unija,
+    partnerImage: unija,
     partnerName: "Unija",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
   },
   {
-    partnerImage: Viser,
+    partnerImage: viser,
     partnerName: "Viser",
     bgColor: "#fff",
-    link: "https://knjaz.rs/portfolio/guarana/", //!treba
+    link: "#",
+  },
+  {
+    partnerImage: youth,
+    partnerName: "Youth",
+    bgColor: "#1d1e19",
+    link: "#",
   },
 ];

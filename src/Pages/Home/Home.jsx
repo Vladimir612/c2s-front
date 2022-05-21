@@ -295,7 +295,7 @@ const Home = () => {
                   height="12rem"
                 />
               </div>
-              <div className="media-partners" style={{ display: "none" }}>
+              <div className="media-partners">
                 <h3>medijski partneri</h3>
                 <PartnersSlider
                   partners={mediaPartners}

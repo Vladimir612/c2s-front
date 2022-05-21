@@ -8,8 +8,8 @@ import { FaCaretDown } from "react-icons/fa";
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
-  const [oProjektuAktiv, setOProjektuAktiv] = useState(false);
-  const [nasiPartneriAktiv, setNasiPartneriAktiv] = useState(false);
+  const [aboutProjectActive, setAboutProjectActive] = useState(false);
+  const [ourPartnersActive, setOurPartnersActive] = useState(false);
 
   return (
     <>
@@ -73,17 +73,17 @@ const Nav = () => {
             </Link>
             <li
               onClick={() => {
-                setNasiPartneriAktiv(false);
-                setOProjektuAktiv(!oProjektuAktiv);
+                setOurPartnersActive(false);
+                setAboutProjectActive(!aboutProjectActive);
               }}
               datacontent={"O projektu"}
-              className={oProjektuAktiv ? "active" : ""}
+              className={aboutProjectActive ? "active" : ""}
             >
               <span>O projektu</span>
-              <FaCaretDown color={oProjektuAktiv ? "#fff" : "#ffffffb3"} />
+              <FaCaretDown color={aboutProjectActive ? "#fff" : "#ffffffb3"} />
               <motion.ul
-                className="sub-linkovi"
-                animate={{ height: oProjektuAktiv ? "9.5rem" : 0 }}
+                className="sub-links"
+                animate={{ height: aboutProjectActive ? "9.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
@@ -112,17 +112,17 @@ const Nav = () => {
             </Link>
             <li
               onClick={() => {
-                setOProjektuAktiv(false);
-                setNasiPartneriAktiv(!nasiPartneriAktiv);
+                setAboutProjectActive(false);
+                setOurPartnersActive(!ourPartnersActive);
               }}
               datacontent={"Naši partneri"}
-              className={nasiPartneriAktiv ? "active" : ""}
+              className={ourPartnersActive ? "active" : ""}
             >
               <span>Naši partneri</span>
-              <FaCaretDown color={nasiPartneriAktiv ? "#fff" : "#ffffffb3"} />
+              <FaCaretDown color={ourPartnersActive ? "#fff" : "#ffffffb3"} />
               <motion.ul
-                className="sub-linkovi"
-                animate={{ height: nasiPartneriAktiv ? "18.5rem" : 0 }}
+                className="sub-links"
+                animate={{ height: ourPartnersActive ? "18.5rem" : 0 }}
                 initial={{ height: 0 }}
                 transition={{ duration: 0.5 }}
               >
@@ -181,7 +181,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="btn-prijavi"
+              className="btn-application"
               style={{ marginRight: "1rem" }}
               whileHover={{
                 scale: 1.1,
@@ -207,7 +207,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="btn-prijavi"
+              className="btn-application"
               whileHover={{
                 scale: 1.1,
               }}
@@ -237,18 +237,20 @@ const Nav = () => {
           </Link>
           <li
             onClick={() => {
-              setNasiPartneriAktiv(false);
-              setOProjektuAktiv(!oProjektuAktiv);
+              setOurPartnersActive(false);
+              setAboutProjectActive(!aboutProjectActive);
             }}
             datacontent={"O projektu"}
-            className={oProjektuAktiv ? "active nema-padding" : "nema-padding"}
+            className={
+              aboutProjectActive ? "active nema-padding" : "nema-padding"
+            }
           >
             <span>O projektu</span>
-            <FaCaretDown color={oProjektuAktiv ? "#fff" : "#ffffffb3"} />
+            <FaCaretDown color={aboutProjectActive ? "#fff" : "#ffffffb3"} />
 
             <motion.ul
-              className="sub-linkovi"
-              animate={{ height: oProjektuAktiv ? "8.5rem" : 0 }}
+              className="sub-links"
+              animate={{ height: aboutProjectActive ? "8.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
@@ -276,20 +278,19 @@ const Nav = () => {
           </Link>
           <li
             onClick={() => {
-              setOProjektuAktiv(false);
-              setNasiPartneriAktiv(!nasiPartneriAktiv);
+              setAboutProjectActive(false);
+              setOurPartnersActive(!ourPartnersActive);
             }}
             datacontent={"Naši partneri"}
             className={
-              nasiPartneriAktiv ? "active nema-padding" : "nema-padding"
+              ourPartnersActive ? "active nema-padding" : "nema-padding"
             }
           >
             <span>Naši partneri</span>
-            <FaCaretDown color={nasiPartneriAktiv ? "#fff" : "#ffffffb3"} />
-
+            <FaCaretDown color={ourPartnersActive ? "#fff" : "#ffffffb3"} />
             <motion.ul
-              className="sub-linkovi"
-              animate={{ height: nasiPartneriAktiv ? "15.5rem" : 0 }}
+              className="sub-links"
+              animate={{ height: ourPartnersActive ? "15.5rem" : 0 }}
               initial={{ height: 0 }}
               transition={{ duration: 0.5 }}
             >
@@ -380,7 +381,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="btn-prijavi"
+              className="btn-application"
               style={{ marginRight: "1rem" }}
               whileHover={{
                 scale: 1.1,
@@ -399,7 +400,7 @@ const Nav = () => {
             }}
           >
             <motion.button
-              className="btn-prijavi"
+              className="btn-application"
               whileHover={{
                 scale: 1.1,
               }}

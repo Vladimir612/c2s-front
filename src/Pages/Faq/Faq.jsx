@@ -154,7 +154,7 @@ const Faq = () => {
             </div>
             <div className="success-message">{successfullySent}</div>
             <motion.button
-              className="btn-prijavi"
+              className="btn-application"
               onClick={() => {
                 setSuccessfullySent("Mail je uspešno poslat");
                 axios

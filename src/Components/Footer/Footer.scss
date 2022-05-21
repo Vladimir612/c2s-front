@@ -40,7 +40,7 @@ footer {
       border: 2px solid #fff;
       background: transparent;
     }
-    &.sivo {
+    &.gray {
       border: none;
       color: $bg_dark;
       background: $bg_gray;
@@ -55,7 +55,7 @@ footer {
 @media only screen and (max-width: 850px) {
   footer {
     flex-direction: column;
-    button.sivo {
+    button.gray {
       margin-bottom: 2rem;
     }
     .contact-section {

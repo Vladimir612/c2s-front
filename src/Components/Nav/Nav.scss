@@ -8,7 +8,7 @@ nav {
   width: 100vw;
   top: 0;
   background: transparent;
-  .btn-prijavi {
+  .btn-application {
     background: $red;
     border-radius: 2rem;
     padding: 0.4rem 1.9rem;
@@ -53,7 +53,7 @@ nav {
     &.active::before {
       width: 80% !important;
     }
-    .sub-linkovi {
+    .sub-links {
       position: absolute;
       left: 0;
       width: 11rem;
@@ -126,7 +126,7 @@ nav {
       }
     }
 
-    .sub-linkovi {
+    .sub-links {
       overflow-y: scroll;
       li {
         padding: 0.5vh 0;
@@ -141,7 +141,7 @@ nav {
       }
     }
   }
-  .btn-prijavi {
+  .btn-application {
     cursor: pointer;
     background: $red;
     border-radius: 2rem;
