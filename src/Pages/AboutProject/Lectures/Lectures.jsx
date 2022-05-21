@@ -9,7 +9,7 @@ import { lecturesArr, lectureTextIntro } from "./lecturesData";
 
 const Lectures = () => {
   return (
-    <div className="radionice-container">
+    <div className="lectures-container">
       <div className="about-project-intro">
         <div className="photo">
           <LazyLoadImage effect="blur" src={radioniceSlika} alt="Radionice" />

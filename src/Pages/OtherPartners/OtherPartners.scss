@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.ostali-partners-container {
+.other-partners-container {
   .hero-partners {
     margin-top: 3.8rem;
     background: $red;
@@ -14,7 +14,7 @@
       color: #fff;
     }
   }
-  .ostali-content {
+  .other-content {
     position: relative;
     .balls-anim {
       z-index: -1;
@@ -64,7 +64,7 @@
       }
     }
   }
-  .ostali-partners-slider {
+  .other-partners-slider {
     margin-top: 2rem;
     padding: 1rem 2rem;
     h3 {
@@ -78,8 +78,8 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .ostali-partners-container {
-    .ostali-partners-slider {
+  .other-partners-container {
+    .other-partners-slider {
       h3 {
         padding-left: 0;
       }

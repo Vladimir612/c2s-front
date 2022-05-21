@@ -1,23 +1,23 @@
 //zaposleni slike
-import RenataColic from "../../Assets/Images/Partneri/A1/zaposleni/RenataColic.jpg";
-import UrosKomlenovic from "../../Assets/Images/Partneri/A1/zaposleni/UrosKomlenovic.jpg";
+import RenataColic from "../../Assets/Images/Partners/A1/zaposleni/RenataColic.jpg";
+import UrosKomlenovic from "../../Assets/Images/Partners/A1/zaposleni/UrosKomlenovic.jpg";
 
-import MarkoVukovic from "../../Assets/Images/Partneri/Adacta/zaposleni/MarkoVukovic.jpg";
-import UnaGvozdenov from "../../Assets/Images/Partneri/Adacta/zaposleni/UnaGvozdenov.jpg";
+import MarkoVukovic from "../../Assets/Images/Partners/Adacta/zaposleni/MarkoVukovic.jpg";
+import UnaGvozdenov from "../../Assets/Images/Partners/Adacta/zaposleni/UnaGvozdenov.jpg";
 
-import MilosZivanic from "../../Assets/Images/Partneri/Eyesee/zaposleni/MilosZivanic.jpg";
-import NikolaMiljevic from "../../Assets/Images/Partneri/Eyesee/zaposleni/NikolaMiljevic.jpg";
-import VladimirMatic from "../../Assets/Images/Partneri/Eyesee/zaposleni/VladimirMatic.jpg";
+import MilosZivanic from "../../Assets/Images/Partners/Eyesee/zaposleni/MilosZivanic.jpg";
+import NikolaMiljevic from "../../Assets/Images/Partners/Eyesee/zaposleni/NikolaMiljevic.jpg";
+import VladimirMatic from "../../Assets/Images/Partners/Eyesee/zaposleni/VladimirMatic.jpg";
 
-import AleksandraDjordjevic from "../../Assets/Images/Partneri/Prime/zaposleni/AleksandraDjordjevic.jpg";
-import DamjanMladenovic from "../../Assets/Images/Partneri/Prime/zaposleni/DamjanMladenovic.jpg";
+import AleksandraDjordjevic from "../../Assets/Images/Partners/Prime/zaposleni/AleksandraDjordjevic.jpg";
+import DamjanMladenovic from "../../Assets/Images/Partners/Prime/zaposleni/DamjanMladenovic.jpg";
 
-import AleksandarSmiljkovic from "../../Assets/Images/Partneri/Raiffeisen/zaposleni/AleksandarSmiljkovic.jpg";
-import StefanGavrilovic from "../../Assets/Images/Partneri/Raiffeisen/zaposleni/StefanGavrilovic.jpg";
+import AleksandarSmiljkovic from "../../Assets/Images/Partners/Raiffeisen/zaposleni/AleksandarSmiljkovic.jpg";
+import StefanGavrilovic from "../../Assets/Images/Partners/Raiffeisen/zaposleni/StefanGavrilovic.jpg";
 
-import AndreaAdamovic from "../../Assets/Images/Partneri/Semos/zaposleni/AndreaAdamovic.jpg";
-import BorisKolakovic from "../../Assets/Images/Partneri/Semos/zaposleni/BorisKolakovic.jpg";
-import JanaFilipovic from "../../Assets/Images/Partneri/Semos/zaposleni/JanaFilipovic.jpg";
+import AndreaAdamovic from "../../Assets/Images/Partners/Semos/zaposleni/AndreaAdamovic.jpg";
+import BorisKolakovic from "../../Assets/Images/Partners/Semos/zaposleni/BorisKolakovic.jpg";
+import JanaFilipovic from "../../Assets/Images/Partners/Semos/zaposleni/JanaFilipovic.jpg";
 
 const zaposleniA1 = [
   {

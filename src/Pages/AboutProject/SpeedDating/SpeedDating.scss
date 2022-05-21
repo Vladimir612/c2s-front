@@ -30,7 +30,7 @@
     a {
       color: $text_dark;
     }
-    .link-do-kompanije {
+    .company-link {
       margin: 3rem 0;
       padding: 1rem 0.5rem;
       background: #fff;
@@ -59,7 +59,7 @@
   .speed-dating-container,
   .tech-challenge-container {
     .companies {
-      .link-do-kompanije {
+      .company-link {
         flex-direction: column;
         gap: 0.5rem;
       }

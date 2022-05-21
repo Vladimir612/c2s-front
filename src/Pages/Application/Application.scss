@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.uspesna-prijava {
+.successful-application {
   @include box-center($direction: column, $justify: space-around);
   min-height: calc(100vh - 5rem);
   width: 40%;
@@ -16,19 +16,19 @@
   color: white;
 }
 
-.prijava-wrapper {
+.application-wrapper {
   .none {
     display: none;
   }
 }
 
-.prijava-container {
+.application-container {
   button {
     border-radius: 2rem;
   }
 }
 
-.prijava-flex {
+.application-flex {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
@@ -42,7 +42,7 @@
     font-size: 1.8rem;
   }
 
-  .prijava-container {
+  .application-container {
     background-color: #24282a;
     border-radius: 2rem;
     .form-steps {
@@ -188,11 +188,11 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .prijava-flex {
+  .application-flex {
     padding: 1rem;
     padding-top: 4rem;
   }
-  .uspesna-prijava {
+  .successful-application {
     width: 90%;
   }
 }
@@ -212,7 +212,7 @@
     width: 100% !important;
   }
 
-  .uspesna-prijava {
+  .successful-application {
     img {
       width: 70%;
     }

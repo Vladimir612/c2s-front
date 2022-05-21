@@ -1,8 +1,8 @@
 @import "../../global.scss";
 
-.o-projektu-container {
+.about-project-container {
   margin-top: 3.8rem;
-  .o-projektu-navigation {
+  .about-project-navigation {
     width: fit-content;
     @include box-center;
     padding: 0.5rem;
@@ -54,7 +54,7 @@
     }
   }
 
-  .donji-nav {
+  .bottom-nav {
     background: $red;
     padding: 2rem 0;
     @include box-center($direction: column);
@@ -68,7 +68,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .o-projektu-container {
+  .about-project-container {
     .about-project-intro {
       flex-direction: column;
       .text {
@@ -79,7 +79,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .o-projektu-container {
+  .about-project-container {
     .about-project-intro {
       .photo {
         img {
@@ -87,7 +87,7 @@
         }
       }
     }
-    .o-projektu-navigation {
+    .about-project-navigation {
       font-size: 1rem;
       margin: 1rem auto 0 auto;
       ul {

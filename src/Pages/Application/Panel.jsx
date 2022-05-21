@@ -1,7 +1,7 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
 
-const PanelDiskusija = () => {
+const Panel = () => {
   return (
     <div className="input-page">
       <h3 className="input-title">PANEL DISKUSIJA:</h3>
@@ -21,4 +21,4 @@ const PanelDiskusija = () => {
     </div>
   );
 };
-export default PanelDiskusija;
+export default Panel;

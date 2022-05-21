@@ -1,24 +1,24 @@
 //companies
-import semos from "../../../Assets/Images/Partneri/pokrovitelji/semos.png";
-import a1 from "../../../Assets/Images/Partneri/pokrovitelji/a1.png";
-import adacta from "../../../Assets/Images/Partneri/pokrovitelji/adacta.png";
-import eyesee from "../../../Assets/Images/Partneri/pokrovitelji/eyesee.png";
-import prime from "../../../Assets/Images/Partneri/godisnji/prime.png";
+import semos from "../../../Assets/Images/Partners/pokrovitelji/semos.png";
+import a1 from "../../../Assets/Images/Partners/pokrovitelji/a1.png";
+import adacta from "../../../Assets/Images/Partners/pokrovitelji/adacta.png";
+import eyesee from "../../../Assets/Images/Partners/pokrovitelji/eyesee.png";
+import prime from "../../../Assets/Images/Partners/godisnji/prime.png";
 
 //lecturers
-import AnaNikolic from "../../../Assets/Images/Partneri/A1/panel/AnaNikolic.jpg";
-import MihajloMilanovic from "../../../Assets/Images/Partneri/A1/radionice/MihajloMilanovic.jpg";
+import AnaNikolic from "../../../Assets/Images/Partners/A1/panel/AnaNikolic.jpg";
+import MihajloMilanovic from "../../../Assets/Images/Partners/A1/radionice/MihajloMilanovic.jpg";
 
-import GoranVujanovic from "../../../Assets/Images/Partneri/Adacta/radionice/GoranVujanovic.jpg";
-import NenadMaricic from "../../../Assets/Images/Partneri/Adacta/radionice/NenadMaricic.jpg";
+import GoranVujanovic from "../../../Assets/Images/Partners/Adacta/radionice/GoranVujanovic.jpg";
+import NenadMaricic from "../../../Assets/Images/Partners/Adacta/radionice/NenadMaricic.jpg";
 
-import NikolaMihajlovic from "../../../Assets/Images/Partneri/Eyesee/radionice/NikolaMihajlovic.jpg";
-import VladimirMatic from "../../../Assets/Images/Partneri/Eyesee/zaposleni/VladimirMatic.jpg";
+import NikolaMihajlovic from "../../../Assets/Images/Partners/Eyesee/radionice/NikolaMihajlovic.jpg";
+import VladimirMatic from "../../../Assets/Images/Partners/Eyesee/zaposleni/VladimirMatic.jpg";
 
-import DraganKocic from "../../../Assets/Images/Partneri/Prime/radionice/DraganKocic.jpg";
-import MilicaMilekic from "../../../Assets/Images/Partneri/Prime/radionice/MilicaMilekic.jpg";
+import DraganKocic from "../../../Assets/Images/Partners/Prime/radionice/DraganKocic.jpg";
+import MilicaMilekic from "../../../Assets/Images/Partners/Prime/radionice/MilicaMilekic.jpg";
 
-import NikolaGarabandic from "../../../Assets/Images/Partneri/Semos/radionice/NikolaGarabandic.jpg";
+import NikolaGarabandic from "../../../Assets/Images/Partners/Semos/radionice/NikolaGarabandic.jpg";
 
 const lecture1 = {
   heading: "Izazovi u B2C monetizaciji 5G usluga",

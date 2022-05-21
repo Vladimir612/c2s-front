@@ -8,11 +8,11 @@ import VisibilitySensor from "react-visibility-sensor";
 import balls2 from "../../Assets/Images/krugovi-radionica.png";
 import { Link } from "react-router-dom";
 
-import raiffeisen from "../../Assets/Images/Partneri/pokrovitelji/raiffeisen.svg";
+import raiffeisen from "../../Assets/Images/Partners/pokrovitelji/raiffeisen.svg";
 
-import IvaKrcmar from "../../Assets/Images/Partneri/Raiffeisen/radionice/IvaKrcmar.jpg";
-import MarkoMilosevic from "../../Assets/Images/Partneri/Raiffeisen/radionice/MarkoMilosevic.jpg";
-import StefanGavrilovic from "../../Assets/Images/Partneri/Raiffeisen/zaposleni/StefanGavrilovic.jpg";
+import IvaKrcmar from "../../Assets/Images/Partners/Raiffeisen/radionice/IvaKrcmar.jpg";
+import MarkoMilosevic from "../../Assets/Images/Partners/Raiffeisen/radionice/MarkoMilosevic.jpg";
+import StefanGavrilovic from "../../Assets/Images/Partners/Raiffeisen/zaposleni/StefanGavrilovic.jpg";
 
 const radionica5 = {
   heading: "DevOps pristup razvoju softvera",

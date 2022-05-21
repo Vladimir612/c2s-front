@@ -2,7 +2,8 @@ import React from "react";
 import { Field, ErrorMessage } from "formik";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-const OpsteInformacije = () => {
+
+const GeneralInfo = () => {
   return (
     <div className="input-page">
       <h3 className="input-title">OPŠTE INFORMACIJE:</h3>
@@ -177,4 +178,4 @@ const OpsteInformacije = () => {
   );
 };
 
-export default OpsteInformacije;
+export default GeneralInfo;

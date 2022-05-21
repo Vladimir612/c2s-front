@@ -1,18 +1,18 @@
 //organizacioni team
-import AnaKesic from "../../Assets/Images/organizacioniTim/AnaKesic.jpg";
-import AnjaPejovic from "../../Assets/Images/organizacioniTim/AnjaPejovic.jpg";
-import BojanaCelovic from "../../Assets/Images/organizacioniTim/BojanaCelovic.jpg";
-import coreTeamSlika from "../../Assets/Images/organizacioniTim/coreTeam.jpg";
-import crTeamSlika from "../../Assets/Images/organizacioniTim/crTeam.jpg";
-import designTeamSlika from "../../Assets/Images/organizacioniTim/designTeam.jpg";
-import hrTeamSlika from "../../Assets/Images/organizacioniTim/hrTeam.jpg";
-import itTeamSlika from "../../Assets/Images/organizacioniTim/itTeam.jpg";
-import KostaAcimovic from "../../Assets/Images/organizacioniTim/KostaAcimovic.jpg";
-import logisticsTeamSlika from "../../Assets/Images/organizacioniTim/logisticsTeam.jpg";
-import NemanjaVukelic from "../../Assets/Images/organizacioniTim/NemanjaVukelic.jpg";
-import prTeamSlika from "../../Assets/Images/organizacioniTim/prTeam.jpg";
-import StefanBozovic from "../../Assets/Images/organizacioniTim/StefanBozovic.jpg";
-import VladimirLazarevic from "../../Assets/Images/organizacioniTim/VladimirLazarevic.jpg";
+import AnaKesic from "../../Assets/Images/organisationTeam/AnaKesic.jpg";
+import AnjaPejovic from "../../Assets/Images/organisationTeam/AnjaPejovic.jpg";
+import BojanaCelovic from "../../Assets/Images/organisationTeam/BojanaCelovic.jpg";
+import coreTeamSlika from "../../Assets/Images/organisationTeam/coreTeam.jpg";
+import crTeamSlika from "../../Assets/Images/organisationTeam/crTeam.jpg";
+import designTeamSlika from "../../Assets/Images/organisationTeam/designTeam.jpg";
+import hrTeamSlika from "../../Assets/Images/organisationTeam/hrTeam.jpg";
+import itTeamSlika from "../../Assets/Images/organisationTeam/itTeam.jpg";
+import KostaAcimovic from "../../Assets/Images/organisationTeam/KostaAcimovic.jpg";
+import logisticsTeamSlika from "../../Assets/Images/organisationTeam/logisticsTeam.jpg";
+import NemanjaVukelic from "../../Assets/Images/organisationTeam/NemanjaVukelic.jpg";
+import prTeamSlika from "../../Assets/Images/organisationTeam/prTeam.jpg";
+import StefanBozovic from "../../Assets/Images/organisationTeam/StefanBozovic.jpg";
+import VladimirLazarevic from "../../Assets/Images/organisationTeam/VladimirLazarevic.jpg";
 
 export const coreTeam = {
   teamName: "TIM KOORDINATORA",

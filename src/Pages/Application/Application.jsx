@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer, { scrollFunc } from "../../Components/Footer/Footer";
-import "./Prijava.scss";
+import "./Application.scss";
 import { Formik, Form } from "formik";
-import OpsteInformacije from "./OpsteInformacije";
+import GeneralInfo from "./GeneralInfo";
 import { motion } from "framer-motion";
-import PanelDiskusija from "./PanelDiskusija";
+import Panel from "./Panel";
 import Lectures from "./Lectures";
 import SpeedDating from "./SpeedDating";
 import TechChallenge from "./TechChallenge";
 import axios from "axios";
-import uspesnaPrijava from "../../Assets/Images/uspesnaPrijava.png";
+import successfulApplication from "../../Assets/Images/successfulApplication.png";
 
-const Prijava = (props) => {
-  let prijavaRef = useRef();
+const Application = (props) => {
+  let pageStartRef = useRef();
   let [steps, setSteps] = useState(1);
   let [currentStep, setCurrentStep] = useState(0.2);
   let [next, setNext] = useState(false);
@@ -21,29 +21,29 @@ const Prijava = (props) => {
   let [success, setSuccess] = useState(false);
   let arr = [1, 2, 3, 4, 5];
   let forms = [
-    <OpsteInformacije />,
-    <PanelDiskusija />,
+    <GeneralInfo />,
+    <Panel />,
     <Lectures />,
     <SpeedDating />,
     <TechChallenge />,
   ];
 
   useEffect(() => {
-    scrollFunc(prijavaRef);
+    scrollFunc(pageStartRef);
   }, []);
 
   return (
     <>
-      <div className="ref-start" ref={prijavaRef}></div>
-      <div className="prijava-wrapper">
+      <div className="ref-start" ref={pageStartRef}></div>
+      <div className="application-wrapper">
         <Nav />
 
         <motion.div
-          className={success ? "uspesna-prijava" : "none"}
+          className={success ? "successful-application" : "none"}
           animate={{ scale: 1 }}
           initial={{ scale: 0 }}
         >
-          <img src={uspesnaPrijava} alt="Uspesna prijava" />
+          <img src={successfulApplication} alt="Uspesna prijava" />
           <h2>PRIJAVA JE USPEŠNO POSLATA</h2>
           <p>
             U narednom periodu će ti stići mail. Sve bitne informacije ćemo
@@ -59,9 +59,9 @@ const Prijava = (props) => {
             .
           </p>
         </motion.div>
-        <div className={!success ? "prijava-flex" : "none"}>
+        <div className={!success ? "application-flex" : "none"}>
           <h2>PRIJAVA</h2>
-          <div className="prijava-container">
+          <div className="application-container">
             <div className="form-steps">
               <div
                 className="gradient-background"
@@ -192,7 +192,7 @@ const Prijava = (props) => {
                       imePrezime: values.name,
                       emailPriv: values.email,
                       newsletter: values.newsletter,
-                      brojTelefona: values.phone,
+                      phoneNumber: values.phone,
                       linkCv: values.cv,
                       fakultet: values.faculty,
                       godinaStudija: values.year,
@@ -333,10 +333,10 @@ const Prijava = (props) => {
             </Formik>
           </div>
         </div>
-        <Footer pageStartRef={prijavaRef} mailStart={props.mailStart} />
+        <Footer pageStartRef={pageStartRef} mailStart={props.mailStart} />
       </div>
     </>
   );
 };
 
-export default Prijava;
+export default Application;

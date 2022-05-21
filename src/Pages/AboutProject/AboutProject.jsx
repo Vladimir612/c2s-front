@@ -11,9 +11,11 @@ import { scrollFunc } from "../../Components/Footer/Footer";
 
 const AboutProject = () => {
   const pageStartRef = useRef();
+
   useEffect(() => {
     scrollFunc(pageStartRef);
   }, []);
+
   const location = useLocation();
   let activePage = -1;
 
@@ -42,8 +44,8 @@ const AboutProject = () => {
     <>
       <div className="ref-start" ref={pageStartRef}></div>
       <Nav />
-      <div className="o-projektu-container">
-        <div className="o-projektu-navigation">
+      <div className="about-project-container">
+        <div className="about-project-navigation">
           <ul>
             <li className={activePage === 1 ? "active" : ""}>
               <Link to="/o-projektu/radionice">RADIONICE</Link>
@@ -67,9 +69,9 @@ const AboutProject = () => {
           <Route path="tech-challenge" element={<TechChallenge />} />
         </Routes>
 
-        <div className="donji-nav">
+        <div className="bottom-nav">
           <p>POGLEDAJ I OSTALE DELOVE</p>
-          <div className="o-projektu-navigation">
+          <div className="about-project-navigation">
             <ul>
               <li className={activePage === 1 ? "active" : ""}>
                 <Link to="/o-projektu/radionice">RADIONICE</Link>

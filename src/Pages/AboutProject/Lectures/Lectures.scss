@@ -1,31 +1,5 @@
 @import "../../../global.scss";
-@import "../../../global.scss";
 
-.radionice-container {
+.lectures-container {
   min-height: 100vh;
-  .presek-dana {
-    position: relative;
-    height: 1rem;
-    border-top: 1px solid $bg_gray;
-    border-right: 1px solid $bg_gray;
-    border-left: 1px solid $bg_gray;
-    margin: 5rem 2rem;
-    font-size: 1rem;
-    .krug-presek {
-      position: absolute;
-      top: -2.5rem;
-      left: calc(50% - 2.5rem);
-      bottom: 2.5rem;
-      width: 5rem;
-      height: 5rem;
-      background-color: $bg_gray;
-      border-radius: 50%;
-      @include box-center;
-      p {
-        color: #14191b;
-        font-weight: 700;
-        transform: translateY(-4px);
-      }
-    }
-  }
 }

@@ -195,14 +195,14 @@ const Generator = () => {
               />
             </div>
             <div className="input-field">
-              <label className="input-label" for="brojTelefona">
+              <label className="input-label" for="phoneNumber">
                 Broj telefona
               </label>
               <motion.input
                 whileFocus={{ scale: 1.02 }}
                 type="text"
-                name="brojTelefona"
-                id="brojTelefona"
+                name="phoneNumber"
+                id="phoneNumber"
                 placeholder="+381 60 123 4567"
                 value={phoneInput}
                 onChange={handlePhoneChange}
